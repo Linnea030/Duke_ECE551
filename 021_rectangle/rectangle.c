@@ -52,7 +52,7 @@ rectangle intersection(rectangle r1, rectangle r2) {
   top = min(r1.y + r1.height, r2.y + r2.height);
   bottom = max(r1.y, r2.y);
 
-  if (right <= left || top <= bottom) {
+  if (right < left || top < bottom) {
     inter.x = 0;
     inter.y = 0;
     inter.width = 0;
