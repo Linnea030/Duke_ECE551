@@ -1,14 +1,8 @@
-Grading at 09/11/2022:18:55:06.478485
-For commit ID 71480aa7be044fef706540a287830f3ad2db736d
-Grading at Sun Sep 11 02:55:06 PM EDT 2022
+Grading at 09/11/2022:19:01:16.760098
+For commit ID 1bc85cf0c8fb7ae9d7681b1c249e013b0362daa8
+Grading at Sun Sep 11 03:01:16 PM EDT 2022
 Attempting to compile rectangle.c
 Tring to run rectangle
-Line_9_did_not_match
-Line_10_did_not_match
-Line_12_did_not_match
-Line_13_did_not_match
-Line_14_did_not_match
-Line_15_did_not_match
 Line_16_did_not_match
 Line_19_did_not_match
 Your file did not match the expected ouput
@@ -21,14 +15,14 @@ intersection(r1,r1): (2,3) to (7,9)
 intersection(r1,r2): (2,3) to (4,5)
 intersection(r1,r3): (2,3) to (5,7)
 intersection(r1,r4): <empty>
-intersection(r2,r1): (2,2) to (4,5)
-intersection(r2,r2): (-1,-1) to (4,5)
+intersection(r2,r1): (2,3) to (4,5)
+intersection(r2,r2): (-1,-2) to (4,5)
 intersection(r2,r3): (-1,-2) to (4,5)
-intersection(r2,r4): (-1,-2) to (0,5)
-intersection(r3,r1): (2,2) to (5,7)
-intersection(r3,r2): (-1,-1) to (4,5)
-intersection(r3,r3): (-2,-2) to (5,7)
-intersection(r3,r4): (-2,-3) to (0,7)
+intersection(r2,r4): <empty>
+intersection(r3,r1): (2,3) to (5,7)
+intersection(r3,r2): (-1,-2) to (4,5)
+intersection(r3,r3): (-2,-3) to (5,7)
+intersection(r3,r4): <empty>
 intersection(r4,r1): <empty>
 intersection(r4,r2): <empty>
 intersection(r4,r3): <empty>
