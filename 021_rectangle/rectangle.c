@@ -45,25 +45,14 @@ rectangle intersection(rectangle r1, rectangle r2) {
   rectangle inter;
   int left;
   int bottom;
-  int w;
-  int h;
-  if (r1.x <= r2.x) {
-    left = r2.x;
-    w = r1.width + r1.x - r2.x;
-  }
-  else {
-    left = r1.x;
-    w = r2.width + r2.x - r1.x;
-  }
-  if (r1.y <= r2.y) {
-    bottom = r2.y;
-    h = r1.height + r1.y - r2.y;
-  }
-  else {
-    bottom = r1.y;
-    h = r2.height + r2.y - r1.x;
-  }
-  if (w <= 0 || h <= 0) {
+  int top;
+  int right;
+  left = max(r1.x, r2.x);
+  right = min(r1.x + r1.width, r2.x + r2.width);
+  top = min(r1.y + r1.height, r2.y + r2.height);
+  bottom = max(r1.y, r2.x);
+
+  if (right <= left || top <= bottom) {
     inter.x = 0;
     inter.y = 0;
     inter.width = 0;
@@ -72,8 +61,8 @@ rectangle intersection(rectangle r1, rectangle r2) {
   else {
     inter.x = left;
     inter.y = bottom;
-    inter.width = w;
-    inter.height = h;
+    inter.width = right - left;
+    inter.height = top - bottom;
   }
   return inter;
 }
