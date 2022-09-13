@@ -1,0 +1,20 @@
+abcde abcde
+abccd abccd
+aaabb aaaab
+aaaab abccd
+aaaaa bbbbb
+aaaaa bbbcc
+aabbc ccdda
+abcde aaaaa
+abcde aabbb abcdc
+abcdc
+aabccc abcde
+aab abcde
+abcde aabbcc
+abcde aab
+aaabc baacd
+abccc abccd
+Aaabc daabc
+)cbdc (chsb
+accde bcdea
+abecc abbbc
