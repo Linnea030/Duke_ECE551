@@ -1,0 +1,110 @@
+Grading at 09/22/2022:05:03:03.991208
+For commit ID 62ce9cc2f87fe8caadc1e22a1900e38ab219adb6
+Grading at Thu Sep 22 01:03:03 AM EDT 2022
+**Testing broken implementation 10 **
+-------------------------------------
+
+array({3, 1, 2, 6, 7, 9, 29, 35, 16, 29})
+array({5, 6, 5, 5, 5, 7, 9})
+array({-3, -42, -2, -9, 0, 1, -6})
+array(NULL)
+array({-3, -42, -2})
+array({59, 60})
+array({-3, -42, -2, -9, 0, 1})
+Failed
+
+**Testing broken implementation 11 **
+-------------------------------------
+
+array({3, 1, 2, 6, 7, 9, 29, 35, 16, 29})
+Failed
+
+**Testing broken implementation 1 **
+-------------------------------------
+
+array({3, 1, 2, 6, 7, 9, 29, 35, 16, 29})
+array({5, 6, 5, 5, 5, 7, 9})
+Failed
+
+**Testing broken implementation 2 **
+-------------------------------------
+
+array({3, 1, 2, 6, 7, 9, 29, 35, 16, 29})
+Failed
+
+**Testing broken implementation 3 **
+-------------------------------------
+
+array({3, 1, 2, 6, 7, 9, 29, 35, 16, 29})
+array({5, 6, 5, 5, 5, 7, 9})
+array({-3, -42, -2, -9, 0, 1, -6})
+array(NULL)
+array({-3, -42, -2})
+array({59, 60})
+array({-3, -42, -2, -9, 0, 1})
+array({3, 1, 2, 6, 7, 9})
+Failed
+
+**Testing broken implementation 4 **
+-------------------------------------
+
+array({3, 1, 2, 6, 7, 9, 29, 35, 16, 29})
+array({5, 6, 5, 5, 5, 7, 9})
+array({-3, -42, -2, -9, 0, 1, -6})
+array(NULL)
+Failed
+
+**Testing broken implementation 5 **
+-------------------------------------
+
+array({3, 1, 2, 6, 7, 9, 29, 35, 16, 29})
+Failed
+
+**Testing broken implementation 6 **
+-------------------------------------
+
+array({3, 1, 2, 6, 7, 9, 29, 35, 16, 29})
+array({5, 6, 5, 5, 5, 7, 9})
+Failed
+
+**Testing broken implementation 7 **
+-------------------------------------
+
+array({3, 1, 2, 6, 7, 9, 29, 35, 16, 29})
+Failed
+
+**Testing broken implementation 8 **
+-------------------------------------
+
+array({3, 1, 2, 6, 7, 9, 29, 35, 16, 29})
+Failed
+
+**Testing broken implementation 9 **
+-------------------------------------
+
+array({3, 1, 2, 6, 7, 9, 29, 35, 16, 29})
+Failed
+
+**Testing correct implementation **
+-------------------------------------
+
+array({3, 1, 2, 6, 7, 9, 29, 35, 16, 29})
+array({5, 6, 5, 5, 5, 7, 9})
+array({-3, -42, -2, -9, 0, 1, -6})
+array(NULL)
+array({-3, -42, -2})
+array({59, 60})
+array({-3, -42, -2, -9, 0, 1})
+array({3, 1, 2, 6, 7, 9})
+array({59, 60, -3, 77, 0, 36})
+array({-3, -42, -2, -9})
+array({})
+array({16, -3})
+array(NULL)
+array({5, 6, 5})
+array({5})
+succeed
+
+All test programs were handled correctly
+
+Overall Grade: PASSED
