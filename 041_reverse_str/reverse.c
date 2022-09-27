@@ -3,14 +3,18 @@
 #include <string.h>
 
 void reverse(char * str) {
+  if (str == NULL)
+    return;
   //  int x = 0;
   int y = strlen(str);
   //printf("%d",y);
-  for (int i = 0; i < y / 2; i++) {
-    char temp = str[i];
-    str[i] = str[y - i - 1];
-    str[y - i - 1] = temp;
-  }  //WRITE ME!
+  if (y > 1) {
+    for (int i = 0; i < y / 2; i++) {
+      char temp = str[i];
+      str[i] = str[y - i - 1];
+      str[y - i - 1] = temp;
+    }  //WRITE ME!
+  }
 }
 
 int main(void) {
