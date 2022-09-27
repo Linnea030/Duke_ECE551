@@ -3,12 +3,12 @@
 #include <string.h>
 
 void reverse(char * str) {
-  int x = 0;
+  //  int x = 0;
   int y = strlen(str);
   //printf("%d",y);
   for (int i = 0; i < y / 2; i++) {
     char temp = str[i];
-    str[i] = str[x - i - 1];
+    str[i] = str[y - i - 1];
     str[y - i - 1] = temp;
   }  //WRITE ME!
 }
