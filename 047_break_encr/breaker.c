@@ -19,7 +19,7 @@ void breaker(FILE * f) {
       maxf = freq[i];
     }
   }
-  if (maxi >= 4) {
+  if (maxi >= 5) {
     fprintf(stdout, "%d\n", maxi - 5);
   }
   else if (maxf == 0) {
