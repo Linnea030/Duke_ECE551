@@ -19,15 +19,15 @@ void breaker(FILE * f) {
       maxf = freq[i];
     }
   }
-  if (maxi >= 5) {
-    fprintf(stdout, "%d\n", maxi - 5);
+  if (maxi >= 4) {
+    fprintf(stdout, "%d\n", maxi - 4);
   }
   else if (maxf == 0) {
     fprintf(stderr, "nothing in the file\n");
     exit(EXIT_FAILURE);
   }
   else {
-    fprintf(stdout, "%d\n", maxi + 21);
+    fprintf(stdout, "%d\n", maxi + 22);
   }
 }
 
