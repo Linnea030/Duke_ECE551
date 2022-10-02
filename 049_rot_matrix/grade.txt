@@ -1,24 +1,13 @@
-Grading at 10/02/2022:04:59:17.449427
-For commit ID ca19139f1d4bab9669888be5f2dd252e2c2e52c7
-Grading at Sun Oct  2 12:59:17 AM EDT 2022
+Grading at 10/02/2022:05:02:12.120822
+For commit ID f0ad165f41c150226d7614fc26e7a506a03c3431
+Grading at Sun Oct  2 01:02:12 AM EDT 2022
 Attempting to compile rotateMatrix.c
 rotateMatrix.c: In function ‘rotate_m’:
-rotateMatrix.c:10:9: error: implicit declaration of function ‘strchr’ [-Werror=implicit-function-declaration]
-   10 |     if (strchr(line, '\n') == NULL) {
-      |         ^~~~~~
-rotateMatrix.c:3:1: note: include ‘<string.h>’ or provide a declaration of ‘strchr’
-    2 | #include <stdlib.h>
-  +++ |+#include <string.h>
-    3 | 
-rotateMatrix.c:10:9: error: incompatible implicit declaration of built-in function ‘strchr’ [-Werror=builtin-declaration-mismatch]
-   10 |     if (strchr(line, '\n') == NULL) {
-      |         ^~~~~~
-rotateMatrix.c:10:9: note: include ‘<string.h>’ or provide a declaration of ‘strchr’
-rotateMatrix.c:9:10: error: ‘fgets’ writing 12 bytes into a region of size 11 overflows the destination [-Werror=stringop-overflow=]
-    9 |   while (fgets(line, 12, f) != NULL) {
+rotateMatrix.c:10:10: error: ‘fgets’ writing 12 bytes into a region of size 11 overflows the destination [-Werror=stringop-overflow=]
+   10 |   while (fgets(line, 12, f) != NULL) {
       |          ^~~~~~~~~~~~~~~~~~
-rotateMatrix.c:7:8: note: destination object ‘line’ of size 11
-    7 |   char line[11];
+rotateMatrix.c:8:8: note: destination object ‘line’ of size 11
+    8 |   char line[11];
       |        ^~~~
 In file included from rotateMatrix.c:1:
 /usr/include/stdio.h:592:14: note: in a call to function ‘fgets’ declared with attribute ‘access (write_only, 1, 2)’
