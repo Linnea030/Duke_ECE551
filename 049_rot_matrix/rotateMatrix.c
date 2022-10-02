@@ -7,7 +7,7 @@ void rotate_m(FILE * f) {
   char matrix[10][10];
   char line[11];
   int m = 0;
-  while (fgets(line, 12, f) != NULL) {
+  while (fgets(line, 11, f) != NULL) {
     if (strchr(line, '\n') == NULL) {
       fprintf(stderr, "This is not a string\n");
       exit(EXIT_FAILURE);
