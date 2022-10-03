@@ -137,12 +137,11 @@ void printCountryWithMax(country_t * countries,
     }
     daymax[i] = tempmax;
   }
-  {
-    for (size_t k = 0; k < n_countries; k++) {
-      if (daymax[k] >= tempmax) {
-        index = k;
-        tempmax = daymax[k];
-      }
+  tempmax = 0;
+  for (size_t k = 0; k < n_countries; k++) {
+    if (daymax[k] >= tempmax) {
+      index = k;
+      tempmax = daymax[k];
     }
   }
   printf("%s has the most daily cases with %u\n", countries[index].name, tempmax);
