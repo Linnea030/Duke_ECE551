@@ -132,7 +132,7 @@ void printCountryWithMax(country_t * countries,
   for (size_t i = 0; i < n_countries; i++) {
     for (size_t j = 0; j < n_days; j++) {
       if (data[i][j] > tempmax) {
-        tempmax = data[i][i];
+        tempmax = data[i][j];
       }
       daymax[i] = tempmax;
     }
