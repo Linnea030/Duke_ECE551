@@ -62,6 +62,28 @@ country_t parseLine(char * line) {
 
 void calcRunningAvg(unsigned * data, size_t n_days, double * avg) {
   //WRITE ME
+  size_t i = 0;  //count for days
+  //If there is no data
+  if (data == NULL) {
+    printf("No data in the array!\n");
+    exit(EXIT_FAILURE);
+  }
+  //If there is no data in array
+  if (n_days == 0) {
+    printf("The size of data is zero!\n");
+    exit(EXIT_FAILURE);
+  }
+  //If n_days is smaller than 7
+  if (n_days < 7) {
+    printf("The data is not enough for 7 days!\n");
+    exit(EXIT_FAILURE);
+  }
+  //If n_days is larger than 6
+  for (; i < n_days - 6; i++) {
+    avg[i] = (data[i] + data[i + 1] + data[i + 2] + data[i + 3] + data[i + 4] +
+              data[i + 5] + data[i + 6]) /
+             (double)7;  //convert it to double using cast
+  }
 }
 
 void calcCumulative(unsigned * data, size_t n_days, uint64_t pop, double * cum) {

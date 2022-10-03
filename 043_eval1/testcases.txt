@@ -1,1 +1,2 @@
 printCountries population.csv
+printRunningAvg population.csv daily_small.csv
