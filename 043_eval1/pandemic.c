@@ -111,4 +111,37 @@ void printCountryWithMax(country_t * countries,
                          unsigned ** data,
                          size_t n_days) {
   //WRITE ME
+  //If there is no data
+  if (data == NULL) {
+    printf("There is no input data!\n");
+    exit(EXIT_FAILURE);
+  }
+  //If there is no country
+  if (countries == NULL) {
+    printf("There is no country!\n");
+    exit(EXIT_FAILURE);
+  }
+  //If the n_days is invalid
+  if (n_days < 0) {
+    printf("n_days is invalid\n");
+    exit(EXIT_FAILURE);
+  }
+  unsigned daymax[n_countries];
+  unsigned tempmax = 0;
+  size_t index = 0;
+  for (size_t i = 0; i < n_countries; i++) {
+    for (size_t j = 0; j < n_days; j++) {
+      if (data[i][j] > tempmax) {
+        tempmax = data[i][i];
+      }
+      daymax[i] = tempmax;
+    }
+    for (size_t k = 0; k < n_countries; k++) {
+      if (daymax[k] > tempmax) {
+        index = k;
+        tempmax = daymax[k];
+      }
+    }
+  }
+  printf("%s has the most daily cases with %u\n", countries[index].name, tempmax);
 }
