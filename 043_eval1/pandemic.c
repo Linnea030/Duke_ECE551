@@ -102,7 +102,7 @@ void calcCumulative(unsigned * data, size_t n_days, uint64_t pop, double * cum) 
   unsigned sum = 0;
   for (size_t i = 0; i < n_days; i++) {
     sum += data[i];
-    cum[i] = (double)sum / pop / base;
+    cum[i] = (double)sum / pop * base;
   }
 }
 
