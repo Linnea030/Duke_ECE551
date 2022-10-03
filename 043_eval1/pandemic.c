@@ -128,14 +128,18 @@ void printCountryWithMax(country_t * countries,
   }
   unsigned daymax[n_countries];
   unsigned tempmax = 0;
+  // unsigned tempmax_c = 0;
   size_t index = 0;
   for (size_t i = 0; i < n_countries; i++) {
     for (size_t j = 0; j < n_days; j++) {
       if (data[i][j] > tempmax) {
         tempmax = data[i][j];
       }
-      daymax[i] = tempmax;
+      //tempmax_c=tempmax>tempmax_c? tempmax:tempmax_c;
     }
+    daymax[i] = tempmax;
+  }
+  {
     for (size_t k = 0; k < n_countries; k++) {
       if (daymax[k] > tempmax) {
         index = k;
