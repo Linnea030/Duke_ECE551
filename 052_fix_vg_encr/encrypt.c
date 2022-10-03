@@ -5,7 +5,7 @@
 
 void encrypt(FILE * f, int key, FILE * outfile) {
   char * line = NULL;
-  size_t sz = 0;
+  size_t sz;
   while (getline(&line, &sz, f) >= 0) {
     char * ptr = line;
     while (*ptr != '\0') {
