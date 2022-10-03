@@ -126,8 +126,9 @@ void printCountryWithMax(country_t * countries,
     printf("n_days is invalid\n");
     exit(EXIT_FAILURE);
   }
-  unsigned daymax[n_countries];
+  // unsigned daymax[n_countries];
   unsigned tempmax = 0;
+  unsigned max = 0;
   size_t index = 0;
   for (size_t i = 0; i < n_countries; i++) {
     for (size_t j = 0; j < n_days; j++) {
@@ -135,14 +136,17 @@ void printCountryWithMax(country_t * countries,
         tempmax = data[i][j];
       }
     }
-    daymax[i] = tempmax;
+    if (max < tempmax) {
+      max = tempmax;
+      index = i;
+    }
   }
-  tempmax = 0;
-  for (size_t k = 0; k < n_countries; k++) {
+  // tempmax = 0;
+  /*  for (size_t k = 0; k < n_countries; k++) {
     if (daymax[k] >= tempmax) {
       index = k;
       tempmax = daymax[k];
     }
-  }
+    }*/
   printf("%s has the most daily cases with %u\n", countries[index].name, tempmax);
 }
