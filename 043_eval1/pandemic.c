@@ -88,6 +88,22 @@ void calcRunningAvg(unsigned * data, size_t n_days, double * avg) {
 
 void calcCumulative(unsigned * data, size_t n_days, uint64_t pop, double * cum) {
   //WRITE ME
+  //If data is null
+  if (data == NULL) {
+    printf("There is no input data!\n");
+    exit(EXIT_FAILURE);
+  }
+  //If population is zero
+  if (pop == 0) {
+    printf("Population is zero!\n");
+    exit(EXIT_FAILURE);
+  }
+  size_t base = 100000;  //per 100,000 people
+  unsigned sum = 0;
+  for (size_t i = 0; i < n_days; i++) {
+    sum += data[i];
+    cum[i] = (double)sum / pop / base;
+  }
 }
 
 void printCountryWithMax(country_t * countries,
