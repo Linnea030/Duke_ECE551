@@ -1,6 +1,6 @@
-Grading at 10/03/2022:03:34:24.305683
-For commit ID bf3724604224082a3f892349c4c88d74061b2e28
-Grading at Sun Oct  2 11:34:23 PM EDT 2022
+Grading at 10/03/2022:03:38:55.664903
+For commit ID 4ab983bdd98a4e37ff5fb6c052da70ce64320fdb
+Grading at Sun Oct  2 11:38:54 PM EDT 2022
 
 Compiling 
 rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
@@ -9,6 +9,11 @@ gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printRunningAvg.o -o pr
 gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCumulative.o -o printCumulative
 gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printDailyMax.o -o printDailyMax
 Running your test cases
-Cannot proceed without testcases.txt
++-----------------------------------------------------------------------+
+Test case printCountries population.csv
+Your file matched the expected output
+
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
