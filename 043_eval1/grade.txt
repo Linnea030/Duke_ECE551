@@ -1,6 +1,6 @@
-Grading at 10/03/2022:04:54:07.977712
+Grading at 10/03/2022:04:54:20.588091
 For commit ID cc5a72d835e10ed771aafd133fc2de85c163601f
-Grading at Mon Oct  3 12:54:05 AM EDT 2022
+Grading at Mon Oct  3 12:54:18 AM EDT 2022
 
 Compiling 
 rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
