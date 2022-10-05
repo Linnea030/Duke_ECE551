@@ -1,6 +1,6 @@
-Grading at 10/05/2022:03:46:09.223424
-For commit ID 0c0d02955c6e64b08e748a2e66f6837f76cf0468
-Grading at Tue Oct  4 11:46:03 PM EDT 2022
+Grading at 10/05/2022:04:09:35.589966
+For commit ID 4e9c81948e34b9babd4aa68d11392cd52a612204
+Grading at Wed Oct  5 12:09:29 AM EDT 2022
 
 Compiling 
 rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
@@ -11,22 +11,16 @@ gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printDailyMax.o -o prin
 Running your test cases
 +-----------------------------------------------------------------------+
 Test case printCountries invalid.csv
-Invalid input of population part, it is not a digit number!
-No data for population!
-Your program did not indicate a failure case
+Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries invalid1.csv
-Invalid input of population part, it is not a digit number!
-China: 12
-Your program did not indicate a failure case
+Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries invalid2.csv
-The format of this input  is invalid!
-Your program did not indicate a failure case
+Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries invalid3.csv
-The format of this input  is invalid!
-Your program did not indicate a failure case
+Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries invalid4.csv
 Our printCountries does not consider this an error case
