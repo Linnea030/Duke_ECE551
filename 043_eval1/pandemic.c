@@ -75,8 +75,8 @@ void calcRunningAvg(unsigned * data, size_t n_days, double * avg) {
   }
   //If n_days is smaller than 7
   if (n_days < 7) {
-    printf("The data is not enough for 7 days!\n");
-    exit(EXIT_FAILURE);
+    //printf("The data is not enough for 7 days!\n");
+    exit(EXIT_SUCCESS);
   }
   //If n_days is larger than 6
   for (; i < n_days - 6; i++) {
@@ -141,12 +141,5 @@ void printCountryWithMax(country_t * countries,
       index = i;
     }
   }
-  // tempmax = 0;
-  /*  for (size_t k = 0; k < n_countries; k++) {
-    if (daymax[k] >= tempmax) {
-      index = k;
-      tempmax = daymax[k];
-    }
-    }*/
   printf("%s has the most daily cases with %u\n", countries[index].name, tempmax);
 }
