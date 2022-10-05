@@ -10,7 +10,6 @@ printCountries
 printRunningAvg
 printRunningAvg population.csv
 printRunningAvg daily_small.csv
-printRunningAvg population.csv ivalid11.csv
 
 printCumulative
 printCumulative population.csv
@@ -25,3 +24,4 @@ printCountries population.csv
 printRunningAvg population.csv daily_small.csv
 printCumulative population.csv daily_small.csv
 printDailyMax population.csv daily_small.csv
+printRunningAvg population.csv ivalid11.csv
