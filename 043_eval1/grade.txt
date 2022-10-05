@@ -1,6 +1,6 @@
-Grading at 10/05/2022:04:21:27.192026
-For commit ID 4cc85a706446e412bd2072d9c3894a0eb3927c64
-Grading at Wed Oct  5 12:21:20 AM EDT 2022
+Grading at 10/05/2022:04:36:30.280564
+For commit ID e3f98516b4ed989ec29e64de93ebc436cccbc178
+Grading at Wed Oct  5 12:36:16 AM EDT 2022
 
 Compiling 
 rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
@@ -26,6 +26,36 @@ Test case printCountries invalid4.csv
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries invalid5.csv
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case printCountries 
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case printRunningAvg 
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case printRunningAvg population.csv
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case printRunningAvg daily_small.csv
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case printCumulative 
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case printCumulative population.csv
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case printCumulative daily_small.csv
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case printDailyMax 
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case printDailyMax population.csv
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case printDailyMax daily_small.csv
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries population.csv
