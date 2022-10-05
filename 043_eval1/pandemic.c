@@ -6,7 +6,7 @@ country_t parseLine(char * line) {
   //WRITE ME
   //If there is no input, report error and exit
   if (line == NULL) {
-    printf("There is no input!\n");
+    fprintf(stderr, "There is no input!\n");
     exit(EXIT_FAILURE);
   }
 
@@ -30,7 +30,7 @@ country_t parseLine(char * line) {
 
   //If there is no comma or the data of population is null, report and exit
   if (line[i] == '\0' || line[i] == '\n') {
-    printf("The format of this input  is invalid!\n");
+    fprintf(stderr, "The format of this input is invalid!\n");
     exit(EXIT_FAILURE);
   }
 
@@ -40,7 +40,8 @@ country_t parseLine(char * line) {
   while (line[i] != '\0' && line[i] != '\n') {
     //If population number is not a digit number, report error and exit
     if (line[i] < '0' || line[i] > '9') {
-      printf("Invalid input of population part, it is not a digit number!\n");
+      fprintf(stderr, "Invalid input of population part, it is not a digit number!\n");
+      exit(EXIT_FAILURE);
     }
     population_c[i - j] = line[i];
     i++;  //count i
@@ -50,11 +51,11 @@ country_t parseLine(char * line) {
 
   //If there is nothing in the line,report error and exit
   if (ans.name[0] == '\0') {
-    printf("No data for country name!\n");
+    fprintf(stderr, "No data for country name!\n");
     exit(EXIT_FAILURE);
   }
   if (ans.population == 0) {
-    printf("No data for population!\n");
+    fprintf(stderr, "No data for population!\n");
     exit(EXIT_FAILURE);
   }
   return ans;
@@ -65,22 +66,22 @@ void calcRunningAvg(unsigned * data, size_t n_days, double * avg) {
   size_t i = 0;  //count for days
   //If there is no data
   if (data == NULL) {
-    printf("No data in the array!\n");
+    fprintf(stderr, "No data in the array!\n");
     exit(EXIT_FAILURE);
   }
   //If there is no data in array
   if (n_days == 0) {
-    printf("The size of data is zero!\n");
+    fprintf(stderr, "The size of data is zero!\n");
     exit(EXIT_FAILURE);
   }
   //If n_days is smaller than 7
   if (n_days < 7) {
     //printf("The data is not enough for 7 days!\n");
-    exit(EXIT_SUCCESS);
+    return;
   }
   //If avg is NULL, no array to write into
   if (avg == NULL) {
-    printf("The array to write into is NULL!\n");
+    fprintf(stderr, "The array to write into is NULL!\n");
     exit(EXIT_FAILURE);
   }
   //If n_days is larger than 6
@@ -95,22 +96,22 @@ void calcCumulative(unsigned * data, size_t n_days, uint64_t pop, double * cum) 
   //WRITE ME
   //If data is null
   if (data == NULL) {
-    printf("There is no input data!\n");
+    fprintf(stderr, "There is no input data!\n");
     exit(EXIT_FAILURE);
   }
   //If population is zero
   if (pop == 0) {
-    printf("Population is zero!\n");
+    fprintf(stderr, "Population is zero!\n");
     exit(EXIT_FAILURE);
   }
   //If there is no data cases
   if (n_days == 0) {
-    printf("There is no data cases!\n");
+    fprintf(stderr, "There is no data cases!\n");
     exit(EXIT_FAILURE);
   }
   //If cum is NULL, no array to write into
   if (cum == NULL) {
-    printf("The array to write into is NULL!\n");
+    fprintf(stderr, "The array to write into is NULL!\n");
     exit(EXIT_FAILURE);
   }
 
@@ -130,22 +131,22 @@ void printCountryWithMax(country_t * countries,
   //WRITE ME
   //If there is no data
   if (data == NULL) {
-    printf("There is no input data!\n");
+    fprintf(stderr, "There is no input data!\n");
     exit(EXIT_FAILURE);
   }
   //If there is no country
   if (countries == NULL) {
-    printf("There is no country!\n");
+    fprintf(stderr, "There is no country!\n");
     exit(EXIT_FAILURE);
   }
   //If the n_days is invalid
   if (n_days == 0) {
-    printf("n_days is invalid!\n");
+    fprintf(stderr, "n_days is invalid!\n");
     exit(EXIT_FAILURE);
   }
   //If the n_countries is invalid
   if (n_countries == 0) {
-    printf("n_countries is invalid!\n");
+    fprintf(stderr, "n_countries is invalid!\n");
     exit(EXIT_FAILURE);
   }
   unsigned tempMax = 0;
