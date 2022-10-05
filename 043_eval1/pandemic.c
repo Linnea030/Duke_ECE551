@@ -78,6 +78,11 @@ void calcRunningAvg(unsigned * data, size_t n_days, double * avg) {
     //printf("The data is not enough for 7 days!\n");
     exit(EXIT_SUCCESS);
   }
+  //If avg is NULL, no array to write into
+  if (avg == NULL) {
+    printf("The array to write into is NULL!\n");
+    exit(EXIT_FAILURE);
+  }
   //If n_days is larger than 6
   for (; i < n_days - 6; i++) {
     avg[i] = (data[i] + data[i + 1] + data[i + 2] + data[i + 3] + data[i + 4] +
@@ -98,11 +103,23 @@ void calcCumulative(unsigned * data, size_t n_days, uint64_t pop, double * cum) 
     printf("Population is zero!\n");
     exit(EXIT_FAILURE);
   }
+  //If there is no data cases
+  if (n_days == 0) {
+    printf("There is no data cases!\n");
+    exit(EXIT_FAILURE);
+  }
+  //If cum is NULL, no array to write into
+  if (cum == NULL) {
+    printf("The array to write into is NULL!\n");
+    exit(EXIT_FAILURE);
+  }
+
   size_t base = 100000;  //per 100,000 people
   unsigned sum = 0;
+
   for (size_t i = 0; i < n_days; i++) {
     sum += data[i];
-    cum[i] = (double)sum / pop * base;
+    cum[i] = (double)sum / pop * base;  //the cumulative cases per 100,000 people
   }
 }
 
@@ -122,24 +139,30 @@ void printCountryWithMax(country_t * countries,
     exit(EXIT_FAILURE);
   }
   //If the n_days is invalid
-  if (n_days < 0) {
-    printf("n_days is invalid\n");
+  if (n_days == 0) {
+    printf("n_days is invalid!\n");
     exit(EXIT_FAILURE);
   }
-  // unsigned daymax[n_countries];
-  unsigned tempmax = 0;
+  //If the n_countries is invalid
+  if (n_countries == 0) {
+    printf("n_countries is invalid!\n");
+    exit(EXIT_FAILURE);
+  }
+  unsigned tempMax = 0;
   unsigned max = 0;
   size_t index = 0;
+  //using for loop to traverse the whole array
   for (size_t i = 0; i < n_countries; i++) {
     for (size_t j = 0; j < n_days; j++) {
-      if (data[i][j] > tempmax) {
-        tempmax = data[i][j];
+      if (data[i][j] > tempMax) {  //if there is a larger one, update tempMax
+        tempMax = data[i][j];
       }
     }
-    if (max < tempmax) {
-      max = tempmax;
+    if (max <
+        tempMax) {  //if tempMax(for the row) is larger than Max(for the whole array), update Max
+      max = tempMax;
       index = i;
     }
   }
-  printf("%s has the most daily cases with %u\n", countries[index].name, tempmax);
+  printf("%s has the most daily cases with %u\n", countries[index].name, tempMax);
 }
