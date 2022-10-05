@@ -27,7 +27,11 @@ country_t parseLine(char * line) {
     ans.name[i] = line[i];  //put char into name
     i++;                    //count i
   }
-
+  //If country name size is too big
+  if (i > 64) {
+    fprintf(stderr, "The line of country name is out of range!\n");
+    exit(EXIT_FAILURE);
+  }
   //If there is no comma or the data of population is null, report and exit
   if (line[i] == '\0' || line[i] == '\n') {
     fprintf(stderr, "The format of this input is invalid!\n");
