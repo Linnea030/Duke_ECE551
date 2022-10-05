@@ -1,4 +1,13 @@
+#error
+printCountries invalid.csv
+printCountries invalid1.csv
+printCountries invalid2.csv
+printCountries invalid3.csv
+printCountries invalid4.csv
+
+#success
 printCountries population.csv
+
 printRunningAvg population.csv daily_small.csv
 printCumulative population.csv daily_small.csv
 printDailyMax population.csv daily_small.csv
