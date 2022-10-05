@@ -1,6 +1,6 @@
-Grading at 10/05/2022:03:28:44.661312
-For commit ID 6b4d50ee276c4594dbece7e6f708650ff0a9ff76
-Grading at Tue Oct  4 11:28:41 PM EDT 2022
+Grading at 10/05/2022:03:46:09.223424
+For commit ID 0c0d02955c6e64b08e748a2e66f6837f76cf0468
+Grading at Tue Oct  4 11:46:03 PM EDT 2022
 
 Compiling 
 rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
@@ -9,6 +9,27 @@ gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printRunningAvg.o -o pr
 gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCumulative.o -o printCumulative
 gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printDailyMax.o -o printDailyMax
 Running your test cases
++-----------------------------------------------------------------------+
+Test case printCountries invalid.csv
+Invalid input of population part, it is not a digit number!
+No data for population!
+Your program did not indicate a failure case
++-----------------------------------------------------------------------+
+Test case printCountries invalid1.csv
+Invalid input of population part, it is not a digit number!
+China: 12
+Your program did not indicate a failure case
++-----------------------------------------------------------------------+
+Test case printCountries invalid2.csv
+The format of this input  is invalid!
+Your program did not indicate a failure case
++-----------------------------------------------------------------------+
+Test case printCountries invalid3.csv
+The format of this input  is invalid!
+Your program did not indicate a failure case
++-----------------------------------------------------------------------+
+Test case printCountries invalid4.csv
+Our printCountries does not consider this an error case
 +-----------------------------------------------------------------------+
 Test case printCountries population.csv
 Your file matched the expected output
@@ -22,7 +43,7 @@ Your file matched the expected output
 Test case printDailyMax population.csv daily_small.csv
 Your file matched the expected output
 
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
