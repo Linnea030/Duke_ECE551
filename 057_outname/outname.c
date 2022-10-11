@@ -10,6 +10,7 @@ char * computeOutputFileName(const char * inputName) {
   char * add = ".count\0";
   char * output;  // = malloc((size + strlen(add)) * sizeof(*output));
   output = strndup(inputName, size);
+  output = realloc(output, (size + 8) * sizeof(*output));
   strcpy(output + size, add);
   return output;
 }
