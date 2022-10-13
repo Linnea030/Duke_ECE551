@@ -23,7 +23,7 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
       *line1 = '\0';
     }
     addCount(word, lookupValue(kvPairs, line));
-    //free(line);
+    free(line);
     //line = NULL;
   }
   free(line);
