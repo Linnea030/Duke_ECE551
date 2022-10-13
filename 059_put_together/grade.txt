@@ -1,6 +1,6 @@
-Grading at 10/13/2022:23:31:21.808222
-For commit ID ccb58cd45f40d0720851214b9d94f59b281f3f37
-Grading at Thu Oct 13 07:31:16 PM EDT 2022
+Grading at 10/13/2022:23:43:07.219790
+For commit ID bd823d55cd991282d1815df61e5cb32ec79a368d
+Grading at Thu Oct 13 07:43:02 PM EDT 2022
 Attempting to compile:
 rm -f  counts.o  kv.o  main.o  outname.o count_values *~
 gcc -c -Wall -Werror -std=gnu99 -pedantic -ggdb3 counts.c
