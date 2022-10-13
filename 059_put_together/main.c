@@ -18,6 +18,10 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
   size_t sz = 0;
   while (getline(&line, &sz, f) > 0) {
     //lookupValue(kvPairs, line);
+    char * line1 = strchr(line, '\n');
+    if (line1 != NULL) {
+      *line1 = '\0';
+    }
     addCount(word, lookupValue(kvPairs, line));
     free(line);
     line = NULL;
