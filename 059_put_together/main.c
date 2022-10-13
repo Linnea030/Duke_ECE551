@@ -18,17 +18,17 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
   size_t sz = 0;
   while (getline(&line, &sz, f) > 0) {
     //lookupValue(kvPairs, line);
-    char * line1 = strchr(line, '\n');
-    if (line1 != NULL) {
-      *line1 = '\0';
-    }
+    //    char * line1 = strchr(line, '\n');
+    //if (line1 != NULL) {
+    //  *line1 = '\0';
+    //}
     addCount(word, lookupValue(kvPairs, line));
     free(line);
     line = NULL;
   }
   free(line);
-  int n = fclose(f);
-  if (n != 0) {
+  //int n = fclose(f);
+  if (fclose(f) != 0) {
     fprintf(stderr, "Failed to close");
     exit(EXIT_FAILURE);
   }
@@ -60,8 +60,8 @@ int main(int argc, char ** argv) {
     //print the counts from c into the FILE f
     printCounts(c, f);
     //close f
-    int n = fclose(f);
-    if (n != 0) {
+    //int n = fclose(f);
+    if (fclose(f) != 0) {
       fprintf(stderr, "Failed to close");
       exit(EXIT_FAILURE);
     }
