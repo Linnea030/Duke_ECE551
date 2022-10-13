@@ -11,7 +11,7 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
   FILE * f = fopen(filename, "r");
   if (f == NULL) {
     fprintf(stderr, "No such file");
-    exit(EXIT_FAILURE);
+    return NULL;
   }
   counts_t * word = createCounts();
   char * line = NULL;
@@ -38,7 +38,7 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
 int main(int argc, char ** argv) {
   //WRITE ME (plus add appropriate error checking!)
   //read the key/value pairs from the file named by argv[1] (call the result kv)
-  if (argc <= 2) {
+  if (argc < 2) {
     fprintf(stderr, "no argc");
     exit(EXIT_FAILURE);
   }
