@@ -52,6 +52,7 @@ kvarray_t * readKVs(const char * fname) {
     free(line);
     line = NULL;
   }
+  free(line);
   //  free(line);
   int result = fclose(f);
   assert(result == 0);
