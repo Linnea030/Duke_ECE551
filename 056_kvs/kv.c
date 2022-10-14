@@ -49,8 +49,10 @@ kvarray_t * readKVs(const char * fname) {
     //realloc space for answer->pairs because line is increasing
     answer->pairs[answer->size - 1] = getPair(line);
     //getPair from other function
+    free(line);
+    line = NULL;
   }
-  free(line);
+  //  free(line);
   int result = fclose(f);
   assert(result == 0);
   return answer;
