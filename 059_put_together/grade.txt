@@ -1,6 +1,6 @@
-Grading at 10/14/2022:18:51:16.376831
-For commit ID 946a56ad78730a6c051a1b38f492d410ad1aa56e
-Grading at Fri Oct 14 02:51:11 PM EDT 2022
+Grading at 10/14/2022:18:57:23.843748
+For commit ID b961b910cbe8b2bec0481b0ace13df1c8c73fe9d
+Grading at Fri Oct 14 02:57:18 PM EDT 2022
 Attempting to compile:
 rm -f  counts.o  kv.o  main.o  outname.o count_values *~
 gcc -c -Wall -Werror -std=gnu99 -pedantic -ggdb3 counts.c
@@ -15,34 +15,33 @@ testcase1 passed, your program successfully indicated a failure
 valgrind was clean
 #################################################
 testcase2:
-Line_6_did_not_match
-Your file did not match the expected ouput
+Your file matched the expected output
 Comparing file list1a.txt.counts with answer
 Your output is correct
 Comparing file list1b.txt.counts with answer
-Line_7_did_not_match
-Your file did not match the expected ouput
-Your output is incorrect
+Your file matched the expected output
+Your output is correct
+  - Valgrind was clean (no errors, no memory leaks)
+valgrind was clean
 #################################################
 testcase3:
 Your file matched the expected output
 Comparing file list2a.txt.counts with answer
 Your output is correct
 Comparing file list2b.txt.counts with answer
-Line_5_did_not_match
-Your file did not match the expected ouput
-Your output is incorrect
+Your file matched the expected output
+Your output is correct
 Comparing file list2c.txt.counts with answer
-Line_5_did_not_match
-Your file did not match the expected ouput
-Your output is incorrect
+Your file matched the expected output
+Your output is correct
+  - Valgrind was clean (no errors, no memory leaks)
+valgrind was clean
 #################################################
 testcase4:
-Line_6_did_not_match
-Your file did not match the expected ouput
+Your file matched the expected output
 Comparing file list3a.txt.counts with answer
 Your output is correct
   - Valgrind was clean (no errors, no memory leaks)
 valgrind was clean
 
-Overall Grade: D
+Overall Grade: A
