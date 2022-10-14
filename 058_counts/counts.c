@@ -36,7 +36,7 @@ void printCounts(counts_t * c, FILE * outFile) {
     fprintf(outFile, "%s: %d\n", c->array[i].string, c->array[i].count);
   }
   if (c->unknown != 0) {
-    fprintf(outFile, "<unknow> : %d\n", c->unknown);
+    fprintf(outFile, "<unknown> : %d\n", c->unknown);
   }
 }
 
