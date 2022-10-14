@@ -24,6 +24,8 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
     }
     char * value = lookupValue(kvPairs, key);
     addCount(answer, value);
+    free(key);
+    key = NULL;
   }
   free(key);
   assert(fclose(f) == 0);
