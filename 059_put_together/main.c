@@ -13,23 +13,22 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
     fprintf(stderr, "No such file");
     return NULL;
   }
-  counts_t * answer = createCounts();
-  //for every key in file
-  char * key = NULL;
+  counts_t * res = createCounts();
+  char * line = NULL;
   size_t sz;
-  while (getline(&key, &sz, f) >= 0) {
-    char * p = strchr(key, '\n');
-    if (p != NULL) {
-      *p = '\0';
+  while (getline(&line, &sz, f) >= 0) {
+    char * line1 = strchr(line, '\n');
+    if (line1 != NULL) {
+      *line1 = '\0';
     }
-    char * value = lookupValue(kvPairs, key);
-    addCount(answer, value);
-    free(key);
-    key = NULL;
+    char * name = lookupValue(kvPairs, line);
+    addCount(res, name);
+    //free(line);
+    //line = NULL;
   }
-  free(key);
+  free(line);
   assert(fclose(f) == 0);
-  return answer;
+  return res;
 }
 
 int main(int argc, char ** argv) {
