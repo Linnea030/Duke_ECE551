@@ -62,10 +62,11 @@ int main(int argc, char ** argv) {
           k++;
           if (k >= len) {
             free(res);
-            for (size_t j = 0; j < i; j++) {
-              free(larray[j]);
-            }
-            free(larray);
+            freeArr(i, larray);
+            //for (size_t j = 0; j < i; j++) {
+            //free(larray[j]);
+            //}
+            //free(larray);
             fprintf(stderr, "No matching underscore");
             exit(EXIT_FAILURE);
           }
@@ -78,10 +79,11 @@ int main(int argc, char ** argv) {
     printf("%s", res);
     free(res);
   }
-  for (size_t j = 0; j < i; j++) {
-    free(larray[j]);
-  }
-  free(larray);
+  // for (size_t j = 0; j < i; j++) {
+  //free(larray[j]);
+  //}
+  //free(larray);
+  freeArr(i, larray);
   assert(fclose(f) == 0);
   return EXIT_SUCCESS;
 }
