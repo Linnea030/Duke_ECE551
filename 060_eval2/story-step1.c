@@ -19,7 +19,10 @@ int main(int argc, char ** argv) {
 
   FILE * f = fopen(argv[1], "r");
   //open file is fail
-
+  if (f == NULL) {
+    fprintf(stderr, "Input file is NULL\n");
+    exit(EXIT_FAILURE);
+  }
   char * line = NULL;
   char ** larray = NULL;
   size_t sz = 0;
