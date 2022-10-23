@@ -1,6 +1,6 @@
-Grading at 10/23/2022:05:57:09.047294
-For commit ID 5a1ffeadedac4c096dd1c387e4d27bdd53214a9c
-Grading at Sun Oct 23 01:57:08 AM EDT 2022
+Grading at 10/23/2022:06:03:20.292111
+For commit ID 5d8d4fad57bfc0a1546c51f7741c25e6b25309a1
+Grading at Sun Oct 23 02:03:19 AM EDT 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -21,56 +21,56 @@ Now running YOUR tests for step 1
 Your output looks good. Lets check valgrind
   - Valgrind reported errors
 Valgrind reported errors or memory leaks:
-==158173== Memcheck, a memory error detector
-==158173== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==158173== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==158173== Command: ./story-step1 story.txt
-==158173== Parent PID: 158171
-==158173== 
-==158173== Conditional jump or move depends on uninitialised value(s)
-==158173==    at 0x484DC80: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==158173==    by 0x1094E0: main (story-step1.c:44)
-==158173== 
-==158173== Invalid free() / delete / delete[] / realloc()
-==158173==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==158173==    by 0x109564: main (story-step1.c:53)
-==158173==  Address 0x4a90c80 is 0 bytes inside a block of size 472 free'd
-==158173==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==158173==    by 0x109664: main (story-step1.c:70)
-==158173==  Block was alloc'd at
-==158173==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==158173==    by 0x10962B: main (story-step1.c:67)
-==158173== 
-==158173== Invalid write of size 1
-==158173==    at 0x109582: main (story-step1.c:54)
-==158173==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==158173== 
-==158173== 
-==158173== Process terminating with default action of signal 11 (SIGSEGV)
-==158173==  Access not within mapped region at address 0x0
-==158173==    at 0x109582: main (story-step1.c:54)
-==158173==  If you believe this happened as a result of a stack
-==158173==  overflow in your program's main thread (unlikely but
-==158173==  possible), you can try to increase the size of the
-==158173==  main thread stack using the --main-stacksize= flag.
-==158173==  The main thread stack size used in this run was 8388608.
-==158173== 
-==158173== HEAP SUMMARY:
-==158173==     in use at exit: 8,920 bytes in 6 blocks
-==158173==   total heap usage: 68 allocs, 62 frees, 11,232 bytes allocated
-==158173== 
-==158173== LEAK SUMMARY:
-==158173==    definitely lost: 0 bytes in 0 blocks
-==158173==    indirectly lost: 0 bytes in 0 blocks
-==158173==      possibly lost: 0 bytes in 0 blocks
-==158173==    still reachable: 8,920 bytes in 6 blocks
-==158173==         suppressed: 0 bytes in 0 blocks
-==158173== Reachable blocks (those to which a pointer was found) are not shown.
-==158173== To see them, rerun with: --leak-check=full --show-leak-kinds=all
-==158173== 
-==158173== Use --track-origins=yes to see where uninitialised values come from
-==158173== For lists of detected and suppressed errors, rerun with: -s
-==158173== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)
+==161238== Memcheck, a memory error detector
+==161238== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==161238== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==161238== Command: ./story-step1 story.txt
+==161238== Parent PID: 161237
+==161238== 
+==161238== Conditional jump or move depends on uninitialised value(s)
+==161238==    at 0x484DC80: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==161238==    by 0x109514: main (story-step1.c:47)
+==161238== 
+==161238== Invalid free() / delete / delete[] / realloc()
+==161238==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==161238==    by 0x109598: main (story-step1.c:56)
+==161238==  Address 0x4a90c80 is 0 bytes inside a block of size 472 free'd
+==161238==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==161238==    by 0x109698: main (story-step1.c:73)
+==161238==  Block was alloc'd at
+==161238==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==161238==    by 0x10965F: main (story-step1.c:70)
+==161238== 
+==161238== Invalid write of size 1
+==161238==    at 0x1095B6: main (story-step1.c:57)
+==161238==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==161238== 
+==161238== 
+==161238== Process terminating with default action of signal 11 (SIGSEGV)
+==161238==  Access not within mapped region at address 0x0
+==161238==    at 0x1095B6: main (story-step1.c:57)
+==161238==  If you believe this happened as a result of a stack
+==161238==  overflow in your program's main thread (unlikely but
+==161238==  possible), you can try to increase the size of the
+==161238==  main thread stack using the --main-stacksize= flag.
+==161238==  The main thread stack size used in this run was 8388608.
+==161238== 
+==161238== HEAP SUMMARY:
+==161238==     in use at exit: 8,920 bytes in 6 blocks
+==161238==   total heap usage: 68 allocs, 62 frees, 11,232 bytes allocated
+==161238== 
+==161238== LEAK SUMMARY:
+==161238==    definitely lost: 0 bytes in 0 blocks
+==161238==    indirectly lost: 0 bytes in 0 blocks
+==161238==      possibly lost: 0 bytes in 0 blocks
+==161238==    still reachable: 8,920 bytes in 6 blocks
+==161238==         suppressed: 0 bytes in 0 blocks
+==161238== Reachable blocks (those to which a pointer was found) are not shown.
+==161238== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==161238== 
+==161238== Use --track-origins=yes to see where uninitialised values come from
+==161238== For lists of detected and suppressed errors, rerun with: -s
+==161238== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)
 
 Step 2
 Checking that story-step2 compiles
