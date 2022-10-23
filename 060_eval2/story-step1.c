@@ -36,7 +36,7 @@ int main(int argc, char ** argv) {
   free(line);
 
   for (size_t j = 0; j < i; j++) {
-    char * res;
+    char * res = NULL;
     size_t len = strlen(larray[j]);
     size_t len_res = 0;
     const char * cword;
