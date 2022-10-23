@@ -1,6 +1,6 @@
-Grading at 10/23/2022:06:03:20.292111
-For commit ID 5d8d4fad57bfc0a1546c51f7741c25e6b25309a1
-Grading at Sun Oct 23 02:03:19 AM EDT 2022
+Grading at 10/23/2022:06:08:20.237931
+For commit ID 8c3ee9644db2aa232df089b3cdbab93c5dc3db94
+Grading at Sun Oct 23 02:08:19 AM EDT 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -19,58 +19,30 @@ Now running YOUR tests for step 1
 1.1: Current test is story-step1 story.txt
 -----------------------------
 Your output looks good. Lets check valgrind
-  - Valgrind reported errors
+  - Valgrind showed memory leaks
 Valgrind reported errors or memory leaks:
-==161238== Memcheck, a memory error detector
-==161238== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==161238== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==161238== Command: ./story-step1 story.txt
-==161238== Parent PID: 161237
-==161238== 
-==161238== Conditional jump or move depends on uninitialised value(s)
-==161238==    at 0x484DC80: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==161238==    by 0x109514: main (story-step1.c:47)
-==161238== 
-==161238== Invalid free() / delete / delete[] / realloc()
-==161238==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==161238==    by 0x109598: main (story-step1.c:56)
-==161238==  Address 0x4a90c80 is 0 bytes inside a block of size 472 free'd
-==161238==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==161238==    by 0x109698: main (story-step1.c:73)
-==161238==  Block was alloc'd at
-==161238==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==161238==    by 0x10965F: main (story-step1.c:70)
-==161238== 
-==161238== Invalid write of size 1
-==161238==    at 0x1095B6: main (story-step1.c:57)
-==161238==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==161238== 
-==161238== 
-==161238== Process terminating with default action of signal 11 (SIGSEGV)
-==161238==  Access not within mapped region at address 0x0
-==161238==    at 0x1095B6: main (story-step1.c:57)
-==161238==  If you believe this happened as a result of a stack
-==161238==  overflow in your program's main thread (unlikely but
-==161238==  possible), you can try to increase the size of the
-==161238==  main thread stack using the --main-stacksize= flag.
-==161238==  The main thread stack size used in this run was 8388608.
-==161238== 
-==161238== HEAP SUMMARY:
-==161238==     in use at exit: 8,920 bytes in 6 blocks
-==161238==   total heap usage: 68 allocs, 62 frees, 11,232 bytes allocated
-==161238== 
-==161238== LEAK SUMMARY:
-==161238==    definitely lost: 0 bytes in 0 blocks
-==161238==    indirectly lost: 0 bytes in 0 blocks
-==161238==      possibly lost: 0 bytes in 0 blocks
-==161238==    still reachable: 8,920 bytes in 6 blocks
-==161238==         suppressed: 0 bytes in 0 blocks
-==161238== Reachable blocks (those to which a pointer was found) are not shown.
-==161238== To see them, rerun with: --leak-check=full --show-leak-kinds=all
-==161238== 
-==161238== Use --track-origins=yes to see where uninitialised values come from
-==161238== For lists of detected and suppressed errors, rerun with: -s
-==161238== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)
+==164461== Memcheck, a memory error detector
+==164461== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==164461== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==164461== Command: ./story-step1 story.txt
+==164461== Parent PID: 164460
+==164461== 
+==164461== 
+==164461== HEAP SUMMARY:
+==164461==     in use at exit: 472 bytes in 1 blocks
+==164461==   total heap usage: 74 allocs, 73 frees, 11,308 bytes allocated
+==164461== 
+==164461== LEAK SUMMARY:
+==164461==    definitely lost: 0 bytes in 0 blocks
+==164461==    indirectly lost: 0 bytes in 0 blocks
+==164461==      possibly lost: 0 bytes in 0 blocks
+==164461==    still reachable: 472 bytes in 1 blocks
+==164461==         suppressed: 0 bytes in 0 blocks
+==164461== Reachable blocks (those to which a pointer was found) are not shown.
+==164461== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==164461== 
+==164461== For lists of detected and suppressed errors, rerun with: -s
+==164461== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 Step 2
 Checking that story-step2 compiles
