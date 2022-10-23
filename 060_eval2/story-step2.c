@@ -16,7 +16,6 @@ int main(int argc, char ** argv) {
     fprintf(stderr, "No input file\n");
     exit(EXIT_FAILURE);
   }
-
   FILE * f = fopen(argv[1], "r");
   //open file is fail
   if (f == NULL) {
@@ -24,7 +23,7 @@ int main(int argc, char ** argv) {
     exit(EXIT_FAILURE);
   }
   //using function to parsing the story
-  getStory_cat(f);
+
   //close file, if fail assert
   assert(fclose(f) == 0);
   return EXIT_SUCCESS;
