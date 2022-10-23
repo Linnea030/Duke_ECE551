@@ -1,3 +1,4 @@
+#include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -60,6 +61,11 @@ int main(int argc, char ** argv) {
         while (larray[j][k] != '_') {
           k++;
           if (k >= len) {
+            free(res);
+            for (size_t j = 0; j < i; j++) {
+              free(larray[j]);
+            }
+            free(larray);
             fprintf(stderr, "No matching underscore");
             exit(EXIT_FAILURE);
           }
@@ -76,5 +82,6 @@ int main(int argc, char ** argv) {
     free(larray[j]);
   }
   free(larray);
+  assert(fclose(f) == 0);
   return EXIT_SUCCESS;
 }
