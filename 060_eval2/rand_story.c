@@ -123,6 +123,7 @@ catarray_t * getWord_cat(FILE * f) {
           cat->arr[cat->n].name = temp;
           x = cat->n;  //index of categories
           cat->n++;
+          cat->arr[x].words = malloc(sizeof(*(cat->arr[x].words)));
         }
         else {
           free(temp);
