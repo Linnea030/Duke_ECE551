@@ -1,6 +1,6 @@
-Grading at 10/24/2022:00:31:41.378220
-For commit ID 910150634d3960923dcc1e430a79bad024999904
-Grading at Sun Oct 23 08:31:39 PM EDT 2022
+Grading at 10/24/2022:00:45:22.976212
+For commit ID ce07a305d6b7d2e70d889dd9e603f494899f64d2
+Grading at Sun Oct 23 08:45:21 PM EDT 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -36,29 +36,8 @@ Now running YOUR tests for step 2
 2.1: Current test is story-step2 words.txt
 -----------------------------
 Your output looks good. Lets check valgrind
-  - Valgrind reported errors
-Valgrind reported errors or memory leaks:
-==1591993== Memcheck, a memory error detector
-==1591993== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==1591993== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==1591993== Command: ./story-step2 words.txt
-==1591993== Parent PID: 1591992
-==1591993== 
-==1591993== Conditional jump or move depends on uninitialised value(s)
-==1591993==    at 0x484DC80: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1591993==    by 0x109CE4: getWord_cat (rand_story.c:144)
-==1591993==    by 0x10946C: main (story-step2.c:26)
-==1591993== 
-==1591993== 
-==1591993== HEAP SUMMARY:
-==1591993==     in use at exit: 0 bytes in 0 blocks
-==1591993==   total heap usage: 39 allocs, 39 frees, 10,041 bytes allocated
-==1591993== 
-==1591993== All heap blocks were freed -- no leaks are possible
-==1591993== 
-==1591993== Use --track-origins=yes to see where uninitialised values come from
-==1591993== For lists of detected and suppressed errors, rerun with: -s
-==1591993== ERROR SUMMARY: 3 errors from 1 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 Step 3
 Checking that story-step3 compiles
