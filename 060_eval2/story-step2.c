@@ -23,7 +23,11 @@ int main(int argc, char ** argv) {
     exit(EXIT_FAILURE);
   }
   //using function to parsing the story
+  catarray_t * res = getWord_cat(f);
+  printWords(res);
 
+  //free
+  freecat(res, res->n);
   //close file, if fail assert
   assert(fclose(f) == 0);
   return EXIT_SUCCESS;
