@@ -1,12 +1,15 @@
-Grading at 10/23/2022:20:02:11.444378
-For commit ID 85d0dde2fd2ffcdb5d136ba90a1cbc5f68b75818
-Grading at Sun Oct 23 04:02:11 PM EDT 2022
+Grading at 10/24/2022:00:26:58.948228
+For commit ID 0ca95be3d30023e2f77a2ec532cb9243c5f55383
+Grading at Sun Oct 23 08:26:58 PM EDT 2022
 Doing some basic checking for your submission
 
 Step 1
 Checking that story-step1 compiles
 rm -f *~ story-step2   story-step2.o rand_story.o
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step1.c
+gcc -o story-step1 story-step1.o rand_story.o provided.o
+rm story-step1.o
 The code did not compile!
 
 Overall Grade: NO GRADE YET
