@@ -12,7 +12,7 @@ void freeArr(size_t i, char ** larray) {
   free(larray);
 }
 
-void getStory_line(FILE * f) {
+void getStory_cat(FILE * f) {
   char * line = NULL;
   char ** larray = NULL;
   size_t sz = 0;
