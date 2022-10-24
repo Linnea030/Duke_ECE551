@@ -1,6 +1,6 @@
-Grading at 10/24/2022:00:45:22.976212
-For commit ID ce07a305d6b7d2e70d889dd9e603f494899f64d2
-Grading at Sun Oct 23 08:45:21 PM EDT 2022
+Grading at 10/24/2022:21:22:54.146130
+For commit ID 6ec78870e36b0fd609b73da3f8c76d1da38d539c
+Grading at Mon Oct 24 05:22:51 PM EDT 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -41,6 +41,27 @@ Valgrind was clean
 
 Step 3
 Checking that story-step3 compiles
+rm -f *~ story-step1  story-step2  story-step1.o story-step2.o rand_story.o
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step3.c
+gcc -o story-step3 story-step3.o rand_story.o provided.o
+rm story-step3.o
+The code compiled (good)
+Executable story-step3 exists (good)
+Now running YOUR tests for step 3
+
+3.1: Current test is story-step3 words.txt story2.txt
+-----------------------------
+It looks like you got different output from us on that case.
+Here is the diff (yours on left, ours on right):
+
+							      >	Once upon a time, there was a walrus. This walrus lived in a 
+							      >	peculiar cave. One day, it left its peculiar cave and met a w
+Your file did not match the expected ouput
+
+
+Step 4
+Checking that story-step4 compiles
 rm -f *~ story-step1  story-step2  story-step1.o story-step2.o rand_story.o
 The code did not compile!
 
