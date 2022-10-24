@@ -13,7 +13,7 @@
 //using this to free array
 void freeArr(size_t i, char ** larray);
 //using this to get the story when input is NULL
-void getStory_cat(FILE * f);
+void getStory_cat(FILE * f, catarray_t * cats);
 //compare the temp with exist name in arr
 int contains(char * temp, category_t * arr, size_t num_cat);
 //get cataarray_t from input word.txt

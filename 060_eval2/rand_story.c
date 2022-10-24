@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+//free larray[][]
 void freeArr(size_t i, char ** larray) {
   for (size_t j = 0; j < i; j++) {
     free(larray[j]);
@@ -12,7 +13,8 @@ void freeArr(size_t i, char ** larray) {
   free(larray);
 }
 
-void getStory_cat(FILE * f) {
+//get story by input category and catarray_t
+void getStory_cat(FILE * f, catarray_t * cats) {
   char * line = NULL;
   char ** larray = NULL;
   size_t sz = 0;
@@ -26,45 +28,57 @@ void getStory_cat(FILE * f) {
   free(line);
 
   for (size_t j = 0; j < i; j++) {
-    char * res = NULL;
+    char * res = NULL;  // result of story
     size_t len = strlen(larray[j]);
-    size_t len_res = 0;
+    size_t len_res = 0;  //length of each line
     const char * cword;
 
     for (size_t k = 0; k < len; k++) {
+      char * cate = NULL;  //categories of word
       if (larray[j][k] != '_') {
         res = realloc(res, (len_res + 1) * sizeof(*res));
         res[len_res] = larray[j][k];
         len_res++;
       }
       else {
-        cword = chooseWord(NULL, NULL);
-        size_t len_c = strlen(cword);
+        size_t len_cate = 0;  //length of cate
         k++;
+        while (larray[j][k] != '_') {  //if it is not underscore, save it in cate
+          cate = realloc(cate, (len_cate + 1) * sizeof(*cate));
+          cate[len_cate] = larray[j][k];
+          len_cate++;
+          if (k >= len) {  //If there is no underscore in the line
+            // free everything and quit with error
+            free(res);
+            freeArr(i, larray);
+            free(cate);
+            fprintf(stderr, "No matching underscore");
+            exit(EXIT_FAILURE);
+          }
+          k++;
+        }
+        cword = chooseWord(cate, cats);  //choose word from cats by cate
+        size_t len_c = strlen(cword);
+        free(cate);  //free categories of word
+                     //repalce cate with word in line
         for (size_t m = 0; m < len_c; m++) {
           res = realloc(res, (len_res + 1) * sizeof(*res));
           res[len_res] = cword[m];
           len_res++;
         }
-        while (larray[j][k] != '_') {
-          k++;
-          if (k >= len) {
-            free(res);
-            freeArr(i, larray);
-            fprintf(stderr, "No matching underscore");
-            exit(EXIT_FAILURE);
-          }
-        }
       }
     }
     res = realloc(res, (len_res + 1) * sizeof(*res));
-    res[len_res] = '\0';
+    res[len_res] = '\0';  //make result of story as a string
     printf("%s", res);
-    free(res);
+    free(res);  //free res
   }
-  freeArr(i, larray);
+  freeArr(i, larray);  //free larray
 }
 
+//sub function used in getWord_cat(), use it to check if name in word.txt is unique
+//if unique, return -1
+//else, return the index of exist arr which contains name
 int contains(char * temp, category_t * arr, size_t num_cat) {
   int x = -1;                             //declare index of arr
   for (size_t i = 0; i < num_cat; i++) {  //traverse to compare each name with temp
@@ -77,6 +91,7 @@ int contains(char * temp, category_t * arr, size_t num_cat) {
   return x;
 }
 
+//process with word.txt, store the word in catarray_t type value and return it
 catarray_t * getWord_cat(FILE * f) {
   char * line = NULL;
   char ** larray = NULL;
@@ -139,8 +154,6 @@ catarray_t * getWord_cat(FILE * f) {
         char * temp1 = strndup(larray[j] + index_line, m - index_line + 1);
         temp1[m - index_line] = '\0';
         //if no temp in word, realloc words in arr
-        //printf("%d",x);
-        //printf("%ld\n", cat->arr[x].n_words);
 
         cat->arr[x].words = realloc(
             cat->arr[x].words, (cat->arr[x].n_words + 1) * sizeof(*(cat->arr[x].words)));
@@ -154,6 +167,7 @@ catarray_t * getWord_cat(FILE * f) {
   return cat;
 }
 
+/*free catarray_t type value with size of n, return void*/
 void freecat(catarray_t * cat, size_t n) {
   for (size_t i = 0; i < n; i++) {
     free(cat->arr[i].name);
@@ -165,54 +179,3 @@ void freecat(catarray_t * cat, size_t n) {
   free(cat->arr);
   free(cat);
 }
-
-/* catarray_t * categories = malloc(sizeof(*categories));  //words for categories
-  size_t num_cat = 0;                                     //number of cataegories
-  //  size_t num_word = 0;  //number of words for one caraegories
-  for (size_t j = 0; j < i; j++) {
-    char temp[100000000000000];
-    size_t len_line = strlen(larray[j]);  //get length of larray, that is size of lin
-    if (strchr(larray[j], ':') == NULL) {
-      fprintf(stderr, "No : in the line %ld \n", j);
-      return NULL;
-    }
-    // categories->arr = realloc(categories->arr, (num_cat + 1) * sizeof(*categories->arr));
-    // categories->arr[num_cat].n_words = 0;
-    size_t index = 0;
-    int x = 0;  //index for name
-    for (size_t k = 0; k < len_line; k++) {
-      if (larray[j][k] == ':') {
-        temp[k] = '\0';
-        x = contains(temp, categories->arr, num_cat);
-        if (x == 0) {  //no cate in this arr, create categories
-                       //categories->arr[num_cat].name[k] = '\0';
-          categories->arr =
-              realloc(categories->arr, (num_cat + 1) * sizeof(*categories->arr));
-          categories->arr[num_cat].n_words = 0;
-          categories->arr[num_cat].name = strndup(temp, k + 1);
-          x = num_cat;  //index of categories
-          num_cat++;
-          categories->n = num_cat;  //number of categories
-        }
-        index = k;
-        //categories->arr[x].n_words++;
-        break;
-      }
-      temp[k] = larray[j][k];
-      //categories->arr[num_cat].name[k] = larray[j][k];
-    }
-    //temp=NULL;
-    //get words after :
-    for (size_t m = index + 1; m < len_line; m++) {
-      if (larray[j][m] == '\0' || larray[j][m] == '\n') {
-        temp[m - index - 1] = '\0';
-        categories->arr[x].words[categories->arr[x].n_words] = strndup(temp, m - index);
-        categories->arr[x].n_words++;
-      }
-      temp[m - index - 1] = larray[j][m];
-      //categories->arr[num_cat].words[][m-index-1] = larray[j][m];
-    }
-  }
-  freeArr(i, larray);
-  return categories;
-  }*/
