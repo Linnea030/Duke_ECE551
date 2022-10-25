@@ -271,9 +271,9 @@ catarray_t * getWord_cat(FILE * f) {
     //get word from word after :
     for (size_t m = index_line; m < len_line; m++) {
       if (larray[j][m] == '\0' || larray[j][m] == '\n') {
-        //get word after : save as temp
+        //get word after : save as temp1
         char * temp1 = strndup(larray[j] + index_line, m - index_line + 1);
-        temp1[m - index_line] = '\0';
+        temp1[m - index_line] = '\0';  //make temp1 as string
         //realloc words in arr,words can repeated at this time
         cat->arr[x].words = realloc(
             cat->arr[x].words, (cat->arr[x].n_words + 1) * sizeof(*(cat->arr[x].words)));
