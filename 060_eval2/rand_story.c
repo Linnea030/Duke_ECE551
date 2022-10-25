@@ -12,6 +12,50 @@ void freeArr(size_t i, char ** larray) {
   }
   free(larray);
 }
+//check if word is valid integer, if it is valid, return -1, else return value of cate
+int valid(char * cate, size_t len_cate) {
+  int value = atoi(cate);  //cited as AOP chapter10
+  int temp = value;
+  size_t len_value = 0;
+  //printf("%s\n", cate);
+  if (value <= 0) {  // if cate is string or not positive value
+    return -1;
+  }
+  while (temp != 0) {  //check the length of value
+    temp = temp / 10;
+    len_value++;
+  }
+  if (len_value != len_cate - 1) {  //if length of value is not equal to length of cate,
+    //there is other character in cate
+    return -1;
+  }
+  else {
+    return value;  // value is the index of word
+  }
+}
+
+//add word into tracking list cats_pro
+void addpro(const char * cword, category_t * cats_pro) {
+  cats_pro->words =
+      realloc(cats_pro->words, (cats_pro->n_words + 1) * sizeof(*(cats_pro->words)));
+  cats_pro->words[cats_pro->n_words] = strndup(cword, strlen(cword));
+  cats_pro->n_words++;
+}
+
+//choose provious word that used
+char * choosepro(size_t index, category_t * cats_pro) {
+  char * cword = NULL;
+  cword = cats_pro->words[cats_pro->n_words - index];
+  return cword;
+}
+
+void freepro(category_t * cat, size_t len_pro) {
+  for (size_t i = 0; i < len_pro; i++) {
+    free(cat->words[i]);
+  }
+  free(cat->words);
+  free(cat);
+}
 
 //get story by input category and catarray_t
 void getStory_cat(FILE * f, catarray_t * cats) {
@@ -26,6 +70,13 @@ void getStory_cat(FILE * f, catarray_t * cats) {
     i++;
   }
   free(line);
+
+  //using cats_pro to track the provious words
+  category_t * cats_pro =
+      malloc(sizeof(*cats_pro));  //using it to track the provious words
+  cats_pro->name = NULL;
+  cats_pro->words = malloc(sizeof(*(cats_pro->words)));
+  cats_pro->n_words = 0;  // initialize the variables in it
 
   for (size_t j = 0; j < i; j++) {
     char * res = NULL;  // result of story
@@ -47,6 +98,7 @@ void getStory_cat(FILE * f, catarray_t * cats) {
           cate = realloc(cate, (len_cate + 1) * sizeof(*cate));
           cate[len_cate] = larray[j][k];
           len_cate++;
+
           if (k >= len) {  //If there is no underscore in the line
             // free everything and quit with error
             free(res);
@@ -57,7 +109,30 @@ void getStory_cat(FILE * f, catarray_t * cats) {
           }
           k++;
         }
-        cword = chooseWord(cate, cats);  //choose word from cats by cate
+        //make cate as string
+        cate = realloc(cate, (len_cate + 1) * sizeof(*cate));
+        cate[len_cate] = '\0';
+        len_cate++;
+
+        //printf("%s\n", cate);
+        //check if cate is valid integer, using provious words
+        int index = valid(cate, len_cate);
+        //printf("%d\n", index);
+
+        if (index != -1) {
+          //using provious words
+          cword = choosepro(index, cats_pro);
+        }
+
+        //else, use it to choose word
+        else {
+          cword = chooseWord(cate, cats);  //choose word from cats by cate
+        }
+
+        // add cword into cats_pro
+        addpro(cword, cats_pro);
+
+        //put cword into story
         size_t len_c = strlen(cword);
         free(cate);  //free categories of word
                      //repalce cate with word in line
@@ -73,6 +148,7 @@ void getStory_cat(FILE * f, catarray_t * cats) {
     printf("%s", res);
     free(res);  //free res
   }
+  freepro(cats_pro, cats_pro->n_words);
   freeArr(i, larray);  //free larray
 }
 

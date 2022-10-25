@@ -35,9 +35,12 @@ int main(int argc, char ** argv) {
     exit(EXIT_FAILURE);
   }
   //using function to select a word
+  catarray_t * cats = getWord_cat(f1);
 
+  //using function to replace the words and generate a story
+  getStory_cat(f2, cats);
   //free
-
+  freecat(cats, cats->n);
   //close file, if fail assert
   assert(fclose(f2) == 0);
   assert(fclose(f1) == 0);
