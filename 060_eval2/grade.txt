@@ -1,11 +1,11 @@
-Grading at 10/24/2022:21:22:54.146130
-For commit ID 6ec78870e36b0fd609b73da3f8c76d1da38d539c
-Grading at Mon Oct 24 05:22:51 PM EDT 2022
+Grading at 10/25/2022:00:57:01.679732
+For commit ID 6407157af9cadf9b8d0ab7a9f0d03c944ce49319
+Grading at Mon Oct 24 08:56:58 PM EDT 2022
 Doing some basic checking for your submission
 
 Step 1
 Checking that story-step1 compiles
-rm -f *~ story-step1  story-step2  story-step1.o story-step2.o rand_story.o
+rm -f *~ story-step1  story-step2  story-step3  story-step1.o story-step2.o story-step3.o rand_story.o
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step1.c
 gcc -o story-step1 story-step1.o rand_story.o provided.o
@@ -24,7 +24,7 @@ Valgrind was clean
 
 Step 2
 Checking that story-step2 compiles
-rm -f *~ story-step1  story-step2  story-step1.o story-step2.o rand_story.o
+rm -f *~ story-step1  story-step2  story-step3  story-step1.o story-step2.o story-step3.o rand_story.o
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step2.c
 gcc -o story-step2 story-step2.o rand_story.o provided.o
@@ -41,7 +41,7 @@ Valgrind was clean
 
 Step 3
 Checking that story-step3 compiles
-rm -f *~ story-step1  story-step2  story-step1.o story-step2.o rand_story.o
+rm -f *~ story-step1  story-step2  story-step3  story-step1.o story-step2.o story-step3.o rand_story.o
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step3.c
 gcc -o story-step3 story-step3.o rand_story.o provided.o
@@ -52,17 +52,13 @@ Now running YOUR tests for step 3
 
 3.1: Current test is story-step3 words.txt story2.txt
 -----------------------------
-It looks like you got different output from us on that case.
-Here is the diff (yours on left, ours on right):
-
-							      >	Once upon a time, there was a walrus. This walrus lived in a 
-							      >	peculiar cave. One day, it left its peculiar cave and met a w
-Your file did not match the expected ouput
-
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 Step 4
 Checking that story-step4 compiles
-rm -f *~ story-step1  story-step2  story-step1.o story-step2.o rand_story.o
+rm -f *~ story-step1  story-step2  story-step3  story-step1.o story-step2.o story-step3.o rand_story.o
 The code did not compile!
 
 Overall Grade: NO GRADE YET
