@@ -10,15 +10,20 @@
 
 //any functions you want your main to use
 
+//get larray[] to save each line from the file
+char ** get_larray(FILE * f);
+
 //using this to free array
 void freeArr(size_t i, char ** larray);
 
+//delete repeated words
+void delete_word(char * cate, const char * cword, catarray_t * cats);
+
 //using this to get the story when input is NULL
-void getStory_cat(FILE * f, catarray_t * cats);
+void getStory_cat(FILE * f, catarray_t * cats, int op);
 
 //compare the temp with exist name in arr
 int contains(char * temp, category_t * arr, size_t num_cat);
-
 //get cataarray_t from input word.txt
 catarray_t * getWord_cat(FILE * f);
 

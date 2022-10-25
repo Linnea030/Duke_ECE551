@@ -24,7 +24,7 @@ int main(int argc, char ** argv) {
     exit(EXIT_FAILURE);
   }
   //using function to parsing the story
-  getStory_cat(f, NULL);
+  getStory_cat(f, NULL, 0);
   //close file, if fail assert
   assert(fclose(f) == 0);
   return EXIT_SUCCESS;

@@ -38,7 +38,7 @@ int main(int argc, char ** argv) {
   catarray_t * cats = getWord_cat(f1);
 
   //using function to replace the words and generate a story
-  getStory_cat(f2, cats);
+  getStory_cat(f2, cats, 0);
   //free
   freecat(cats, cats->n);
   //close file, if fail assert
