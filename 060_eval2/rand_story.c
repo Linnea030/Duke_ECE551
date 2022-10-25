@@ -274,8 +274,7 @@ catarray_t * getWord_cat(FILE * f) {
         //get word after : save as temp
         char * temp1 = strndup(larray[j] + index_line, m - index_line + 1);
         temp1[m - index_line] = '\0';
-        //if no temp in word, realloc words in arr
-
+        //realloc words in arr,words can repeated at this time
         cat->arr[x].words = realloc(
             cat->arr[x].words, (cat->arr[x].n_words + 1) * sizeof(*(cat->arr[x].words)));
         cat->arr[x].words[cat->arr[x].n_words] = temp1;
@@ -283,7 +282,6 @@ catarray_t * getWord_cat(FILE * f) {
         break;
       }
     }
-    printWords(cat);
   }
   freeArr(i, larray);  //free larray
   return cat;          //return result of category array
