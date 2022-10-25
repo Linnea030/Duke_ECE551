@@ -3,6 +3,10 @@ story-step1
 story-step1 words.txt
 story-step1 words.txt story.txt
 story-step1 mys1.txt
+story-step1 mys2.txt
+story-step1 mys3.txt
+story-step1 mys4.txt
+story-step1 mys5.txt
 story-step2 words.txt
 story-step2 words.txt story.txt
 story-step2
