@@ -80,13 +80,15 @@ void delete_word(char * cate, const char * cword, catarray_t * cats) {
   }
 }
 
-//get story by input category and catarray_t
+//get story by input category cats and input file f and operation code op
+//return void, this function print the new story
+//every memory is freed inside this function
 void getStory_cat(FILE * f, catarray_t * cats, int op) {
   char * line = NULL;
   char ** larray = NULL;
   size_t sz = 0;
   size_t i = 0;
-  while (getline(&line, &sz, f) >= 0) {
+  while (getline(&line, &sz, f) >= 0) {  //get each line from story
     larray = realloc(larray, (i + 1) * sizeof(*larray));
     larray[i] = line;
     line = NULL;
@@ -101,17 +103,20 @@ void getStory_cat(FILE * f, catarray_t * cats, int op) {
   cats_pro->words = malloc(sizeof(*(cats_pro->words)));
   cats_pro->n_words = 0;  // initialize the variables in it
 
+  //del is used to track whether or not we need delete the word from cat_pro
   int del = 0;
 
+  //traverse each line in file
   for (size_t j = 0; j < i; j++) {
     char * res = NULL;  // result of story
     size_t len = strlen(larray[j]);
     size_t len_res = 0;  //length of each line
-    const char * cword;
+    const char * cword;  //used to save the word which is used to replace the story blank
 
+    //traverse each character in lines
     for (size_t k = 0; k < len; k++) {
-      char * cate = NULL;  //categories of word
-      if (larray[j][k] != '_') {
+      char * cate = NULL;         //categories of word
+      if (larray[j][k] != '_') {  //if get '_' save the word between "_"
         res = realloc(res, (len_res + 1) * sizeof(*res));
         res[len_res] = larray[j][k];
         len_res++;
@@ -203,7 +208,8 @@ int contains(char * temp, category_t * arr, size_t num_cat) {
   return x;
 }
 
-//process with word.txt, store the word in catarray_t type value and return it
+//process with word.txt, one argument as file f
+//store the word in catarray_t type value and return it
 catarray_t * getWord_cat(FILE * f) {
   char * line = NULL;                    //line used to save each line of file
   char ** larray = NULL;                 //larray is an array to save all the lines
