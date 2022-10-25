@@ -141,12 +141,11 @@ void getStory_cat(FILE * f, catarray_t * cats, int op) {
         }
         //make cate as string
         cate = realloc(cate, (len_cate + 1) * sizeof(*cate));
-        cate[len_cate] = '\0';
+        cate[len_cate] = '\0';  //maek cate as a string
         len_cate++;
 
         //check if cate is valid integer, using provious words
         int index = valid(cate, len_cate);
-        //printf("%d\n", index);
 
         if (index != -1) {
           //using provious words
