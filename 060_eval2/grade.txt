@@ -1,6 +1,6 @@
-Grading at 10/25/2022:04:21:18.253275
-For commit ID ec6816fe4da00177d8f84041968ee7b5bd1864d3
-Grading at Tue Oct 25 12:21:14 AM EDT 2022
+Grading at 10/25/2022:21:24:16.456989
+For commit ID a0152f984b1cfe48e63391d5f9b0bf507c634687
+Grading at Tue Oct 25 05:24:14 PM EDT 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -35,9 +35,66 @@ Now running YOUR tests for step 2
 
 2.1: Current test is story-step2 words.txt
 -----------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
+It looks like you got different output from us on that case.
+Here is the diff (yours on left, ours on right):
+
+animal:								animal:
+  dragon							  dragon
+animal:							      <
+  dragon						      <
+  walrus						      <
+animal:							      <
+  dragon						      <
+  walrus						      <
+place:							      <
+  cave							      <
+animal:							      <
+  dragon						      <
+  walrus						      <
+place:							      <
+  cave							      <
+adjective:						      <
+  peculiar						      <
+animal:							      <
+  dragon						      <
+  walrus						      <
+place:							      <
+  cave							      <
+adjective:						      <
+  peculiar						      <
+  scary							      <
+animal:							      <
+  dragon						      <
+  walrus						      <
+place:							      <
+  cave							      <
+adjective:						      <
+  peculiar						      <
+  scary							      <
+  peaceful						      <
+animal:							      <
+  dragon						      <
+  walrus							  walrus
+place:								place:
+  cave								  cave
+adjective:							adjective:
+  peculiar							  peculiar
+  scary								  scary
+  peaceful							  peaceful
+Your file did not match the expected ouput
+
+
+2.2: Current test is story-step2 myword1.txt
+-----------------------------
+It looks like you got different output from us on that case.
+Here is the diff (yours on left, ours on right):
+
+:								:
+  a								  a
+:							      <
+  a							      <
+Your file did not match the expected ouput
+
 
 Step 3
 Checking that story-step3 compiles
@@ -52,9 +109,47 @@ Now running YOUR tests for step 3
 
 3.1: Current test is story-step3 words.txt story2.txt
 -----------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
+It looks like you got different output from us on that case.
+Here is the diff (yours on left, ours on right):
+
+animal:							      <
+  dragon						      <
+animal:							      <
+  dragon						      <
+  walrus						      <
+animal:							      <
+  dragon						      <
+  walrus						      <
+place:							      <
+  cave							      <
+animal:							      <
+  dragon						      <
+  walrus						      <
+place:							      <
+  cave							      <
+adjective:						      <
+  peculiar						      <
+animal:							      <
+  dragon						      <
+  walrus						      <
+place:							      <
+  cave							      <
+adjective:						      <
+  peculiar						      <
+  scary							      <
+animal:							      <
+  dragon						      <
+  walrus						      <
+place:							      <
+  cave							      <
+adjective:						      <
+  peculiar						      <
+  scary							      <
+  peaceful						      <
+Once upon a time, there was a walrus. This walrus lived in a 	Once upon a time, there was a walrus. This walrus lived in a 
+peculiar cave. One day, it left its peculiar cave and met a w	peculiar cave. One day, it left its peculiar cave and met a w
+Your file did not match the expected ouput
+
 
 Step 4
 Checking that story-step4 compiles
@@ -69,18 +164,94 @@ Now running YOUR tests for step 4
 
 4.1: Current test is story-step4 words.txt story2.txt
 -----------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
+It looks like you got different output from us on that case.
+Here is the diff (yours on left, ours on right):
+
+animal:							      <
+  dragon						      <
+animal:							      <
+  dragon						      <
+  walrus						      <
+animal:							      <
+  dragon						      <
+  walrus						      <
+place:							      <
+  cave							      <
+animal:							      <
+  dragon						      <
+  walrus						      <
+place:							      <
+  cave							      <
+adjective:						      <
+  peculiar						      <
+animal:							      <
+  dragon						      <
+  walrus						      <
+place:							      <
+  cave							      <
+adjective:						      <
+  peculiar						      <
+  scary							      <
+animal:							      <
+  dragon						      <
+  walrus						      <
+place:							      <
+  cave							      <
+adjective:						      <
+  peculiar						      <
+  scary							      <
+  peaceful						      <
+Once upon a time, there was a walrus. This walrus lived in a 	Once upon a time, there was a walrus. This walrus lived in a 
+peculiar cave. One day, it left its peculiar cave and met a w	peculiar cave. One day, it left its peculiar cave and met a w
+Your file did not match the expected ouput
+
 
 4.2: Current test is story-step4 -n words.txt story2.txt
 -----------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
+It looks like you got different output from us on that case.
+Here is the diff (yours on left, ours on right):
 
-You have passed the test cases YOU provided
-If your tests are good, this is great. 
-If your tests are insufficient, you should do much more testing
+animal:							      <
+  dragon						      <
+animal:							      <
+  dragon						      <
+  walrus						      <
+animal:							      <
+  dragon						      <
+  walrus						      <
+place:							      <
+  cave							      <
+animal:							      <
+  dragon						      <
+  walrus						      <
+place:							      <
+  cave							      <
+adjective:						      <
+  peculiar						      <
+animal:							      <
+  dragon						      <
+  walrus						      <
+place:							      <
+  cave							      <
+adjective:						      <
+  peculiar						      <
+  scary							      <
+animal:							      <
+  dragon						      <
+  walrus						      <
+place:							      <
+  cave							      <
+adjective:						      <
+  peculiar						      <
+  scary							      <
+  peaceful						      <
+Once upon a time, there was a walrus. This walrus lived in a 	Once upon a time, there was a walrus. This walrus lived in a 
+peculiar cave. One day, it left its peculiar cave and met a d	peculiar cave. One day, it left its peculiar cave and met a d
+Your file did not match the expected ouput
+
+
+You have NOT passed your test cases!
+You should go and figure out/understand where thing went wrong
+And fix the problem(s) before the deadline
 
 Overall Grade: NO GRADE YET
