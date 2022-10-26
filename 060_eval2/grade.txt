@@ -1,6 +1,6 @@
-Grading at 10/26/2022:01:49:35.990453
-For commit ID e59bd13a89f5120c14e6804e497f90605f449e31
-Grading at Tue Oct 25 09:48:58 PM EDT 2022
+Grading at 10/26/2022:01:53:52.215838
+For commit ID 9d30a38c741b90ce03ea645c16079b68a7a421f8
+Grading at Tue Oct 25 09:53:16 PM EDT 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -295,73 +295,91 @@ Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-4.15: Current test is story-step4 -n words.txt story2.txt words.txt
+4.15: Current test is story-step4 -o words.txt story2.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-4.16: Current test is story-step4 -n words.txt story.txt
+4.16: Current test is story-step4 -n words1.txt story2.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+4.17: Current test is story-step4 -n words.txt story6.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+4.18: Current test is story-step4 -n words.txt story2.txt words.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+4.19: Current test is story-step4 -n words.txt story.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
-4.17: Current test is story-step4 -n words.txt mys1.txt
+4.20: Current test is story-step4 -n words.txt mys1.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
-4.18: Current test is story-step4 -n words.txt mys2.txt
+4.21: Current test is story-step4 -n words.txt mys2.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-4.19: Current test is story-step4 -n words.txt mys3.txt
+4.22: Current test is story-step4 -n words.txt mys3.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-4.20: Current test is story-step4 -n words.txt mys4.txt
+4.23: Current test is story-step4 -n words.txt mys4.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-4.21: Current test is story-step4 -n words.txt mys5.txt
+4.24: Current test is story-step4 -n words.txt mys5.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-4.22: Current test is story-step4 -n myword1.txt mys1.txt
+4.25: Current test is story-step4 -n myword1.txt mys1.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
-4.23: Current test is story-step4 -n words.txt mys8.txt
+4.26: Current test is story-step4 -n words.txt mys8.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-4.24: Current test is story-step4 -n words.txt mys9.txt
+4.27: Current test is story-step4 -n words.txt mys9.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-4.25: Current test is story-step4 -n words.txt     mys10.txt
+4.28: Current test is story-step4 -n words.txt mys10.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
-4.26: Current test is story-step4 -n myword5.txt mys12.txt
+4.29: Current test is story-step4 -n myword5.txt mys12.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
