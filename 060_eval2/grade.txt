@@ -1,6 +1,6 @@
-Grading at 10/25/2022:22:02:13.485303
-For commit ID 89cc437157949fde5a5602508056bf07a8f397ab
-Grading at Tue Oct 25 06:02:00 PM EDT 2022
+Grading at 10/26/2022:00:54:57.711441
+For commit ID 5c9c050a90ccffa1cf0642c221dc6ad482d93727
+Grading at Tue Oct 25 08:54:38 PM EDT 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -146,6 +146,30 @@ Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
+3.2: Current test is story-step3
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+3.3: Current test is story-step3 words.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+3.4: Current test is story-step3 words.txt story2.txt word.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+3.5: Current test is story-step3 words.txt mys6.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
+
 Step 4
 Checking that story-step4 compiles
 rm -f *~ story-step1  story-step2  story-step3  story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
@@ -163,10 +187,46 @@ Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
-4.2: Current test is story-step4 -n words.txt story2.txt
+4.2: Current test is story-step4
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+4.3: Current test is story-step4 words.txt story2.txt word.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+4.4: Current test is story-step4 words.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+4.5: Current test is story-step4 -n words.txt story2.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
+
+4.6: Current test is story-step4 -n words.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+4.7: Current test is story-step4 -n
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+4.8: Current test is story-step4 -n words.txt story2.txt words.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
 Valgrind was clean
 
 You have passed the test cases YOU provided
