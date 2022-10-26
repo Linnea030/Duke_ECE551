@@ -22,15 +22,12 @@ int valid(char * cate) {
   //if there is front space in backreference
   while (temp_cate[0] == ' ') {
     temp_cate++;
-    // printf("loop:%s\n", temp_cate);
   }
-  //printf("%s\n", temp_cate);
   size_t len_temp = strlen(temp_cate);  //length of temp_cate
   int value = atoi(temp_cate);          //cited as AOP chapter10
-  //printf("value=%d\n", value);
   int temp = value;
   size_t len_value = 0;
-  if (value <= 0) {  // if cate is string or not positive value
+  if (value <= 0) {  //if cate is string or not positive value
     return -1;
   }
   while (temp != 0) {  //check the length of value
@@ -170,6 +167,10 @@ void getStory_cat(FILE * f, catarray_t * cats, int op) {
 
         //if it is not a valid integer
         if (index != -1) {
+          if ((int)cats_pro->n_words < index) {
+            fprintf(stderr, "index of provious is out of boundary\n");
+            exit(EXIT_FAILURE);
+          }
           //using provious words with index
           cword = choosepro(index, cats_pro);
         }
@@ -229,10 +230,10 @@ int contains(char * temp, category_t * arr, size_t num_cat) {
 //process with word.txt, one argument as file f
 //store the word in catarray_t type value and return it
 catarray_t * getWord_cat(FILE * f) {
-  char * line = NULL;                    //line used to save each line of file
-  char ** larray = NULL;                 //larray is an array to save all the lines
-  size_t sz = 0;                         //size of line
-  size_t i = 0;                          //size of larray
+  char * line = NULL;
+  char ** larray = NULL;
+  size_t sz = 0;
+  size_t i = 0;
   while (getline(&line, &sz, f) >= 0) {  //using getline to save each line
     larray = realloc(larray, (i + 1) * sizeof(*larray));
     larray[i] = line;
@@ -277,7 +278,6 @@ catarray_t * getWord_cat(FILE * f) {
           //alloc memory for cat->arr
           cat->arr = realloc(cat->arr, (cat->n + 1) * sizeof(*(cat->arr)));
           cat->arr[cat->n].n_words = 0;
-          //printf("%s\n", temp);
           cat->arr[cat->n].name = temp;
           x = cat->n;  //index of categories
           cat->n++;

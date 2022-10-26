@@ -19,11 +19,15 @@ story-step3 words.txt story2.txt
 story-step3
 story-step3 words.txt
 story-step3 words.txt story2.txt word.txt
+story-step3 words.txt mys8.txt
 story-step3 words.txt mys6.txt
 story-step4 words.txt story2.txt
 story-step4
+story-step4 words.txt mys8.txt
 story-step4 words.txt story2.txt word.txt
 story-step4 words.txt
+story-step4 words.txt mys7.txt
+story-step4 -n words.txt mys7.txt
 story-step4 -n words.txt story2.txt
 story-step4 -n words.txt
 story-step4 -n
@@ -35,3 +39,4 @@ story-step4 -n words.txt mys3.txt
 story-step4 -n words.txt mys4.txt
 story-step4 -n words.txt mys5.txt
 story-step4 -n myword1.txt mys1.txt
+story-step4 -n words.txt mys8.txt
