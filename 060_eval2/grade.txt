@@ -1,6 +1,6 @@
-Grading at 10/26/2022:00:54:57.711441
-For commit ID 5c9c050a90ccffa1cf0642c221dc6ad482d93727
-Grading at Tue Oct 25 08:54:38 PM EDT 2022
+Grading at 10/26/2022:01:04:10.744082
+For commit ID fd808f51f8973caa6da30c298da985b627090c16
+Grading at Tue Oct 25 09:03:44 PM EDT 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -227,6 +227,48 @@ Valgrind was clean
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
+Valgrind was clean
+
+4.9: Current test is story-step4 -n words.txt story.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
+
+4.10: Current test is story-step4 -n words.txt mys1.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
+
+4.11: Current test is story-step4 -n words.txt mys2.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+4.12: Current test is story-step4 -n words.txt mys3.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+4.13: Current test is story-step4 -n words.txt mys4.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+4.14: Current test is story-step4 -n words.txt mys5.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+4.15: Current test is story-step4 -n myword1.txt mys1.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
 You have passed the test cases YOU provided
