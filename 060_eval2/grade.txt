@@ -1,6 +1,6 @@
-Grading at 10/26/2022:01:45:58.428207
-For commit ID 38a3b80a1fd8ffcfd3c76bce20643f6fc0fd73e7
-Grading at Tue Oct 25 09:45:24 PM EDT 2022
+Grading at 10/26/2022:01:49:35.990453
+For commit ID e59bd13a89f5120c14e6804e497f90605f449e31
+Grading at Tue Oct 25 09:48:58 PM EDT 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -170,25 +170,31 @@ Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-3.5: Current test is story-step3 words.txt story2.txt word.txt
+3.5: Current test is story-step3 myword5.txt mys14.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-3.6: Current test is story-step3 words.txt mys8.txt
+3.6: Current test is story-step3 words.txt story2.txt word.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-3.7: Current test is story-step3 words.txt mys6.txt
+3.7: Current test is story-step3 words.txt mys8.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+3.8: Current test is story-step3 words.txt mys6.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
-3.8: Current test is story-step3 myword5.txt mys11.txt
+3.9: Current test is story-step3 myword5.txt mys11.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
@@ -247,103 +253,115 @@ Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
-4.8: Current test is story-step4 -n myword5.txt mys11.txt
+4.8: Current test is story-step4 myword5.txt mys14.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+4.9: Current test is story-step4 -n myword5.txt mys14.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+4.10: Current test is story-step4 -n myword5.txt mys11.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
-4.9: Current test is story-step4 -n words.txt mys7.txt
+4.11: Current test is story-step4 -n words.txt mys7.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-4.10: Current test is story-step4 -n words.txt story2.txt
+4.12: Current test is story-step4 -n words.txt story2.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
-4.11: Current test is story-step4 -n words.txt
+4.13: Current test is story-step4 -n words.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-4.12: Current test is story-step4 -n
+4.14: Current test is story-step4 -n
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-4.13: Current test is story-step4 -n words.txt story2.txt words.txt
+4.15: Current test is story-step4 -n words.txt story2.txt words.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-4.14: Current test is story-step4 -n words.txt story.txt
+4.16: Current test is story-step4 -n words.txt story.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
-4.15: Current test is story-step4 -n words.txt mys1.txt
+4.17: Current test is story-step4 -n words.txt mys1.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
-4.16: Current test is story-step4 -n words.txt mys2.txt
+4.18: Current test is story-step4 -n words.txt mys2.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-4.17: Current test is story-step4 -n words.txt mys3.txt
+4.19: Current test is story-step4 -n words.txt mys3.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-4.18: Current test is story-step4 -n words.txt mys4.txt
+4.20: Current test is story-step4 -n words.txt mys4.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-4.19: Current test is story-step4 -n words.txt mys5.txt
+4.21: Current test is story-step4 -n words.txt mys5.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-4.20: Current test is story-step4 -n myword1.txt mys1.txt
+4.22: Current test is story-step4 -n myword1.txt mys1.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
-4.21: Current test is story-step4 -n words.txt mys8.txt
+4.23: Current test is story-step4 -n words.txt mys8.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-4.22: Current test is story-step4 -n words.txt mys9.txt
+4.24: Current test is story-step4 -n words.txt mys9.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-4.23: Current test is story-step4 -n words.txt     mys10.txt
+4.25: Current test is story-step4 -n words.txt     mys10.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
-4.24: Current test is story-step4 -n myword5.txt mys12.txt
+4.26: Current test is story-step4 -n myword5.txt mys12.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
