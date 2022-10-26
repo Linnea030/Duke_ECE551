@@ -28,3 +28,10 @@ story-step4 -n words.txt story2.txt
 story-step4 -n words.txt
 story-step4 -n
 story-step4 -n words.txt story2.txt words.txt
+story-step4 -n words.txt story.txt
+story-step4 -n words.txt mys1.txt
+story-step4 -n words.txt mys2.txt
+story-step4 -n words.txt mys3.txt
+story-step4 -n words.txt mys4.txt
+story-step4 -n words.txt mys5.txt
+story-step4 -n myword1.txt mys1.txt
