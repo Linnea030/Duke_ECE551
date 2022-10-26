@@ -1,6 +1,6 @@
-Grading at 10/26/2022:01:40:37.519219
-For commit ID f4d2612f2e1c1afacb95fc78d4695e2afcaa8c53
-Grading at Tue Oct 25 09:40:05 PM EDT 2022
+Grading at 10/26/2022:01:45:58.428207
+For commit ID 38a3b80a1fd8ffcfd3c76bce20643f6fc0fd73e7
+Grading at Tue Oct 25 09:45:24 PM EDT 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -164,25 +164,31 @@ Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-3.4: Current test is story-step3 words.txt story2.txt word.txt
+3.4: Current test is story-step3 myword5.txt mys13.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-3.5: Current test is story-step3 words.txt mys8.txt
+3.5: Current test is story-step3 words.txt story2.txt word.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-3.6: Current test is story-step3 words.txt mys6.txt
+3.6: Current test is story-step3 words.txt mys8.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+3.7: Current test is story-step3 words.txt mys6.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
-3.7: Current test is story-step3 myword5.txt mys11.txt
+3.8: Current test is story-step3 myword5.txt mys11.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
