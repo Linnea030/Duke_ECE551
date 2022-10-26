@@ -40,3 +40,5 @@ story-step4 -n words.txt mys4.txt
 story-step4 -n words.txt mys5.txt
 story-step4 -n myword1.txt mys1.txt
 story-step4 -n words.txt mys8.txt
+story-step4 -n words.txt mys9.txt
+story-step4 -n words.txt mys10.txt

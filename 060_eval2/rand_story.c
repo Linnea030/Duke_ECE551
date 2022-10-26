@@ -167,7 +167,7 @@ void getStory_cat(FILE * f, catarray_t * cats, int op) {
 
         //if it is not a valid integer
         if (index != -1) {
-          if ((int)cats_pro->n_words < index) {
+          if ((int)cats_pro->n_words < index || index == 0) {
             fprintf(stderr, "index of provious is out of boundary\n");
             exit(EXIT_FAILURE);
           }
