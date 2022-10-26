@@ -37,7 +37,7 @@ void freepro(category_t * cat, size_t len_pro);
 void addpro(const char * cword, category_t * cats_pro);
 
 //check if word is valid integer, if it is valid, return -1, else return value of cate
-int valid(char * cate, size_t len_cate);
+int valid(char * cate);
 
 //choose provious word that used
 char * choosepro(size_t index, category_t * cats_pro);

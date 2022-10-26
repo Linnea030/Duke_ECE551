@@ -5,7 +5,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-//free larray[][]
+//free larray[][], arguments are size of array i and 2D array larray
+//return void
 void freeArr(size_t i, char ** larray) {
   for (size_t j = 0; j < i; j++) {
     free(larray[j]);
@@ -13,12 +14,22 @@ void freeArr(size_t i, char ** larray) {
   free(larray);
 }
 
-//check if word is valid integer, if it is valid, return -1, else return value of cate
-int valid(char * cate, size_t len_cate) {
-  int value = atoi(cate);  //cited as AOP chapter10
+//arguments are char cate
+//check if word is valid integer,
+//if it is valid, return -1, else return value of cate
+int valid(char * cate) {
+  char * temp_cate = cate;
+  //if there is front space in backreference
+  while (temp_cate[0] == ' ') {
+    temp_cate++;
+    // printf("loop:%s\n", temp_cate);
+  }
+  //printf("%s\n", temp_cate);
+  size_t len_temp = strlen(temp_cate);  //length of temp_cate
+  int value = atoi(temp_cate);          //cited as AOP chapter10
+  //printf("value=%d\n", value);
   int temp = value;
   size_t len_value = 0;
-  //printf("%s\n", cate);
   if (value <= 0) {  // if cate is string or not positive value
     return -1;
   }
@@ -26,7 +37,7 @@ int valid(char * cate, size_t len_cate) {
     temp = temp / 10;
     len_value++;
   }
-  if (len_value != len_cate - 1) {  //if length of value is not equal to length of cate,
+  if (len_value != len_temp) {  //if length of value is not equal to length of temp_cate,
     //there is other character in cate
     return -1;
   }
@@ -36,6 +47,8 @@ int valid(char * cate, size_t len_cate) {
 }
 
 //add word into tracking list cats_pro
+//arguments are the new word get from line named cword and the tracking category cats_pro
+//return void, malloc spaces for cats_pro and add words
 void addpro(const char * cword, category_t * cats_pro) {
   cats_pro->words =
       realloc(cats_pro->words, (cats_pro->n_words + 1) * sizeof(*(cats_pro->words)));
@@ -44,6 +57,8 @@ void addpro(const char * cword, category_t * cats_pro) {
 }
 
 //choose provious word that used
+//arguments are index of the used word and the tracking category cats_pro
+//return tracked string
 char * choosepro(size_t index, category_t * cats_pro) {
   char * cword = NULL;
   cword = cats_pro->words[cats_pro->n_words - index];
@@ -51,6 +66,8 @@ char * choosepro(size_t index, category_t * cats_pro) {
 }
 
 //free cats_pro which is used to track the provious words
+//arguments are size of cat_pro and the tracking category cat
+//return void, free everything related to cat
 void freepro(category_t * cat, size_t len_pro) {
   for (size_t i = 0; i < len_pro; i++) {
     free(cat->words[i]);
@@ -60,17 +77,21 @@ void freepro(category_t * cat, size_t len_pro) {
 }
 
 //delete repeated words
+//arguments are word's category named cate, and the word named cword and the catarray cats
+//return void
 void delete_word(char * cate, const char * cword, catarray_t * cats) {
   for (size_t a = 0; a < cats->n; a++) {
+    //compare to find the name
     int x = strcmp(cate, cats->arr[a].name);
     if (x == 0) {
       for (size_t b = 0; b < cats->arr[a].n_words; b++) {
+        //compare to find the word
         int y = strcmp(cword, cats->arr[a].words[b]);
-        if (y == 0) {
+        if (y == 0) {  //delete word
           char * temp = cats->arr[a].words[b];
           cats->arr[a].words[b] = cats->arr[a].words[cats->arr[a].n_words - 1];
           cats->arr[a].words[cats->arr[a].n_words - 1] = temp;
-          free(temp);
+          free(temp);  //free word
           cats->arr[a].n_words--;
           break;
         }
@@ -145,16 +166,16 @@ void getStory_cat(FILE * f, catarray_t * cats, int op) {
         len_cate++;
 
         //check if cate is valid integer, using provious words
-        int index = valid(cate, len_cate);
+        int index = valid(cate);
 
+        //if it is not a valid integer
         if (index != -1) {
-          //using provious words
+          //using provious words with index
           cword = choosepro(index, cats_pro);
         }
         //else, use it to choose word
         else {
           cword = chooseWord(cate, cats);  //choose word from cats by cate
-          //cword += '\0';                   //make cword as string
           if (op == -1) {
             //delete cword from cats but not now
             del = 2;
@@ -163,10 +184,8 @@ void getStory_cat(FILE * f, catarray_t * cats, int op) {
 
         // add cword into cats_pro
         addpro(cword, cats_pro);
-
         //put cword into story
         size_t len_c = strlen(cword);
-        //free(cate);  //free categories of word
         //repalce cate with word in line
         for (size_t m = 0; m < len_c; m++) {
           res = realloc(res, (len_res + 1) * sizeof(*res));

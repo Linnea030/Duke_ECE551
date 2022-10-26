@@ -16,5 +16,15 @@ story-step2 myword2.txt
 story-step2 myword3.txt
 story-step2 myword4.txt
 story-step3 words.txt story2.txt
+story-step3
+story-step3 words.txt
+story-step3 words.txt story2.txt word.txt
+story-step3 words.txt mys6.txt
 story-step4 words.txt story2.txt
+story-step4
+story-step4 words.txt story2.txt word.txt
+story-step4 words.txt
 story-step4 -n words.txt story2.txt
+story-step4 -n words.txt
+story-step4 -n
+story-step4 -n words.txt story2.txt words.txt
