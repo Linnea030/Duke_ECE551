@@ -76,7 +76,7 @@ int main(int argc, char ** argv) {
       fprintf(stderr, "Input file is NULL\n");
       exit(EXIT_FAILURE);
     }
-    op = -1;
+    op = -1;  //operation code for op =-1 means no repeated words
 
     //cats used to save words
     catarray_t * cats = getWord_cat(f1);
