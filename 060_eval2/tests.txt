@@ -25,6 +25,8 @@ story-step3 words.txt story2.txt word.txt
 story-step3 words.txt mys8.txt
 story-step3 words.txt mys6.txt
 story-step3 myword5.txt mys11.txt
+story-step3 myword6.txt mys15.txt
+
 story-step4 words.txt story2.txt
 story-step4
 story-step4 words.txt mys8.txt
