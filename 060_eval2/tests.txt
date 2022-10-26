@@ -19,6 +19,7 @@ story-step2 myword5.txt
 story-step3 words.txt story2.txt
 story-step3
 story-step3 words.txt
+story-step3 myword5.txt mys13.txt
 story-step3 words.txt story2.txt word.txt
 story-step3 words.txt mys8.txt
 story-step3 words.txt mys6.txt
