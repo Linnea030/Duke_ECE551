@@ -1,6 +1,6 @@
-Grading at 10/19/2022:03:24:33.606326
-For commit ID cb311b2830fd724098c6b29b703f6205b21aa87a
-Grading at Tue Oct 18 11:24:32 PM EDT 2022
+Grading at 10/27/2022:15:46:59.434876
+For commit ID 8f6086b83cbdcbe375bcbf173e09070108cd9a8a
+Grading at Thu Oct 27 11:46:58 AM EDT 2022
 Attempting to compile:
 rm -f  main.o  point.o points *~
 g++ -c -Wall -Werror -std=gnu++98 -pedantic -ggdb3 main.cpp
