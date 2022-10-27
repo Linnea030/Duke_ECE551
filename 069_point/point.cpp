@@ -1,12 +1,12 @@
 #include "point.hpp"
 
 #include <cmath>
+using namespace std;
 
 void Point::move(double dx, double dy) {
   x += dx;
   y += dy;
 }
-
 double Point::distanceFrom(const Point & p) {
-  return std::sqrt(std::pow(p.x - x, 2) + std::pow(p.y - y, 2));
+  return sqrt(pow(p.x - x, 2) + pow(p.y - y, 2));
 }
