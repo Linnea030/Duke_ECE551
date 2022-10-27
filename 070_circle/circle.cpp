@@ -9,7 +9,7 @@ double Circle::intersectionArea(const Circle & otherCircle) {
   double sum = radius + otherCircle.radius;
   double Rs;
   double Rl;
-  if (radius <= otherCircle.radius) {
+  if (radius < otherCircle.radius) {
     Rl = otherCircle.radius;
     Rs = radius;
   }
