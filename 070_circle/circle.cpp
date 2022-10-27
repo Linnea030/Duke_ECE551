@@ -6,32 +6,26 @@ void Circle::move(double dx, double dy) {
 }
 
 double Circle::intersectionArea(const Circle & otherCircle) {
-  const double sum = radius + otherCircle.radius;
-  double smallerR;
-  double largerR;
-  if (radius >= otherCircle.radius) {
-    smallerR = otherCircle.radius;
-    largerR = radius;
+  double sum = radius + otherCircle.radius;
+  double Rs;
+  double Rl;
+  if (radius <= otherCircle.radius) {
+    Rl = otherCircle.radius;
+    Rs = radius;
   }
   else {
-    largerR = otherCircle.radius;
-    smallerR = radius;
+    Rl = otherCircle.radius;
+    Rs = radius;
   }
-  double sub = largerR - smallerR;
-  double distance = center.distanceFrom(otherCircle.center);
-
-  if (distance >= sum) {
+  double d = center.distanceFrom(otherCircle.center);
+  double sub = Rl - Rs;
+  if (d >= sum)
     return 0.0;
-  }
-  else if (distance <= sub) {
-    return M_PI * smallerR * smallerR;
-  }
+  else if (d <= sub)
+    return M_PI * pow(Rs, 2);
   else {
-    double a = std::acos((smallerR * smallerR + distance * distance - largerR * largerR) /
-                         (2.0 * smallerR * distance));
-    double b = std::acos((largerR * largerR + distance * distance - smallerR * smallerR) /
-                         (2.0 * largerR * distance));
-    return a * smallerR * smallerR + b * largerR * largerR -
-           smallerR * distance * std::sin(a);
+    double ang1 = acos((Rl * Rl + d * d - Rs * Rs) / (2 * Rl * d));
+    double ang2 = acos((Rs * Rs + d * d - Rl * Rl) / (2 * Rs * d));
+    return ang1 * Rl * Rl + ang2 * Rs * Rs - Rl * d * sin(ang1);
   }
 }
