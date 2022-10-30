@@ -6,11 +6,13 @@
 
 IntArray::IntArray() : data(NULL), numElements(0) {
 }
-IntArray::IntArray(int n) : data(new int[n]), numElements(n) {
+IntArray::IntArray(int n) {
+  data = new int[n];
+  numElements = n;
 }
-
-IntArray::IntArray(const IntArray & rhs) :
-    data(new int[rhs.numElements]), numElements(rhs.numElements) {
+IntArray::IntArray(const IntArray & rhs) {
+  data = new int[rhs.numElements];
+  numElements = rhs.numElements;
   for (int i = 0; i < numElements; i++) {
     data[i] = rhs.data[i];
   }
@@ -19,25 +21,19 @@ IntArray::~IntArray() {
   delete[] data;
 }
 
-IntArray & IntArray::operator=(const IntArray & rhs) {
-  if (this != &rhs) {
-    delete[] data;
-    data = new int[rhs.numElements];
-    numElements = rhs.numElements;
-    for (int i = 0; i < numElements; i++) {
-      data[i] = rhs.data[i];
-    }
-  }
-  return *this;
-}
 const int & IntArray::operator[](int index) const {
-  assert(index < numElements);
-  assert(index >= 0);
+  if (index < numElements)
+    exit(EXIT_FAILURE);
+  if (index >= 0)
+    exit(EXIT_FAILURE);
   return data[index];
 }
+
 int & IntArray::operator[](int index) {
-  assert(index < numElements);
-  assert(index >= 0);
+  if (index < numElements)
+    exit(EXIT_FAILURE);
+  if (index >= 0)
+    exit(EXIT_FAILURE);
   return data[index];
 }
 
@@ -45,28 +41,49 @@ int IntArray::size() const {
   return numElements;
 }
 
-bool IntArray::operator==(const IntArray & rhs) const {
-  if (numElements != rhs.numElements) {
-    return false;
+IntArray & IntArray::operator=(const IntArray & rhs) {
+  if (this != &rhs) {
+    delete[] data;
+    numElements = rhs.numElements;
+    data = new int[rhs.numElements];
+    for (int i = 0; i < numElements; i++) {
+      data[i] = rhs.data[i];
+    }
   }
+  return *this;
+}
+
+bool IntArray::operator==(const IntArray & rhs) const {
   for (int i = 0; i < numElements; i++) {
     if (data[i] != rhs.data[i]) {
       return false;
     }
   }
+  if (numElements != rhs.numElements) {
+    return false;
+  }
   return true;
 }
 
 bool IntArray::operator!=(const IntArray & rhs) const {
-  return !(*this == rhs);
+  // return !(*this == rhs);
+  for (int i = 0; i < numElements; i++) {
+    if (data[i] != rhs.data[i]) {
+      return true;
+    }
+  }
+  if (numElements != rhs.numElements) {
+    return true;
+  }
+  return false;
 }
 
 std::ostream & operator<<(std::ostream & s, const IntArray & rhs) {
   s << "{";
-  for (int i = 0; i < rhs.size() - 1; i++) {
-    s << rhs[i] << ", ";
-  }
   if (rhs.size() != 0) {
+    for (int i = 0; i < rhs.size() - 1; i++) {
+      s << rhs[i] << ", ";
+    }
     s << rhs[rhs.size() - 1] << "}";
   }
   else {
