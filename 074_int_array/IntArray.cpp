@@ -21,7 +21,7 @@ IntArray::~IntArray() {
   delete[] data;
 }
 
-const int & IntArray::operator[](int index) const {
+/*const int & IntArray::operator[](int index) const {
   if (index < numElements)
     exit(EXIT_FAILURE);
   if (index >= 0)
@@ -36,7 +36,18 @@ int & IntArray::operator[](int index) {
     exit(EXIT_FAILURE);
   return data[index];
 }
+*/
 
+const int & IntArray::operator[](int index) const {
+  assert(index < numElements);
+  assert(index >= 0);
+  return data[index];
+}
+int & IntArray::operator[](int index) {
+  assert(index < numElements);
+  assert(index >= 0);
+  return data[index];
+}
 int IntArray::size() const {
   return numElements;
 }
