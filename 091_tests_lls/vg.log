@@ -1,0 +1,33 @@
+==2005890== Memcheck, a memory error detector
+==2005890== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2005890== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==2005890== Command: ./test-lls
+==2005890== Parent PID: 2005889
+==2005890== 
+==2005890== 
+==2005890== Process terminating with default action of signal 6 (SIGABRT)
+==2005890==    at 0x4B43A7C: __pthread_kill_implementation (pthread_kill.c:44)
+==2005890==    by 0x4B43A7C: __pthread_kill_internal (pthread_kill.c:78)
+==2005890==    by 0x4B43A7C: pthread_kill@@GLIBC_2.34 (pthread_kill.c:89)
+==2005890==    by 0x4AEF475: raise (raise.c:26)
+==2005890==    by 0x4AD57F2: abort (abort.c:79)
+==2005890==    by 0x4AD571A: __assert_fail_base.cold (assert.c:92)
+==2005890==    by 0x4AE6E95: __assert_fail (assert.c:101)
+==2005890==    by 0x10A5EE: Tester::testRemove() (in /home/yc538/ece551/091_tests_lls/test-lls)
+==2005890==    by 0x10921F: main (in /home/yc538/ece551/091_tests_lls/test-lls)
+==2005890== 
+==2005890== HEAP SUMMARY:
+==2005890==     in use at exit: 72,704 bytes in 1 blocks
+==2005890==   total heap usage: 18 allocs, 17 frees, 73,262 bytes allocated
+==2005890== 
+==2005890== LEAK SUMMARY:
+==2005890==    definitely lost: 0 bytes in 0 blocks
+==2005890==    indirectly lost: 0 bytes in 0 blocks
+==2005890==      possibly lost: 0 bytes in 0 blocks
+==2005890==    still reachable: 72,704 bytes in 1 blocks
+==2005890==         suppressed: 0 bytes in 0 blocks
+==2005890== Reachable blocks (those to which a pointer was found) are not shown.
+==2005890== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==2005890== 
+==2005890== For lists of detected and suppressed errors, rerun with: -s
+==2005890== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
