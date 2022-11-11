@@ -32,13 +32,15 @@ class LinkedList {
  public:
   LinkedList() : head(NULL), tail(NULL), sz(0) {}
   //copy
-  LinkedList(const LinkedList & rhs) {
+
+  LinkedList(const LinkedList & rhs) : head(NULL), tail(NULL), sz(0) {
     Node * temp = rhs.head;
     for (int i = 0; i < rhs.sz; i++) {
       addBack(temp->data);
       temp = temp->next;
     }
   }
+
   LinkedList & operator=(const LinkedList & rhs) {
     if (this != &rhs) {
       Node * n1 = this->head;
@@ -46,7 +48,7 @@ class LinkedList {
       this->head = lhs.head;
       this->tail = lhs.tail;
       this->sz = lhs.sz;
-      delete n1;
+      // delete n1;
     }
     return *this;
   }
