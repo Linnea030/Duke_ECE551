@@ -1,38 +1,23 @@
-Grading at 11/11/2022:20:41:38.861744
-For commit ID d1ecdcd70d7e8b7d812dafd668cda04d51b91063
-Grading at Fri Nov 11 03:41:38 PM EST 2022
+Grading at 11/11/2022:20:42:36.677158
+For commit ID aa14c050a2874bec62a5a49ef0518b3dd0090a88
+Grading at Fri Nov 11 03:42:32 PM EST 2022
 -----------------------------------------------
 testcase 1 : Testing with LinkedList<int>
 ...compiling...
-In file included from tester.cpp:1:
-ll.hpp: In instantiation of ‘LinkedList<T>& LinkedList<T>::operator=(const LinkedList<T>&) [with T = int]’:
-tester.cpp:94:11:   required from here
-ll.hpp:49:19: error: ‘class LinkedList<int>’ has no member named ‘size’; did you mean ‘sz’?
-   49 |       std::swap(l.size, sz);
-      |                 ~~^~~~
-      |                 sz
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind reported errors
+Valgrind reported errors (test failed).
 -----------------------------------------------
 testcase 2 : Testing with LinkedList<std::string>
 ...compiling...
-In file included from tester.cpp:1:
-ll.hpp: In instantiation of ‘LinkedList<T>& LinkedList<T>::operator=(const LinkedList<T>&) [with T = std::__cxx11::basic_string<char>]’:
-tester.cpp:94:11:   required from here
-ll.hpp:49:19: error: ‘class LinkedList<std::__cxx11::basic_string<char> >’ has no member named ‘size’; did you mean ‘sz’?
-   49 |       std::swap(l.size, sz);
-      |                 ~~^~~~
-      |                 sz
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind reported errors
+Valgrind reported errors (test failed).
 -----------------------------------------------
 testcase 3 : Testing with LinkedList<(a custom class we wrote)>
 ...compiling...
-In file included from tester.cpp:1:
-ll.hpp: In instantiation of ‘LinkedList<T>& LinkedList<T>::operator=(const LinkedList<T>&) [with T = Tester]’:
-tester.cpp:94:11:   required from here
-ll.hpp:49:19: error: ‘class LinkedList<Tester>’ has no member named ‘size’; did you mean ‘sz’?
-   49 |       std::swap(l.size, sz);
-      |                 ~~^~~~
-      |                 sz
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind reported errors
+Valgrind reported errors (test failed).
 
 Overall Grade: F
