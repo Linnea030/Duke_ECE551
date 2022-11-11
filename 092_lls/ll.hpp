@@ -46,7 +46,7 @@ class LinkedList {
       LinkedList l(rhs);
       std::swap(l.head, head);
       std::swap(l.tail, tail);
-      std::swap(l.size, sz);
+      std::swap(l.sz, sz);
     }
     return *this;
   }
