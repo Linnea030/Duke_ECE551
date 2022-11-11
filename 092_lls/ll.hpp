@@ -50,6 +50,7 @@ class LinkedList {
     }
     return *this;
   }
+
   //deconstructor
   void addFront(const T & item) {
     Node * n1 = new Node(item);
@@ -61,7 +62,9 @@ class LinkedList {
     }
     head->prev = n1;
     n1->next = head;
+    head = n1;
   }
+
   void addBack(const T & item) {
     Node * n1 = new Node(item);
     sz++;
@@ -72,7 +75,9 @@ class LinkedList {
     }
     tail->next = n1;
     n1->prev = tail;
+    tail = n1;
   }
+
   bool remove(const T & item) {
     Node * temp = head;
     if (head == NULL) {
@@ -111,7 +116,7 @@ class LinkedList {
     return false;
   }
 
-  T & operator[](int index) {
+  /*T & operator[](int index) {
     try {
       if (index > sz - 1 || index < 0) {
         throw error();
@@ -156,6 +161,39 @@ class LinkedList {
     else
       throw error();
   }
+  */
+
+  T & operator[](int index) {
+    try {
+      if (index < 0 || index >= sz) {
+        throw error();
+      }
+    }
+    catch (error & r) {
+      std::cerr << r.Error() << std::endl;
+    }
+    Node * current = head;
+    for (int i = 0; i < index; i++) {
+      current = current->next;
+    }
+    return current->data;
+  }
+
+  T & operator[](int index) const {
+    try {
+      if (index < 0 || index >= sz) {
+        throw error();
+      }
+    }
+    catch (error & r) {
+      std::cerr << r.Error() << std::endl;
+    }
+    Node * current = head;
+    for (int i = 0; i < index; i++) {
+      current = current->next;
+    }
+    return current->data;
+  }
 
   int find(const T & item) const {
     for (int i = 0; i < sz; i++) {
@@ -169,13 +207,21 @@ class LinkedList {
   int getSize() const { return sz; }
   friend void testList(void);
 
-  ~LinkedList() {
+  /* ~LinkedList() {
     Node * temp = head;
     while (temp != NULL) {
       Node * t = temp;
       temp = temp->next;
       delete t;
     }
+    }*/
+  ~LinkedList() {
+    while (head != NULL) {
+      Node * temp = head->next;
+      delete head;
+      head = temp;
+    }
+    tail = NULL;
     sz = 0;
   }
 };
