@@ -150,11 +150,14 @@ class LinkedList {
     }
     if (head == NULL)
       throw error();
-    int i = 0;
+  
+  int i = 0;
     Node * temp = head;
-    while (i != index && temp->next != NULL) {
+    while (i != index ) {
       temp = temp->next;
+i++
     }
+
     if (i == index) {
       return temp->data;
     }
@@ -172,11 +175,14 @@ class LinkedList {
     catch (error & r) {
       std::cerr << r.Error() << std::endl;
     }
-    Node * current = head;
-    for (int i = 0; i < index; i++) {
-      current = current->next;
+
+    int i = 0;
+    Node * temp = head;
+    while (i != index) {
+      temp = temp->next;
+      i++;
     }
-    return current->data;
+    return temp->data;
   }
 
   T & operator[](int index) const {
@@ -188,11 +194,14 @@ class LinkedList {
     catch (error & r) {
       std::cerr << r.Error() << std::endl;
     }
-    Node * current = head;
-    for (int i = 0; i < index; i++) {
-      current = current->next;
+
+    int i = 0;
+    Node * temp = head;
+    while (i != index) {
+      temp = temp->next;
+      i++;
     }
-    return current->data;
+    return temp->data;
   }
 
   int find(const T & item) const {
