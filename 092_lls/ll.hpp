@@ -43,11 +43,10 @@ class LinkedList {
 
   LinkedList & operator=(const LinkedList & rhs) {
     if (this != &rhs) {
-      delete this;
-      LinkedList lhs(rhs);
-      this->head = lhs.head;
-      this->tail = lhs.tail;
-      this->sz = lhs.sz;
+      LinkedList l(rhs);
+      std::swap(l.head, head);
+      std::swap(l.tail, tail);
+      std::swap(l.size, sz);
     }
     return *this;
   }
