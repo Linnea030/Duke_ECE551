@@ -127,5 +127,15 @@ class BstMap : public Map<K, V> {
     delete temp;
   }
 
+  void copy(Node * curr) {
+    if (curr == NULL)
+      return;
+    add(curr->key, curr->value);
+    copy(curr->left);
+    copy(curr->right);
+  }
+
+  BstMap(const BstMap<K, V> & rhs) : root(NULL) { copy(rhs.root); }
+
   virtual ~BstMap<K, V>() { des(root); }
 };
