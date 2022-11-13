@@ -13,20 +13,16 @@ class BstMap : public Map<K, V> {
     V value;
     Node * left;
     Node * right;
-    Node(K key, V value) {
-      this->key = key;
-      this->value = value;
-      this->left = NULL;
-      this->right = NULL;
-    }
-    Node() : right(NULL), left(NULL) {}
+    Node(K key, V value) : key(key), value(value), left(NULL), right(NULL) {}
+
+    //Node() : right(NULL), left(NULL) {}
     ~Node() {}
   };
   Node * root;
-  int size;
 
  public:
   BstMap() : root(NULL) {}
+
   virtual void add(const K & key, const V & value) {
     Node * temp = root;
     if (temp == NULL) {
@@ -80,46 +76,56 @@ class BstMap : public Map<K, V> {
     return temp->value;
   }
 
-  virtual void remove(const K & key) {
+  virtual Node * remhelp(Node * root, const K & key) {
     Node * temp = root;
-    while (temp != NULL) {
-      if (key == temp->key) {
-        break;
+    if (temp == NULL) {
+      return NULL;
+    }
+    if (temp->key > key) {
+      temp->left = remhelp(temp->left, key);
+      return temp;
+    }
+    else if (temp->key < key) {
+      temp->right = remhelp(temp->right, key);
+      return temp;
+    }
+    else if (temp->key == key) {
+      if (temp->left == NULL) {
+        Node * t = temp->right;
+        delete temp;
+        return t;
       }
-      else if (key > temp->key) {
-        temp = temp->right;
-        break;
+      else if (temp->right == NULL) {
+        Node * t = temp->left;
+        delete temp;
+        return t;
       }
-      else if (key < temp->key) {
-        temp = temp->left;
-        break;
+      else {
+        Node * t = temp->left;
+        while (t->right != NULL) {
+          t = t->right;
+        }
+
+        K key1 = t->key;
+        V value1 = t->value;
+        //remove(temp->key);
+        temp->key = key1;
+        temp->value = value1;
+        temp->left = remhelp(temp->left, temp->key);
+        return temp;
       }
     }
+    return temp;
+  }
+
+  virtual void remove(const K & key) { root = remhelp(root, key); }
+  void des(Node * temp) {
     if (temp == NULL)
-      throw std::invalid_argument("No such key!\n");
-    else if (temp->right == NULL) {
-      Node * t = temp->left;
-      delete temp;
-      temp = t;
-    }
-    else if (temp->left == NULL) {
-      Node * t = temp->right;
-      delete temp;
-      temp = t;
-    }
-    else {
-      Node * t = temp;
-      temp = temp->right;
-      while (temp->left != NULL) {
-        temp = temp->left;
-      }
-      K key1 = temp->key;
-      V value1 = temp->value;
-      t->key = key1;
-      t->value = value1;
-      remove(temp->key);
-    }
-    return;
-  };
-  //virtual ~Map<K, V>() {}
+      return;
+    des(temp->left);
+    des(temp->right);
+    delete temp;
+  }
+
+  virtual ~BstMap<K, V>() { des(root); }
 };
