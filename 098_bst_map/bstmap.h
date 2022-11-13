@@ -55,6 +55,7 @@ class BstMap : public Map<K, V> {
         }
       }
     }
+    return;
   }
 
   virtual const V & lookup(const K & key) const throw(std::invalid_argument) {
@@ -75,61 +76,6 @@ class BstMap : public Map<K, V> {
     return temp->value;
   }
 
-  /*  Node remove(Node * node, K key) {
-    if (node == NULL)
-      return NULL;
-
-    if (key < node->key) {
-      node->left = remove(node->left, key);
-      return node;
-    }
-    else if (key > node->key) {
-      node->right = remove(node->right, key);
-      return node;
-    }
-    else {
-      if (node->left == NULL) {  //左孩子为空
-        Node rightNode = node->right;
-        node->right = NULL;
-        //size--;
-        return rightNode;
-      }
-      else if (node->right == NULL) {  //右孩子为空
-        Node leftNode = node->left;
-        node->left = NULL;
-        //        size--;
-        return leftNode;
-      }
-      else {  //左右孩子均不为空
-        Node min = minimum(node->right);
-
-        min.left = node->left;
-        min.right = removeMin(node->left);
-        node->left = NULL;
-        node->right = NULL;
-
-        return min;
-      }
-    }
-  }
-  Node minimum(Node * node) {
-    if (node->left == NULL) {
-      return node;
-    }
-    return minimum(node->left);
-  }
-
-  //删除最小元素,并返回新树的根结点
-  Node removeMin(Node * node) {
-    if (node->left == NULL) {
-      Node newRight = node->right;
-      node->right = NULL;
-      size--;
-      return newRight;
-    }
-    node->left = removeMin(node->left);
-    return node;
-    }*/
   virtual Node * remhelp(Node * root, const K & key) {
     Node * temp = root;
     if (temp == NULL) {
@@ -181,5 +127,6 @@ class BstMap : public Map<K, V> {
     delete temp;
   }
 
-  virtual ~BstMap<K, V>() { des(root); }
+  virtual ~BstMap<K, V>() {  // des(root);
+  }
 };
