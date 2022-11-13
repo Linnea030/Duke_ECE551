@@ -21,12 +21,9 @@ class BstMap : public Map<K, V> {
   };
   Node * root;
 
-<<<<<<< HEAD
-=======
  public:
   BstMap() : root(NULL) {}
 
->>>>>>> temp-branch
   virtual void add(const K & key, const V & value) {
     Node * temp = root;
     if (root == NULL) {
@@ -77,9 +74,6 @@ class BstMap : public Map<K, V> {
       throw std::invalid_argument("No such key!\n");
     return temp->value;
   }
-
-<<<<<<< HEAD
-  virtual void remove(const K & key) {}  // root = remove(root, key); }
 
   /*  Node remove(Node * node, K key) {
     if (node == NULL)
@@ -136,7 +130,6 @@ class BstMap : public Map<K, V> {
     node->left = removeMin(node->left);
     return node;
     }*/
-=======
   virtual Node * remhelp(Node * root, const K & key) {
     Node * temp = root;
     if (temp == NULL) {
@@ -189,5 +182,4 @@ class BstMap : public Map<K, V> {
   }
 
   virtual ~BstMap<K, V>() { des(root); }
->>>>>>> temp-branch
 };
