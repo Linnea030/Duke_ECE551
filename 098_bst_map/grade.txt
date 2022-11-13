@@ -1,68 +1,95 @@
-Grading at 11/13/2022:22:12:02.470991
-For commit ID 81b0de0228b34d5ab72332b0722e789c0fa91f6d
-Grading at Sun Nov 13 05:11:52 PM EST 2022
+Grading at 11/13/2022:22:15:34.087325
+For commit ID d876bef4a76105e13c86ef91d04308fc4cdfeeab
+Grading at Sun Nov 13 05:15:32 PM EST 2022
 -----------------------------------------------
 testcase 1 : Testing with BstMap<int,int>
 ...compiling...
-The code compiled.
-  - Valgrind was clean (no errors, no memory leaks)
-Your file matched the expected output
-Testcase passed 
+In file included from 89-tester.cpp:1:
+bstmap.h: In instantiation of ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = int; V = int]’:
+89-tester.cpp:131:10:   required from here
+bstmap.h:140:16: error: cannot convert ‘const BstMap<int, int>’ to ‘BstMap<int, int>*’ in initialization
+  140 |       BstMap * t1(rhs);
+      |                ^~
+The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 2 : Testing with BstMap<int,std::string>
 ...compiling...
-The code compiled.
-  - Valgrind was clean (no errors, no memory leaks)
-Your file matched the expected output
-Testcase passed 
+In file included from 89-tester.cpp:1:
+bstmap.h: In instantiation of ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = int; V = std::__cxx11::basic_string<char>]’:
+89-tester.cpp:131:10:   required from here
+bstmap.h:140:16: error: cannot convert ‘const BstMap<int, std::__cxx11::basic_string<char> >’ to ‘BstMap<int, std::__cxx11::basic_string<char> >*’ in initialization
+  140 |       BstMap * t1(rhs);
+      |                ^~
+The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 3 : Testing with BstMap<int,(a custom class we wrote)>
 ...compiling...
-The code compiled.
-  - Valgrind was clean (no errors, no memory leaks)
-Your file matched the expected output
-Testcase passed 
+In file included from 89-tester.cpp:1:
+bstmap.h: In instantiation of ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = int; V = Tester]’:
+89-tester.cpp:131:10:   required from here
+bstmap.h:140:16: error: cannot convert ‘const BstMap<int, Tester>’ to ‘BstMap<int, Tester>*’ in initialization
+  140 |       BstMap * t1(rhs);
+      |                ^~
+The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 4 : Testing with BstMap<std::string,int>
 ...compiling...
-The code compiled.
-  - Valgrind was clean (no errors, no memory leaks)
-Your file matched the expected output
-Testcase passed 
+In file included from 89-tester.cpp:1:
+bstmap.h: In instantiation of ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = std::__cxx11::basic_string<char>; V = int]’:
+89-tester.cpp:131:10:   required from here
+bstmap.h:140:16: error: cannot convert ‘const BstMap<std::__cxx11::basic_string<char>, int>’ to ‘BstMap<std::__cxx11::basic_string<char>, int>*’ in initialization
+  140 |       BstMap * t1(rhs);
+      |                ^~
+The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 5 : Testing with BstMap<std::string,std::string>
 ...compiling...
-The code compiled.
-  - Valgrind was clean (no errors, no memory leaks)
-Your file matched the expected output
-Testcase passed 
+In file included from 89-tester.cpp:1:
+bstmap.h: In instantiation of ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = std::__cxx11::basic_string<char>; V = std::__cxx11::basic_string<char>]’:
+89-tester.cpp:131:10:   required from here
+bstmap.h:140:16: error: cannot convert ‘const BstMap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’ to ‘BstMap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >*’ in initialization
+  140 |       BstMap * t1(rhs);
+      |                ^~
+The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 6 : Testing with BstMap<std::string,(a custom class we wrote)>
 ...compiling...
-The code compiled.
-  - Valgrind was clean (no errors, no memory leaks)
-Your file matched the expected output
-Testcase passed 
+In file included from 89-tester.cpp:1:
+bstmap.h: In instantiation of ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = std::__cxx11::basic_string<char>; V = Tester]’:
+89-tester.cpp:131:10:   required from here
+bstmap.h:140:16: error: cannot convert ‘const BstMap<std::__cxx11::basic_string<char>, Tester>’ to ‘BstMap<std::__cxx11::basic_string<char>, Tester>*’ in initialization
+  140 |       BstMap * t1(rhs);
+      |                ^~
+The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 7 : Testing with BstMap<(a custom class we wrote),int>
 ...compiling...
-The code compiled.
-  - Valgrind was clean (no errors, no memory leaks)
-Your file matched the expected output
-Testcase passed 
+In file included from 89-tester.cpp:1:
+bstmap.h: In instantiation of ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = Tester; V = int]’:
+89-tester.cpp:131:10:   required from here
+bstmap.h:140:16: error: cannot convert ‘const BstMap<Tester, int>’ to ‘BstMap<Tester, int>*’ in initialization
+  140 |       BstMap * t1(rhs);
+      |                ^~
+The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 8 : Testing with BstMap<(a custom class we wrote),std::string>
 ...compiling...
-The code compiled.
-  - Valgrind was clean (no errors, no memory leaks)
-Your file matched the expected output
-Testcase passed 
+In file included from 89-tester.cpp:1:
+bstmap.h: In instantiation of ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = Tester; V = std::__cxx11::basic_string<char>]’:
+89-tester.cpp:131:10:   required from here
+bstmap.h:140:16: error: cannot convert ‘const BstMap<Tester, std::__cxx11::basic_string<char> >’ to ‘BstMap<Tester, std::__cxx11::basic_string<char> >*’ in initialization
+  140 |       BstMap * t1(rhs);
+      |                ^~
+The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 9 : Testing with BstMap<(a custom class we wrote),(a custom class we wrote)>
 ...compiling...
-The code compiled.
-  - Valgrind was clean (no errors, no memory leaks)
-Your file matched the expected output
-Testcase passed 
+In file included from 89-tester.cpp:1:
+bstmap.h: In instantiation of ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = Tester; V = Tester]’:
+89-tester.cpp:131:10:   required from here
+bstmap.h:140:16: error: cannot convert ‘const BstMap<Tester, Tester>’ to ‘BstMap<Tester, Tester>*’ in initialization
+  140 |       BstMap * t1(rhs);
+      |                ^~
+The code did not compile.  This test failed.
 
-Overall Grade: A
+Overall Grade: F
