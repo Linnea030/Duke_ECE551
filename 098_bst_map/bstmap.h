@@ -137,8 +137,8 @@ class BstMap : public Map<K, V> {
 
   BstMap & operator=(const BstMap<K, V> & rhs) {
     if (this != &rhs) {
-      BstMap * t1(rhs);
-      std::swap(t1->root, root);
+      BstMap t1(rhs);
+      std::swap(t1.root, root);
     }
     return *this;
   }
