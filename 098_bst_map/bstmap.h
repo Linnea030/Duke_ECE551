@@ -134,7 +134,13 @@ class BstMap : public Map<K, V> {
     copy(curr->left);
     copy(curr->right);
   }
-
+  BstMap & operator=(const BstMap<K, V> & rhs) {
+    if (this != &rhs) {
+      BstMap temp(rhs);
+      std::swap(temp.root, root);
+    }
+    return *this;
+  }
   BstMap(const BstMap<K, V> & rhs) : root(NULL) { copy(rhs.root); }
 
   virtual ~BstMap<K, V>() { des(root); }
