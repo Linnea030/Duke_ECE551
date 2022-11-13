@@ -1,0 +1,242 @@
+Grading at 11/13/2022:22:28:04.802615
+For commit ID db320368f40ab09a91b3bbbbd91217c35e41f828
+Grading at Sun Nov 13 05:28:04 PM EST 2022
+-----------------------------------------------
+testcase 1 : Testing with BstSet<int>
+...compiling...
+In file included from 90-tester.cpp:1:
+bstset.h:140:35: error: ‘K’ was not declared in this scope
+  140 |   BstMap & operator=(const BstMap<K, V> & rhs) {
+      |                                   ^
+bstset.h:140:38: error: ‘V’ was not declared in this scope
+  140 |   BstMap & operator=(const BstMap<K, V> & rhs) {
+      |                                      ^
+bstset.h:140:39: error: wrong number of template arguments (2, should be 1)
+  140 |   BstMap & operator=(const BstMap<K, V> & rhs) {
+      |                                       ^
+bstset.h:9:7: note: provided for ‘template<class T> class BstMap’
+    9 | class BstMap : public Set<T> {
+      |       ^~~~~~
+bstset.h:148:23: error: ‘K’ was not declared in this scope
+  148 |   BstMap(const BstMap<K, V> & rhs) : root(NULL) { copy(rhs.root); }
+      |                       ^
+bstset.h:148:26: error: ‘V’ was not declared in this scope
+  148 |   BstMap(const BstMap<K, V> & rhs) : root(NULL) { copy(rhs.root); }
+      |                          ^
+bstset.h:148:27: error: wrong number of template arguments (2, should be 1)
+  148 |   BstMap(const BstMap<K, V> & rhs) : root(NULL) { copy(rhs.root); }
+      |                           ^
+bstset.h:9:7: note: provided for ‘template<class T> class BstMap’
+    9 | class BstMap : public Set<T> {
+      |       ^~~~~~
+bstset.h:150:19: error: ‘K’ was not declared in this scope
+  150 |   virtual ~BstMap<K, V>() { des(root); }
+      |                   ^
+bstset.h:150:22: error: ‘V’ was not declared in this scope
+  150 |   virtual ~BstMap<K, V>() { des(root); }
+      |                      ^
+bstset.h:150:23: error: wrong number of template arguments (2, should be 1)
+  150 |   virtual ~BstMap<K, V>() { des(root); }
+      |                       ^
+bstset.h:9:7: note: provided for ‘template<class T> class BstMap’
+    9 | class BstMap : public Set<T> {
+      |       ^~~~~~
+bstset.h: In constructor ‘BstMap<T>::BstMap(const int&)’:
+bstset.h:148:60: error: request for member ‘root’ in ‘rhs’, which is of non-class type ‘const int’
+  148 |   BstMap(const BstMap<K, V> & rhs) : root(NULL) { copy(rhs.root); }
+      |                                                            ^~~~
+90-tester.cpp: At global scope:
+90-tester.cpp:54:9: error: ‘BstSet’ does not name a type
+   54 | typedef BstSet<KEYTYPE> BSTSetTy;
+      |         ^~~~~~
+90-tester.cpp: In function ‘int main()’:
+90-tester.cpp:70:3: error: ‘BSTSetTy’ was not declared in this scope; did you mean ‘SetTy’?
+   70 |   BSTSetTy * bmt = new BSTSetTy();
+      |   ^~~~~~~~
+      |   SetTy
+90-tester.cpp:70:14: error: ‘bmt’ was not declared in this scope
+   70 |   BSTSetTy * bmt = new BSTSetTy();
+      |              ^~~
+90-tester.cpp:70:24: error: expected type-specifier before ‘BSTSetTy’
+   70 |   BSTSetTy * bmt = new BSTSetTy();
+      |                        ^~~~~~~~
+90-tester.cpp:92:14: error: ‘m2’ was not declared in this scope; did you mean ‘m’?
+   92 |   BSTSetTy * m2 = new BSTSetTy(*bmt);
+      |              ^~
+      |              m
+90-tester.cpp:92:23: error: expected type-specifier before ‘BSTSetTy’
+   92 |   BSTSetTy * m2 = new BSTSetTy(*bmt);
+      |                       ^~~~~~~~
+90-tester.cpp:149:10: error: type ‘<type error>’ argument given to ‘delete’, expected pointer
+  149 |   delete bmt;
+      |          ^~~
+90-tester.cpp:151:17: error: expected type-specifier before ‘BSTSetTy’
+  151 |   m = bmt = new BSTSetTy();
+      |                 ^~~~~~~~
+90-tester.cpp:173:10: error: type ‘<type error>’ argument given to ‘delete’, expected pointer
+  173 |   delete bmt;
+      |          ^~~
+90-tester.cpp:174:10: error: type ‘<type error>’ argument given to ‘delete’, expected pointer
+  174 |   delete m2;
+      |          ^~
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 2 : Testing with BstSet<std::string>
+...compiling...
+In file included from 90-tester.cpp:1:
+bstset.h:140:35: error: ‘K’ was not declared in this scope
+  140 |   BstMap & operator=(const BstMap<K, V> & rhs) {
+      |                                   ^
+bstset.h:140:38: error: ‘V’ was not declared in this scope
+  140 |   BstMap & operator=(const BstMap<K, V> & rhs) {
+      |                                      ^
+bstset.h:140:39: error: wrong number of template arguments (2, should be 1)
+  140 |   BstMap & operator=(const BstMap<K, V> & rhs) {
+      |                                       ^
+bstset.h:9:7: note: provided for ‘template<class T> class BstMap’
+    9 | class BstMap : public Set<T> {
+      |       ^~~~~~
+bstset.h:148:23: error: ‘K’ was not declared in this scope
+  148 |   BstMap(const BstMap<K, V> & rhs) : root(NULL) { copy(rhs.root); }
+      |                       ^
+bstset.h:148:26: error: ‘V’ was not declared in this scope
+  148 |   BstMap(const BstMap<K, V> & rhs) : root(NULL) { copy(rhs.root); }
+      |                          ^
+bstset.h:148:27: error: wrong number of template arguments (2, should be 1)
+  148 |   BstMap(const BstMap<K, V> & rhs) : root(NULL) { copy(rhs.root); }
+      |                           ^
+bstset.h:9:7: note: provided for ‘template<class T> class BstMap’
+    9 | class BstMap : public Set<T> {
+      |       ^~~~~~
+bstset.h:150:19: error: ‘K’ was not declared in this scope
+  150 |   virtual ~BstMap<K, V>() { des(root); }
+      |                   ^
+bstset.h:150:22: error: ‘V’ was not declared in this scope
+  150 |   virtual ~BstMap<K, V>() { des(root); }
+      |                      ^
+bstset.h:150:23: error: wrong number of template arguments (2, should be 1)
+  150 |   virtual ~BstMap<K, V>() { des(root); }
+      |                       ^
+bstset.h:9:7: note: provided for ‘template<class T> class BstMap’
+    9 | class BstMap : public Set<T> {
+      |       ^~~~~~
+bstset.h: In constructor ‘BstMap<T>::BstMap(const int&)’:
+bstset.h:148:60: error: request for member ‘root’ in ‘rhs’, which is of non-class type ‘const int’
+  148 |   BstMap(const BstMap<K, V> & rhs) : root(NULL) { copy(rhs.root); }
+      |                                                            ^~~~
+90-tester.cpp: At global scope:
+90-tester.cpp:54:9: error: ‘BstSet’ does not name a type
+   54 | typedef BstSet<KEYTYPE> BSTSetTy;
+      |         ^~~~~~
+90-tester.cpp: In function ‘int main()’:
+90-tester.cpp:70:3: error: ‘BSTSetTy’ was not declared in this scope; did you mean ‘SetTy’?
+   70 |   BSTSetTy * bmt = new BSTSetTy();
+      |   ^~~~~~~~
+      |   SetTy
+90-tester.cpp:70:14: error: ‘bmt’ was not declared in this scope
+   70 |   BSTSetTy * bmt = new BSTSetTy();
+      |              ^~~
+90-tester.cpp:70:24: error: expected type-specifier before ‘BSTSetTy’
+   70 |   BSTSetTy * bmt = new BSTSetTy();
+      |                        ^~~~~~~~
+90-tester.cpp:92:14: error: ‘m2’ was not declared in this scope; did you mean ‘m’?
+   92 |   BSTSetTy * m2 = new BSTSetTy(*bmt);
+      |              ^~
+      |              m
+90-tester.cpp:92:23: error: expected type-specifier before ‘BSTSetTy’
+   92 |   BSTSetTy * m2 = new BSTSetTy(*bmt);
+      |                       ^~~~~~~~
+90-tester.cpp:149:10: error: type ‘<type error>’ argument given to ‘delete’, expected pointer
+  149 |   delete bmt;
+      |          ^~~
+90-tester.cpp:151:17: error: expected type-specifier before ‘BSTSetTy’
+  151 |   m = bmt = new BSTSetTy();
+      |                 ^~~~~~~~
+90-tester.cpp:173:10: error: type ‘<type error>’ argument given to ‘delete’, expected pointer
+  173 |   delete bmt;
+      |          ^~~
+90-tester.cpp:174:10: error: type ‘<type error>’ argument given to ‘delete’, expected pointer
+  174 |   delete m2;
+      |          ^~
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 3 : Testing with BstSet<(a custom class we wrote)>
+...compiling...
+In file included from 90-tester.cpp:1:
+bstset.h:140:35: error: ‘K’ was not declared in this scope
+  140 |   BstMap & operator=(const BstMap<K, V> & rhs) {
+      |                                   ^
+bstset.h:140:38: error: ‘V’ was not declared in this scope
+  140 |   BstMap & operator=(const BstMap<K, V> & rhs) {
+      |                                      ^
+bstset.h:140:39: error: wrong number of template arguments (2, should be 1)
+  140 |   BstMap & operator=(const BstMap<K, V> & rhs) {
+      |                                       ^
+bstset.h:9:7: note: provided for ‘template<class T> class BstMap’
+    9 | class BstMap : public Set<T> {
+      |       ^~~~~~
+bstset.h:148:23: error: ‘K’ was not declared in this scope
+  148 |   BstMap(const BstMap<K, V> & rhs) : root(NULL) { copy(rhs.root); }
+      |                       ^
+bstset.h:148:26: error: ‘V’ was not declared in this scope
+  148 |   BstMap(const BstMap<K, V> & rhs) : root(NULL) { copy(rhs.root); }
+      |                          ^
+bstset.h:148:27: error: wrong number of template arguments (2, should be 1)
+  148 |   BstMap(const BstMap<K, V> & rhs) : root(NULL) { copy(rhs.root); }
+      |                           ^
+bstset.h:9:7: note: provided for ‘template<class T> class BstMap’
+    9 | class BstMap : public Set<T> {
+      |       ^~~~~~
+bstset.h:150:19: error: ‘K’ was not declared in this scope
+  150 |   virtual ~BstMap<K, V>() { des(root); }
+      |                   ^
+bstset.h:150:22: error: ‘V’ was not declared in this scope
+  150 |   virtual ~BstMap<K, V>() { des(root); }
+      |                      ^
+bstset.h:150:23: error: wrong number of template arguments (2, should be 1)
+  150 |   virtual ~BstMap<K, V>() { des(root); }
+      |                       ^
+bstset.h:9:7: note: provided for ‘template<class T> class BstMap’
+    9 | class BstMap : public Set<T> {
+      |       ^~~~~~
+bstset.h: In constructor ‘BstMap<T>::BstMap(const int&)’:
+bstset.h:148:60: error: request for member ‘root’ in ‘rhs’, which is of non-class type ‘const int’
+  148 |   BstMap(const BstMap<K, V> & rhs) : root(NULL) { copy(rhs.root); }
+      |                                                            ^~~~
+90-tester.cpp: At global scope:
+90-tester.cpp:54:9: error: ‘BstSet’ does not name a type
+   54 | typedef BstSet<KEYTYPE> BSTSetTy;
+      |         ^~~~~~
+90-tester.cpp: In function ‘int main()’:
+90-tester.cpp:70:3: error: ‘BSTSetTy’ was not declared in this scope; did you mean ‘SetTy’?
+   70 |   BSTSetTy * bmt = new BSTSetTy();
+      |   ^~~~~~~~
+      |   SetTy
+90-tester.cpp:70:14: error: ‘bmt’ was not declared in this scope
+   70 |   BSTSetTy * bmt = new BSTSetTy();
+      |              ^~~
+90-tester.cpp:70:24: error: expected type-specifier before ‘BSTSetTy’
+   70 |   BSTSetTy * bmt = new BSTSetTy();
+      |                        ^~~~~~~~
+90-tester.cpp:92:14: error: ‘m2’ was not declared in this scope; did you mean ‘m’?
+   92 |   BSTSetTy * m2 = new BSTSetTy(*bmt);
+      |              ^~
+      |              m
+90-tester.cpp:92:23: error: expected type-specifier before ‘BSTSetTy’
+   92 |   BSTSetTy * m2 = new BSTSetTy(*bmt);
+      |                       ^~~~~~~~
+90-tester.cpp:149:10: error: type ‘<type error>’ argument given to ‘delete’, expected pointer
+  149 |   delete bmt;
+      |          ^~~
+90-tester.cpp:151:17: error: expected type-specifier before ‘BSTSetTy’
+  151 |   m = bmt = new BSTSetTy();
+      |                 ^~~~~~~~
+90-tester.cpp:173:10: error: type ‘<type error>’ argument given to ‘delete’, expected pointer
+  173 |   delete bmt;
+      |          ^~~
+90-tester.cpp:174:10: error: type ‘<type error>’ argument given to ‘delete’, expected pointer
+  174 |   delete m2;
+      |          ^~
+The code did not compile.  This test failed.
+
+Overall Grade: F
