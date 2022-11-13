@@ -22,7 +22,7 @@ class BstSet : public Set<T> {
   Node * root;
 
  public:
-  BstMap() : root(NULL) {}
+  BstSet() : root(NULL) {}
 
   virtual void add(const T & key) {
     Node * temp = root;
@@ -137,15 +137,15 @@ class BstSet : public Set<T> {
     copy(temp->right);
   }
 
-  BstMap & operator=(const BstSet<T> & rhs) {
+  BstSet & operator=(const BstSet<T> & rhs) {
     if (this != &rhs) {
-      BstMap t1(rhs);
+      BstSet t1(rhs);
       std::swap(t1.root, root);
     }
     return *this;
   }
 
-  BstMap(const BstSet<T> & rhs) : root(NULL) { copy(rhs.root); }
+  BstSet(const BstSet<T> & rhs) : root(NULL) { copy(rhs.root); }
 
   virtual ~BstSet<T>() { des(root); }
 };
