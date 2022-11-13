@@ -6,7 +6,7 @@
 
 template<typename T>
 
-class BstMap : public Set<T> {
+class BstSet : public Set<T> {
  private:
   class Node {
    public:
@@ -137,7 +137,7 @@ class BstMap : public Set<T> {
     copy(temp->right);
   }
 
-  BstMap & operator=(const BstMap<K, V> & rhs) {
+  BstMap & operator=(const BstSet<T> & rhs) {
     if (this != &rhs) {
       BstMap t1(rhs);
       std::swap(t1.root, root);
@@ -145,7 +145,7 @@ class BstMap : public Set<T> {
     return *this;
   }
 
-  BstMap(const BstMap<K, V> & rhs) : root(NULL) { copy(rhs.root); }
+  BstMap(const BstSet<T> & rhs) : root(NULL) { copy(rhs.root); }
 
-  virtual ~BstMap<K, V>() { des(root); }
+  virtual ~BstSet<T>() { des(root); }
 };
