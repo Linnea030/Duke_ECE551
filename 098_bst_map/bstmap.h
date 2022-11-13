@@ -14,18 +14,19 @@ class BstMap : public Map<K, V> {
     V value;
     Node * left;
     Node * right;
-    Node(K key, V value) {
-      this->key = key;
-      this->value = value;
-      this->left = NULL;
-      this->right = NULL;
-    }
-    Node() : right(NULL), left(NULL) {}
+    Node(K key, V value) : key(key), value(value), left(NULL), right(NULL) {}
+
+    //Node() : right(NULL), left(NULL) {}
     ~Node() {}
   };
   Node * root;
-  int size;
 
+<<<<<<< HEAD
+=======
+ public:
+  BstMap() : root(NULL) {}
+
+>>>>>>> temp-branch
   virtual void add(const K & key, const V & value) {
     Node * temp = root;
     if (root == NULL) {
@@ -77,6 +78,7 @@ class BstMap : public Map<K, V> {
     return temp->value;
   }
 
+<<<<<<< HEAD
   virtual void remove(const K & key) {}  // root = remove(root, key); }
 
   /*  Node remove(Node * node, K key) {
@@ -134,4 +136,58 @@ class BstMap : public Map<K, V> {
     node->left = removeMin(node->left);
     return node;
     }*/
+=======
+  virtual Node * remhelp(Node * root, const K & key) {
+    Node * temp = root;
+    if (temp == NULL) {
+      return NULL;
+    }
+    if (temp->key > key) {
+      temp->left = remhelp(temp->left, key);
+      return temp;
+    }
+    else if (temp->key < key) {
+      temp->right = remhelp(temp->right, key);
+      return temp;
+    }
+    else if (temp->key == key) {
+      if (temp->left == NULL) {
+        Node * t = temp->right;
+        delete temp;
+        return t;
+      }
+      else if (temp->right == NULL) {
+        Node * t = temp->left;
+        delete temp;
+        return t;
+      }
+      else {
+        Node * t = temp->left;
+        while (t->right != NULL) {
+          t = t->right;
+        }
+
+        K key1 = t->key;
+        V value1 = t->value;
+        //remove(temp->key);
+        temp->key = key1;
+        temp->value = value1;
+        temp->left = remhelp(temp->left, temp->key);
+        return temp;
+      }
+    }
+    return temp;
+  }
+
+  virtual void remove(const K & key) { root = remhelp(root, key); }
+  void des(Node * temp) {
+    if (temp == NULL)
+      return;
+    des(temp->left);
+    des(temp->right);
+    delete temp;
+  }
+
+  virtual ~BstMap<K, V>() { des(root); }
+>>>>>>> temp-branch
 };
