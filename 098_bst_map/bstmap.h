@@ -105,7 +105,6 @@ class BstMap : public Map<K, V> {
         while (t->right != NULL) {
           t = t->right;
         }
-
         K key1 = t->key;
         V value1 = t->value;
         //remove(temp->key);
@@ -119,6 +118,7 @@ class BstMap : public Map<K, V> {
   }
 
   virtual void remove(const K & key) { root = remhelp(root, key); }
+
   void des(Node * temp) {
     if (temp == NULL)
       return;
@@ -127,6 +127,5 @@ class BstMap : public Map<K, V> {
     delete temp;
   }
 
-  virtual ~BstMap<K, V>() {  // des(root);
-  }
+  virtual ~BstMap<K, V>() { des(root); }
 };

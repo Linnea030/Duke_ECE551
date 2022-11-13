@@ -18,6 +18,7 @@ int main(void) {
   map.add(35, 10);
   map.add(70, 11);
   map.add(86, 12);
+
   std::cout << "\n";
   int ans1 = map.lookup(60);
   int ans2 = map.lookup(35);
@@ -26,7 +27,7 @@ int main(void) {
   std::cout << "ans1 should be 1 and =" << ans1 << "\n";
   std::cout << "ans2 should be 10 and =" << ans2 << "\n";
 
-  BstMap<int, int> map2 = map;
+  //  BstMap<int, int> map2 = map;
   std::cout << "\n";
   return EXIT_SUCCESS;
 }
