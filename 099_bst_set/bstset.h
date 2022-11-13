@@ -132,7 +132,7 @@ class BstSet : public Set<T> {
   void copy(Node * temp) {
     if (temp == NULL)
       return;
-    add(temp->key, temp->value);
+    add(temp->key);
     copy(temp->left);
     copy(temp->right);
   }
