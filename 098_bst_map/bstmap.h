@@ -30,8 +30,8 @@ class BstMap : public Map<K, V> {
   virtual void add(const K & key, const V & value) {
     Node * temp = root;
     if (temp == NULL) {
-      Node * t = new Node(key, value);
-      root = t;
+      root = new Node(key, value);
+      //root = t;
       return;
     }
     while (temp != NULL) {
@@ -44,11 +44,11 @@ class BstMap : public Map<K, V> {
           temp = temp->right;
         }
       }
-      if (key == temp->key) {
-        temp->value = value;
-        break;
-      }
-      if (key < temp->key) {
+      //if (key == temp->key) {
+      // temp->value = value;
+      // break;
+      //}
+      if (key <= temp->key) {
         if (temp->left == NULL) {
           temp->left = new Node(key, value);
           break;
@@ -68,11 +68,9 @@ class BstMap : public Map<K, V> {
       }
       else if (key > temp->key) {
         temp = temp->right;
-        break;
       }
       else if (key < temp->key) {
         temp = temp->left;
-        break;
       }
     }
     if (temp == NULL)
@@ -88,11 +86,11 @@ class BstMap : public Map<K, V> {
       }
       else if (key > temp->key) {
         temp = temp->right;
-        break;
+        //  break;
       }
       else if (key < temp->key) {
         temp = temp->left;
-        break;
+        //   break;
       }
     }
     if (temp == NULL)
@@ -115,9 +113,10 @@ class BstMap : public Map<K, V> {
       }
       K key1 = temp->key;
       V value1 = temp->value;
+      remove(temp->key);
       t->key = key1;
       t->value = value1;
-      remove(temp->key);
+      //  remove(temp->key);
     }
     return;
   };
