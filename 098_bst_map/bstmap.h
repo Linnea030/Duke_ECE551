@@ -1,6 +1,7 @@
 #include <cstdlib>
 #include <stdexcept>
 
+#include "assert.h"
 #include "map.h"
 
 template<typename K, typename V>
@@ -25,11 +26,9 @@ class BstMap : public Map<K, V> {
   Node * root;
   int size;
 
- public:
-  BstMap() : root(NULL) {}
   virtual void add(const K & key, const V & value) {
     Node * temp = root;
-    if (temp == NULL) {
+    if (root == NULL) {
       root = new Node(key, value);
       //root = t;
       return;
@@ -44,11 +43,11 @@ class BstMap : public Map<K, V> {
           temp = temp->right;
         }
       }
-      //if (key == temp->key) {
-      // temp->value = value;
-      // break;
-      //}
-      if (key <= temp->key) {
+      if (key == temp->key) {
+        temp->value = value;
+        break;
+      }
+      if (key < temp->key) {
         if (temp->left == NULL) {
           temp->left = new Node(key, value);
           break;
@@ -78,47 +77,61 @@ class BstMap : public Map<K, V> {
     return temp->value;
   }
 
-  virtual void remove(const K & key) {
-    Node * temp = root;
-    while (temp != NULL) {
-      if (key == temp->key) {
-        break;
-      }
-      else if (key > temp->key) {
-        temp = temp->right;
-        //  break;
-      }
-      else if (key < temp->key) {
-        temp = temp->left;
-        //   break;
-      }
+  virtual void remove(const K & key) {}  // root = remove(root, key); }
+
+  /*  Node remove(Node * node, K key) {
+    if (node == NULL)
+      return NULL;
+
+    if (key < node->key) {
+      node->left = remove(node->left, key);
+      return node;
     }
-    if (temp == NULL)
-      throw std::invalid_argument("No such key!\n");
-    else if (temp->right == NULL) {
-      Node * t = temp->left;
-      delete temp;
-      temp = t;
-    }
-    else if (temp->left == NULL) {
-      Node * t = temp->right;
-      delete temp;
-      temp = t;
+    else if (key > node->key) {
+      node->right = remove(node->right, key);
+      return node;
     }
     else {
-      Node * t = temp;
-      temp = temp->right;
-      while (temp->left != NULL) {
-        temp = temp->left;
+      if (node->left == NULL) {  //左孩子为空
+        Node rightNode = node->right;
+        node->right = NULL;
+        //size--;
+        return rightNode;
       }
-      K key1 = temp->key;
-      V value1 = temp->value;
-      remove(temp->key);
-      t->key = key1;
-      t->value = value1;
-      //  remove(temp->key);
+      else if (node->right == NULL) {  //右孩子为空
+        Node leftNode = node->left;
+        node->left = NULL;
+        //        size--;
+        return leftNode;
+      }
+      else {  //左右孩子均不为空
+        Node min = minimum(node->right);
+
+        min.left = node->left;
+        min.right = removeMin(node->left);
+        node->left = NULL;
+        node->right = NULL;
+
+        return min;
+      }
     }
-    return;
-  };
-  //virtual ~Map<K, V>() {}
+  }
+  Node minimum(Node * node) {
+    if (node->left == NULL) {
+      return node;
+    }
+    return minimum(node->left);
+  }
+
+  //删除最小元素,并返回新树的根结点
+  Node removeMin(Node * node) {
+    if (node->left == NULL) {
+      Node newRight = node->right;
+      node->right = NULL;
+      size--;
+      return newRight;
+    }
+    node->left = removeMin(node->left);
+    return node;
+    }*/
 };
