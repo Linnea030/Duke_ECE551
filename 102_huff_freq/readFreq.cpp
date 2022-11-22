@@ -27,9 +27,9 @@ uint64_t * readFrequencies(const char * fname) {
   std::ifstream ifs;
   ifs.open(fname);
 
-  int c = ifs.get();
-  while (c != EOF) {
-    c = ifs.get();
+  int c = 0;
+  while ((c = ifs.get()) != EOF) {
+    //c = ifs.get();
     res[c]++;
   }
   res[256]++;
