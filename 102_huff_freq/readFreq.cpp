@@ -28,7 +28,7 @@ uint64_t * readFrequencies(const char * fname) {
   ifs.open(fname);
   char c;
   while ((c = ifs.get()) != EOF) {
-    res[(uint64_t)c]++;
+    res[(unsigned char)c]++;
   }
   res[256]++;
   ifs.close();
