@@ -23,16 +23,16 @@ void printSym(std::ostream & s, unsigned sym) {
 }
 uint64_t * readFrequencies(const char * fname) {
   //WRITE ME!
-  uint64_t * res = new uint64_t[257];
+  uint64_t * res = new uint64_t[257]();
   std::ifstream ifs;
   ifs.open(fname);
 
-  char c = ifs.get();
+  int c = ifs.get();
   while (c != EOF) {
     c = ifs.get();
-    res[(unsigned char)c]++;
+    res[c]++;
   }
   res[256]++;
-  // ifs.close();
+  ifs.close();
   return res;
 }
