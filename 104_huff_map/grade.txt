@@ -1,0 +1,156 @@
+Grading at 11/22/2022:19:56:14.389973
+For commit ID a2074216a2d5879fcaabd32d6d9979152d0c29f7
+Grading at Tue Nov 22 02:56:10 PM EST 2022
+compiling
+g++ -ggdb3 -Wall -Werror -pedantic -std=gnu++98 -o testMap  bitstring.o  buildTree.o  node.o  readFreq.o  testMap.o
+Make succeed, testMap created
+Testcase 1
+-----------------------
+  - Valgrind showed memory leaks
+Valgrind reported errors (test failed).
+==914139== Memcheck, a memory error detector
+==914139== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==914139== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==914139== Command: ./testMap /etc/issue
+==914139== Parent PID: 914138
+==914139== 
+==914139== 
+==914139== Process terminating with default action of signal 6 (SIGABRT)
+==914139==    at 0x4B43A7C: __pthread_kill_implementation (pthread_kill.c:44)
+==914139==    by 0x4B43A7C: __pthread_kill_internal (pthread_kill.c:78)
+==914139==    by 0x4B43A7C: pthread_kill@@GLIBC_2.34 (pthread_kill.c:89)
+==914139==    by 0x4AEF475: raise (raise.c:26)
+==914139==    by 0x4AD57F2: abort (abort.c:79)
+==914139==    by 0x4AD571A: __assert_fail_base.cold (assert.c:92)
+==914139==    by 0x4AE6E95: __assert_fail (assert.c:101)
+==914139==    by 0x111C39: Node::buildMap(BitString, std::map<unsigned int, BitString, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, BitString> > >&) (node.cpp:6)
+==914139==    by 0x113138: main (testMap.cpp:26)
+==914139== 
+==914139== HEAP SUMMARY:
+==914139==     in use at exit: 74,976 bytes in 40 blocks
+==914139==   total heap usage: 52 allocs, 12 frees, 86,740 bytes allocated
+==914139== 
+==914139== LEAK SUMMARY:
+==914139==    definitely lost: 0 bytes in 0 blocks
+==914139==    indirectly lost: 0 bytes in 0 blocks
+==914139==      possibly lost: 0 bytes in 0 blocks
+==914139==    still reachable: 74,976 bytes in 40 blocks
+==914139==         suppressed: 0 bytes in 0 blocks
+==914139== Reachable blocks (those to which a pointer was found) are not shown.
+==914139== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==914139== 
+==914139== For lists of detected and suppressed errors, rerun with: -s
+==914139== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+Testcase 2
+-----------------------
+  - Valgrind showed memory leaks
+Valgrind reported errors (test failed).
+==914173== Memcheck, a memory error detector
+==914173== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==914173== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==914173== Command: ./testMap /etc/services
+==914173== Parent PID: 914172
+==914173== 
+==914173== 
+==914173== Process terminating with default action of signal 6 (SIGABRT)
+==914173==    at 0x4B43A7C: __pthread_kill_implementation (pthread_kill.c:44)
+==914173==    by 0x4B43A7C: __pthread_kill_internal (pthread_kill.c:78)
+==914173==    by 0x4B43A7C: pthread_kill@@GLIBC_2.34 (pthread_kill.c:89)
+==914173==    by 0x4AEF475: raise (raise.c:26)
+==914173==    by 0x4AD57F2: abort (abort.c:79)
+==914173==    by 0x4AD571A: __assert_fail_base.cold (assert.c:92)
+==914173==    by 0x4AE6E95: __assert_fail (assert.c:101)
+==914173==    by 0x111C39: Node::buildMap(BitString, std::map<unsigned int, BitString, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, BitString> > >&) (node.cpp:6)
+==914173==    by 0x113138: main (testMap.cpp:26)
+==914173== 
+==914173== HEAP SUMMARY:
+==914173==     in use at exit: 79,008 bytes in 166 blocks
+==914173==   total heap usage: 180 allocs, 14 frees, 92,308 bytes allocated
+==914173== 
+==914173== LEAK SUMMARY:
+==914173==    definitely lost: 0 bytes in 0 blocks
+==914173==    indirectly lost: 0 bytes in 0 blocks
+==914173==      possibly lost: 0 bytes in 0 blocks
+==914173==    still reachable: 79,008 bytes in 166 blocks
+==914173==         suppressed: 0 bytes in 0 blocks
+==914173== Reachable blocks (those to which a pointer was found) are not shown.
+==914173== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==914173== 
+==914173== For lists of detected and suppressed errors, rerun with: -s
+==914173== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+Testcase 3
+-----------------------
+  - Valgrind showed memory leaks
+Valgrind reported errors (test failed).
+==914196== Memcheck, a memory error detector
+==914196== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==914196== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==914196== Command: ./testMap /usr/share/dict/words
+==914196== Parent PID: 914195
+==914196== 
+==914196== 
+==914196== Process terminating with default action of signal 6 (SIGABRT)
+==914196==    at 0x4B43A7C: __pthread_kill_implementation (pthread_kill.c:44)
+==914196==    by 0x4B43A7C: __pthread_kill_internal (pthread_kill.c:78)
+==914196==    by 0x4B43A7C: pthread_kill@@GLIBC_2.34 (pthread_kill.c:89)
+==914196==    by 0x4AEF475: raise (raise.c:26)
+==914196==    by 0x4AD57F2: abort (abort.c:79)
+==914196==    by 0x4AD571A: __assert_fail_base.cold (assert.c:92)
+==914196==    by 0x4AE6E95: __assert_fail (assert.c:101)
+==914196==    by 0x111C39: Node::buildMap(BitString, std::map<unsigned int, BitString, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, BitString> > >&) (node.cpp:6)
+==914196==    by 0x113138: main (testMap.cpp:26)
+==914196== 
+==914196== HEAP SUMMARY:
+==914196==     in use at exit: 78,432 bytes in 148 blocks
+==914196==   total heap usage: 162 allocs, 14 frees, 91,732 bytes allocated
+==914196== 
+==914196== LEAK SUMMARY:
+==914196==    definitely lost: 0 bytes in 0 blocks
+==914196==    indirectly lost: 0 bytes in 0 blocks
+==914196==      possibly lost: 0 bytes in 0 blocks
+==914196==    still reachable: 78,432 bytes in 148 blocks
+==914196==         suppressed: 0 bytes in 0 blocks
+==914196== Reachable blocks (those to which a pointer was found) are not shown.
+==914196== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==914196== 
+==914196== For lists of detected and suppressed errors, rerun with: -s
+==914196== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+Testcase 4
+-----------------------
+  - Valgrind showed memory leaks
+Valgrind reported errors (test failed).
+==914245== Memcheck, a memory error detector
+==914245== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==914245== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==914245== Command: ./testMap /usr/share/dict/cracklib-small
+==914245== Parent PID: 914244
+==914245== 
+==914245== 
+==914245== Process terminating with default action of signal 6 (SIGABRT)
+==914245==    at 0x4B43A7C: __pthread_kill_implementation (pthread_kill.c:44)
+==914245==    by 0x4B43A7C: __pthread_kill_internal (pthread_kill.c:78)
+==914245==    by 0x4B43A7C: pthread_kill@@GLIBC_2.34 (pthread_kill.c:89)
+==914245==    by 0x4AEF475: raise (raise.c:26)
+==914245==    by 0x4AD57F2: abort (abort.c:79)
+==914245==    by 0x4AD571A: __assert_fail_base.cold (assert.c:92)
+==914245==    by 0x4AE6E95: __assert_fail (assert.c:101)
+==914245==    by 0x111C39: Node::buildMap(BitString, std::map<unsigned int, BitString, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, BitString> > >&) (node.cpp:6)
+==914245==    by 0x113138: main (testMap.cpp:26)
+==914245== 
+==914245== HEAP SUMMARY:
+==914245==     in use at exit: 76,448 bytes in 86 blocks
+==914245==   total heap usage: 99 allocs, 13 frees, 88,724 bytes allocated
+==914245== 
+==914245== LEAK SUMMARY:
+==914245==    definitely lost: 0 bytes in 0 blocks
+==914245==    indirectly lost: 0 bytes in 0 blocks
+==914245==      possibly lost: 0 bytes in 0 blocks
+==914245==    still reachable: 76,448 bytes in 86 blocks
+==914245==         suppressed: 0 bytes in 0 blocks
+==914245== Reachable blocks (those to which a pointer was found) are not shown.
+==914245== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==914245== 
+==914245== For lists of detected and suppressed errors, rerun with: -s
+==914245== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+Overall Grade: F
