@@ -33,6 +33,6 @@ uint64_t * readFrequencies(const char * fname) {
     res[(unsigned char)c]++;
   }
   res[256]++;
-  ifs.close();
+  // ifs.close();
   return res;
 }
