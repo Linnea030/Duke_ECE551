@@ -1,6 +1,6 @@
-Grading at 11/22/2022:18:48:56.903427
-For commit ID 6d0a81765bd1a7f59de56b598c3214b1641b0c5c
-Grading at Tue Nov 22 01:48:52 PM EST 2022
+Grading at 11/22/2022:18:55:31.164990
+For commit ID 6e108d774ed91b36d0aecd634d22d1c67810c643
+Grading at Tue Nov 22 01:55:27 PM EST 2022
 compiling
 g++ -ggdb3 -Wall -Werror -pedantic -o testFreq testFreq.cpp readFreq.cpp
 Make succeed, testFreq created
@@ -8,141 +8,141 @@ Testcase 1
 -----------------------
   - Valgrind reported errors
 Valgrind reported errors (test failed).
-==895892== Memcheck, a memory error detector
-==895892== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==895892== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==895892== Command: ./testFreq /etc/issue
-==895892== Parent PID: 895891
-==895892== 
-==895892== Conditional jump or move depends on uninitialised value(s)
-==895892==    at 0x10944B: main (testFreq.cpp:13)
-==895892== 
-==895892== Use of uninitialised value of size 8
-==895892==    at 0x499181B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==895892==    by 0x4991F99: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<unsigned long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, unsigned long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==895892==    by 0x49A0399: std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==895892==    by 0x10949C: main (testFreq.cpp:17)
-==895892== 
-==895892== Conditional jump or move depends on uninitialised value(s)
-==895892==    at 0x499182D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==895892==    by 0x4991F99: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<unsigned long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, unsigned long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==895892==    by 0x49A0399: std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==895892==    by 0x10949C: main (testFreq.cpp:17)
-==895892== 
-==895892== 
-==895892== HEAP SUMMARY:
-==895892==     in use at exit: 0 bytes in 0 blocks
-==895892==   total heap usage: 5 allocs, 5 frees, 87,520 bytes allocated
-==895892== 
-==895892== All heap blocks were freed -- no leaks are possible
-==895892== 
-==895892== Use --track-origins=yes to see where uninitialised values come from
-==895892== For lists of detected and suppressed errors, rerun with: -s
-==895892== ERROR SUMMARY: 293 errors from 3 contexts (suppressed: 0 from 0)
+==898824== Memcheck, a memory error detector
+==898824== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==898824== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==898824== Command: ./testFreq /etc/issue
+==898824== Parent PID: 898823
+==898824== 
+==898824== Invalid read of size 8
+==898824==    at 0x109775: readFrequencies(char const*) (readFreq.cpp:33)
+==898824==    by 0x109413: main (testFreq.cpp:10)
+==898824==  Address 0x4dd2c78 is 8 bytes before a block of size 2,056 alloc'd
+==898824==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==898824==    by 0x1096D9: readFrequencies(char const*) (readFreq.cpp:26)
+==898824==    by 0x109413: main (testFreq.cpp:10)
+==898824== 
+==898824== Invalid write of size 8
+==898824==    at 0x10977C: readFrequencies(char const*) (readFreq.cpp:33)
+==898824==    by 0x109413: main (testFreq.cpp:10)
+==898824==  Address 0x4dd2c78 is 8 bytes before a block of size 2,056 alloc'd
+==898824==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==898824==    by 0x1096D9: readFrequencies(char const*) (readFreq.cpp:26)
+==898824==    by 0x109413: main (testFreq.cpp:10)
+==898824== 
+==898824== 
+==898824== HEAP SUMMARY:
+==898824==     in use at exit: 0 bytes in 0 blocks
+==898824==   total heap usage: 5 allocs, 5 frees, 87,520 bytes allocated
+==898824== 
+==898824== All heap blocks were freed -- no leaks are possible
+==898824== 
+==898824== For lists of detected and suppressed errors, rerun with: -s
+==898824== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
 Testcase 2
 -----------------------
   - Valgrind reported errors
 Valgrind reported errors (test failed).
-==895919== Memcheck, a memory error detector
-==895919== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==895919== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==895919== Command: ./testFreq /etc/services
-==895919== Parent PID: 895918
-==895919== 
-==895919== Conditional jump or move depends on uninitialised value(s)
-==895919==    at 0x10944B: main (testFreq.cpp:13)
-==895919== 
-==895919== Use of uninitialised value of size 8
-==895919==    at 0x499181B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==895919==    by 0x4991F99: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<unsigned long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, unsigned long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==895919==    by 0x49A0399: std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==895919==    by 0x10949C: main (testFreq.cpp:17)
-==895919== 
-==895919== Conditional jump or move depends on uninitialised value(s)
-==895919==    at 0x499182D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==895919==    by 0x4991F99: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<unsigned long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, unsigned long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==895919==    by 0x49A0399: std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==895919==    by 0x10949C: main (testFreq.cpp:17)
-==895919== 
-==895919== 
-==895919== HEAP SUMMARY:
-==895919==     in use at exit: 0 bytes in 0 blocks
-==895919==   total heap usage: 5 allocs, 5 frees, 87,520 bytes allocated
-==895919== 
-==895919== All heap blocks were freed -- no leaks are possible
-==895919== 
-==895919== Use --track-origins=yes to see where uninitialised values come from
-==895919== For lists of detected and suppressed errors, rerun with: -s
-==895919== ERROR SUMMARY: 617 errors from 3 contexts (suppressed: 0 from 0)
+==898843== Memcheck, a memory error detector
+==898843== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==898843== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==898843== Command: ./testFreq /etc/services
+==898843== Parent PID: 898842
+==898843== 
+==898843== Invalid read of size 8
+==898843==    at 0x109775: readFrequencies(char const*) (readFreq.cpp:33)
+==898843==    by 0x109413: main (testFreq.cpp:10)
+==898843==  Address 0x4dd2c78 is 8 bytes before a block of size 2,056 alloc'd
+==898843==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==898843==    by 0x1096D9: readFrequencies(char const*) (readFreq.cpp:26)
+==898843==    by 0x109413: main (testFreq.cpp:10)
+==898843== 
+==898843== Invalid write of size 8
+==898843==    at 0x10977C: readFrequencies(char const*) (readFreq.cpp:33)
+==898843==    by 0x109413: main (testFreq.cpp:10)
+==898843==  Address 0x4dd2c78 is 8 bytes before a block of size 2,056 alloc'd
+==898843==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==898843==    by 0x1096D9: readFrequencies(char const*) (readFreq.cpp:26)
+==898843==    by 0x109413: main (testFreq.cpp:10)
+==898843== 
+==898843== 
+==898843== HEAP SUMMARY:
+==898843==     in use at exit: 0 bytes in 0 blocks
+==898843==   total heap usage: 5 allocs, 5 frees, 87,520 bytes allocated
+==898843== 
+==898843== All heap blocks were freed -- no leaks are possible
+==898843== 
+==898843== For lists of detected and suppressed errors, rerun with: -s
+==898843== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
 Testcase 3
 -----------------------
   - Valgrind reported errors
 Valgrind reported errors (test failed).
-==895990== Memcheck, a memory error detector
-==895990== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==895990== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==895990== Command: ./testFreq /usr/share/dict/words
-==895990== Parent PID: 895989
-==895990== 
-==895990== Conditional jump or move depends on uninitialised value(s)
-==895990==    at 0x10944B: main (testFreq.cpp:13)
-==895990== 
-==895990== Use of uninitialised value of size 8
-==895990==    at 0x499181B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==895990==    by 0x4991F99: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<unsigned long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, unsigned long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==895990==    by 0x49A0399: std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==895990==    by 0x10949C: main (testFreq.cpp:17)
-==895990== 
-==895990== Conditional jump or move depends on uninitialised value(s)
-==895990==    at 0x499182D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==895990==    by 0x4991F99: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<unsigned long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, unsigned long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==895990==    by 0x49A0399: std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==895990==    by 0x10949C: main (testFreq.cpp:17)
-==895990== 
-==895990== 
-==895990== HEAP SUMMARY:
-==895990==     in use at exit: 0 bytes in 0 blocks
-==895990==   total heap usage: 5 allocs, 5 frees, 87,520 bytes allocated
-==895990== 
-==895990== All heap blocks were freed -- no leaks are possible
-==895990== 
-==895990== Use --track-origins=yes to see where uninitialised values come from
-==895990== For lists of detected and suppressed errors, rerun with: -s
-==895990== ERROR SUMMARY: 753 errors from 3 contexts (suppressed: 0 from 0)
+==898875== Memcheck, a memory error detector
+==898875== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==898875== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==898875== Command: ./testFreq /usr/share/dict/words
+==898875== Parent PID: 898874
+==898875== 
+==898875== Invalid read of size 8
+==898875==    at 0x109775: readFrequencies(char const*) (readFreq.cpp:33)
+==898875==    by 0x109413: main (testFreq.cpp:10)
+==898875==  Address 0x4dd2c78 is 8 bytes before a block of size 2,056 alloc'd
+==898875==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==898875==    by 0x1096D9: readFrequencies(char const*) (readFreq.cpp:26)
+==898875==    by 0x109413: main (testFreq.cpp:10)
+==898875== 
+==898875== Invalid write of size 8
+==898875==    at 0x10977C: readFrequencies(char const*) (readFreq.cpp:33)
+==898875==    by 0x109413: main (testFreq.cpp:10)
+==898875==  Address 0x4dd2c78 is 8 bytes before a block of size 2,056 alloc'd
+==898875==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==898875==    by 0x1096D9: readFrequencies(char const*) (readFreq.cpp:26)
+==898875==    by 0x109413: main (testFreq.cpp:10)
+==898875== 
+==898875== 
+==898875== HEAP SUMMARY:
+==898875==     in use at exit: 0 bytes in 0 blocks
+==898875==   total heap usage: 5 allocs, 5 frees, 87,520 bytes allocated
+==898875== 
+==898875== All heap blocks were freed -- no leaks are possible
+==898875== 
+==898875== For lists of detected and suppressed errors, rerun with: -s
+==898875== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
 Testcase 4
 -----------------------
   - Valgrind reported errors
 Valgrind reported errors (test failed).
-==896077== Memcheck, a memory error detector
-==896077== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==896077== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==896077== Command: ./testFreq /etc/issue
-==896077== Parent PID: 896076
-==896077== 
-==896077== Conditional jump or move depends on uninitialised value(s)
-==896077==    at 0x10944B: main (testFreq.cpp:13)
-==896077== 
-==896077== Use of uninitialised value of size 8
-==896077==    at 0x499181B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==896077==    by 0x4991F99: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<unsigned long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, unsigned long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==896077==    by 0x49A0399: std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==896077==    by 0x10949C: main (testFreq.cpp:17)
-==896077== 
-==896077== Conditional jump or move depends on uninitialised value(s)
-==896077==    at 0x499182D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==896077==    by 0x4991F99: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<unsigned long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, unsigned long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==896077==    by 0x49A0399: std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==896077==    by 0x10949C: main (testFreq.cpp:17)
-==896077== 
-==896077== 
-==896077== HEAP SUMMARY:
-==896077==     in use at exit: 0 bytes in 0 blocks
-==896077==   total heap usage: 5 allocs, 5 frees, 87,520 bytes allocated
-==896077== 
-==896077== All heap blocks were freed -- no leaks are possible
-==896077== 
-==896077== Use --track-origins=yes to see where uninitialised values come from
-==896077== For lists of detected and suppressed errors, rerun with: -s
-==896077== ERROR SUMMARY: 293 errors from 3 contexts (suppressed: 0 from 0)
+==898896== Memcheck, a memory error detector
+==898896== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==898896== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==898896== Command: ./testFreq /etc/issue
+==898896== Parent PID: 898895
+==898896== 
+==898896== Invalid read of size 8
+==898896==    at 0x109775: readFrequencies(char const*) (readFreq.cpp:33)
+==898896==    by 0x109413: main (testFreq.cpp:10)
+==898896==  Address 0x4dd2c78 is 8 bytes before a block of size 2,056 alloc'd
+==898896==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==898896==    by 0x1096D9: readFrequencies(char const*) (readFreq.cpp:26)
+==898896==    by 0x109413: main (testFreq.cpp:10)
+==898896== 
+==898896== Invalid write of size 8
+==898896==    at 0x10977C: readFrequencies(char const*) (readFreq.cpp:33)
+==898896==    by 0x109413: main (testFreq.cpp:10)
+==898896==  Address 0x4dd2c78 is 8 bytes before a block of size 2,056 alloc'd
+==898896==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==898896==    by 0x1096D9: readFrequencies(char const*) (readFreq.cpp:26)
+==898896==    by 0x109413: main (testFreq.cpp:10)
+==898896== 
+==898896== 
+==898896== HEAP SUMMARY:
+==898896==     in use at exit: 0 bytes in 0 blocks
+==898896==   total heap usage: 5 allocs, 5 frees, 87,520 bytes allocated
+==898896== 
+==898896== All heap blocks were freed -- no leaks are possible
+==898896== 
+==898896== For lists of detected and suppressed errors, rerun with: -s
+==898896== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
 
 Overall Grade: F
