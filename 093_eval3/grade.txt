@@ -1,6 +1,6 @@
-Grading at 11/26/2022:04:50:20.081099
-For commit ID 677df3c8265684a2932319d14aaff0ea3d9c5beb
-Grading at Fri Nov 25 11:49:58 PM EST 2022
+Grading at 11/26/2022:04:53:51.333927
+For commit ID f9e89e346fa9ec454c6ba5012ccc3865ee26d06e
+Grading at Fri Nov 25 11:53:30 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -56,68 +56,16 @@ You have requested that we check for intermediate deadline completion on step 2
 Step 2 EC intermediate deadline test 1
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story1 < /usr/local/ece551/cyoa/story1/inputs/input0.txt
-  - Valgrind reported errors
-Valgrind reported errors or memory leaks
-==3085236== Memcheck, a memory error detector
-==3085236== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3085236== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3085236== Command: ./cyoa-step2 /usr/local/ece551/cyoa/story1
-==3085236== Parent PID: 3085235
-==3085236== 
-==3085236== 
-==3085236== HEAP SUMMARY:
-==3085236==     in use at exit: 8 bytes in 4 blocks
-==3085236==   total heap usage: 312 allocs, 308 frees, 148,571 bytes allocated
-==3085236== 
-==3085236== 8 bytes in 4 blocks are definitely lost in loss record 1 of 1
-==3085236==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3085236==    by 0x10D464: Pstory::isValidChoice(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, long) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085236==    by 0x10D23D: Pstory::beginGame(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085236==    by 0x10ADF0: ReadStory::processFile2(char**) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085236==    by 0x10A801: main (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085236== 
-==3085236== LEAK SUMMARY:
-==3085236==    definitely lost: 8 bytes in 4 blocks
-==3085236==    indirectly lost: 0 bytes in 0 blocks
-==3085236==      possibly lost: 0 bytes in 0 blocks
-==3085236==    still reachable: 0 bytes in 0 blocks
-==3085236==         suppressed: 0 bytes in 0 blocks
-==3085236== 
-==3085236== For lists of detected and suppressed errors, rerun with: -s
-==3085236== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 2
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story1 < /usr/local/ece551/cyoa/story1/inputs/input10.txt
-  - Valgrind reported errors
-Valgrind reported errors or memory leaks
-==3085290== Memcheck, a memory error detector
-==3085290== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3085290== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3085290== Command: ./cyoa-step2 /usr/local/ece551/cyoa/story1
-==3085290== Parent PID: 3085289
-==3085290== 
-==3085290== 
-==3085290== HEAP SUMMARY:
-==3085290==     in use at exit: 6 bytes in 3 blocks
-==3085290==   total heap usage: 298 allocs, 295 frees, 139,419 bytes allocated
-==3085290== 
-==3085290== 6 bytes in 3 blocks are definitely lost in loss record 1 of 1
-==3085290==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3085290==    by 0x10D464: Pstory::isValidChoice(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, long) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085290==    by 0x10D23D: Pstory::beginGame(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085290==    by 0x10ADF0: ReadStory::processFile2(char**) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085290==    by 0x10A801: main (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085290== 
-==3085290== LEAK SUMMARY:
-==3085290==    definitely lost: 6 bytes in 3 blocks
-==3085290==    indirectly lost: 0 bytes in 0 blocks
-==3085290==      possibly lost: 0 bytes in 0 blocks
-==3085290==    still reachable: 0 bytes in 0 blocks
-==3085290==         suppressed: 0 bytes in 0 blocks
-==3085290== 
-==3085290== For lists of detected and suppressed errors, rerun with: -s
-==3085290== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 3
 ===========================================================
@@ -317,629 +265,135 @@ Your file did not match the expected ouput
 Step 2 EC intermediate deadline test 4
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story1 < /usr/local/ece551/cyoa/story1/inputs/input12.txt
-  - Valgrind reported errors
-Valgrind reported errors or memory leaks
-==3085373== Memcheck, a memory error detector
-==3085373== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3085373== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3085373== Command: ./cyoa-step2 /usr/local/ece551/cyoa/story1
-==3085373== Parent PID: 3085370
-==3085373== 
-==3085373== 
-==3085373== HEAP SUMMARY:
-==3085373==     in use at exit: 6 bytes in 3 blocks
-==3085373==   total heap usage: 299 allocs, 296 frees, 139,432 bytes allocated
-==3085373== 
-==3085373== 6 bytes in 3 blocks are definitely lost in loss record 1 of 1
-==3085373==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3085373==    by 0x10D464: Pstory::isValidChoice(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, long) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085373==    by 0x10D23D: Pstory::beginGame(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085373==    by 0x10ADF0: ReadStory::processFile2(char**) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085373==    by 0x10A801: main (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085373== 
-==3085373== LEAK SUMMARY:
-==3085373==    definitely lost: 6 bytes in 3 blocks
-==3085373==    indirectly lost: 0 bytes in 0 blocks
-==3085373==      possibly lost: 0 bytes in 0 blocks
-==3085373==    still reachable: 0 bytes in 0 blocks
-==3085373==         suppressed: 0 bytes in 0 blocks
-==3085373== 
-==3085373== For lists of detected and suppressed errors, rerun with: -s
-==3085373== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 5
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story1 < /usr/local/ece551/cyoa/story1/inputs/input1.txt
-  - Valgrind reported errors
-Valgrind reported errors or memory leaks
-==3085424== Memcheck, a memory error detector
-==3085424== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3085424== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3085424== Command: ./cyoa-step2 /usr/local/ece551/cyoa/story1
-==3085424== Parent PID: 3085423
-==3085424== 
-==3085424== 
-==3085424== HEAP SUMMARY:
-==3085424==     in use at exit: 8 bytes in 4 blocks
-==3085424==   total heap usage: 313 allocs, 309 frees, 148,620 bytes allocated
-==3085424== 
-==3085424== 8 bytes in 4 blocks are definitely lost in loss record 1 of 1
-==3085424==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3085424==    by 0x10D464: Pstory::isValidChoice(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, long) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085424==    by 0x10D23D: Pstory::beginGame(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085424==    by 0x10ADF0: ReadStory::processFile2(char**) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085424==    by 0x10A801: main (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085424== 
-==3085424== LEAK SUMMARY:
-==3085424==    definitely lost: 8 bytes in 4 blocks
-==3085424==    indirectly lost: 0 bytes in 0 blocks
-==3085424==      possibly lost: 0 bytes in 0 blocks
-==3085424==    still reachable: 0 bytes in 0 blocks
-==3085424==         suppressed: 0 bytes in 0 blocks
-==3085424== 
-==3085424== For lists of detected and suppressed errors, rerun with: -s
-==3085424== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 6
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story1 < /usr/local/ece551/cyoa/story1/inputs/input2.txt
-  - Valgrind reported errors
-Valgrind reported errors or memory leaks
-==3085473== Memcheck, a memory error detector
-==3085473== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3085473== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3085473== Command: ./cyoa-step2 /usr/local/ece551/cyoa/story1
-==3085473== Parent PID: 3085472
-==3085473== 
-==3085473== 
-==3085473== HEAP SUMMARY:
-==3085473==     in use at exit: 8 bytes in 4 blocks
-==3085473==   total heap usage: 312 allocs, 308 frees, 148,571 bytes allocated
-==3085473== 
-==3085473== 8 bytes in 4 blocks are definitely lost in loss record 1 of 1
-==3085473==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3085473==    by 0x10D464: Pstory::isValidChoice(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, long) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085473==    by 0x10D23D: Pstory::beginGame(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085473==    by 0x10ADF0: ReadStory::processFile2(char**) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085473==    by 0x10A801: main (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085473== 
-==3085473== LEAK SUMMARY:
-==3085473==    definitely lost: 8 bytes in 4 blocks
-==3085473==    indirectly lost: 0 bytes in 0 blocks
-==3085473==      possibly lost: 0 bytes in 0 blocks
-==3085473==    still reachable: 0 bytes in 0 blocks
-==3085473==         suppressed: 0 bytes in 0 blocks
-==3085473== 
-==3085473== For lists of detected and suppressed errors, rerun with: -s
-==3085473== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 7
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story1 < /usr/local/ece551/cyoa/story1/inputs/input3.txt
-  - Valgrind reported errors
-Valgrind reported errors or memory leaks
-==3085510== Memcheck, a memory error detector
-==3085510== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3085510== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3085510== Command: ./cyoa-step2 /usr/local/ece551/cyoa/story1
-==3085510== Parent PID: 3085509
-==3085510== 
-==3085510== 
-==3085510== HEAP SUMMARY:
-==3085510==     in use at exit: 6 bytes in 3 blocks
-==3085510==   total heap usage: 298 allocs, 295 frees, 139,407 bytes allocated
-==3085510== 
-==3085510== 6 bytes in 3 blocks are definitely lost in loss record 1 of 1
-==3085510==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3085510==    by 0x10D464: Pstory::isValidChoice(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, long) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085510==    by 0x10D23D: Pstory::beginGame(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085510==    by 0x10ADF0: ReadStory::processFile2(char**) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085510==    by 0x10A801: main (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085510== 
-==3085510== LEAK SUMMARY:
-==3085510==    definitely lost: 6 bytes in 3 blocks
-==3085510==    indirectly lost: 0 bytes in 0 blocks
-==3085510==      possibly lost: 0 bytes in 0 blocks
-==3085510==    still reachable: 0 bytes in 0 blocks
-==3085510==         suppressed: 0 bytes in 0 blocks
-==3085510== 
-==3085510== For lists of detected and suppressed errors, rerun with: -s
-==3085510== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 8
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story1 < /usr/local/ece551/cyoa/story1/inputs/input4.txt
-  - Valgrind reported errors
-Valgrind reported errors or memory leaks
-==3085549== Memcheck, a memory error detector
-==3085549== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3085549== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3085549== Command: ./cyoa-step2 /usr/local/ece551/cyoa/story1
-==3085549== Parent PID: 3085548
-==3085549== 
-==3085549== 
-==3085549== HEAP SUMMARY:
-==3085549==     in use at exit: 6 bytes in 3 blocks
-==3085549==   total heap usage: 298 allocs, 295 frees, 139,419 bytes allocated
-==3085549== 
-==3085549== 6 bytes in 3 blocks are definitely lost in loss record 1 of 1
-==3085549==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3085549==    by 0x10D464: Pstory::isValidChoice(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, long) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085549==    by 0x10D23D: Pstory::beginGame(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085549==    by 0x10ADF0: ReadStory::processFile2(char**) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085549==    by 0x10A801: main (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085549== 
-==3085549== LEAK SUMMARY:
-==3085549==    definitely lost: 6 bytes in 3 blocks
-==3085549==    indirectly lost: 0 bytes in 0 blocks
-==3085549==      possibly lost: 0 bytes in 0 blocks
-==3085549==    still reachable: 0 bytes in 0 blocks
-==3085549==         suppressed: 0 bytes in 0 blocks
-==3085549== 
-==3085549== For lists of detected and suppressed errors, rerun with: -s
-==3085549== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 9
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story1 < /usr/local/ece551/cyoa/story1/inputs/input5.txt
-  - Valgrind reported errors
-Valgrind reported errors or memory leaks
-==3085598== Memcheck, a memory error detector
-==3085598== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3085598== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3085598== Command: ./cyoa-step2 /usr/local/ece551/cyoa/story1
-==3085598== Parent PID: 3085597
-==3085598== 
-==3085598== 
-==3085598== HEAP SUMMARY:
-==3085598==     in use at exit: 6 bytes in 3 blocks
-==3085598==   total heap usage: 297 allocs, 294 frees, 139,265 bytes allocated
-==3085598== 
-==3085598== 6 bytes in 3 blocks are definitely lost in loss record 1 of 1
-==3085598==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3085598==    by 0x10D464: Pstory::isValidChoice(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, long) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085598==    by 0x10D23D: Pstory::beginGame(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085598==    by 0x10ADF0: ReadStory::processFile2(char**) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085598==    by 0x10A801: main (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085598== 
-==3085598== LEAK SUMMARY:
-==3085598==    definitely lost: 6 bytes in 3 blocks
-==3085598==    indirectly lost: 0 bytes in 0 blocks
-==3085598==      possibly lost: 0 bytes in 0 blocks
-==3085598==    still reachable: 0 bytes in 0 blocks
-==3085598==         suppressed: 0 bytes in 0 blocks
-==3085598== 
-==3085598== For lists of detected and suppressed errors, rerun with: -s
-==3085598== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 10
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story1 < /usr/local/ece551/cyoa/story1/inputs/input6.txt
-  - Valgrind reported errors
-Valgrind reported errors or memory leaks
-==3085628== Memcheck, a memory error detector
-==3085628== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3085628== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3085628== Command: ./cyoa-step2 /usr/local/ece551/cyoa/story1
-==3085628== Parent PID: 3085627
-==3085628== 
-==3085628== 
-==3085628== HEAP SUMMARY:
-==3085628==     in use at exit: 6 bytes in 3 blocks
-==3085628==   total heap usage: 297 allocs, 294 frees, 139,286 bytes allocated
-==3085628== 
-==3085628== 6 bytes in 3 blocks are definitely lost in loss record 1 of 1
-==3085628==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3085628==    by 0x10D464: Pstory::isValidChoice(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, long) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085628==    by 0x10D23D: Pstory::beginGame(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085628==    by 0x10ADF0: ReadStory::processFile2(char**) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085628==    by 0x10A801: main (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085628== 
-==3085628== LEAK SUMMARY:
-==3085628==    definitely lost: 6 bytes in 3 blocks
-==3085628==    indirectly lost: 0 bytes in 0 blocks
-==3085628==      possibly lost: 0 bytes in 0 blocks
-==3085628==    still reachable: 0 bytes in 0 blocks
-==3085628==         suppressed: 0 bytes in 0 blocks
-==3085628== 
-==3085628== For lists of detected and suppressed errors, rerun with: -s
-==3085628== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 11
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story1 < /usr/local/ece551/cyoa/story1/inputs/input7.txt
-  - Valgrind reported errors
-Valgrind reported errors or memory leaks
-==3085650== Memcheck, a memory error detector
-==3085650== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3085650== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3085650== Command: ./cyoa-step2 /usr/local/ece551/cyoa/story1
-==3085650== Parent PID: 3085649
-==3085650== 
-==3085650== 
-==3085650== HEAP SUMMARY:
-==3085650==     in use at exit: 6 bytes in 3 blocks
-==3085650==   total heap usage: 297 allocs, 294 frees, 139,277 bytes allocated
-==3085650== 
-==3085650== 6 bytes in 3 blocks are definitely lost in loss record 1 of 1
-==3085650==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3085650==    by 0x10D464: Pstory::isValidChoice(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, long) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085650==    by 0x10D23D: Pstory::beginGame(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085650==    by 0x10ADF0: ReadStory::processFile2(char**) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085650==    by 0x10A801: main (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085650== 
-==3085650== LEAK SUMMARY:
-==3085650==    definitely lost: 6 bytes in 3 blocks
-==3085650==    indirectly lost: 0 bytes in 0 blocks
-==3085650==      possibly lost: 0 bytes in 0 blocks
-==3085650==    still reachable: 0 bytes in 0 blocks
-==3085650==         suppressed: 0 bytes in 0 blocks
-==3085650== 
-==3085650== For lists of detected and suppressed errors, rerun with: -s
-==3085650== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 12
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story1 < /usr/local/ece551/cyoa/story1/inputs/input8.txt
-  - Valgrind reported errors
-Valgrind reported errors or memory leaks
-==3085672== Memcheck, a memory error detector
-==3085672== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3085672== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3085672== Command: ./cyoa-step2 /usr/local/ece551/cyoa/story1
-==3085672== Parent PID: 3085671
-==3085672== 
-==3085672== 
-==3085672== HEAP SUMMARY:
-==3085672==     in use at exit: 6 bytes in 3 blocks
-==3085672==   total heap usage: 298 allocs, 295 frees, 139,430 bytes allocated
-==3085672== 
-==3085672== 6 bytes in 3 blocks are definitely lost in loss record 1 of 1
-==3085672==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3085672==    by 0x10D464: Pstory::isValidChoice(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, long) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085672==    by 0x10D23D: Pstory::beginGame(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085672==    by 0x10ADF0: ReadStory::processFile2(char**) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085672==    by 0x10A801: main (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085672== 
-==3085672== LEAK SUMMARY:
-==3085672==    definitely lost: 6 bytes in 3 blocks
-==3085672==    indirectly lost: 0 bytes in 0 blocks
-==3085672==      possibly lost: 0 bytes in 0 blocks
-==3085672==    still reachable: 0 bytes in 0 blocks
-==3085672==         suppressed: 0 bytes in 0 blocks
-==3085672== 
-==3085672== For lists of detected and suppressed errors, rerun with: -s
-==3085672== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 13
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story1 < /usr/local/ece551/cyoa/story1/inputs/input9.txt
-  - Valgrind reported errors
-Valgrind reported errors or memory leaks
-==3085697== Memcheck, a memory error detector
-==3085697== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3085697== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3085697== Command: ./cyoa-step2 /usr/local/ece551/cyoa/story1
-==3085697== Parent PID: 3085696
-==3085697== 
-==3085697== 
-==3085697== HEAP SUMMARY:
-==3085697==     in use at exit: 6 bytes in 3 blocks
-==3085697==   total heap usage: 298 allocs, 295 frees, 139,430 bytes allocated
-==3085697== 
-==3085697== 6 bytes in 3 blocks are definitely lost in loss record 1 of 1
-==3085697==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3085697==    by 0x10D464: Pstory::isValidChoice(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, long) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085697==    by 0x10D23D: Pstory::beginGame(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085697==    by 0x10ADF0: ReadStory::processFile2(char**) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085697==    by 0x10A801: main (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085697== 
-==3085697== LEAK SUMMARY:
-==3085697==    definitely lost: 6 bytes in 3 blocks
-==3085697==    indirectly lost: 0 bytes in 0 blocks
-==3085697==      possibly lost: 0 bytes in 0 blocks
-==3085697==    still reachable: 0 bytes in 0 blocks
-==3085697==         suppressed: 0 bytes in 0 blocks
-==3085697== 
-==3085697== For lists of detected and suppressed errors, rerun with: -s
-==3085697== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 14
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story2 < /usr/local/ece551/cyoa/story2/inputs/input0.txt
-  - Valgrind reported errors
-Valgrind reported errors or memory leaks
-==3085720== Memcheck, a memory error detector
-==3085720== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3085720== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3085720== Command: ./cyoa-step2 /usr/local/ece551/cyoa/story2
-==3085720== Parent PID: 3085719
-==3085720== 
-==3085720== 
-==3085720== HEAP SUMMARY:
-==3085720==     in use at exit: 4 bytes in 2 blocks
-==3085720==   total heap usage: 219 allocs, 217 frees, 125,850 bytes allocated
-==3085720== 
-==3085720== 4 bytes in 2 blocks are definitely lost in loss record 1 of 1
-==3085720==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3085720==    by 0x10D464: Pstory::isValidChoice(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, long) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085720==    by 0x10D23D: Pstory::beginGame(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085720==    by 0x10ADF0: ReadStory::processFile2(char**) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085720==    by 0x10A801: main (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085720== 
-==3085720== LEAK SUMMARY:
-==3085720==    definitely lost: 4 bytes in 2 blocks
-==3085720==    indirectly lost: 0 bytes in 0 blocks
-==3085720==      possibly lost: 0 bytes in 0 blocks
-==3085720==    still reachable: 0 bytes in 0 blocks
-==3085720==         suppressed: 0 bytes in 0 blocks
-==3085720== 
-==3085720== For lists of detected and suppressed errors, rerun with: -s
-==3085720== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 15
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story2 < /usr/local/ece551/cyoa/story2/inputs/input1.txt
-  - Valgrind reported errors
-Valgrind reported errors or memory leaks
-==3085758== Memcheck, a memory error detector
-==3085758== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3085758== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3085758== Command: ./cyoa-step2 /usr/local/ece551/cyoa/story2
-==3085758== Parent PID: 3085757
-==3085758== 
-==3085758== 
-==3085758== HEAP SUMMARY:
-==3085758==     in use at exit: 10 bytes in 5 blocks
-==3085758==   total heap usage: 260 allocs, 255 frees, 153,299 bytes allocated
-==3085758== 
-==3085758== 10 bytes in 5 blocks are definitely lost in loss record 1 of 1
-==3085758==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3085758==    by 0x10D464: Pstory::isValidChoice(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, long) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085758==    by 0x10D23D: Pstory::beginGame(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085758==    by 0x10ADF0: ReadStory::processFile2(char**) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085758==    by 0x10A801: main (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085758== 
-==3085758== LEAK SUMMARY:
-==3085758==    definitely lost: 10 bytes in 5 blocks
-==3085758==    indirectly lost: 0 bytes in 0 blocks
-==3085758==      possibly lost: 0 bytes in 0 blocks
-==3085758==    still reachable: 0 bytes in 0 blocks
-==3085758==         suppressed: 0 bytes in 0 blocks
-==3085758== 
-==3085758== For lists of detected and suppressed errors, rerun with: -s
-==3085758== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 16
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story2 < /usr/local/ece551/cyoa/story2/inputs/input2.txt
-  - Valgrind reported errors
-Valgrind reported errors or memory leaks
-==3085780== Memcheck, a memory error detector
-==3085780== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3085780== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3085780== Command: ./cyoa-step2 /usr/local/ece551/cyoa/story2
-==3085780== Parent PID: 3085779
-==3085780== 
-==3085780== 
-==3085780== HEAP SUMMARY:
-==3085780==     in use at exit: 10 bytes in 5 blocks
-==3085780==   total heap usage: 259 allocs, 254 frees, 153,163 bytes allocated
-==3085780== 
-==3085780== 10 bytes in 5 blocks are definitely lost in loss record 1 of 1
-==3085780==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3085780==    by 0x10D464: Pstory::isValidChoice(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, long) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085780==    by 0x10D23D: Pstory::beginGame(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085780==    by 0x10ADF0: ReadStory::processFile2(char**) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085780==    by 0x10A801: main (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085780== 
-==3085780== LEAK SUMMARY:
-==3085780==    definitely lost: 10 bytes in 5 blocks
-==3085780==    indirectly lost: 0 bytes in 0 blocks
-==3085780==      possibly lost: 0 bytes in 0 blocks
-==3085780==    still reachable: 0 bytes in 0 blocks
-==3085780==         suppressed: 0 bytes in 0 blocks
-==3085780== 
-==3085780== For lists of detected and suppressed errors, rerun with: -s
-==3085780== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 17
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story2 < /usr/local/ece551/cyoa/story2/inputs/input3.txt
-  - Valgrind reported errors
-Valgrind reported errors or memory leaks
-==3085803== Memcheck, a memory error detector
-==3085803== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3085803== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3085803== Command: ./cyoa-step2 /usr/local/ece551/cyoa/story2
-==3085803== Parent PID: 3085802
-==3085803== 
-==3085803== 
-==3085803== HEAP SUMMARY:
-==3085803==     in use at exit: 8 bytes in 4 blocks
-==3085803==   total heap usage: 247 allocs, 243 frees, 144,210 bytes allocated
-==3085803== 
-==3085803== 8 bytes in 4 blocks are definitely lost in loss record 1 of 1
-==3085803==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3085803==    by 0x10D464: Pstory::isValidChoice(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, long) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085803==    by 0x10D23D: Pstory::beginGame(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085803==    by 0x10ADF0: ReadStory::processFile2(char**) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085803==    by 0x10A801: main (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085803== 
-==3085803== LEAK SUMMARY:
-==3085803==    definitely lost: 8 bytes in 4 blocks
-==3085803==    indirectly lost: 0 bytes in 0 blocks
-==3085803==      possibly lost: 0 bytes in 0 blocks
-==3085803==    still reachable: 0 bytes in 0 blocks
-==3085803==         suppressed: 0 bytes in 0 blocks
-==3085803== 
-==3085803== For lists of detected and suppressed errors, rerun with: -s
-==3085803== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 18
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story2 < /usr/local/ece551/cyoa/story2/inputs/input4.txt
-  - Valgrind reported errors
-Valgrind reported errors or memory leaks
-==3085841== Memcheck, a memory error detector
-==3085841== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3085841== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3085841== Command: ./cyoa-step2 /usr/local/ece551/cyoa/story2
-==3085841== Parent PID: 3085840
-==3085841== 
-==3085841== 
-==3085841== HEAP SUMMARY:
-==3085841==     in use at exit: 8 bytes in 4 blocks
-==3085841==   total heap usage: 246 allocs, 242 frees, 144,082 bytes allocated
-==3085841== 
-==3085841== 8 bytes in 4 blocks are definitely lost in loss record 1 of 1
-==3085841==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3085841==    by 0x10D464: Pstory::isValidChoice(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, long) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085841==    by 0x10D23D: Pstory::beginGame(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085841==    by 0x10ADF0: ReadStory::processFile2(char**) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085841==    by 0x10A801: main (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085841== 
-==3085841== LEAK SUMMARY:
-==3085841==    definitely lost: 8 bytes in 4 blocks
-==3085841==    indirectly lost: 0 bytes in 0 blocks
-==3085841==      possibly lost: 0 bytes in 0 blocks
-==3085841==    still reachable: 0 bytes in 0 blocks
-==3085841==         suppressed: 0 bytes in 0 blocks
-==3085841== 
-==3085841== For lists of detected and suppressed errors, rerun with: -s
-==3085841== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 19
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story2 < /usr/local/ece551/cyoa/story2/inputs/input5.txt
-  - Valgrind reported errors
-Valgrind reported errors or memory leaks
-==3085863== Memcheck, a memory error detector
-==3085863== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3085863== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3085863== Command: ./cyoa-step2 /usr/local/ece551/cyoa/story2
-==3085863== Parent PID: 3085862
-==3085863== 
-==3085863== 
-==3085863== HEAP SUMMARY:
-==3085863==     in use at exit: 8 bytes in 4 blocks
-==3085863==   total heap usage: 246 allocs, 242 frees, 144,083 bytes allocated
-==3085863== 
-==3085863== 8 bytes in 4 blocks are definitely lost in loss record 1 of 1
-==3085863==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3085863==    by 0x10D464: Pstory::isValidChoice(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, long) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085863==    by 0x10D23D: Pstory::beginGame(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085863==    by 0x10ADF0: ReadStory::processFile2(char**) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085863==    by 0x10A801: main (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085863== 
-==3085863== LEAK SUMMARY:
-==3085863==    definitely lost: 8 bytes in 4 blocks
-==3085863==    indirectly lost: 0 bytes in 0 blocks
-==3085863==      possibly lost: 0 bytes in 0 blocks
-==3085863==    still reachable: 0 bytes in 0 blocks
-==3085863==         suppressed: 0 bytes in 0 blocks
-==3085863== 
-==3085863== For lists of detected and suppressed errors, rerun with: -s
-==3085863== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 20
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story2 < /usr/local/ece551/cyoa/story2/inputs/input6.txt
-  - Valgrind reported errors
-Valgrind reported errors or memory leaks
-==3085901== Memcheck, a memory error detector
-==3085901== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3085901== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3085901== Command: ./cyoa-step2 /usr/local/ece551/cyoa/story2
-==3085901== Parent PID: 3085900
-==3085901== 
-==3085901== 
-==3085901== HEAP SUMMARY:
-==3085901==     in use at exit: 2 bytes in 1 blocks
-==3085901==   total heap usage: 206 allocs, 205 frees, 116,776 bytes allocated
-==3085901== 
-==3085901== 2 bytes in 1 blocks are definitely lost in loss record 1 of 1
-==3085901==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3085901==    by 0x10D464: Pstory::isValidChoice(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, long) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085901==    by 0x10D23D: Pstory::beginGame(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085901==    by 0x10ADF0: ReadStory::processFile2(char**) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085901==    by 0x10A801: main (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085901== 
-==3085901== LEAK SUMMARY:
-==3085901==    definitely lost: 2 bytes in 1 blocks
-==3085901==    indirectly lost: 0 bytes in 0 blocks
-==3085901==      possibly lost: 0 bytes in 0 blocks
-==3085901==    still reachable: 0 bytes in 0 blocks
-==3085901==         suppressed: 0 bytes in 0 blocks
-==3085901== 
-==3085901== For lists of detected and suppressed errors, rerun with: -s
-==3085901== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 21
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story2 < /usr/local/ece551/cyoa/story2/inputs/input7.txt
-  - Valgrind reported errors
-Valgrind reported errors or memory leaks
-==3085941== Memcheck, a memory error detector
-==3085941== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3085941== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3085941== Command: ./cyoa-step2 /usr/local/ece551/cyoa/story2
-==3085941== Parent PID: 3085940
-==3085941== 
-==3085941== 
-==3085941== HEAP SUMMARY:
-==3085941==     in use at exit: 2 bytes in 1 blocks
-==3085941==   total heap usage: 206 allocs, 205 frees, 116,777 bytes allocated
-==3085941== 
-==3085941== 2 bytes in 1 blocks are definitely lost in loss record 1 of 1
-==3085941==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3085941==    by 0x10D464: Pstory::isValidChoice(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, long) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085941==    by 0x10D23D: Pstory::beginGame(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085941==    by 0x10ADF0: ReadStory::processFile2(char**) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085941==    by 0x10A801: main (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085941== 
-==3085941== LEAK SUMMARY:
-==3085941==    definitely lost: 2 bytes in 1 blocks
-==3085941==    indirectly lost: 0 bytes in 0 blocks
-==3085941==      possibly lost: 0 bytes in 0 blocks
-==3085941==    still reachable: 0 bytes in 0 blocks
-==3085941==         suppressed: 0 bytes in 0 blocks
-==3085941== 
-==3085941== For lists of detected and suppressed errors, rerun with: -s
-==3085941== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 22
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story2 < /usr/local/ece551/cyoa/story2/inputs/input8.txt
-  - Valgrind reported errors
-Valgrind reported errors or memory leaks
-==3085978== Memcheck, a memory error detector
-==3085978== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3085978== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3085978== Command: ./cyoa-step2 /usr/local/ece551/cyoa/story2
-==3085978== Parent PID: 3085977
-==3085978== 
-==3085978== 
-==3085978== HEAP SUMMARY:
-==3085978==     in use at exit: 10 bytes in 5 blocks
-==3085978==   total heap usage: 260 allocs, 255 frees, 153,165 bytes allocated
-==3085978== 
-==3085978== 10 bytes in 5 blocks are definitely lost in loss record 1 of 1
-==3085978==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3085978==    by 0x10D464: Pstory::isValidChoice(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, long) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085978==    by 0x10D23D: Pstory::beginGame(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085978==    by 0x10ADF0: ReadStory::processFile2(char**) (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085978==    by 0x10A801: main (in /home/ece551db/graderbase/work/yc538.093_eval3.tqyd9Z/cyoa-step2)
-==3085978== 
-==3085978== LEAK SUMMARY:
-==3085978==    definitely lost: 10 bytes in 5 blocks
-==3085978==    indirectly lost: 0 bytes in 0 blocks
-==3085978==      possibly lost: 0 bytes in 0 blocks
-==3085978==    still reachable: 0 bytes in 0 blocks
-==3085978==         suppressed: 0 bytes in 0 blocks
-==3085978== 
-==3085978== For lists of detected and suppressed errors, rerun with: -s
-==3085978== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 23
 ===========================================================
