@@ -294,5 +294,6 @@ bool Pstory::isValidChoice(std::string n, long num_choice) {
     delete[] c;
     return false;
   }
+  delete[] c;
   return true;
 }
