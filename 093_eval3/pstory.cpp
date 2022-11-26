@@ -60,6 +60,13 @@ bool Pstory::isChoice(std::string line) {
 
 //convert string to integer and check if it is valid
 long Pstory::convert(std::string s) {
+  //if string is empty???
+  if (s.empty()) {
+    std::cerr << "string is empty\n";
+    exit(EXIT_FAILURE);
+  }
+
+  //if string is not empty
   char * c = new char[s.length() + 1];
   std::strcpy(c, s.c_str());
   char * end;
@@ -70,6 +77,7 @@ long Pstory::convert(std::string s) {
     delete[] c;
     exit(EXIT_FAILURE);
   }
+
   //chech if integer if negative
   if (num < 0) {
     std::cerr << "Negative integer!\n";
@@ -228,7 +236,7 @@ void Pstory::beginGame(std::string path) {
     print_single(path, currnum);
     long num_choice = story[currnum].choice.size();  //get number of choice
     //read from cmd
-    std::cin >> n;
+    std::getline(std::cin, n);
 
     //test!!!
     // std::cout << n << std::endl;
@@ -236,7 +244,7 @@ void Pstory::beginGame(std::string path) {
     //if input is invalid, input again until valid
     while (!isValidChoice(n, num_choice)) {
       std::cout << "That is not a valid choice, please try again\n";
-      std::cin >> n;
+      std::getline(std::cin, n);
     }
 
     //get choice number
@@ -265,6 +273,12 @@ void Pstory::beginGame(std::string path) {
 }
 
 bool Pstory::isValidChoice(std::string n, long num_choice) {
+  //if string is empty???
+  if (n.empty()) {
+    return false;
+  }
+
+  //if string is not empty
   char * c = new char[n.length() + 1];
   std::strcpy(c, n.c_str());
   char * end;
@@ -279,7 +293,7 @@ bool Pstory::isValidChoice(std::string n, long num_choice) {
     return false;
   }
   //chech if integer if negative
-  if (num < 0) {
+  if (num <= 0) {
     //test!!!
     //std::cout << "<0\n";
 
