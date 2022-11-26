@@ -6,11 +6,17 @@
 #include <iostream>
 #include <vector>
 
-void Page::print_p(std::string path) {
-  //print pagenumber
-  std::cout << "Page " << pageNum << "\n";
-  std::cout << "==========\n";
-
+void Page::print_p(std::string path, int step) {
+  if (step == 1) {
+    //print pagenumber
+    std::cout << "Page " << pageNum << "\n";
+    std::cout << "==========\n";
+  }
+  else if (step == 2) {
+    //print newline
+    std::cout << "\n";
+    std::cout << "\n";
+  }
   //print text
   //convert file name
   std::ifstream ifsp;

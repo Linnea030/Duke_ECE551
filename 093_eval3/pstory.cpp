@@ -11,12 +11,12 @@
 //print all the story in step1
 void Pstory::print(std::string path) {
   for (int i = 0; i <= p_num; i++) {
-    story[i].print_p(path);
+    story[i].print_p(path, 1);
   }
 }
 //print single story in step2
 void Pstory::print_single(std::string path, int i) {
-  story[i].print_p(path);
+  story[i].print_p(path, 2);
 }
 
 //check if the pagenumber is valid in step1

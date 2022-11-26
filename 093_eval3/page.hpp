@@ -9,5 +9,5 @@ class Page {
   Page(long pn, std::string pt, std::string fn) :
       pageNum(pn), pageType(pt), fileName(fn) {}
 
-  void print_p(std::string path);
+  void print_p(std::string path, int step);
 };
