@@ -33,7 +33,7 @@ void ReadStory::openFile(char ** argv) {
   //return ifs;
 }
 
-void ReadStory::processFile(char ** argv) {
+void ReadStory::processFile1(char ** argv) {
   //convert argv to char
   std::string s;
   std::stringstream ss;
@@ -43,6 +43,19 @@ void ReadStory::processFile(char ** argv) {
   Pstory ps;
   ps.proStory(ifs);
   ps.print(s);
+}
+
+void ReadStory::processFile2(char ** argv) {
+  //convert argv to char
+  std::string s;
+  std::stringstream ss;
+  ss << argv[1];
+  ss >> s;
+  //read and print story.txt file
+  Pstory ps;
+  ps.proStory(ifs);
+  ps.checkValid();
+  ps.beginGame(s);
 }
 
 void ReadStory::closeFile() {

@@ -9,7 +9,8 @@ class ReadStory {
   std::ifstream ifs;
   ReadStory() {}
   void openFile(char ** argv);
-  void processFile(char ** argv);
+  void processFile1(char ** argv);
+  void processFile2(char ** argv);
   void closeFile();
 };
 #endif

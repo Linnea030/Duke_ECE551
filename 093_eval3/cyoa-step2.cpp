@@ -11,13 +11,12 @@ int main(int argc, char ** argv) {
     std::cerr << "The command line input has errors!\n";
     exit(EXIT_FAILURE);
   }
-
   //open the file
   ReadStory rs;
   rs.openFile(argv);
 
-  //process and print story.txt file
-  rs.processFile1(argv);
+  //process the whole story
+  rs.processFile2(argv);
 
   //close story.txt file
   rs.closeFile();

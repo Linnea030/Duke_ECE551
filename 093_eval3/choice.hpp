@@ -13,9 +13,6 @@ class Choice {
   Choice(long pn, long dn, std::string text, long cnum) :
       pagenum(pn), destnum(dn), text(text), cnum(cnum) {}
 
-  void print_c() {
-    std::cout << " " << cnum << ". " << text;
-    std::cout << "\n";
-  }
+  void print_c();
 };
 #endif
