@@ -1,6 +1,6 @@
-Grading at 11/29/2022:19:52:04.762924
-For commit ID 876d9432792bba7356ad457180e0891cad01d7ce
-Grading at Tue Nov 29 02:51:56 PM EST 2022
+Grading at 11/29/2022:20:11:01.274696
+For commit ID b2e733ff03985c70d575a8a85d51b6fea644783e
+Grading at Tue Nov 29 03:10:55 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -29,7 +29,7 @@ No request to check for intermediate deadline completion on step 1
 
 Step 2
 Checking that cyoa-step2 compiles
-g++ -o cyoa-step2 -pedantic -std=gnu++98 -Werror -Wall cyoa-step2.cpp readStory.hpp readStory.cpp page.hpp page.cpp choice.hpp choice.cpp pstory.hpp pstory.cpp
+make: 'cyoa-step2' is up to date.
 The code compiled (good)
 Executable cyoa-step2 exists (good)
 ------------------------------------
@@ -70,14 +70,9 @@ Valgrind was clean
 
 3.2: Current test is ./cyoa-step3 /usr/local/ece551/cyoa/story2 < /dev/null
 -----------------------------
-It looks like you got different output from us on that case.
-Here is the diff (yours on left, ours on right):
-
-							      >	0(1),1(2),5(1),6(1),8(1),11(win)
-							      >	0(1),1(2),5(2),7(1),10(win)
-0(2),2(win)							0(2),2(win)
-Your file did not match the expected output
-
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 ------------------------------------
 You have requested that we check for intermediate deadline completion on step 3
 ------------------------------------
@@ -92,12 +87,10 @@ You have passed this test case
 Step 3 EC intermediate deadline test 2
 ===========================================================
 ./cyoa-step3 /usr/local/ece551/cyoa/story2
-Your output differs from ours.
-Below is the diff (yours left/ours right)
-							      >	0(1),1(2),5(1),6(1),8(1),11(win)
-							      >	0(1),1(2),5(2),7(1),10(win)
-0(2),2(win)							0(2),2(win)
-Your file did not match the expected output
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+Intermediate deadline requirements for Step 3 passed at Tue Nov 29 03:11:01 PM EST 2022
 
 Step 4
 Checking that cyoa-step4 compiles
