@@ -20,5 +20,12 @@ class Pstory {
   void checkValid();
   void beginGame(std::string path);
   bool isValidChoice(std::string n, long num_choice);
+  void findWay();
+  bool isContained(const std::vector<long> & visited, const long & pageNum);
+  std::string toString(std::vector<std::pair<Page, long> > currPath);
+  void printWay(std::vector<std::string> way);
+  //  bool isContained(std::vector<Page> const & visited, Page const & currPage);
+  //  bool operator==(const Page & rhs);
+  //  bool operator!=(const Page & rhs);
   // ~Pstory() {}
 };

@@ -5,6 +5,9 @@
 #include <fstream>
 #include <iostream>
 #include <map>
+#include <sstream>
+//#include <set>
+#include <stack>
 #include <string>
 #include <vector>
 
@@ -311,3 +314,111 @@ bool Pstory::isValidChoice(std::string n, long num_choice) {
   delete[] c;
   return true;
 }
+
+void Pstory::findWay() {
+  //long curr_p = 0;  //current page number
+  long curr_c = 0;  //current choice number under this page
+  //std::vector<long> visited;
+  std::map<long, int> visit;
+  std::vector<std::pair<Page, long> > currPath;
+  std::stack<std::vector<std::pair<Page, long> > > todoPath;
+  std::vector<std::string> resPath;
+  std::pair<Page, long> currPage = std::make_pair(story[0], curr_c);
+  currPath.push_back(currPage);
+  todoPath.push(currPath);
+  while (!todoPath.empty()) {
+    currPath = todoPath.top();
+    todoPath.pop();
+    currPage = currPath[currPath.size() - 1];
+    //curr_p = currPage.first.pageNum;
+    if (currPage.first.pageType == "W") {
+      //convert(currPath to string)
+      std::string way = toString(currPath);
+
+      //test!!!
+      /*
+      for (unsigned long k = 0; k < currPath.size(); ++k) {
+        std::cout << currPath[k].first.pageNum << std::endl;
+	}*/
+
+      resPath.push_back(way);
+      //get visited back
+      visit.clear();
+      for (unsigned long j = 0; j < todoPath.top().size(); ++j) {
+        long index = todoPath.top()[j].first.pageNum;
+        visit[index]++;
+      }
+      continue;
+    }
+    if (!visit.count(currPage.first.pageNum)) {
+      visit[currPage.first.pageNum]++;
+      for (unsigned long i = 0; i < currPage.first.choice.size(); ++i) {
+        curr_c = i + 1;
+        long next_p = currPage.first.choice[i].destnum;
+        if (!visit.count(next_p)) {
+          std::pair<Page, long> tempPage = std::make_pair(story[next_p], curr_c);
+          currPath.push_back(tempPage);
+          todoPath.push(currPath);
+          currPath.pop_back();
+        }
+      }
+    }
+
+    /*    if (!isContained(visited, currPage.first.pageNum)) {
+      visited.push_back(currPage.first.pageNum);
+      for (unsigned long i = 0; i < currPage.first.choice.size(); ++i) {
+        curr_c = i + 1;
+        long next_p = currPage.first.choice[i].destnum;
+        if (!isContained(visited, next_p)) {
+          currPath.push_back({story[next_p], curr_c});
+          todoPath.push(currPath);
+          currPath.pop_back();
+        }
+      }
+    }
+*/
+  }
+  if (resPath.empty()) {
+    std::cout << "This story is unwinnable!\n";
+    return;
+  }
+  printWay(resPath);
+}
+
+std::string Pstory::toString(std::vector<std::pair<Page, long> > currPath) {
+  std::string path;
+  std::stringstream s1;
+  for (unsigned long k = 0; k < currPath.size() - 1; ++k) {
+    s1 << currPath[k].first.pageNum << "(" << currPath[k + 1].second << "),";
+  }
+  s1 << currPath[currPath.size() - 1].first.pageNum << "(win)";
+  s1 >> path;
+  return path;
+}
+
+void Pstory::printWay(std::vector<std::string> way) {
+  for (unsigned long int i = 0; i < way.size(); ++i) {
+    std::cout << way[i] << std::endl;
+  }
+}
+
+///////////////////////////////////////////////////////////
+bool Pstory::isContained(const std::vector<long> & visited, const long & pageNum) {
+  for (unsigned long i = 0; i < visited.size(); ++i) {
+    if (pageNum != visited[i]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+/*
+bool Pstory::isContained(const std::vector<Page> & visited, const Page & currPage) {
+  for (unsigned long i = 0; i < visited.size(); ++i) {
+    if (currPage != visited[i]) {  //overloaded operator !=
+      return false;
+    }
+  }
+  return true;
+}
+*/

@@ -61,3 +61,20 @@ void Page::print_p(std::string path, int step) {
     std::cout << "Sorry, you have lost. Better luck next time!\n";
   }
 }
+
+/////////////////////////////////////////////////
+bool Page::operator==(const Page & rhs) {
+  if (pageNum != rhs.pageNum || pageType != rhs.pageType || fileName != rhs.fileName) {
+    return false;
+  }
+  //if(choice)
+  return true;
+}
+
+///////////////////////////////////////////////
+bool Page::operator!=(const Page & rhs) {
+  if (*this != rhs) {
+    return false;
+  }
+  return true;
+}

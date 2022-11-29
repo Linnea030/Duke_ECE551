@@ -4,4 +4,10 @@ cyoa-step1 /usr/local/ece551/cyoa/story2
 
 cyoa-step2 /usr/local/ece551/cyoa/story1 < /usr/local/ece551/cyoa/story1/input1.txt
 cyoa-step2 /usr/local/ece551/cyoa/story2 < /usr/local/ece551/cyoa/story2/input1.txt
-ec:step2
+#ec:step2
+
+cyoa-step3 /usr/local/ece551/cyoa/story1
+cyoa-step3 /usr/local/ece551/cyoa/story2
+ec:step3
+
+

@@ -10,4 +10,6 @@ class Page {
       pageNum(pn), pageType(pt), fileName(fn) {}
 
   void print_p(std::string path, int step);
+  bool operator==(const Page & rhs);
+  bool operator!=(const Page & rhs);
 };

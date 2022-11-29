@@ -16,7 +16,7 @@ int main(int argc, char ** argv) {
   rs.openFile(argv);
 
   //process the whole story
-  rs.processFile2(argv);
+  rs.processFile3(argv);
 
   //close story.txt file
   rs.closeFile();

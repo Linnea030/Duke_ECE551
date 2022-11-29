@@ -58,6 +58,19 @@ void ReadStory::processFile2(char ** argv) {
   ps.beginGame(s);
 }
 
+void ReadStory::processFile3(char ** argv) {
+  //convert argv to char
+  std::string s;
+  std::stringstream ss;
+  ss << argv[1];
+  ss >> s;
+  //read and print story.txt file
+  Pstory ps;
+  ps.proStory(ifs);
+  ps.checkValid();
+  ps.findWay();
+}
+
 void ReadStory::closeFile() {
   //close fail
   ifs.close();
