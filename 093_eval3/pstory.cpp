@@ -320,20 +320,20 @@ void Pstory::findWay() {
   long curr_c = 0;  //current choice number under this page
   //std::vector<long> visited;
   std::map<long, int> visit;
-  std::vector<std::pair<Page, long> > currPath;
+  std::vector<std::pair<Page, long> > Path;
   std::stack<std::vector<std::pair<Page, long> > > todoPath;
   std::vector<std::string> resPath;
   std::pair<Page, long> currPage = std::make_pair(story[0], curr_c);
-  currPath.push_back(currPage);
-  todoPath.push(currPath);
+  Path.push_back(currPage);
+  todoPath.push(Path);
   while (!todoPath.empty()) {
-    currPath = todoPath.top();
+    Path = todoPath.top();
     todoPath.pop();
-    currPage = currPath[currPath.size() - 1];
+    currPage = Path[Path.size() - 1];
     //curr_p = currPage.first.pageNum;
     if (currPage.first.pageType == "W") {
       //convert(currPath to string)
-      std::string way = toString(currPath);
+      std::string way = toString(Path);
 
       //test!!!
       /*
@@ -344,7 +344,7 @@ void Pstory::findWay() {
       resPath.push_back(way);
       //get visited back
       visit.clear();
-      for (unsigned long j = 0; j < todoPath.top().size(); ++j) {
+      for (unsigned long j = 0; j < todoPath.top().size() - 1; ++j) {
         long index = todoPath.top()[j].first.pageNum;
         visit[index]++;
       }
@@ -357,9 +357,9 @@ void Pstory::findWay() {
         long next_p = currPage.first.choice[i].destnum;
         if (!visit.count(next_p)) {
           std::pair<Page, long> tempPage = std::make_pair(story[next_p], curr_c);
-          currPath.push_back(tempPage);
-          todoPath.push(currPath);
-          currPath.pop_back();
+          Path.push_back(tempPage);
+          todoPath.push(Path);
+          Path.pop_back();
         }
       }
     }
