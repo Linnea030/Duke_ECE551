@@ -8,6 +8,8 @@ cyoa-step2 /usr/local/ece551/cyoa/story2 < /usr/local/ece551/cyoa/story2/input1.
 
 cyoa-step3 /usr/local/ece551/cyoa/story1
 cyoa-step3 /usr/local/ece551/cyoa/story2
-ec:step3
+#ec:step3
 
+cyoa-step4 /usr/local/ece551/cyoa/story3
+ec:step4
 

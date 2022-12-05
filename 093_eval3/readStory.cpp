@@ -79,7 +79,7 @@ void ReadStory::processFile4(char ** argv) {
   ss >> s;
   //read and print story.txt file
   Pstory ps;
-  ps.proStory(ifs);
+  ps.proStory_2(ifs);
   ps.checkValid();
   ps.beginGame_plus(s);
 }

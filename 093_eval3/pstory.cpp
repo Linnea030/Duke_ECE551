@@ -16,9 +16,17 @@ void Pstory::print(std::string path) {
     story[i].print_p(path, 1);
   }
 }
+
 //print single story in step2
 void Pstory::print_single(std::string path, int i) {
   story[i].print_p(path, 2);
+}
+
+//print single story in step4
+void Pstory::print_single1(std::string path,
+                           int i,
+                           std::vector<std::pair<long int, std::string> > storyVar) {
+  story[i].print_p1(path, 4, storyVar);
 }
 
 //check if the pagenumber is valid in step1
@@ -44,6 +52,23 @@ bool Pstory::isPage(std::string line) {
   }
   return true;
 }
+
+//check if the line type is page or not
+bool Pstory::isPagevar(std::string line) {
+  //find first $
+  size_t pos_cash = line.find("$");
+  if (pos_cash == std::string::npos) {
+    //std::cerr << "No $ in line!\n";
+    return false;
+  }
+  //find first = after $
+  size_t pos_equal = line.find("=", pos_cash + 1);
+  if (pos_equal == std::string::npos) {
+    return false;
+  }
+  return true;
+}
+
 //check if the line type is choice or not
 bool Pstory::isChoice(std::string line) {
   //find first :
@@ -55,6 +80,37 @@ bool Pstory::isChoice(std::string line) {
   //find second :
   size_t pos_colon1 = line.find(":", pos_colon + 1);
   if (pos_colon1 == std::string::npos) {
+    return false;
+  }
+  return true;
+}
+
+//check if the line type is choice or not
+bool Pstory::isChoicevar(std::string line) {
+  //find first [
+  size_t pos_braleft = line.find("[");
+  if (pos_braleft == std::string::npos) {
+    return false;
+  }
+  //find first = after first [
+  size_t pos_equal = line.find("=", pos_braleft + 1);
+  if (pos_equal == std::string::npos) {
+    return false;
+  }
+  //find first ] after first =
+  //]:??? blank space
+  size_t pos_braright = line.find("]", pos_equal + 1);
+  if (pos_braright == std::string::npos) {
+    return false;
+  }
+  //find first : after first ]
+  size_t pos_colon1 = line.find(":", pos_braright + 1);
+  if (pos_colon1 == std::string::npos) {
+    return false;
+  }
+  //find second : after first :
+  size_t pos_colon2 = line.find(":", pos_colon1 + 1);
+  if (pos_colon2 == std::string::npos) {
     return false;
   }
   return true;
@@ -140,6 +196,34 @@ void Pstory::proPage(std::string line) {
   story.push_back(P);
 }
 
+void Pstory::proPagevar(std::string line) {
+  //get pagenumber
+  //find first $
+  size_t pos_cash = line.find("$");
+  std::string s1 = line.substr(0, pos_cash);
+  long pagenum = convert(s1);
+  //error check
+  if (pagenum > p_num) {
+    std::cerr << "Invalid line format for pagenum variable!\n";
+    exit(EXIT_FAILURE);
+  }
+
+  //get variable name
+  //find first = after $
+  size_t pos_equal = line.find("=", pos_cash + 1);
+  std::string s2 = line.substr(pos_cash + 1, pos_equal - pos_cash - 1);
+
+  //get variable value
+  std::string s3 = line.substr(pos_equal + 1);
+  long varValue = convert(s3);
+
+  //check repeated pagenum and variable name???
+  std::pair<long int, std::string> varPair = std::make_pair(varValue, s2);
+  story[pagenum].var.push_back(varPair);
+  //test!!!
+  //std::cout << "page" << pagenum << "var size" << story[pagenum].var.size() << std::endl;
+}
+
 void Pstory::proChoice(std::string line) {
   //if line is choice line
   //get pagenumber of choice
@@ -171,7 +255,48 @@ void Pstory::proChoice(std::string line) {
   story[cpagenum].choice.push_back(C);
 }
 
-//process story in step4
+void Pstory::proChoicevar(std::string line) {
+  //get pagenumber of choice
+  size_t cpos_bra1 = line.find("[");  //left brackets
+  std::string cs1 = line.substr(0, cpos_bra1);
+  long cpagenum = convert(cs1);
+  //check if pagenum is exist
+  checkPage(cpagenum, p_num);
+  //check if this page if win or lose
+  if (story[cpagenum].pageType == "W" || story[cpagenum].pageType == "L") {
+    std::cerr << "Win or Lose type can not have choice!\n";
+    exit(EXIT_FAILURE);
+  }
+
+  //get variable name
+  size_t cpos_equal = line.find("=", cpos_bra1 + 1);
+  std::string cs2 = line.substr(cpos_bra1 + 1, cpos_equal - cpos_bra1 - 1);
+
+  //check if cs2 is contained in page???
+
+  //get variable value
+  size_t cpos_bra2 = line.find("]", cpos_equal + 1);
+  std::string cs3 = line.substr(cpos_equal + 1, cpos_bra2 - cpos_equal - 1);
+  long int value = convert(cs3);
+
+  //get destnum
+  size_t cpos_colon1 = line.find(":", cpos_bra2 + 1);
+  size_t cpos_colon2 = line.find(":", cpos_colon1 + 1);
+  std::string cs4 = line.substr(cpos_colon1 + 1, cpos_colon2 - cpos_colon1 - 1);
+  long destpage = convert(cs4);
+
+  //get text of choice
+  std::string cs5 = line.substr(cpos_colon2 + 1);
+
+  //creat and put choice into page
+  int cnum = story[cpagenum].choice.size() + 1;
+  Choice C(cpagenum, destpage, cs5, cnum);
+  C.choiceVar = std::make_pair(value, cs3);
+  C.needVar = true;
+  story[cpagenum].choice.push_back(C);
+}
+
+//process story in step1
 void Pstory::proStory_1(std::ifstream & ifs) {
   std::string line;
   p_num = -1;
@@ -187,7 +312,6 @@ void Pstory::proStory_1(std::ifstream & ifs) {
     else if (isChoice(line)) {
       proChoice(line);
     }
-
     else {
       std::cerr << "Invalid line format!\n";
       exit(EXIT_FAILURE);
@@ -195,8 +319,45 @@ void Pstory::proStory_1(std::ifstream & ifs) {
   }
 }
 
-//process story in step1
-void Pstory::proStory(std::ifstream & ifs) {
+//process story in step4
+void Pstory::proStory_2(std::ifstream & ifs) {
+  std::string line;
+  p_num = -1;
+  while (getline(ifs, line)) {
+    //test!!!
+    // std::cout << line << std::endl;
+
+    //if line is empty
+    if (isSpacel(line)) {
+      continue;
+    }
+    //if line is page line
+    if (isPage(line)) {
+      //test!!!
+      // std::cout << "Page\n";
+      proPage(line);
+    }
+    else if (isPagevar(line)) {
+      // std::cout << "Pagevar\n";
+      proPagevar(line);
+    }
+    else if (isChoicevar(line)) {
+      //std::cout << "Choicevar\n";
+      proChoicevar(line);
+    }
+    else if (isChoice(line)) {
+      //std::cout << "Choice\n";
+      proChoice(line);
+    }
+    else {
+      std::cerr << "Invalid line format!\n";
+      exit(EXIT_FAILURE);
+    }
+  }
+}
+/*
+//process story in step
+void Pstory::proStory_2(std::ifstream & ifs) {
   std::string line;
   p_num = -1;
   while (getline(ifs, line)) {
@@ -278,7 +439,7 @@ void Pstory::proStory(std::ifstream & ifs) {
     }
   }
 }
-
+*/
 void Pstory::check_wl(std::string s2) {
   if (s2 == "W") {
     win_num++;
@@ -359,16 +520,20 @@ void Pstory::beginGame(std::string path) {
 void Pstory::beginGame_plus(std::string path) {
   long currnum = 0;
   std::string n;
+  std::vector<std::pair<long int, std::string> > storyVar;
   //if type is N
   while (story[currnum].pageType != "W" && story[currnum].pageType != "L") {
+    //save current variable value in storyVar
+    for (unsigned long k = 0; k < story[currnum].var.size(); ++k) {
+      storyVar.push_back(story[currnum].var[k]);
+    }
+
     //print page(num).txt and choice
-    print_single(path, currnum);
+    print_single1(path, currnum, storyVar);
     long num_choice = story[currnum].choice.size();  //get number of choice
+
     //read from cmd
     std::getline(std::cin, n);
-
-    //test!!!
-    // std::cout << n << std::endl;
 
     //if input is invalid, input again until valid
     while (!isValidChoice(n, num_choice)) {
@@ -376,19 +541,28 @@ void Pstory::beginGame_plus(std::string path) {
       std::getline(std::cin, n);
     }
 
+    long temp = convert(n);
+    //check if <UNAVAILABLE>
+    while (!story[currnum].choice[temp - 1].available) {
+      std::cout << "That choice is not available at this time, please try again\n";
+      std::getline(std::cin, n);
+      //if input is invalid, input again until valid
+      while (!isValidChoice(n, num_choice)) {
+        std::cout << "That is not a valid choice, please try again\n";
+        std::getline(std::cin, n);
+      }
+      temp = convert(n);
+    }
+
     //get choice number
     long num = convert(n);
 
-    //test!!!
-    // std::cout << num << std::endl;
-
     //update currnum to destpage number
-
     long nextnum = story[currnum].choice[num - 1].destnum;
     currnum = nextnum;
   }
   //if type is win or lose
-  print_single(path, currnum);
+  print_single1(path, currnum, storyVar);
 }
 
 bool Pstory::isValidChoice(std::string n, long num_choice) {
@@ -396,7 +570,6 @@ bool Pstory::isValidChoice(std::string n, long num_choice) {
   if (n.empty()) {
     return false;
   }
-
   //if string is not empty
   char * c = new char[n.length() + 1];
   std::strcpy(c, n.c_str());
@@ -405,25 +578,16 @@ bool Pstory::isValidChoice(std::string n, long num_choice) {
 
   //check valid of integer
   if (*end != 0) {
-    //test!!!
-    //  std::cout << "not integer\n";
-
     delete[] c;
     return false;
   }
   //chech if integer if negative
   if (num <= 0) {
-    //test!!!
-    //std::cout << "<0\n";
-
     delete[] c;
     return false;
   }
   //check if choice is in this page
   if (num > num_choice) {
-    //test!!!
-    //std::cout << "no such choice\n";
-
     delete[] c;
     return false;
   }
