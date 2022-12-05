@@ -78,7 +78,12 @@ void Page::print_p1(std::string path,
     std::cout << "\n";
     std::cout << "\n";
     }*/
-
+  //test!!!
+  //  std::cout << pageNum << std::endl;
+  for (unsigned int x = 0; x < storyVar.size(); ++x) {
+    std::cout << "key=" << storyVar[x].second << "value=" << storyVar[x].first
+              << std::endl;
+  }
   //print text
   textPrint(path);
 
@@ -97,7 +102,7 @@ void Page::print_p1(std::string path,
       //if this choice is not related to variable, print as usual
       if (choice[i].needVar == false) {
         //test!!!
-        //        std::cout << "not related to variable\n";
+        //std::cout << "not related to variable\n";
 
         choice[i].print_c();
         continue;
@@ -108,7 +113,8 @@ void Page::print_p1(std::string path,
                           //check if the variable name is existed in this page
       for (unsigned long j = 0; j < storyVar.size(); ++j) {
         //if var exist in this page
-
+        //test!!!
+        // std::cout << storyVar[j].second << " and " << choice[i].choiceVar.second<< std::endl;
         if (storyVar[j].second.compare(choice[i].choiceVar.second) == 0) {
           pos_var = j;  //get the index of variable in var
           break;
@@ -118,27 +124,41 @@ void Page::print_p1(std::string path,
       //check if variable existed
       bool existed = (pos_var != -1);
       //check if variable value are the same
-      bool valueEqual = (storyVar[pos_var].first == choice[i].choiceVar.first);
+      //bool valueEqual = (storyVar[pos_var].first == choice[i].choiceVar.first);
       //check if value is 0
       bool valueEqual0 = (choice[i].choiceVar.first == 0);
 
-      if (existed && valueEqual) {
+      //if existed and value equal
+      if (existed) {
         //if there is such var in this page,the value is equal
-        //test!!!
-        //        std::cout << "existed and equal\n";
-        choice[i].print_c();
+        if (storyVar[pos_var].first == choice[i].choiceVar.first) {
+          //test!!!
+          // std::cout << "existed and equal\n";
+          choice[i].print_c();
+        }
+        else {
+          //test!!
+          // std::cout << "existed but not equal\n";
+          choice[i].available = false;
+          choice[i].print_var();
+        }
       }
-      else if (!existed && valueEqual0) {
+      //is not existed
+      else if (!existed) {
         //if there is no such var in this page,the default value is 0, and equal
         //test!!!
         // std::cout << "not existed but euqal 0\n";
-        choice[i].print_c();
-      }
-      else {
-        //test!!!
-        // std::cout << "unavailable\n";
-        choice[i].available = false;
-        choice[i].print_var();
+        if (valueEqual0) {
+          //test!!!
+          //   std::cout << "not existed but euqal 0\n";
+          choice[i].print_c();
+        }
+        else {
+          //test!!
+          //         std::cout << "not existed and not euqal 0\n";
+          choice[i].available = false;
+          choice[i].print_var();
+        }
       }
     }
   }

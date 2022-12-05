@@ -291,7 +291,10 @@ void Pstory::proChoicevar(std::string line) {
   //creat and put choice into page
   int cnum = story[cpagenum].choice.size() + 1;
   Choice C(cpagenum, destpage, cs5, cnum);
-  C.choiceVar = std::make_pair(value, cs3);
+  //test!!!
+  //  std::cout << "here is pstory.cpp"
+  //          << " value=" << value << " key=" << cs2 << std::endl;
+  C.choiceVar = std::make_pair(value, cs2);
   C.needVar = true;
   story[cpagenum].choice.push_back(C);
 }
