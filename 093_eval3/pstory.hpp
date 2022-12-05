@@ -9,6 +9,9 @@ class Pstory {
 
   Pstory() : p_num(-1), win_num(0), lose_num(0) {}
   void proStory(std::ifstream & ifs);
+  void proStory_1(std::ifstream & ifs);
+  void proPage(std::string line);
+  void proChoice(std::string line);
   void print(std::string path);
   void print_single(std::string path, int i);
   void checkPage(long num, long p_num);
@@ -19,13 +22,9 @@ class Pstory {
   void check_wl(std::string s2);
   void checkValid();
   void beginGame(std::string path);
+  void beginGame_plus(std::string path);
   bool isValidChoice(std::string n, long num_choice);
   void findWay();
-  bool isContained(const std::vector<long> & visited, const long & pageNum);
   std::string toString(std::vector<std::pair<Page, long> > currPath);
   void printWay(std::vector<std::string> way);
-  //  bool isContained(std::vector<Page> const & visited, Page const & currPage);
-  //  bool operator==(const Page & rhs);
-  //  bool operator!=(const Page & rhs);
-  // ~Pstory() {}
 };

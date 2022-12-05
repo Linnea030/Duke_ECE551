@@ -12,6 +12,7 @@ class ReadStory {
   void processFile1(char ** argv);
   void processFile2(char ** argv);
   void processFile3(char ** argv);
+  void processFile4(char ** argv);
   void closeFile();
 };
 #endif

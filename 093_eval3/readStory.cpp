@@ -41,7 +41,7 @@ void ReadStory::processFile1(char ** argv) {
   ss >> s;
   //read and print story.txt file
   Pstory ps;
-  ps.proStory(ifs);
+  ps.proStory_1(ifs);
   ps.print(s);
 }
 
@@ -53,7 +53,7 @@ void ReadStory::processFile2(char ** argv) {
   ss >> s;
   //read and print story.txt file
   Pstory ps;
-  ps.proStory(ifs);
+  ps.proStory_1(ifs);
   ps.checkValid();
   ps.beginGame(s);
 }
@@ -66,9 +66,22 @@ void ReadStory::processFile3(char ** argv) {
   ss >> s;
   //read and print story.txt file
   Pstory ps;
-  ps.proStory(ifs);
+  ps.proStory_1(ifs);
   ps.checkValid();
   ps.findWay();
+}
+
+void ReadStory::processFile4(char ** argv) {
+  //convert argv to char
+  std::string s;
+  std::stringstream ss;
+  ss << argv[1];
+  ss >> s;
+  //read and print story.txt file
+  Pstory ps;
+  ps.proStory(ifs);
+  ps.checkValid();
+  ps.beginGame_plus(s);
 }
 
 void ReadStory::closeFile() {
