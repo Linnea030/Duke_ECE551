@@ -80,10 +80,11 @@ void Page::print_p1(std::string path,
     }*/
   //test!!!
   //  std::cout << pageNum << std::endl;
-  for (unsigned int x = 0; x < storyVar.size(); ++x) {
-    std::cout << "key=" << storyVar[x].second << "value=" << storyVar[x].first
-              << std::endl;
-  }
+  //  for (unsigned int x = 0; x < storyVar.size(); ++x) {
+  //std::cout << "key=" << storyVar[x].second << "value=" << storyVar[x].first
+  //          << std::endl;
+  // }
+
   //print text
   textPrint(path);
 
