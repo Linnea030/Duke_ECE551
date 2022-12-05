@@ -12,11 +12,11 @@ void Page::print_p(std::string path, int step) {
     std::cout << "Page " << pageNum << "\n";
     std::cout << "==========\n";
   }
-  else if (step == 2) {
+  /* else if (step == 2) {
     //print newline
     std::cout << "\n";
     std::cout << "\n";
-  }
+    }*/
 
   //print text
   textPrint(path);
