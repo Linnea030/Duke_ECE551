@@ -26,7 +26,7 @@ void Pstory::print_single(std::string path, int i) {
 void Pstory::print_single1(std::string path,
                            int i,
                            std::vector<std::pair<long int, std::string> > storyVar) {
-  story[i].print_p1(path, 4, storyVar);
+  story[i].print_p1(path, storyVar);
 }
 
 //check if the pagenumber is valid in step1

@@ -15,7 +15,6 @@ class Page {
   void textPrint(std::string path);
   //print this page with variable in step4
   void print_p1(std::string path,
-                int step,
                 std::vector<std::pair<long int, std::string> > storyVar);
   bool operator==(const Page & rhs);
   bool operator!=(const Page & rhs);

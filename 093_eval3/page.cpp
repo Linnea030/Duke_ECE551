@@ -17,6 +17,7 @@ void Page::print_p(std::string path, int step) {
     std::cout << "\n";
     std::cout << "\n";
     }*/
+  //error check???
 
   //print text
   textPrint(path);
@@ -71,13 +72,12 @@ void Page::textPrint(std::string path) {
 }
 
 void Page::print_p1(std::string path,
-                    int step,
                     std::vector<std::pair<long int, std::string> > storyVar) {
-  if (step == 4) {
+  /*if (step == 4) {
     //print newline
     std::cout << "\n";
     std::cout << "\n";
-  }
+    }*/
 
   //print text
   textPrint(path);
