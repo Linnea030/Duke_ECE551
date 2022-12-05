@@ -355,9 +355,9 @@ void Pstory::proStory_2(std::ifstream & ifs) {
     }
   }
 }
-/*
+
 //process story in step
-void Pstory::proStory_2(std::ifstream & ifs) {
+void Pstory::proStory_3(std::ifstream & ifs) {
   std::string line;
   p_num = -1;
   while (getline(ifs, line)) {
@@ -439,7 +439,7 @@ void Pstory::proStory_2(std::ifstream & ifs) {
     }
   }
 }
-*/
+
 void Pstory::check_wl(std::string s2) {
   if (s2 == "W") {
     win_num++;

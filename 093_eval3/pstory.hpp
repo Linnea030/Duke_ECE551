@@ -11,6 +11,7 @@ class Pstory {
   void proStory_1(std::ifstream & ifs);
   //process story in step 4
   void proStory_2(std::ifstream & ifs);
+  void proStory_3(std::ifstream & ifs);
   //process Page type
   void proPage(std::string line);
   //process choice type
