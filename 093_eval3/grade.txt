@@ -1,11 +1,11 @@
-Grading at 12/05/2022:20:01:13.352610
-For commit ID 34e722a851eac5af4f16128605d5bf280d628fb6
-Grading at Mon Dec  5 03:00:25 PM EST 2022
+Grading at 12/05/2022:20:04:37.704776
+For commit ID 1a2d390a258ec45db8c38dcf0e0d379c0f2dd0c2
+Grading at Mon Dec  5 03:03:43 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
 Checking that cyoa-step1 compiles
-make: 'cyoa-step1' is up to date.
+g++ -o cyoa-step1 -pedantic -std=gnu++98 -Werror -Wall cyoa-step1.cpp readStory.hpp readStory.cpp page.hpp page.cpp choice.hpp choice.cpp pstory.hpp pstory.cpp
 The code compiled (good)
 Executable cyoa-step1 exists (good)
 ------------------------------------
@@ -22,7 +22,7 @@ No request to check for intermediate deadline completion on step 1
 
 Step 2
 Checking that cyoa-step2 compiles
-make: 'cyoa-step2' is up to date.
+g++ -o cyoa-step2 -pedantic -std=gnu++98 -Werror -Wall cyoa-step2.cpp readStory.hpp readStory.cpp page.hpp page.cpp choice.hpp choice.cpp pstory.hpp pstory.cpp
 The code compiled (good)
 Executable cyoa-step2 exists (good)
 ------------------------------------
