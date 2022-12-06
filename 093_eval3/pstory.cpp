@@ -192,7 +192,7 @@ void Pstory::proPage(std::string line) {
   }
 
   //create new page
-  Page P(pagenum, s2, s3);
+  Page P((size_t)pagenum, s2, s3);
   story.push_back(P);
 }
 
@@ -251,7 +251,7 @@ void Pstory::proChoice(std::string line) {
 
   //creat and put choice into page
   int cnum = story[cpagenum].choice.size() + 1;
-  Choice C(cpagenum, destpage, cs3, cnum);
+  Choice C((size_t)cpagenum, (size_t)destpage, cs3, cnum);
   story[cpagenum].choice.push_back(C);
 }
 
@@ -289,7 +289,7 @@ void Pstory::proChoicevar(std::string line) {
   std::string cs5 = line.substr(cpos_colon2 + 1);
 
   //creat and put choice into page
-  int cnum = story[cpagenum].choice.size() + 1;
+  long cnum = story[cpagenum].choice.size() + 1;
   Choice C(cpagenum, destpage, cs5, cnum);
   //test!!!
   //  std::cout << "here is pstory.cpp"
@@ -360,6 +360,7 @@ void Pstory::proStory_2(std::ifstream & ifs) {
 }
 
 //process story in step
+/*
 void Pstory::proStory_3(std::ifstream & ifs) {
   std::string line;
   p_num = -1;
@@ -442,6 +443,7 @@ void Pstory::proStory_3(std::ifstream & ifs) {
     }
   }
 }
+*/
 
 void Pstory::check_wl(std::string s2) {
   if (s2 == "W") {
