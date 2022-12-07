@@ -6,6 +6,7 @@ cyoa-step1 story5
 cyoa-step1 story6
 cyoa-step1 story7
 cyoa-step1 story8
+cyoa-step1 story9
 ec:step1
 
 #ec:step2
@@ -18,6 +19,7 @@ cyoa-step3 story5
 cyoa-step3 story6
 cyoa-step3 story7
 cyoa-step3 story8
+cyoa-step3 story9
 #ec:step3
 
 #ec:step4
