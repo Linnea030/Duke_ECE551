@@ -1,12 +1,21 @@
-cyoa-step1 /usr/local/ece551/cyoa/story1
-cyoa-step1 /usr/local/ece551/cyoa/story2
-cyoa-step1 ~/ece551/093_eval3/story1
-cyoa-step1 ~/ece551/093_eval3/story2
+cyoa-step1 /home/yc538/story1
+cyoa-step1 /home/yc538/story2
+cyoa-step1 /home/yc538/story3
+cyoa-step1 /home/yc538/story4
+cyoa-step1 /home/yc538/story5
+cyoa-step1 /home/yc538/story6
+cyoa-step1 /home/yc538/story7
 ec:step1
 
 #ec:step2
 
-cyoa-step3 ~/ece551/093_eval3/story1
+cyoa-step1 /home/yc538/story1
+cyoa-step1 /home/yc538/story2
+cyoa-step1 /home/yc538/story3
+cyoa-step1 /home/yc538/story4
+cyoa-step1 /home/yc538/story5
+cyoa-step1 /home/yc538/story6
+cyoa-step1 /home/yc538/story7
 #ec:step3
 
 #ec:step4

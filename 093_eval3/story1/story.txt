@@ -12,6 +12,7 @@
 6:3:jump from 6 to 3 for win
 6:4:jump from 6 to 4 for lose
 5:2:jump from 5 to 2
+5:0:
 5:6:jump from 5 to 6
 5:5:jump from 5 to 5
 5:100:jump form 5 to 100

@@ -1,5 +1,5 @@
 start the game now
 test case 1
 test the empty page by jump to page 2
-test the destnum can appear before the page declaration
 test choice test is empty by jump to page 5
+test destpage is not exist
