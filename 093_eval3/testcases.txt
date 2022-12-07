@@ -1,4 +1,4 @@
-cyoa-step1 /home/yc538/story1
+cyoa-step1 story1
 cyoa-step1 /home/yc538/story2
 cyoa-step1 /home/yc538/story3
 cyoa-step1 /home/yc538/story4
