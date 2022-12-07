@@ -1,6 +1,6 @@
-Grading at 12/07/2022:20:47:53.376249
-For commit ID f663f0b7a1c204674d6dd375880df1c8bb123cf4
-Grading at Wed Dec  7 03:47:29 PM EST 2022
+Grading at 12/07/2022:21:03:12.274519
+For commit ID 8725269858d61528c675cd48c39269fa8e6e313b
+Grading at Wed Dec  7 04:02:47 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -88,6 +88,13 @@ Win or Lose type can not have choice!
 -----------------------------------------
 Lets check if it valgrinds:
 Valgrind was clean
+
+
+1.9: Current test is ./cyoa-step1 story9 < /dev/null
+-----------------------------
+You considered this a failure case:
+Invalid file name!
+But we did not.
 ------------------------------------
 You have requested that we check for intermediate deadline completion on step 1
 ------------------------------------
@@ -105,7 +112,7 @@ Step 1 EC intermediate deadline test 2
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean for this testcase
 You have passed this test case
-Intermediate deadline requirements for Step 1 passed at Wed Dec  7 03:47:38 PM EST 2022
+Intermediate deadline requirements for Step 1 passed at Wed Dec  7 04:02:56 PM EST 2022
 
 Step 2
 Checking that cyoa-step2 compiles
@@ -202,6 +209,13 @@ Win or Lose type can not have choice!
 -----------------------------------------
 Lets check if it valgrinds:
 Valgrind was clean
+
+
+3.9: Current test is ./cyoa-step3 story9 < /dev/null
+-----------------------------
+You considered this a failure case:
+Invalid file name!
+But we did not.
 No request to check for intermediate deadline completion on step 3
 
 Step 4
@@ -214,8 +228,8 @@ Now running YOUR tests for step 4
 ------------------------------------
 No request to check for intermediate deadline completion on step 4
 
-You have passed the test cases YOU provided
-If your tests are good, this is great. 
-If your tests are insufficient, you should do much more testing
+You have NOT passed your test cases!
+You should go and figure out/understand where thing went wrong
+And fix the problem(s) before the deadline
 
 Overall Grade: NO GRADE YET
