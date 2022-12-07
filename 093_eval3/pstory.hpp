@@ -2,7 +2,7 @@
 #include "page.hpp"
 class Pstory {
  public:
-  long p_num;               //the number of pages in this story
+  long p_num;               //the number of pages -1 in this story
   long win_num;             //the number of win pages in this story
   long lose_num;            //the number of lose pages in this story
   std::vector<Page> story;  //vector of each Page object

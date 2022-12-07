@@ -183,7 +183,7 @@ void Pstory::proPage(std::string line) {
   p_num++;
 
   //get pagetype
-  size_t pos_colon = line.find(":");
+  size_t pos_colon = line.find(":", pos_at + 1);
   std::string s2 = line.substr(pos_at + 1, pos_colon - pos_at - 1);
   //check if it is win or lose
   check_wl(s2);
@@ -195,6 +195,7 @@ void Pstory::proPage(std::string line) {
 
   //get file name
   std::string s3 = line.substr(pos_colon + 1);
+  //if it is not a .txt file???
   if (s3.find(".txt") == std::string::npos) {
     std::cerr << "Invalid file name!\n";
     exit(EXIT_FAILURE);
@@ -211,7 +212,7 @@ void Pstory::proPagevar(std::string line) {
   size_t pos_cash = line.find("$");
   std::string s1 = line.substr(0, pos_cash);
   long pagenum = convert(s1);
-  //error check
+  //error check for page declaration must appear before anything else
   if (pagenum > p_num) {
     std::cerr << "Invalid line format for pagenum variable!\n";
     exit(EXIT_FAILURE);
@@ -251,9 +252,8 @@ void Pstory::proChoice(std::string line) {
   size_t cpos_colon2 = line.find(":", cpos_colon1 + 1);
   std::string cs2 = line.substr(cpos_colon1 + 1, cpos_colon2 - cpos_colon1 - 1);
   long destpage = convert(cs2);
-
-  //test!!!
-  //      std::cout << destpage << std::endl;
+  //check if destpage is exist, check it in step2 checkValid()
+  checkPage(destpage, p_num);
 
   //get text of choice
   std::string cs3 = line.substr(cpos_colon2 + 1);
@@ -293,6 +293,8 @@ void Pstory::proChoicevar(std::string line) {
   size_t cpos_colon2 = line.find(":", cpos_colon1 + 1);
   std::string cs4 = line.substr(cpos_colon1 + 1, cpos_colon2 - cpos_colon1 - 1);
   long destpage = convert(cs4);
+  //check if destpage is exist
+  checkPage(destpage, p_num);
 
   //get text of choice
   std::string cs5 = line.substr(cpos_colon2 + 1);
@@ -367,92 +369,6 @@ void Pstory::proStory_2(std::ifstream & ifs) {
     }
   }
 }
-
-//process story in step
-/*
-void Pstory::proStory_3(std::ifstream & ifs) {
-  std::string line;
-  p_num = -1;
-  while (getline(ifs, line)) {
-    //if line is empty
-    if (isSpacel(line)) {
-      continue;
-    }
-
-    //if line is page line
-    if (isPage(line)) {
-      //get pagenumber
-      size_t pos_at = line.find("@");
-      std::string s1 = line.substr(0, pos_at);
-      long pagenum = convert(s1);
-      //if pagenumber if not continuous
-      if (pagenum != p_num + 1) {
-        std::cerr << "Invalid line format for pagenum!\n";
-        exit(EXIT_FAILURE);
-      }
-      p_num++;
-
-      //get pagetype
-      //  char ptype;
-      size_t pos_colon = line.find(":");
-      std::string s2 = line.substr(pos_at + 1, pos_colon - pos_at - 1);
-      //check if it is win or lose
-      check_wl(s2);
-      //check if pagetype is valid or not
-      if (s2 != "N" && s2 != "W" && s2 != "L") {
-        std::cerr << "Invalid line format for page type!\n";
-        exit(EXIT_FAILURE);
-      }
-
-      //get file name
-      std::string s3 = line.substr(pos_colon + 1);
-      if (s3.find(".txt") == std::string::npos) {
-        std::cerr << "Invalid file name!\n";
-        exit(EXIT_FAILURE);
-      }
-
-      //create new page
-      Page P(pagenum, s2, s3);
-      story.push_back(P);
-    }
-
-    //if line is choice line
-    else if (isChoice(line)) {
-      //get pagenumber of choice
-      size_t cpos_colon1 = line.find(":");
-      std::string cs1 = line.substr(0, cpos_colon1);
-      long cpagenum = convert(cs1);
-      //check if pagenum is exist
-      checkPage(cpagenum, p_num);
-      //check if this page if win or lose
-      if (story[cpagenum].pageType == "W" || story[cpagenum].pageType == "L") {
-        std::cerr << "Win or Lose type can not have choice!\n";
-        exit(EXIT_FAILURE);
-      }
-
-      //get destpage number of choice
-      size_t cpos_colon2 = line.find(":", cpos_colon1 + 1);
-      std::string cs2 = line.substr(cpos_colon1 + 1, cpos_colon2 - cpos_colon1 - 1);
-      long destpage = convert(cs2);
-
-      //test!!!
-      //      std::cout << destpage << std::endl;
-
-      //get text of choice
-      std::string cs3 = line.substr(cpos_colon2 + 1);
-
-      //creat and put choice into page
-      int cnum = story[cpagenum].choice.size() + 1;
-      Choice C(cpagenum, destpage, cs3, cnum);
-      story[cpagenum].choice.push_back(C);
-    }
-    else {
-      std::cerr << "Invalid line format!\n";
-      exit(EXIT_FAILURE);
-    }
-  }
-}
-*/
 
 void Pstory::check_wl(std::string s2) {
   if (s2 == "W") {
@@ -591,7 +507,8 @@ bool Pstory::isValidChoice(std::string n, long num_choice) {
   long num = std::strtol(c, &end, 10);
 
   //check valid of integer
-  if (*end != 0) {
+  int len_end = strlen(end);
+  if (*end != 0 || len_end != 0) {
     delete[] c;
     return false;
   }

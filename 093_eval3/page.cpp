@@ -16,30 +16,30 @@ void Page::print_p(std::string path, int step) {
     std::cout << "==========\n";
   }
   //print text
-  textPrint(path);
+  textPrint(path);  //1.
 
   //check the page type
   if (pageType == "N") {
     //if N type print
-    std::cout << "\n";
-    std::cout << "What would you like to do?\n";
-    std::cout << "\n";
+    std::cout << "\n";                            //2.
+    std::cout << "What would you like to do?\n";  //3.
+    std::cout << "\n";                            //4.
 
     //print choice
     int n = choice.size();
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < n; ++i) {  //5.
       choice[i].print_c();
     }
   }
   else if (pageType == "W") {
     //if W type
-    std::cout << "\n";
-    std::cout << "Congratulations! You have won. Hooray!\n";
+    std::cout << "\n";                                        //2.
+    std::cout << "Congratulations! You have won. Hooray!\n";  //3.
   }
   else if (pageType == "L") {
     //if L type
-    std::cout << "\n";
-    std::cout << "Sorry, you have lost. Better luck next time!\n";
+    std::cout << "\n";                                              //2.
+    std::cout << "Sorry, you have lost. Better luck next time!\n";  //3.
   }
 }
 
@@ -56,7 +56,7 @@ void Page::textPrint(std::string path) {
   std::strcpy(spath, path1.c_str());
   //open file
   ifsp.open(spath);
-  delete[] spath;  //delete
+  delete[] spath;  //delete space we new
   //check if it is opened
   if (!ifsp.is_open()) {
     std::cerr << "Open file failed!\n";
@@ -65,7 +65,7 @@ void Page::textPrint(std::string path) {
   //if opened, print each line
   std::string line;
   while (getline(ifsp, line)) {
-    std::cout << line << "\n";
+    std::cout << line << "\n";  //1.
   }
   ifsp.close();
   //error check???
