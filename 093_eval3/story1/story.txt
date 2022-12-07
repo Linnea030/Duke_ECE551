@@ -1,0 +1,17 @@
+0:@N:page0.txt
+1:@N:page1.txt
+1:6:jump from 1 to 6
+1:2:jump form 1 to 2
+2:@N:page2.txt
+3:@W:page3.txt
+4:@L:page4.txt
+2:3:jump 2 to 3 for win
+2:4:jump 2 to 4 for lose
+5:@N:page5.txt
+6:@N:page6.txt
+6:3:jump from 6 to 3 for win
+6:4:jump from 6 to 4 for lose
+5:2:jump from 5 to 2
+5:6:jump from 5 to 6
+5:5:jump from 5 to 5
+5:100:jump form 5 to 100
