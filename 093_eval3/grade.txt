@@ -1,6 +1,6 @@
-Grading at 12/07/2022:21:44:10.535282
-For commit ID b0d8813d5338c9fa96ae9d3c27d2a44bdb3e21f9
-Grading at Wed Dec  7 04:43:40 PM EST 2022
+Grading at 12/07/2022:21:47:41.722090
+For commit ID 1732e6467d998b27f300a176908e92b7659ab445
+Grading at Wed Dec  7 04:47:14 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -112,7 +112,7 @@ Step 1 EC intermediate deadline test 2
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean for this testcase
 You have passed this test case
-Intermediate deadline requirements for Step 1 passed at Wed Dec  7 04:43:52 PM EST 2022
+Intermediate deadline requirements for Step 1 passed at Wed Dec  7 04:47:24 PM EST 2022
 
 Step 2
 Checking that cyoa-step2 compiles
@@ -303,6 +303,13 @@ You have been eaten by a dragon.			      |	After knocking on the door, Denevieve
 Sorry, you have lost. Better luck next time!			Sorry, you have lost. Better luck next time!
 Your file did not match the expected output
 
+
+
+2.4: Current test is ./cyoa-step2 story1  <  input3.txt
+-----------------------------
+You considered this a failure case:
+timeout: the monitored command dumped core
+But we did not.
 No request to check for intermediate deadline completion on step 2
 
 Step 3
