@@ -1,6 +1,6 @@
-Grading at 12/07/2022:21:14:09.292662
-For commit ID 0e8c0a6831f2342ec0085e7d9ad99c9a1a9432d0
-Grading at Wed Dec  7 04:13:21 PM EST 2022
+Grading at 12/07/2022:21:16:27.878190
+For commit ID ff87e85d48cdf98d8ca64726e79e17a974dd91c0
+Grading at Wed Dec  7 04:15:39 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -97,10 +97,10 @@ Your output looks good. Lets check valgrind
 Valgrind was clean
 
 
-1.10: Current test is ./cyoa-step1 story1  <  story1/input0.txt
+1.10: Current test is ./cyoa-step1 story1  <  input0.txt
 -----------------------------
 You considered this a failure case:
-/dev/fd/3: line 528: story1/input0.txt: No such file or directory
+/dev/fd/3: line 528: input0.txt: No such file or directory
 But we did not.
 ------------------------------------
 You have requested that we check for intermediate deadline completion on step 1
@@ -119,7 +119,7 @@ Step 1 EC intermediate deadline test 2
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean for this testcase
 You have passed this test case
-Intermediate deadline requirements for Step 1 passed at Wed Dec  7 04:13:31 PM EST 2022
+Intermediate deadline requirements for Step 1 passed at Wed Dec  7 04:15:50 PM EST 2022
 
 Step 2
 Checking that cyoa-step2 compiles
@@ -293,7 +293,7 @@ Step 2 EC intermediate deadline test 23
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean for this testcase
 You have passed this test case
-Intermediate deadline requirements for Step 2 passed at Wed Dec  7 04:13:55 PM EST 2022
+Intermediate deadline requirements for Step 2 passed at Wed Dec  7 04:16:14 PM EST 2022
 
 Step 3
 Checking that cyoa-step3 compiles
