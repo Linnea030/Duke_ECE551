@@ -1,21 +1,23 @@
 cyoa-step1 story1
-cyoa-step1 /home/yc538/story2
-cyoa-step1 /home/yc538/story3
-cyoa-step1 /home/yc538/story4
-cyoa-step1 /home/yc538/story5
-cyoa-step1 /home/yc538/story6
-cyoa-step1 /home/yc538/story7
+cyoa-step1 story2
+cyoa-step1 story3
+cyoa-step1 story4
+cyoa-step1 story5
+cyoa-step1 story6
+cyoa-step1 story7
+cyoa-step1 story8
 ec:step1
 
 #ec:step2
 
-cyoa-step1 /home/yc538/story1
-cyoa-step1 /home/yc538/story2
-cyoa-step1 /home/yc538/story3
-cyoa-step1 /home/yc538/story4
-cyoa-step1 /home/yc538/story5
-cyoa-step1 /home/yc538/story6
-cyoa-step1 /home/yc538/story7
+cyoa-step3 story1
+cyoa-step3 story2
+cyoa-step3 story3
+cyoa-step3 story4
+cyoa-step3 story5
+cyoa-step3 story6
+cyoa-step3 story7
+cyoa-step3 story8
 #ec:step3
 
 #ec:step4
