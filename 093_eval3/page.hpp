@@ -1,21 +1,31 @@
 #include "choice.hpp"
 class Page {
  public:
-  size_t pageNum;
-  std::vector<std::pair<long int, std::string> > var;
-  std::string pageType;
-  std::string fileName;
-  std::vector<Choice> choice;
-
+  size_t pageNum;              //page number of this page
+  std::string pageType;        //page type of this page: N W L
+  std::string fileName;        //file name of this page text
+  std::vector<Choice> choice;  //the choice objects of this page
+  //variable used in step 4
+  std::vector<std::pair<long int, std::string> > var;  //variables set in this page
+  //constructor
   Page(size_t pn, std::string pt, std::string fn) :
       pageNum(pn), pageType(pt), fileName(fn) {}
-  //print this page in step1 2 3
+  //copy constructor
+  Page(const Page & rhs) :
+      pageNum(rhs.pageNum),
+      pageType(rhs.pageType),
+      fileName(rhs.fileName),
+      choice(rhs.choice),
+      var(rhs.var) {}
+  //copy assignment operator
+  Page & operator=(const Page & rhs);
+  //print this page in step1 2
   void print_p(std::string path, int step);
   //print this page's text, subfunction of print_p and print_p1
   void textPrint(std::string path);
   //print this page with variable in step4
   void print_p1(std::string path,
                 std::vector<std::pair<long int, std::string> > storyVar);
-  bool operator==(const Page & rhs);
-  bool operator!=(const Page & rhs);
+  //destructor
+  ~Page() {}
 };

@@ -42,7 +42,11 @@ bool Pstory::isPage(std::string line) {
   //find first @
   size_t pos_at = line.find("@");
   if (pos_at == std::string::npos) {
-    //std::cerr << "No @ in line!\n";
+    return false;
+  }
+  //if : is before @, such as 1:2:1@N:story.txt
+  size_t pos_colon_first = line.find(":");  //detect there is no : before @
+  if (pos_colon_first != std::string::npos && pos_colon_first < pos_at) {
     return false;
   }
   //find first : after @
@@ -58,7 +62,6 @@ bool Pstory::isPagevar(std::string line) {
   //find first $
   size_t pos_cash = line.find("$");
   if (pos_cash == std::string::npos) {
-    //std::cerr << "No $ in line!\n";
     return false;
   }
   //find first = after $
@@ -74,10 +77,14 @@ bool Pstory::isChoice(std::string line) {
   //find first :
   size_t pos_colon = line.find(":");
   if (pos_colon == std::string::npos) {
-    //std::cerr << "No : in line!\n";
     return false;
   }
-  //find second :
+  //find first @ //if @ is before :, such as 1@N:1:2:st@ory.txt
+  size_t pos_at_first = line.find("@");
+  if (pos_at_first != std::string::npos && pos_at_first < pos_colon) {
+    return false;
+  }
+  //find second : after first :
   size_t pos_colon1 = line.find(":", pos_colon + 1);
   if (pos_colon1 == std::string::npos) {
     return false;
@@ -130,7 +137,9 @@ long Pstory::convert(std::string s) {
   char * end;
   long num = std::strtol(c, &end, 10);
   //check valid of integer
-  if (*end != 0) {
+  //if pointer end is pointer to null
+  int len_end = strlen(end);
+  if (*end != 0 || len_end != 0) {
     std::cerr << "Invalid integer!\n";
     delete[] c;
     exit(EXIT_FAILURE);
@@ -667,4 +676,13 @@ void Pstory::printWay(std::vector<std::string> way) {
   }
 }
 
-///////////////////////////////////////////////////////////
+//copy assignment operator
+Pstory & Pstory::operator=(const Pstory & rhs) {
+  if (this != &rhs) {
+    p_num = rhs.p_num;
+    win_num = rhs.win_num;
+    lose_num = rhs.lose_num;
+    story = rhs.story;
+  }
+  return *this;
+}

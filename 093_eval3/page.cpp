@@ -6,19 +6,15 @@
 #include <iostream>
 #include <vector>
 
+//input string path of the pagefile.txt and which step it is in now
+//return is void
+//print this page in step1 2
 void Page::print_p(std::string path, int step) {
   if (step == 1) {
     //print pagenumber
     std::cout << "Page " << pageNum << "\n";
     std::cout << "==========\n";
   }
-  /* else if (step == 2) {
-    //print newline
-    std::cout << "\n";
-    std::cout << "\n";
-    }*/
-  //error check???
-
   //print text
   textPrint(path);
 
@@ -30,7 +26,6 @@ void Page::print_p(std::string path, int step) {
     std::cout << "\n";
 
     //print choice
-    //if in step1 and step2
     int n = choice.size();
     for (int i = 0; i < n; ++i) {
       choice[i].print_c();
@@ -48,9 +43,12 @@ void Page::print_p(std::string path, int step) {
   }
 }
 
+//input string path of the pagefile.txt
+//return is void
+//print this page's text, subfunction of print_p and print_p1
 void Page::textPrint(std::string path) {
   //print text
-  //convert file name
+  //add path and fileName and convert whole path to char
   std::ifstream ifsp;
   std::string path1;
   path1 = path + "/" + fileName;
@@ -59,32 +57,25 @@ void Page::textPrint(std::string path) {
   //open file
   ifsp.open(spath);
   delete[] spath;  //delete
+  //check if it is opened
   if (!ifsp.is_open()) {
     std::cerr << "Open file failed!\n";
     exit(EXIT_FAILURE);
   }
+  //if opened, print each line
   std::string line;
   while (getline(ifsp, line)) {
     std::cout << line << "\n";
   }
   ifsp.close();
-  //error check
+  //error check???
 }
 
+//input string path of the pagefile.txt and vector storyVar which save the variables
+//return void, variable is checked by storyVar (save all variables for now) and choice
+//print this page with variable in step4
 void Page::print_p1(std::string path,
                     std::vector<std::pair<long int, std::string> > storyVar) {
-  /*if (step == 4) {
-    //print newline
-    std::cout << "\n";
-    std::cout << "\n";
-    }*/
-  //test!!!
-  //  std::cout << pageNum << std::endl;
-  //  for (unsigned int x = 0; x < storyVar.size(); ++x) {
-  //std::cout << "key=" << storyVar[x].second << "value=" << storyVar[x].first
-  //          << std::endl;
-  // }
-
   //print text
   textPrint(path);
 
@@ -102,9 +93,6 @@ void Page::print_p1(std::string path,
       choice[i].available = true;
       //if this choice is not related to variable, print as usual
       if (choice[i].needVar == false) {
-        //test!!!
-        //std::cout << "not related to variable\n";
-
         choice[i].print_c();
         continue;
       }
@@ -113,9 +101,7 @@ void Page::print_p1(std::string path,
       long pos_var = -1;  //the position of variable in var
                           //check if the variable name is existed in this page
       for (unsigned long j = 0; j < storyVar.size(); ++j) {
-        //if var exist in this page
-        //test!!!
-        // std::cout << storyVar[j].second << " and " << choice[i].choiceVar.second<< std::endl;
+        //if variable is found, get index of this variable in storyVar
         if (storyVar[j].second.compare(choice[i].choiceVar.second) == 0) {
           pos_var = j;  //get the index of variable in var
           break;
@@ -133,30 +119,22 @@ void Page::print_p1(std::string path,
       if (existed) {
         //if there is such var in this page,the value is equal
         if (storyVar[pos_var].first == choice[i].choiceVar.first) {
-          //test!!!
-          // std::cout << "existed and equal\n";
           choice[i].print_c();
         }
+        //if no such variable's value
         else {
-          //test!!
-          // std::cout << "existed but not equal\n";
           choice[i].available = false;
           choice[i].print_var();
         }
       }
-      //is not existed
+      //if it is not existed
       else if (!existed) {
         //if there is no such var in this page,the default value is 0, and equal
-        //test!!!
-        // std::cout << "not existed but euqal 0\n";
         if (valueEqual0) {
-          //test!!!
-          //   std::cout << "not existed but euqal 0\n";
           choice[i].print_c();
         }
+        //if no such variable's value
         else {
-          //test!!
-          //         std::cout << "not existed and not euqal 0\n";
           choice[i].available = false;
           choice[i].print_var();
         }
@@ -175,19 +153,13 @@ void Page::print_p1(std::string path,
   }
 }
 
-/////////////////////////////////////////////////
-bool Page::operator==(const Page & rhs) {
-  if (pageNum != rhs.pageNum || pageType != rhs.pageType || fileName != rhs.fileName) {
-    return false;
+Page & Page::operator=(const Page & rhs) {
+  if (this != &rhs) {
+    pageNum = rhs.pageNum;
+    pageType = rhs.pageType;
+    fileName = rhs.fileName;
+    choice = rhs.choice;
+    var = rhs.var;
   }
-  //if(choice)
-  return true;
-}
-
-///////////////////////////////////////////////
-bool Page::operator!=(const Page & rhs) {
-  if (*this != rhs) {
-    return false;
-  }
-  return true;
+  return *this;
 }
