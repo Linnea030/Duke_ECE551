@@ -195,11 +195,6 @@ void Pstory::proPage(std::string line) {
 
   //get file name
   std::string s3 = line.substr(pos_colon + 1);
-  //if it is not a .txt file???
-  if (s3.find(".txt") == std::string::npos) {
-    std::cerr << "Invalid file name!\n";
-    exit(EXIT_FAILURE);
-  }
 
   //create new page
   Page P((size_t)pagenum, s2, s3);
