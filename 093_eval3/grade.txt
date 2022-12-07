@@ -1,6 +1,6 @@
-Grading at 12/07/2022:05:48:03.181641
-For commit ID efc1c6e183556c5834366d3b34680a602a4be776
-Grading at Wed Dec  7 12:47:42 AM EST 2022
+Grading at 12/07/2022:16:39:31.812257
+For commit ID 42fad1a371cc6ffc6be372c02d077afed40567e3
+Grading at Wed Dec  7 11:39:24 AM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -15,9 +15,9 @@ Now running YOUR tests for step 1
 
 1.1: Current test is ./cyoa-step1 /usr/local/ece551/cyoa/story1 < /dev/null
 -----------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
+You considered this a failure case:
+No such pagenum!
+But we did not.
 
 
 1.2: Current test is ./cyoa-step1 /usr/local/ece551/cyoa/story2 < /dev/null
@@ -39,9 +39,9 @@ Now running YOUR tests for step 2
 
 2.1: Current test is ./cyoa-step2 /usr/local/ece551/cyoa/story1  <  /usr/local/ece551/cyoa/story1/inputs/input0.txt
 -----------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
+You considered this a failure case:
+No such pagenum!
+But we did not.
 
 
 2.2: Current test is ./cyoa-step2 /usr/local/ece551/cyoa/story2  <  /usr/local/ece551/cyoa/story1/inputs/input1.txt
@@ -84,9 +84,9 @@ Now running YOUR tests for step 3
 
 3.1: Current test is ./cyoa-step3 /usr/local/ece551/cyoa/story1 < /dev/null
 -----------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
+You considered this a failure case:
+No such pagenum!
+But we did not.
 
 
 3.2: Current test is ./cyoa-step3 /usr/local/ece551/cyoa/story2 < /dev/null
@@ -108,83 +108,83 @@ Now running YOUR tests for step 4
 
 4.1: Current test is ./cyoa-step4 /usr/local/ece551/cyoa/story3  <  /usr/local/ece551/cyoa/story3/inputs/input0.txt
 -----------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
+You considered this a failure case:
+No such pagenum!
+But we did not.
 
 
 4.2: Current test is ./cyoa-step4 /usr/local/ece551/cyoa/story3  <  /usr/local/ece551/cyoa/story3/inputs/input1.txt
 -----------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
+You considered this a failure case:
+No such pagenum!
+But we did not.
 
 
 4.3: Current test is ./cyoa-step4 /usr/local/ece551/cyoa/story3  <  /usr/local/ece551/cyoa/story3/inputs/input2.txt
 -----------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
+You considered this a failure case:
+No such pagenum!
+But we did not.
 
 
 4.4: Current test is ./cyoa-step4 /usr/local/ece551/cyoa/story3  <  /usr/local/ece551/cyoa/story3/inputs/input3.txt
 -----------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
+You considered this a failure case:
+No such pagenum!
+But we did not.
 
 
 4.5: Current test is ./cyoa-step4 /usr/local/ece551/cyoa/story3  <  /usr/local/ece551/cyoa/story3/inputs/input4.txt
 -----------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
+You considered this a failure case:
+No such pagenum!
+But we did not.
 
 
 4.6: Current test is ./cyoa-step4 /usr/local/ece551/cyoa/story3  <  /usr/local/ece551/cyoa/story3/inputs/input5.txt
 -----------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
+You considered this a failure case:
+No such pagenum!
+But we did not.
 
 
 4.7: Current test is ./cyoa-step4 /usr/local/ece551/cyoa/story3  <  /usr/local/ece551/cyoa/story3/inputs/input6.txt
 -----------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
+You considered this a failure case:
+No such pagenum!
+But we did not.
 
 
 4.8: Current test is ./cyoa-step4 /usr/local/ece551/cyoa/story3  <  /usr/local/ece551/cyoa/story3/inputs/input7.txt
 -----------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
+You considered this a failure case:
+No such pagenum!
+But we did not.
 
 
 4.9: Current test is ./cyoa-step4 /usr/local/ece551/cyoa/story3  <  /usr/local/ece551/cyoa/story3/inputs/input8.txt
 -----------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
+You considered this a failure case:
+No such pagenum!
+But we did not.
 
 
 4.10: Current test is ./cyoa-step4 /usr/local/ece551/cyoa/story3  <  /usr/local/ece551/cyoa/story3/inputs/input9.txt
 -----------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
+You considered this a failure case:
+No such pagenum!
+But we did not.
 
 
 4.11: Current test is ./cyoa-step4 /usr/local/ece551/cyoa/story3  <  /usr/local/ece551/cyoa/story3/inputs/input10.txt
 -----------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
+You considered this a failure case:
+No such pagenum!
+But we did not.
 No request to check for intermediate deadline completion on step 4
 
-You have passed the test cases YOU provided
-If your tests are good, this is great. 
-If your tests are insufficient, you should do much more testing
+You have NOT passed your test cases!
+You should go and figure out/understand where thing went wrong
+And fix the problem(s) before the deadline
 
 Overall Grade: NO GRADE YET
