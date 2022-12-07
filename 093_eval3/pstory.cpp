@@ -253,7 +253,7 @@ void Pstory::proChoice(std::string line) {
   std::string cs2 = line.substr(cpos_colon1 + 1, cpos_colon2 - cpos_colon1 - 1);
   long destpage = convert(cs2);
   //check if destpage is exist, check it in step2 checkValid()
-  checkPage(destpage, p_num);
+  //  checkPage(destpage, p_num);
 
   //get text of choice
   std::string cs3 = line.substr(cpos_colon2 + 1);
@@ -294,7 +294,7 @@ void Pstory::proChoicevar(std::string line) {
   std::string cs4 = line.substr(cpos_colon1 + 1, cpos_colon2 - cpos_colon1 - 1);
   long destpage = convert(cs4);
   //check if destpage is exist
-  checkPage(destpage, p_num);
+  // checkPage(destpage, p_num);
 
   //get text of choice
   std::string cs5 = line.substr(cpos_colon2 + 1);
