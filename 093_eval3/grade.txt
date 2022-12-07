@@ -1,6 +1,6 @@
-Grading at 12/07/2022:20:41:40.406992
-For commit ID c18704c2b57c7bf460de7ad0d691c3790b929883
-Grading at Wed Dec  7 03:41:25 PM EST 2022
+Grading at 12/07/2022:20:47:53.376249
+For commit ID f663f0b7a1c204674d6dd375880df1c8bb123cf4
+Grading at Wed Dec  7 03:47:29 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -20,131 +20,71 @@ Your output looks good. Lets check valgrind
 Valgrind was clean
 
 
-1.2: Current test is ./cyoa-step1 /home/yc538/story2 < /dev/null
+1.2: Current test is ./cyoa-step1 story2 < /dev/null
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
-Open file failed!
+Invalid line format for pagenum!
 -----------------------------------------
 Lets check if it valgrinds:
 Valgrind was clean
 
 
-1.3: Current test is ./cyoa-step1 /home/yc538/story3 < /dev/null
+1.3: Current test is ./cyoa-step1 story3 < /dev/null
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
-Open file failed!
+Invalid line format for page type!
 -----------------------------------------
 Lets check if it valgrinds:
 Valgrind was clean
 
 
-1.4: Current test is ./cyoa-step1 /home/yc538/story4 < /dev/null
+1.4: Current test is ./cyoa-step1 story4 < /dev/null
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
-Open file failed!
+No such pagenum!
 -----------------------------------------
 Lets check if it valgrinds:
 Valgrind was clean
 
 
-1.5: Current test is ./cyoa-step1 /home/yc538/story5 < /dev/null
+1.5: Current test is ./cyoa-step1 story5 < /dev/null
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
-Open file failed!
+No such pagenum!
 -----------------------------------------
 Lets check if it valgrinds:
 Valgrind was clean
 
 
-1.6: Current test is ./cyoa-step1 /home/yc538/story6 < /dev/null
+1.6: Current test is ./cyoa-step1 story6 < /dev/null
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
-Open file failed!
+Negative integer!
 -----------------------------------------
 Lets check if it valgrinds:
 Valgrind was clean
 
 
-1.7: Current test is ./cyoa-step1 /home/yc538/story7 < /dev/null
+1.7: Current test is ./cyoa-step1 story7 < /dev/null
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
-Open file failed!
+Invalid integer!
 -----------------------------------------
 Lets check if it valgrinds:
 Valgrind was clean
 
 
-1.8: Current test is ./cyoa-step1 /home/yc538/story1 < /dev/null
+1.8: Current test is ./cyoa-step1 story8 < /dev/null
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
-Open file failed!
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-
-
-1.9: Current test is ./cyoa-step1 /home/yc538/story2 < /dev/null
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-Open file failed!
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-
-
-1.10: Current test is ./cyoa-step1 /home/yc538/story3 < /dev/null
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-Open file failed!
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-
-
-1.11: Current test is ./cyoa-step1 /home/yc538/story4 < /dev/null
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-Open file failed!
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-
-
-1.12: Current test is ./cyoa-step1 /home/yc538/story5 < /dev/null
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-Open file failed!
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-
-
-1.13: Current test is ./cyoa-step1 /home/yc538/story6 < /dev/null
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-Open file failed!
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-
-
-1.14: Current test is ./cyoa-step1 /home/yc538/story7 < /dev/null
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-Open file failed!
+Win or Lose type can not have choice!
 -----------------------------------------
 Lets check if it valgrinds:
 Valgrind was clean
@@ -165,11 +105,11 @@ Step 1 EC intermediate deadline test 2
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean for this testcase
 You have passed this test case
-Intermediate deadline requirements for Step 1 passed at Wed Dec  7 03:41:40 PM EST 2022
+Intermediate deadline requirements for Step 1 passed at Wed Dec  7 03:47:38 PM EST 2022
 
 Step 2
 Checking that cyoa-step2 compiles
-make: 'cyoa-step2' is up to date.
+g++ -o cyoa-step2 -pedantic -std=gnu++98 -Werror -Wall cyoa-step2.cpp readStory.hpp readStory.cpp page.hpp page.cpp choice.hpp choice.cpp pstory.hpp pstory.cpp
 The code compiled (good)
 Executable cyoa-step2 exists (good)
 ------------------------------------
@@ -185,11 +125,88 @@ Executable cyoa-step3 exists (good)
 ------------------------------------
 Now running YOUR tests for step 3
 ------------------------------------
+
+
+3.1: Current test is ./cyoa-step3 story1 < /dev/null
+-----------------------------
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
+
+
+3.2: Current test is ./cyoa-step3 story2 < /dev/null
+-----------------------------
+Great: we both considered this an error
+----here is what you printed on stderr---
+Invalid line format for pagenum!
+-----------------------------------------
+Lets check if it valgrinds:
+Valgrind was clean
+
+
+3.3: Current test is ./cyoa-step3 story3 < /dev/null
+-----------------------------
+Great: we both considered this an error
+----here is what you printed on stderr---
+Invalid line format for page type!
+-----------------------------------------
+Lets check if it valgrinds:
+Valgrind was clean
+
+
+3.4: Current test is ./cyoa-step3 story4 < /dev/null
+-----------------------------
+Great: we both considered this an error
+----here is what you printed on stderr---
+No such pagenum!
+-----------------------------------------
+Lets check if it valgrinds:
+Valgrind was clean
+
+
+3.5: Current test is ./cyoa-step3 story5 < /dev/null
+-----------------------------
+Great: we both considered this an error
+----here is what you printed on stderr---
+No such pagenum!
+-----------------------------------------
+Lets check if it valgrinds:
+Valgrind was clean
+
+
+3.6: Current test is ./cyoa-step3 story6 < /dev/null
+-----------------------------
+Great: we both considered this an error
+----here is what you printed on stderr---
+Negative integer!
+-----------------------------------------
+Lets check if it valgrinds:
+Valgrind was clean
+
+
+3.7: Current test is ./cyoa-step3 story7 < /dev/null
+-----------------------------
+Great: we both considered this an error
+----here is what you printed on stderr---
+Invalid integer!
+-----------------------------------------
+Lets check if it valgrinds:
+Valgrind was clean
+
+
+3.8: Current test is ./cyoa-step3 story8 < /dev/null
+-----------------------------
+Great: we both considered this an error
+----here is what you printed on stderr---
+Win or Lose type can not have choice!
+-----------------------------------------
+Lets check if it valgrinds:
+Valgrind was clean
 No request to check for intermediate deadline completion on step 3
 
 Step 4
 Checking that cyoa-step4 compiles
-make: 'cyoa-step4' is up to date.
+g++ -o cyoa-step4 -pedantic -std=gnu++98 -Werror -Wall cyoa-step4.cpp readStory.hpp readStory.cpp page.hpp page.cpp choice.hpp choice.cpp pstory.hpp pstory.cpp
 The code compiled (good)
 Executable cyoa-step4 exists (good)
 ------------------------------------
