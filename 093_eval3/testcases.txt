@@ -39,6 +39,7 @@ cyoa-step2 st4 < input.txt
 cyoa-step2 st5 < input.txt
 cyoa-step2 st6 < input.txt
 cyoa-step2 st7 < input.txt
+cyoa-step2 st8 < input.txt
 #ec:step2
 
 
@@ -57,6 +58,14 @@ cyoa-step3 story12
 cyoa-step3 ts1
 cyoa-step3 ts2
 cyoa-step3 ts3
+cyoa-step3 st1
+cyoa-step3 st2
+cyoa-step3 st3
+cyoa-step3 st4
+cyoa-step3 st5
+cyoa-step3 st6
+cyoa-step3 st7
+cyoa-step3 st8
 #ec:step3
 
 #ec:step4

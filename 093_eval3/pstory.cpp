@@ -435,15 +435,11 @@ void Pstory::checkValid() {
       if (dest != story[i].choice[j].pagenum) {
         hashmap[dest] = 1;
       }
-      //referenced by itself
-      else {
-        hashmap[dest] = 0;
-      }
     }
   }
 
   //3b. check if every page is referenced
-  for (unsigned long k = 1; k < hashmap.size(); ++k) {
+  for (long k = 1; k < p_num + 1; ++k) {
     if (hashmap[k] == 0) {
       std::cerr << "This page " << k << " is not referenced!\n";
       exit(EXIT_FAILURE);
