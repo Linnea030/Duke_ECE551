@@ -11,13 +11,9 @@
 10@W:aop2.txt
 11@W:home2.txt
 
-12@N:home1:2:tothis.txt
-13@N:1:2:st@ory.txt
-
 0:1:Try to sneak past the sleeping dragon
 0:2:Leave the dragon's cave and go home
 
-12:1:jump to 13@N:start.txt
 
 1:4:Pick up the ruby
 1:5:Pass the ruby to explore the rest of the hoard

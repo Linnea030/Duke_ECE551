@@ -45,6 +45,7 @@ class Pstory {
   void beginGame(std::string path);
   void beginGame_plus(std::string path);
   bool isValidChoice(std::string n, long num_choice);
+  bool isNumber(std::string s);
   void findWay();
   std::string toString(std::vector<std::pair<Page, long> > currPath);
   void printWay(std::vector<std::string> way);

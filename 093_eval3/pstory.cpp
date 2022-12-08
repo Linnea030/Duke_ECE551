@@ -44,9 +44,9 @@ bool Pstory::isPage(std::string line) {
   if (pos_at == std::string::npos) {
     return false;
   }
-  //if : is before @, such as 1:2:1@N:story.txt
-  size_t pos_colon_first = line.find(":");  //detect there is no : before @
-  if (pos_colon_first != std::string::npos && pos_colon_first < pos_at) {
+  //check if valid number before @
+  std::string s1 = line.substr(0, pos_at);
+  if (isNumber(s1) == false) {
     return false;
   }
   //find first : after @
@@ -64,6 +64,11 @@ bool Pstory::isPagevar(std::string line) {
   if (pos_cash == std::string::npos) {
     return false;
   }
+  //check if valid number before $
+  std::string s1 = line.substr(0, pos_cash);
+  if (isNumber(s1) == false) {
+    return false;
+  }
   //find first = after $
   size_t pos_equal = line.find("=", pos_cash + 1);
   if (pos_equal == std::string::npos) {
@@ -79,9 +84,9 @@ bool Pstory::isChoice(std::string line) {
   if (pos_colon == std::string::npos) {
     return false;
   }
-  //find first @ //if @ is before :, such as 1@N:1:2:st@ory.txt
-  size_t pos_at_first = line.find("@");
-  if (pos_at_first != std::string::npos && pos_at_first < pos_colon) {
+  //check if valid number before :
+  std::string s1 = line.substr(0, pos_colon);
+  if (isNumber(s1) == false) {
     return false;
   }
   //find second : after first :
@@ -94,9 +99,14 @@ bool Pstory::isChoice(std::string line) {
 
 //check if the line type is choice or not
 bool Pstory::isChoicevar(std::string line) {
-  //find first [
+  //find first [ left brackets
   size_t pos_braleft = line.find("[");
   if (pos_braleft == std::string::npos) {
+    return false;
+  }
+  //check if valid number before [
+  std::string s1 = line.substr(0, pos_braleft);
+  if (isNumber(s1) == false) {
     return false;
   }
   //find first = after first [
@@ -120,6 +130,32 @@ bool Pstory::isChoicevar(std::string line) {
   if (pos_colon2 == std::string::npos) {
     return false;
   }
+  return true;
+}
+
+bool Pstory::isNumber(std::string s) {
+  //if string is empty
+  if (s.empty()) {
+    return false;
+  }
+  //if string is not empty
+  char * c = new char[s.length() + 1];
+  std::strcpy(c, s.c_str());
+  char * end;
+  long num = std::strtol(c, &end, 10);
+  //check valid of integer
+  //if pointer end is not point to null
+  int len_end = strlen(end);
+  if (*end != 0 || len_end != 0) {
+    delete[] c;
+    return false;
+  }
+  //if it is a negative number
+  if (num < 0) {
+    delete[] c;
+    return false;
+  }
+  delete[] c;
   return true;
 }
 
