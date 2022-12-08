@@ -466,12 +466,14 @@ void Pstory::beginGame(std::string path) {
     print_single(path, currnum);
     long num_choice = story[currnum].choice.size();  //get number of choice
     //read from cmd
-    std::getline(std::cin, n);
+    std::cin >> n;
+    // std::getline(std::cin, n);
 
     //if input is invalid, input again until valid
     while (!isValidChoice(n, num_choice)) {
       std::cout << "That is not a valid choice, please try again\n";
-      std::getline(std::cin, n);
+      std::cin >> n;
+      //std::getline(std::cin, n);
     }
 
     //get choice number
