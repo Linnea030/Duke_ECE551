@@ -161,7 +161,7 @@ bool Pstory::isNumber(std::string s) {
 
 //convert string to integer and check if it is valid
 long Pstory::convert(std::string s) {
-  //if string is empty???
+  //if string is empty
   if (s.empty()) {
     std::cerr << "string is empty\n";
     exit(EXIT_FAILURE);
@@ -365,14 +365,17 @@ void Pstory::proStory_1(std::ifstream & ifs) {
   while (getline(ifs, line)) {
     //if line is empty
     if (isSpacel(line)) {
+      std::cout << "blank line" << std::endl;
       continue;
     }
     //if line is page line
     if (isPage(line)) {
+      std::cout << "page line" << std::endl;
       proPage(line);
     }
     //if line is choice line
     else if (isChoice(line)) {
+      std::cout << "choice line" << std::endl;
       proChoice(line);
     }
     else {
