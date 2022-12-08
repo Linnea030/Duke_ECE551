@@ -11,14 +11,14 @@
 #include <vector>
 
 //print all the story in step1
-void Pstory::print(std::string path) {
+void Pstory::print(std::string path) const {
   for (int i = 0; i <= p_num; i++) {
     story[i].print_p(path, 1);
   }
 }
 
 //print single story in step2
-void Pstory::print_single(std::string path, int i) {
+void Pstory::print_single(std::string path, int i) const {
   story[i].print_p(path, 2);
 }
 
@@ -30,7 +30,7 @@ void Pstory::print_single1(std::string path,
 }
 
 //check if the pagenumber is valid in step1
-void Pstory::checkPage(long num, long p_num) {
+void Pstory::checkPage(long num, long p_num) const {
   if (num > p_num) {
     std::cerr << "No such pagenum!\n";
     exit(EXIT_FAILURE);
@@ -38,7 +38,7 @@ void Pstory::checkPage(long num, long p_num) {
 }
 
 //check if the line type is page or not
-bool Pstory::isPage(std::string line) {
+bool Pstory::isPage(std::string line) const {
   //find first @
   size_t pos_at = line.find("@");
   if (pos_at == std::string::npos) {
@@ -58,7 +58,7 @@ bool Pstory::isPage(std::string line) {
 }
 
 //check if the line type is page or not
-bool Pstory::isPagevar(std::string line) {
+bool Pstory::isPagevar(std::string line) const {
   //find first $
   size_t pos_cash = line.find("$");
   if (pos_cash == std::string::npos) {
@@ -78,7 +78,7 @@ bool Pstory::isPagevar(std::string line) {
 }
 
 //check if the line type is choice or not
-bool Pstory::isChoice(std::string line) {
+bool Pstory::isChoice(std::string line) const {
   //find first :
   size_t pos_colon = line.find(":");
   if (pos_colon == std::string::npos) {
@@ -98,7 +98,7 @@ bool Pstory::isChoice(std::string line) {
 }
 
 //check if the line type is choice or not
-bool Pstory::isChoicevar(std::string line) {
+bool Pstory::isChoicevar(std::string line) const {
   //find first [ left brackets
   size_t pos_braleft = line.find("[");
   if (pos_braleft == std::string::npos) {
@@ -128,7 +128,7 @@ bool Pstory::isChoicevar(std::string line) {
 }
 
 //check if string s is a number
-bool Pstory::isNumber(std::string s) {
+bool Pstory::isNumber(std::string s) const {
   //if string is empty
   if (s.empty()) {
     return false;
@@ -211,7 +211,7 @@ long Pstory::convert1(std::string s) {
 }
 
 //check if the line only contains blackspace and new line
-bool Pstory::isSpacel(std::string line) {
+bool Pstory::isSpacel(std::string line) const {
   unsigned long num = line.size();
   std::string space = " ";
   std::string newline = "\n";
@@ -421,7 +421,7 @@ void Pstory::check_wl(std::string s2) {
 }
 
 //check valid conditions for step2 3 4
-void Pstory::checkValid() {
+void Pstory::checkValid() const {
   //3a. check destpage is valid or not
   std::map<int, int> hashmap;
   //traverse all choice to find destpage and save them in a map
@@ -549,7 +549,7 @@ void Pstory::beginGame_plus(std::string path) {
 }
 
 //check if this choice is valid for this page
-bool Pstory::isValidChoice(std::string n, long num_choice) {
+bool Pstory::isValidChoice(std::string n, long num_choice) const {
   //if string is empty
   if (n.empty()) {
     return false;

@@ -15,14 +15,14 @@ Choice & Choice::operator=(const Choice & rhs) {
 }
 //input nothing, return nothing
 //print choice text in step 1 2 3
-void Choice::print_c() {
+void Choice::print_c() const {
   std::cout << " " << cnum << ". " << text;
   std::cout << "\n";
   return;
 }
 //input nothing, return nothing
 //print choice text in step 4
-void Choice::print_var() {
+void Choice::print_var() const {
   std::cout << " " << cnum << ". <UNAVAILABLE>";
   std::cout << "\n";
   return;

@@ -26,18 +26,22 @@ class Page {
   //input string path of the pagefile.txt and which step it is in now
   //return is void
   //print this page in step1 2
-  void print_p(std::string path, int step);
+  void print_p(std::string path, int step) const;
 
   //input string path of the pagefile.txt
   //return is void
   //print this page's text, subfunction of print_p and print_p1
-  void textPrint(std::string path);
+  void textPrint(std::string path) const;
 
   //input string path of the pagefile.txt and vector storyVar which save the variables
   //return void, variable is checked by storyVar (save all variables for now) and choice
   //print this page with variable in step4
   void print_p1(std::string path,
                 std::vector<std::pair<long int, std::string> > storyVar);
+  //input: vector storyVar which save the variables, return void
+  //print and check variables in choice for step 4
+  void print_step4(std::vector<std::pair<long int, std::string> > storyVar);
+
   //destructor
   ~Page() {}
 };

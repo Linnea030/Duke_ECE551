@@ -13,6 +13,7 @@ class Choice {
   bool needVar;    //if this choice is related to variable, needVar is true
   bool available;  //if this choice is avaiable in, avaiable is true
   std::pair<long int, std::string> choiceVar;  //the variable key and value
+
   //constructor
   Choice(size_t pn, size_t dn, std::string text, long cnum) :
       pagenum(pn), destnum(dn), text(text), cnum(cnum), needVar(false), available(true) {}
@@ -30,10 +31,10 @@ class Choice {
   Choice & operator=(const Choice & rhs);
   //input: nothing, return void
   //print choice text in step 1 2 3
-  void print_c();
+  void print_c() const;
   //input: nothing, return voide
   //print choice text in step 4
-  void print_var();
+  void print_var() const;
   //destructor
   ~Choice() {}
 };

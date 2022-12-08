@@ -9,7 +9,7 @@
 //input string path of the pagefile.txt and which step it is in now
 //return is void
 //print this page in step1 2
-void Page::print_p(std::string path, int step) {
+void Page::print_p(std::string path, int step) const {
   if (step == 1) {
     //print pagenumber
     std::cout << "Page " << pageNum << "\n";
@@ -46,7 +46,7 @@ void Page::print_p(std::string path, int step) {
 //input string path of the pagefile.txt
 //return is void
 //print this page's text, subfunction of print_p and print_p1
-void Page::textPrint(std::string path) {
+void Page::textPrint(std::string path) const {
   //print text
   //add path and fileName and convert whole path to char
   std::ifstream ifsp;
@@ -87,56 +87,9 @@ void Page::print_p1(std::string path,
 
     //print choice
     //if in step4
-    int n = choice.size();
-    for (int i = 0; i < n; ++i) {
-      choice[i].available = true;
-      //if this choice is not related to variable, print as usual
-      if (choice[i].needVar == false) {
-        choice[i].print_c();
-        continue;
-      }
-
-      //else, check the validness of variable in this page
-      long pos_var = -1;  //the position of variable in var
-                          //check if the variable name is existed in this page
-      for (unsigned long j = 0; j < storyVar.size(); ++j) {
-        //if variable is found, get index of this variable in storyVar
-        if (storyVar[j].second.compare(choice[i].choiceVar.second) == 0) {
-          pos_var = j;  //get the index of variable in var
-          break;
-        }
-      }
-      //check if variable existed
-      bool existed = (pos_var != -1);
-      //check if value is 0
-      bool valueEqual0 = (choice[i].choiceVar.first == 0);
-
-      //if existed and value equal
-      if (existed) {
-        //if there is such var in this page,the value is equal
-        if (storyVar[pos_var].first == choice[i].choiceVar.first) {
-          choice[i].print_c();
-        }
-        //if no such variable's value
-        else {
-          choice[i].available = false;
-          choice[i].print_var();
-        }
-      }
-      //if it is not existed
-      else if (!existed) {
-        //if there is no such var in this page,the default value is 0, and equal
-        if (valueEqual0) {
-          choice[i].print_c();
-        }
-        //if no such variable's value
-        else {
-          choice[i].available = false;
-          choice[i].print_var();
-        }
-      }
-    }
+    print_step4(storyVar);
   }
+
   else if (pageType == "W") {
     //if W type
     std::cout << "\n";
@@ -149,6 +102,58 @@ void Page::print_p1(std::string path,
   }
 }
 
+//print and check variables in choice for step 4
+void Page::print_step4(std::vector<std::pair<long int, std::string> > storyVar) {
+  int n = choice.size();
+  for (int i = 0; i < n; ++i) {
+    choice[i].available = true;
+    //if this choice is not related to variable, print as usual
+    if (choice[i].needVar == false) {
+      choice[i].print_c();
+      continue;
+    }
+    //else, check the validness of variable in this page
+    long pos_var = -1;  //the position of variable in var
+                        //check if the variable name is existed in this page
+    for (unsigned long j = 0; j < storyVar.size(); ++j) {
+      //if variable is found, get index of this variable in storyVar
+      if (storyVar[j].second.compare(choice[i].choiceVar.second) == 0) {
+        pos_var = j;  //get the index of variable in var
+        break;
+      }
+    }
+    //check if variable existed
+    bool existed = (pos_var != -1);
+    //check if value is 0
+    bool valueEqual0 = (choice[i].choiceVar.first == 0);
+    //if existed and value equal
+    if (existed) {
+      //if there is such var in this page,the value is equal
+      if (storyVar[pos_var].first == choice[i].choiceVar.first) {
+        choice[i].print_c();
+      }
+      //if no such variable's value
+      else {
+        choice[i].available = false;
+        choice[i].print_var();
+      }
+    }
+    //if it is not existed
+    else if (!existed) {
+      //if there is no such var in this page,the default value is 0, and equal
+      if (valueEqual0) {
+        choice[i].print_c();
+      }
+      //if no such variable's value
+      else {
+        choice[i].available = false;
+        choice[i].print_var();
+      }
+    }
+  }
+}
+
+//copy assignment operator
 Page & Page::operator=(const Page & rhs) {
   if (this != &rhs) {
     pageNum = rhs.pageNum;
