@@ -1,6 +1,6 @@
-Grading at 12/08/2022:05:36:01.711311
-For commit ID 5b93482a1e6eb6a9e72fb0987b53a263419efda2
-Grading at Thu Dec  8 12:34:46 AM EST 2022
+Grading at 12/08/2022:05:42:36.499990
+For commit ID 72a6a65c1843a2f11728fd43879aeb2258e8c8fb
+Grading at Thu Dec  8 12:41:21 AM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -160,7 +160,7 @@ Step 1 EC intermediate deadline test 2
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean for this testcase
 You have passed this test case
-Intermediate deadline requirements for Step 1 passed at Thu Dec  8 12:35:05 AM EST 2022
+Intermediate deadline requirements for Step 1 passed at Thu Dec  8 12:41:40 AM EST 2022
 
 Step 2
 Checking that cyoa-step2 compiles
@@ -222,12 +222,12 @@ timeout: the monitored command dumped core
 -----------------------------------------
 Lets check if it valgrinds:
 Valgrind reported errors:
-==992409== Memcheck, a memory error detector
-==992409== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==992409== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==992409== Command: ./cyoa-step2 story1
-==992409== Parent PID: 992407
-==992409== 
+==998709== Memcheck, a memory error detector
+==998709== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==998709== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==998709== Command: ./cyoa-step2 story1
+==998709== Parent PID: 998708
+==998709== 
 
 
 2.8: Current test is ./cyoa-step2 story1  <  input.txt
