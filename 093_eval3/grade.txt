@@ -1,6 +1,6 @@
-Grading at 12/08/2022:04:52:55.178260
-For commit ID e730c59cae68904a90eec0a00315c35ba29a89e5
-Grading at Wed Dec  7 11:51:47 PM EST 2022
+Grading at 12/08/2022:05:01:58.362444
+For commit ID 83548cca1edc7eabc59039315a3394192cd08be5
+Grading at Thu Dec  8 12:00:44 AM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -160,11 +160,11 @@ Step 1 EC intermediate deadline test 2
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean for this testcase
 You have passed this test case
-Intermediate deadline requirements for Step 1 passed at Wed Dec  7 11:52:06 PM EST 2022
+Intermediate deadline requirements for Step 1 passed at Thu Dec  8 12:01:04 AM EST 2022
 
 Step 2
 Checking that cyoa-step2 compiles
-make: 'cyoa-step2' is up to date.
+g++ -o cyoa-step2 -pedantic -std=gnu++98 -Werror -Wall cyoa-step2.cpp readStory.hpp readStory.cpp page.hpp page.cpp choice.hpp choice.cpp pstory.hpp pstory.cpp
 The code compiled (good)
 Executable cyoa-step2 exists (good)
 ------------------------------------
@@ -172,14 +172,42 @@ Now running YOUR tests for step 2
 ------------------------------------
 
 
-2.1: Current test is ./cyoa-step2 story1  <  input.txt
+2.1: Current test is ./cyoa-step2 story1  <  input0.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
 
-2.2: Current test is ./cyoa-step2 story2  <  input.txt
+2.2: Current test is ./cyoa-step2 story1  <  input1.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
+
+
+2.3: Current test is ./cyoa-step2 story1  <  input2.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
+
+
+2.4: Current test is ./cyoa-step2 story1  <  input3.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
+
+
+2.5: Current test is ./cyoa-step2 story1  <  input.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
+
+
+2.6: Current test is ./cyoa-step2 story2  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -189,7 +217,7 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-2.3: Current test is ./cyoa-step2 story3  <  input.txt
+2.7: Current test is ./cyoa-step2 story3  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -199,7 +227,7 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-2.4: Current test is ./cyoa-step2 story4  <  input.txt
+2.8: Current test is ./cyoa-step2 story4  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -209,7 +237,7 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-2.5: Current test is ./cyoa-step2 story5  <  input.txt
+2.9: Current test is ./cyoa-step2 story5  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -219,7 +247,7 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-2.6: Current test is ./cyoa-step2 story6  <  input.txt
+2.10: Current test is ./cyoa-step2 story6  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -229,7 +257,7 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-2.7: Current test is ./cyoa-step2 story7  <  input.txt
+2.11: Current test is ./cyoa-step2 story7  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -239,7 +267,7 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-2.8: Current test is ./cyoa-step2 story8  <  input.txt
+2.12: Current test is ./cyoa-step2 story8  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -249,14 +277,14 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-2.9: Current test is ./cyoa-step2 story9  <  input.txt
+2.13: Current test is ./cyoa-step2 story9  <  input.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
 
-2.10: Current test is ./cyoa-step2 story10  <  input.txt
+2.14: Current test is ./cyoa-step2 story10  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -266,7 +294,7 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-2.11: Current test is ./cyoa-step2 story11  <  input.txt
+2.15: Current test is ./cyoa-step2 story11  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -276,7 +304,7 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-2.12: Current test is ./cyoa-step2 story12  <  input.txt
+2.16: Current test is ./cyoa-step2 story12  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -286,7 +314,7 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-2.13: Current test is ./cyoa-step2 st1  <  input.txt
+2.17: Current test is ./cyoa-step2 st1  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -296,7 +324,7 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-2.14: Current test is ./cyoa-step2 st2  <  input.txt
+2.18: Current test is ./cyoa-step2 st2  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -306,14 +334,14 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-2.15: Current test is ./cyoa-step2 st3  <  input.txt
+2.19: Current test is ./cyoa-step2 st3  <  input.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
 
-2.16: Current test is ./cyoa-step2 st4  <  input.txt
+2.20: Current test is ./cyoa-step2 st4  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -323,7 +351,7 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-2.17: Current test is ./cyoa-step2 st5  <  input.txt
+2.21: Current test is ./cyoa-step2 st5  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -333,7 +361,7 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-2.18: Current test is ./cyoa-step2 st6  <  input.txt
+2.22: Current test is ./cyoa-step2 st6  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -343,7 +371,7 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-2.19: Current test is ./cyoa-step2 st7  <  input.txt
+2.23: Current test is ./cyoa-step2 st7  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -353,7 +381,7 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-2.20: Current test is ./cyoa-step2 st8  <  input.txt
+2.24: Current test is ./cyoa-step2 st8  <  input.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
