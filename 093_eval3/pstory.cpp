@@ -132,7 +132,7 @@ bool Pstory::isChoicevar(std::string line) {
   }
   return true;
 }
-
+//check if string s is a number
 bool Pstory::isNumber(std::string s) {
   //if string is empty
   if (s.empty()) {
@@ -220,15 +220,17 @@ bool Pstory::isSpacel(std::string line) {
   unsigned long num = line.size();
   std::string space = " ";
   std::string newline = "\n";
+  //traverse each char, to find something that is not space or newline
   for (unsigned long i = 0; i < num; ++i) {
     std::string s = line.substr(i, 1);
+    //if not a space or newline
     if ((s.compare(space)) != 0 && s.compare(newline) != 0) {
       return false;
     }
   }
   return true;
 }
-
+//process Page without variable
 void Pstory::proPage(std::string line) {
   //if line is page line
   //get pagenumber
@@ -260,7 +262,7 @@ void Pstory::proPage(std::string line) {
   Page P((size_t)pagenum, s2, s3);
   story.push_back(P);
 }
-
+//process Page with variable
 void Pstory::proPagevar(std::string line) {
   //get pagenumber
   //find first $
@@ -286,7 +288,7 @@ void Pstory::proPagevar(std::string line) {
   std::pair<long int, std::string> varPair = std::make_pair(varValue, s2);
   story[pagenum].var.push_back(varPair);
 }
-
+//process Choice without variable
 void Pstory::proChoice(std::string line) {
   //if line is choice line
   //get pagenumber of choice
@@ -314,7 +316,7 @@ void Pstory::proChoice(std::string line) {
   Choice C((size_t)cpagenum, (size_t)destpage, cs3, cnum);
   story[cpagenum].choice.push_back(C);
 }
-
+//process Choice with variable
 void Pstory::proChoicevar(std::string line) {
   //get pagenumber of choice
   size_t cpos_bra1 = line.find("[");  //left brackets
@@ -356,7 +358,7 @@ void Pstory::proChoicevar(std::string line) {
   story[cpagenum].choice.push_back(C);
 }
 
-//process story in step1
+//process story in step1 2 3
 void Pstory::proStory_1(std::ifstream & ifs) {
   std::string line;
   p_num = -1;
@@ -411,41 +413,40 @@ void Pstory::proStory_2(std::ifstream & ifs) {
     }
   }
 }
-
+//check if there exist at least 1 win and 1 lose page
 void Pstory::check_wl(std::string s2) {
-  if (s2 == "W") {
+  if (s2 == "W") {  //winpage number +1
     win_num++;
   }
-  else if (s2 == "L") {
+  else if (s2 == "L") {  //losepage number +1
     lose_num++;
   }
 }
-
+//check valid conditions for step2 3 4
 void Pstory::checkValid() {
   //3a. check destpage is valid or not
   std::map<int, int> hashmap;
+  //traverse all choice to find destpage and save them in a map
   for (long i = 0; i <= p_num; ++i) {
     for (unsigned long j = 0; j < story[i].choice.size(); ++j) {
-      size_t dest = story[i].choice[j].destnum;
-      if ((long)dest > p_num) {
+      size_t dest = story[i].choice[j].destnum;  //get destpage
+      if ((long)dest > p_num) {                  //if destpage is not existed
         std::cerr << "No such destpage file!\n";
         exit(EXIT_FAILURE);
       }
-      //referenced by others
+      //page is referenced by others
       if (dest != story[i].choice[j].pagenum) {
         hashmap[dest] = 1;
       }
     }
   }
-
   //3b. check if every page is referenced
   for (long k = 1; k < p_num + 1; ++k) {
-    if (hashmap[k] == 0) {
+    if (hashmap[k] == 0) {  //not referenced
       std::cerr << "This page " << k << " is not referenced!\n";
       exit(EXIT_FAILURE);
     }
   }
-
   //3c. check win and lose page
   if (win_num < 1) {
     std::cerr << "No page for win\n";
@@ -456,7 +457,7 @@ void Pstory::checkValid() {
     exit(EXIT_FAILURE);
   }
 }
-
+//begingame for step1 2 3,start the game for user
 void Pstory::beginGame(std::string path) {
   long currnum = 0;
   //if type is N
@@ -483,7 +484,7 @@ void Pstory::beginGame(std::string path) {
   //if type is win or lose
   print_single(path, currnum);
 }
-
+//begingame for step4,start the game for user
 void Pstory::beginGame_plus(std::string path) {
   long currnum = 0;
   std::vector<std::pair<long int, std::string> > storyVar;
@@ -535,7 +536,7 @@ void Pstory::beginGame_plus(std::string path) {
   //if type is win or lose
   print_single1(path, currnum, storyVar);
 }
-
+//check if this choice is valid for this page
 bool Pstory::isValidChoice(std::string n, long num_choice) {
   //if string is empty
   if (n.empty()) {
@@ -566,7 +567,7 @@ bool Pstory::isValidChoice(std::string n, long num_choice) {
   delete[] c;
   return true;
 }
-
+//find all paths to win and print them
 void Pstory::findWay() {
   long curr_c = 0;                           //current choice number under this page
   std::map<long, int> visit;                 //visited node number
@@ -621,10 +622,10 @@ void Pstory::findWay() {
   //else print all the paths
   printWay(resPath);
 }
-
+//convert path node to a whole path string that can be printed
 std::string Pstory::toString(std::vector<std::pair<Page, long> > currPath) {
   std::string path;
-  std::stringstream s1;
+  std::stringstream s1;  //using stringstream to convert string
   for (unsigned long k = 0; k < currPath.size() - 1; ++k) {
     s1 << currPath[k].first.pageNum << "(" << currPath[k + 1].second << "),";
   }
@@ -632,13 +633,12 @@ std::string Pstory::toString(std::vector<std::pair<Page, long> > currPath) {
   s1 >> path;
   return path;
 }
-
+//print each string way
 void Pstory::printWay(std::vector<std::string> way) {
   for (unsigned long int i = 0; i < way.size(); ++i) {
     std::cout << way[i] << std::endl;
   }
 }
-
 //copy assignment operator
 Pstory & Pstory::operator=(const Pstory & rhs) {
   if (this != &rhs) {

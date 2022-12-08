@@ -68,7 +68,6 @@ void Page::textPrint(std::string path) {
     std::cout << line << "\n";  //1.
   }
   ifsp.close();
-  //error check???
 }
 
 //input string path of the pagefile.txt and vector storyVar which save the variables
@@ -107,11 +106,8 @@ void Page::print_p1(std::string path,
           break;
         }
       }
-
       //check if variable existed
       bool existed = (pos_var != -1);
-      //check if variable value are the same
-      //bool valueEqual = (storyVar[pos_var].first == choice[i].choiceVar.first);
       //check if value is 0
       bool valueEqual0 = (choice[i].choiceVar.first == 0);
 

@@ -28,8 +28,10 @@ class Choice {
   //implement in cpp
   //copy assignment operator
   Choice & operator=(const Choice & rhs);
+  //input: nothing, return void
   //print choice text in step 1 2 3
   void print_c();
+  //input: nothing, return voide
   //print choice text in step 4
   void print_var();
   //destructor
