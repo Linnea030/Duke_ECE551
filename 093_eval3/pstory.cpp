@@ -114,18 +114,13 @@ bool Pstory::isChoicevar(std::string line) {
   if (pos_equal == std::string::npos) {
     return false;
   }
-  //find first ] after first =
-  size_t pos_braright = line.find("]", pos_equal + 1);
+  //find first ]: after first =
+  size_t pos_braright = line.find("]:", pos_equal + 1);
   if (pos_braright == std::string::npos) {
     return false;
   }
-  //find first : after first ]
-  size_t pos_colon1 = line.find(":", pos_braright + 1);
-  if (pos_colon1 == std::string::npos) {
-    return false;
-  }
-  //find second : after first :
-  size_t pos_colon2 = line.find(":", pos_colon1 + 1);
+  //find second : after first ]:
+  size_t pos_colon2 = line.find(":", pos_braright + 1);
   if (pos_colon2 == std::string::npos) {
     return false;
   }
@@ -336,22 +331,21 @@ void Pstory::proChoicevar(std::string line) {
   //check if cs2 is contained in page???
 
   //get variable value
-  size_t cpos_bra2 = line.find("]", cpos_equal + 1);
+  size_t cpos_bra2 = line.find("]:", cpos_equal + 1);
   std::string cs3 = line.substr(cpos_equal + 1, cpos_bra2 - cpos_equal - 1);
   long int value = convert1(cs3);
 
   //get destnum
   size_t cpos_colon1 = line.find(":", cpos_bra2 + 1);
-  size_t cpos_colon2 = line.find(":", cpos_colon1 + 1);
-  std::string cs4 = line.substr(cpos_colon1 + 1, cpos_colon2 - cpos_colon1 - 1);
+  std::string cs4 = line.substr(cpos_bra2 + 1, cpos_colon1 - cpos_bra2 - 1);
   long destpage = convert(cs4);
 
   //get text of choice
-  std::string cs5 = line.substr(cpos_colon2 + 1);
+  std::string cs5 = line.substr(cpos_colon1 + 1);
 
   //creat and put choice into page
   long cnum = story[cpagenum].choice.size() + 1;
-  Choice C(cpagenum, destpage, cs5, cnum);
+  Choice C((size_t)cpagenum, (size_t)destpage, cs5, cnum);
   C.choiceVar = std::make_pair(value, cs2);
   C.needVar = true;
   story[cpagenum].choice.push_back(C);
