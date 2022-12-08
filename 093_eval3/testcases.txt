@@ -74,6 +74,7 @@ cyoa-step3 story13
 cyoa-step3 ts1
 cyoa-step3 ts2
 cyoa-step3 ts3
+cyoa-step3 ts4
 cyoa-step3 st1
 cyoa-step3 st2
 cyoa-step3 st3
