@@ -365,21 +365,21 @@ void Pstory::proStory_1(std::ifstream & ifs) {
   while (getline(ifs, line)) {
     //if line is empty
     if (isSpacel(line)) {
-      std::cout << "blank line" << std::endl;
+      //      std::cout << "blank line" << std::endl;
       continue;
     }
     //if line is page line
     if (isPage(line)) {
-      std::cout << "page line" << std::endl;
+      //  std::cout << "page line" << std::endl;
       proPage(line);
     }
     //if line is choice line
     else if (isChoice(line)) {
-      std::cout << "choice line" << std::endl;
+      //  std::cout << "choice line" << std::endl;
       proChoice(line);
     }
     else {
-      std::cerr << "Invalid line format!\n";
+      // std::cerr << "Invalid line format!\n";
       exit(EXIT_FAILURE);
     }
   }
