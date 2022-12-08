@@ -9,6 +9,7 @@
 
 2:6:Go to Grew for help.
 2:7:Go alone.
+2:2:Stay
 3@N:page3.txt
 3:8:Go to Denevieve for help.
 3:   9:Go to Grew for help.
