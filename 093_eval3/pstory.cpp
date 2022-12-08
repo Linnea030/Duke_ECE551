@@ -477,6 +477,18 @@ void Pstory::beginGame(std::string path) {
   //if type is win or lose
   print_single(path, currnum);
 }
+
+int Pstory::isInVector(std::string s,
+                       std::vector<std::pair<long int, std::string> > storyVar) {
+  size_t n = storyVar.size();
+  for (size_t i = 0; i < n; ++i) {
+    if (s.compare(storyVar[i].second) == 0) {
+      return i;  //if find variable in vector, return its index
+    }
+  }
+  return -1;  //else return -1, means not in vector
+}
+
 //begingame for step4,start the game for user
 void Pstory::beginGame_plus(std::string path) {
   long currnum = 0;
@@ -486,7 +498,15 @@ void Pstory::beginGame_plus(std::string path) {
     std::string n;
     //save current variable value in storyVar
     for (unsigned long k = 0; k < story[currnum].var.size(); ++k) {
-      storyVar.push_back(story[currnum].var[k]);
+      int index = isInVector(story[currnum].var[k].second, storyVar);
+      //if variable in var has not been set in storyVar
+      if (index == -1) {
+        storyVar.push_back(story[currnum].var[k]);
+      }
+      //if in vector, update its value
+      else {
+        storyVar[index].first = story[currnum].var[k].first;
+      }
     }
 
     //print page(num).txt and choice
@@ -495,25 +515,19 @@ void Pstory::beginGame_plus(std::string path) {
 
     //read from cmd
     std::cin >> n;
-    // std::getline(std::cin, n);
-
     //if input is invalid, input again until valid
     while (!isValidChoice(n, num_choice)) {
       std::cout << "That is not a valid choice, please try again\n";
-      //std::getline(std::cin, n);
       std::cin >> n;
     }
-
     long temp = convert(n);
     //check if <UNAVAILABLE>
     while (!story[currnum].choice[temp - 1].available) {
       std::cout << "That choice is not available at this time, please try again\n";
-      // std::getline(std::cin, n);
       std::cin >> n;
       //if input is invalid, input again until valid
       while (!isValidChoice(n, num_choice)) {
         std::cout << "That is not a valid choice, please try again\n";
-        //std::getline(std::cin, n);
         std::cin >> n;
       }
       temp = convert(n);

@@ -10,6 +10,7 @@ cyoa-step1 story9
 cyoa-step1 story10
 cyoa-step1 story11
 cyoa-step1 story12
+cyoa-step1 story13
 cyoa-step1 ts1
 cyoa-step1 ts2
 cyoa-step1 ts3
@@ -35,6 +36,10 @@ cyoa-step2 story9 < input.txt
 cyoa-step2 story10 < input.txt
 cyoa-step2 story11 < input.txt
 cyoa-step2 story12 < input.txt
+cyoa-step2 story13 < input.txt
+cyoa-step2 ts1 < input.txt
+cyoa-step2 ts2 < input.txt
+cyoa-step2 ts3 < input.txt
 #input for st
 cyoa-step2 st1 < input.txt
 cyoa-step2 st2 < input.txt
@@ -58,6 +63,7 @@ cyoa-step3 story9
 cyoa-step3 story10
 cyoa-step3 story11
 cyoa-step3 story12
+cyoa-step3 story13
 cyoa-step3 ts1
 cyoa-step3 ts2
 cyoa-step3 ts3

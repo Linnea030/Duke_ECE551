@@ -80,6 +80,7 @@ class Pstory {
   //input: string path of the files, return void
   //begingame for step4,start the game for user
   void beginGame_plus(std::string path);
+  int isInVector(std::string s, std::vector<std::pair<long int, std::string> > storyVar);
   //input: string n for input and num_choice for the number of choices in this page
   //return true for valid, false for not
   //check if this choice is valid for this page
