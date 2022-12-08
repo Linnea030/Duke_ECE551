@@ -426,12 +426,14 @@ void Pstory::checkValid() {
   std::map<int, int> hashmap;
   for (long i = 0; i < p_num; ++i) {
     for (unsigned long j = 0; j < story[i].choice.size(); ++j) {
-      long dest = story[i].choice[j].destnum;
-      if (dest > p_num) {
+      size_t dest = story[i].choice[j].destnum;
+      if ((long)dest > p_num) {
         std::cerr << "No such destpage file!\n";
         exit(EXIT_FAILURE);
       }
-      hashmap[dest]++;
+      if (dest != story[i].choice[j].pagenum) {
+        hashmap[dest]++;
+      }
     }
   }
 
