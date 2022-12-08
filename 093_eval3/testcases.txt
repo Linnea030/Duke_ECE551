@@ -122,6 +122,7 @@ cyoa-step4 tts5 < input.txt
 cyoa-step4 tts6 < input.txt
 cyoa-step4 tts7 < input.txt
 cyoa-step4 tts8 < input.txt
+cyoa-step4 tts9 < input.txt
 cyoa-step4 hhh < input.txt
 #cyoa-step4 story1 < input6.txt
 ec:step4
