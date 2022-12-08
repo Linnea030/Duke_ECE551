@@ -191,6 +191,30 @@ long Pstory::convert(std::string s) {
   return num;
 }
 
+//convert string to integer and check if it is valid, but it can be negative
+long Pstory::convert1(std::string s) {
+  //if string is empty
+  if (s.empty()) {
+    std::cerr << "string is empty\n";
+    exit(EXIT_FAILURE);
+  }
+  //if string is not empty
+  char * c = new char[s.length() + 1];
+  std::strcpy(c, s.c_str());
+  char * end;
+  long num = std::strtol(c, &end, 10);
+  //check valid of integer
+  //if pointer end is pointer to null
+  int len_end = strlen(end);
+  if (*end != 0 || len_end != 0) {
+    std::cerr << "Invalid integer!\n";
+    delete[] c;
+    exit(EXIT_FAILURE);
+  }
+  delete[] c;
+  return num;
+}
+
 //check if the line only contains blackspace and new line
 bool Pstory::isSpacel(std::string line) {
   unsigned long num = line.size();
@@ -256,13 +280,11 @@ void Pstory::proPagevar(std::string line) {
 
   //get variable value
   std::string s3 = line.substr(pos_equal + 1);
-  long varValue = convert(s3);
+  long varValue = convert1(s3);
 
   //check repeated pagenum and variable name???
   std::pair<long int, std::string> varPair = std::make_pair(varValue, s2);
   story[pagenum].var.push_back(varPair);
-  //test!!!
-  //std::cout << "page" << pagenum << "var size" << story[pagenum].var.size() << std::endl;
 }
 
 void Pstory::proChoice(std::string line) {
@@ -283,8 +305,6 @@ void Pstory::proChoice(std::string line) {
   size_t cpos_colon2 = line.find(":", cpos_colon1 + 1);
   std::string cs2 = line.substr(cpos_colon1 + 1, cpos_colon2 - cpos_colon1 - 1);
   long destpage = convert(cs2);
-  //check if destpage is exist, check it in step2 checkValid()
-  //  checkPage(destpage, p_num);
 
   //get text of choice
   std::string cs3 = line.substr(cpos_colon2 + 1);
@@ -317,15 +337,13 @@ void Pstory::proChoicevar(std::string line) {
   //get variable value
   size_t cpos_bra2 = line.find("]", cpos_equal + 1);
   std::string cs3 = line.substr(cpos_equal + 1, cpos_bra2 - cpos_equal - 1);
-  long int value = convert(cs3);
+  long int value = convert1(cs3);
 
   //get destnum
   size_t cpos_colon1 = line.find(":", cpos_bra2 + 1);
   size_t cpos_colon2 = line.find(":", cpos_colon1 + 1);
   std::string cs4 = line.substr(cpos_colon1 + 1, cpos_colon2 - cpos_colon1 - 1);
   long destpage = convert(cs4);
-  //check if destpage is exist
-  // checkPage(destpage, p_num);
 
   //get text of choice
   std::string cs5 = line.substr(cpos_colon2 + 1);
@@ -333,9 +351,6 @@ void Pstory::proChoicevar(std::string line) {
   //creat and put choice into page
   long cnum = story[cpagenum].choice.size() + 1;
   Choice C(cpagenum, destpage, cs5, cnum);
-  //test!!!
-  //  std::cout << "here is pstory.cpp"
-  //          << " value=" << value << " key=" << cs2 << std::endl;
   C.choiceVar = std::make_pair(value, cs2);
   C.needVar = true;
   story[cpagenum].choice.push_back(C);
@@ -354,6 +369,7 @@ void Pstory::proStory_1(std::ifstream & ifs) {
     if (isPage(line)) {
       proPage(line);
     }
+    //if line is choice line
     else if (isChoice(line)) {
       proChoice(line);
     }
@@ -369,29 +385,24 @@ void Pstory::proStory_2(std::ifstream & ifs) {
   std::string line;
   p_num = -1;
   while (getline(ifs, line)) {
-    //test!!!
-    // std::cout << line << std::endl;
-
     //if line is empty
     if (isSpacel(line)) {
       continue;
     }
     //if line is page line
     if (isPage(line)) {
-      //test!!!
-      // std::cout << "Page\n";
       proPage(line);
     }
+    //if line is page variable line
     else if (isPagevar(line)) {
-      // std::cout << "Pagevar\n";
       proPagevar(line);
     }
+    //if line is choice variable line
     else if (isChoicevar(line)) {
-      //std::cout << "Choicevar\n";
       proChoicevar(line);
     }
+    //if line is choice line
     else if (isChoice(line)) {
-      //std::cout << "Choice\n";
       proChoice(line);
     }
     else {
@@ -454,9 +465,6 @@ void Pstory::beginGame(std::string path) {
     //read from cmd
     std::getline(std::cin, n);
 
-    //test!!!
-    // std::cout << n << std::endl;
-
     //if input is invalid, input again until valid
     while (!isValidChoice(n, num_choice)) {
       std::cout << "That is not a valid choice, please try again\n";
@@ -466,11 +474,7 @@ void Pstory::beginGame(std::string path) {
     //get choice number
     long num = convert(n);
 
-    //test!!!
-    // std::cout << num << std::endl;
-
     //update currnum to destpage number
-
     long nextnum = story[currnum].choice[num - 1].destnum;
     currnum = nextnum;
   }
@@ -527,7 +531,7 @@ void Pstory::beginGame_plus(std::string path) {
 }
 
 bool Pstory::isValidChoice(std::string n, long num_choice) {
-  //if string is empty???
+  //if string is empty
   if (n.empty()) {
     return false;
   }
@@ -558,52 +562,57 @@ bool Pstory::isValidChoice(std::string n, long num_choice) {
 }
 
 void Pstory::findWay() {
-  //long curr_p = 0;  //current page number
-  long curr_c = 0;  //current choice number under this page
-  //std::vector<long> visited;
-  std::map<long, int> visit;
-  std::vector<std::pair<Page, long> > Path;
-  std::stack<std::vector<std::pair<Page, long> > > todoPath;
-  std::vector<std::string> resPath;
-  std::pair<Page, long> currPage = std::make_pair(story[0], curr_c);
+  long curr_c = 0;                           //current choice number under this page
+  std::map<long, int> visit;                 //visited node number
+  std::vector<std::pair<Page, long> > Path;  //current path
+  std::stack<std::vector<std::pair<Page, long> > > todoPath;  //todo list of path
+  std::vector<std::string> resPath;                           //result path
+  std::pair<Page, long> currPage =
+      std::make_pair(story[0], curr_c);  //current page we are in
   Path.push_back(currPage);
   todoPath.push(Path);
+  //doing todo list until it is empty
   while (!todoPath.empty()) {
     Path = todoPath.top();
     todoPath.pop();
     currPage = Path[Path.size() - 1];
-    //curr_p = currPage.first.pageNum;
+    //if find win page
     if (currPage.first.pageType == "W") {
       //convert(currPath to string)
       std::string way = toString(Path);
-
       resPath.push_back(way);
-      //get visited back
+      //update visited vector if todopath is not empty
       visit.clear();
-      for (unsigned long j = 0; j < todoPath.top().size() - 1; ++j) {
-        long index = todoPath.top()[j].first.pageNum;
-        visit[index]++;
+      if (!todoPath.empty()) {
+        for (unsigned long j = 0; j < todoPath.top().size() - 1; ++j) {
+          long index = todoPath.top()[j].first.pageNum;
+          visit[index]++;
+        }
       }
       continue;
     }
+    //if it has not been visited
     if (!visit.count(currPage.first.pageNum)) {
-      visit[currPage.first.pageNum]++;
+      visit[currPage.first.pageNum]++;  //update visited
+      //save its neighbers into todoPath
       for (unsigned long i = 0; i < currPage.first.choice.size(); ++i) {
         curr_c = i + 1;
         long next_p = currPage.first.choice[i].destnum;
-        if (!visit.count(next_p)) {
+        if (!visit.count(next_p)) {  //if its neighber is not visited
           std::pair<Page, long> tempPage = std::make_pair(story[next_p], curr_c);
-          Path.push_back(tempPage);
+          Path.push_back(tempPage);  //push neighber
           todoPath.push(Path);
-          Path.pop_back();
+          Path.pop_back();  //Backtracking
         }
       }
     }
   }
+  //if resPath has not saved path, this story is unwinnable
   if (resPath.empty()) {
     std::cout << "This story is unwinnable!\n";
     return;
   }
+  //else print all the paths
   printWay(resPath);
 }
 

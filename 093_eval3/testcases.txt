@@ -19,6 +19,13 @@ ec:step1
 #cyoa-step2 story1 < input1.txt
 #cyoa-step2 story1 < input2.txt
 #cyoa-step2 story1 < input3.txt
+cyoa-step2 st1 < input.txt
+cyoa-step2 st2 < input.txt
+cyoa-step2 st3 < input.txt
+cyoa-step2 st4 < input.txt
+cyoa-step2 st5 < input.txt
+cyoa-step2 st6 < input.txt
+cyoa-step2 st7 < input.txt
 #ec:step2
 
 

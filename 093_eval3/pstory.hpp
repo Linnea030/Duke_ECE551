@@ -39,6 +39,7 @@ class Pstory {
   bool isPagevar(std::string line);
   bool isChoicevar(std::string line);
   long convert(std::string s);
+  long convert1(std::string s);
   bool isSpacel(std::string line);
   void check_wl(std::string s2);
   void checkValid();
