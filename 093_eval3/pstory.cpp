@@ -189,7 +189,7 @@ long Pstory::convert(std::string s) {
 long Pstory::convert1(std::string s) {
   //if string is empty
   if (s.empty()) {
-    std::cerr << "string is empty\n";
+    std::cerr << "string is empty1\n";
     exit(EXIT_FAILURE);
   }
   //if string is not empty
@@ -336,8 +336,9 @@ void Pstory::proChoicevar(std::string line) {
   long int value = convert1(cs3);
 
   //get destnum
-  size_t cpos_colon1 = line.find(":", cpos_bra2 + 1);
-  std::string cs4 = line.substr(cpos_bra2 + 1, cpos_colon1 - cpos_bra2 - 1);
+  size_t cpos_colon1 = line.find(":", cpos_bra2 + 2);
+  std::string cs4 = line.substr(cpos_bra2 + 2, cpos_colon1 - cpos_bra2 - 2);
+  std::cout << cs4 << std::endl;
   long destpage = convert(cs4);
 
   //get text of choice
@@ -358,21 +359,18 @@ void Pstory::proStory_1(std::ifstream & ifs) {
   while (getline(ifs, line)) {
     //if line is empty
     if (isSpacel(line)) {
-      //      std::cout << "blank line" << std::endl;
       continue;
     }
     //if line is page line
     if (isPage(line)) {
-      //  std::cout << "page line" << std::endl;
       proPage(line);
     }
     //if line is choice line
     else if (isChoice(line)) {
-      //  std::cout << "choice line" << std::endl;
       proChoice(line);
     }
     else {
-      // std::cerr << "Invalid line format!\n";
+      std::cerr << "Invalid line format!\n";
       exit(EXIT_FAILURE);
     }
   }
