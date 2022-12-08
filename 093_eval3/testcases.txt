@@ -11,9 +11,11 @@ cyoa-step1 story10
 cyoa-step1 story11
 cyoa-step1 story12
 cyoa-step1 story13
+cyoa-step1 story
 cyoa-step1 ts1
 cyoa-step1 ts2
 cyoa-step1 ts3
+cyoa-step1 hhh
 ec:step1
 
 cyoa-step2 story1 < input0.txt
@@ -48,6 +50,7 @@ cyoa-step2 st5 < input.txt
 cyoa-step2 st6 < input.txt
 cyoa-step2 st7 < input.txt
 cyoa-step2 st8 < input.txt
+cyoa-step2 hhh < input.txt
 ec:step2
 
 cyoa-step3 story1
@@ -74,6 +77,7 @@ cyoa-step3 st5
 cyoa-step3 st6
 cyoa-step3 st7
 cyoa-step3 st8
+cyoa-step3 hhh
 ec:step3
 
 
@@ -83,38 +87,41 @@ cyoa-step4 story1 < input2.txt
 cyoa-step4 story1 < input3.txt
 cyoa-step4 story1 < input4.txt
 cyoa-step4 story1 < input5.txt
-cyoa-step2 story1 < input.txt
-cyoa-step2 story2 < input.txt
-cyoa-step2 story3 < input.txt
-cyoa-step2 story4 < input.txt
-cyoa-step2 story5 < input.txt
-cyoa-step2 story6 < input.txt
-cyoa-step2 story7 < input.txt
-cyoa-step2 story8 < input.txt
-cyoa-step2 story9 < input.txt
-cyoa-step2 story10 < input.txt
-cyoa-step2 story11 < input.txt
-cyoa-step2 story12 < input.txt
-cyoa-step2 story13 < input.txt
-cyoa-step2 ts2 < input.txt
-cyoa-step2 ts3 < input.txt
-cyoa-step2 st1 < input.txt
-cyoa-step2 st2 < input.txt
-cyoa-step2 st3 < input.txt
-cyoa-step2 st4 < input.txt
-cyoa-step2 st5 < input.txt
-cyoa-step2 st6 < input.txt
-cyoa-step2 st7 < input.txt
-cyoa-step2 st8 < input.txt
+cyoa-step4 story1 < input.txt
+cyoa-step4 story2 < input.txt
+cyoa-step4 story3 < input.txt
+cyoa-step4 story4 < input.txt
+cyoa-step4 story5 < input.txt
+cyoa-step4 story6 < input.txt
+cyoa-step4 story7 < input.txt
+cyoa-step4 story8 < input.txt
+cyoa-step4 story9 < input.txt
+cyoa-step4 story10 < input.txt
+cyoa-step4 story11 < input.txt
+cyoa-step4 story12 < input.txt
+cyoa-step4 story13 < input.txt
+cyoa-step4 ts2 < input.txt
+cyoa-step4 ts3 < input.txt
+cyoa-step4 st1 < input.txt
+cyoa-step4 st2 < input.txt
+cyoa-step4 st3 < input.txt
+cyoa-step4 st4 < input.txt
+cyoa-step4 st5 < input.txt
+cyoa-step4 st6 < input.txt
+cyoa-step4 st7 < input.txt
+cyoa-step4 st8 < input.txt
 cyoa-step4 tts1 < tts1in.txt
 cyoa-step4 tts1 < tts1in1.txt
 cyoa-step4 tts2 < tts2in.txt
 cyoa-step4 tts2 < tts2in1.txt
 cyoa-step4 tts3 < tts3in.txt
+cyoa-step4 tts3 < tts3in1.txt
+cyoa-step4 tts3 < tts3in2.txt
 cyoa-step4 tts4 < input.txt
 cyoa-step4 tts5 < input.txt
 cyoa-step4 tts6 < input.txt
 cyoa-step4 tts7 < input.txt
 cyoa-step4 tts8 < input.txt
+cyoa-step4 hhh < input.txt
 #cyoa-step4 story1 < input6.txt
 ec:step4
