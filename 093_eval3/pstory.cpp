@@ -278,7 +278,7 @@ void Pstory::proPagevar(std::string line) {
   std::string s3 = line.substr(pos_equal + 1);
   long varValue = convert1(s3);
 
-  //check repeated pagenum and variable name???
+  //push variable pair into var vector in this page
   std::pair<long int, std::string> varPair = std::make_pair(varValue, s2);
   story[pagenum].var.push_back(varPair);
 }
