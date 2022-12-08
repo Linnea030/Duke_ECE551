@@ -459,9 +459,9 @@ void Pstory::checkValid() {
 
 void Pstory::beginGame(std::string path) {
   long currnum = 0;
-  std::string n;
   //if type is N
   while (story[currnum].pageType != "W" && story[currnum].pageType != "L") {
+    std::string n;
     //print page(num).txt and choice
     print_single(path, currnum);
     long num_choice = story[currnum].choice.size();  //get number of choice
@@ -475,7 +475,7 @@ void Pstory::beginGame(std::string path) {
       std::cin >> n;
       //std::getline(std::cin, n);
     }
-
+    //std::cout << "choice " << n << std::endl;
     //get choice number
     long num = convert(n);
 
