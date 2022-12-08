@@ -338,7 +338,6 @@ void Pstory::proChoicevar(std::string line) {
   //get destnum
   size_t cpos_colon1 = line.find(":", cpos_bra2 + 2);
   std::string cs4 = line.substr(cpos_bra2 + 2, cpos_colon1 - cpos_bra2 - 2);
-  std::cout << cs4 << std::endl;
   long destpage = convert(cs4);
 
   //get text of choice
