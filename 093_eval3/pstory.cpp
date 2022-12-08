@@ -478,6 +478,7 @@ void Pstory::beginGame(std::string path) {
   print_single(path, currnum);
 }
 
+//help to check if variable has been set in this game
 int Pstory::isInVector(std::string s,
                        std::vector<std::pair<long int, std::string> > storyVar) {
   size_t n = storyVar.size();
