@@ -424,22 +424,27 @@ void Pstory::check_wl(std::string s2) {
 void Pstory::checkValid() {
   //3a. check destpage is valid or not
   std::map<int, int> hashmap;
-  for (long i = 0; i < p_num; ++i) {
+  for (long i = 0; i <= p_num; ++i) {
     for (unsigned long j = 0; j < story[i].choice.size(); ++j) {
       size_t dest = story[i].choice[j].destnum;
       if ((long)dest > p_num) {
         std::cerr << "No such destpage file!\n";
         exit(EXIT_FAILURE);
       }
+      //referenced by others
       if (dest != story[i].choice[j].pagenum) {
-        hashmap[dest]++;
+        hashmap[dest] = 1;
+      }
+      //referenced by itself
+      else {
+        hashmap[dest] = 0;
       }
     }
   }
 
   //3b. check if every page is referenced
   for (unsigned long k = 1; k < hashmap.size(); ++k) {
-    if (hashmap[k] < 1) {
+    if (hashmap[k] == 0) {
       std::cerr << "This page " << k << " is not referenced!\n";
       exit(EXIT_FAILURE);
     }
