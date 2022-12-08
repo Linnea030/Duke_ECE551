@@ -1,6 +1,6 @@
-Grading at 12/08/2022:04:37:23.990246
-For commit ID 2dbea3199a59c4b44bdb5463b9d20f04315e0e34
-Grading at Wed Dec  7 11:36:23 PM EST 2022
+Grading at 12/08/2022:04:52:55.178260
+For commit ID e730c59cae68904a90eec0a00315c35ba29a89e5
+Grading at Wed Dec  7 11:51:47 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -160,7 +160,7 @@ Step 1 EC intermediate deadline test 2
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean for this testcase
 You have passed this test case
-Intermediate deadline requirements for Step 1 passed at Wed Dec  7 11:36:45 PM EST 2022
+Intermediate deadline requirements for Step 1 passed at Wed Dec  7 11:52:06 PM EST 2022
 
 Step 2
 Checking that cyoa-step2 compiles
@@ -258,8 +258,12 @@ Valgrind was clean
 
 2.10: Current test is ./cyoa-step2 story10  <  input.txt
 -----------------------------
-We considered this a failure case.
-But you did not (exit status was EXIT_SUCCESS).
+Great: we both considered this an error
+----here is what you printed on stderr---
+This page 12 is not referenced!
+-----------------------------------------
+Lets check if it valgrinds:
+Valgrind was clean
 
 
 2.11: Current test is ./cyoa-step2 story11  <  input.txt
@@ -346,6 +350,13 @@ Great: we both considered this an error
 No page for win
 -----------------------------------------
 Lets check if it valgrinds:
+Valgrind was clean
+
+
+2.20: Current test is ./cyoa-step2 st8  <  input.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 No request to check for intermediate deadline completion on step 2
 
@@ -445,8 +456,12 @@ Valgrind was clean
 
 3.10: Current test is ./cyoa-step3 story10 < /dev/null
 -----------------------------
-We considered this a failure case.
-But you did not (exit status was EXIT_SUCCESS).
+Great: we both considered this an error
+----here is what you printed on stderr---
+This page 12 is not referenced!
+-----------------------------------------
+Lets check if it valgrinds:
+Valgrind was clean
 
 
 3.11: Current test is ./cyoa-step3 story11 < /dev/null
@@ -488,6 +503,80 @@ Valgrind was clean
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
+
+
+3.16: Current test is ./cyoa-step3 st1 < /dev/null
+-----------------------------
+Great: we both considered this an error
+----here is what you printed on stderr---
+No such destpage file!
+-----------------------------------------
+Lets check if it valgrinds:
+Valgrind was clean
+
+
+3.17: Current test is ./cyoa-step3 st2 < /dev/null
+-----------------------------
+Great: we both considered this an error
+----here is what you printed on stderr---
+This page 5 is not referenced!
+-----------------------------------------
+Lets check if it valgrinds:
+Valgrind was clean
+
+
+3.18: Current test is ./cyoa-step3 st3 < /dev/null
+-----------------------------
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
+
+
+3.19: Current test is ./cyoa-step3 st4 < /dev/null
+-----------------------------
+Great: we both considered this an error
+----here is what you printed on stderr---
+This page 12 is not referenced!
+-----------------------------------------
+Lets check if it valgrinds:
+Valgrind was clean
+
+
+3.20: Current test is ./cyoa-step3 st5 < /dev/null
+-----------------------------
+Great: we both considered this an error
+----here is what you printed on stderr---
+No page for win
+-----------------------------------------
+Lets check if it valgrinds:
+Valgrind was clean
+
+
+3.21: Current test is ./cyoa-step3 st6 < /dev/null
+-----------------------------
+Great: we both considered this an error
+----here is what you printed on stderr---
+No page for lose
+-----------------------------------------
+Lets check if it valgrinds:
+Valgrind was clean
+
+
+3.22: Current test is ./cyoa-step3 st7 < /dev/null
+-----------------------------
+Great: we both considered this an error
+----here is what you printed on stderr---
+No page for win
+-----------------------------------------
+Lets check if it valgrinds:
+Valgrind was clean
+
+
+3.23: Current test is ./cyoa-step3 st8 < /dev/null
+-----------------------------
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 No request to check for intermediate deadline completion on step 3
 
 Step 4
@@ -500,8 +589,8 @@ Now running YOUR tests for step 4
 ------------------------------------
 No request to check for intermediate deadline completion on step 4
 
-You have NOT passed your test cases!
-You should go and figure out/understand where thing went wrong
-And fix the problem(s) before the deadline
+You have passed the test cases YOU provided
+If your tests are good, this is great. 
+If your tests are insufficient, you should do much more testing
 
 Overall Grade: NO GRADE YET
