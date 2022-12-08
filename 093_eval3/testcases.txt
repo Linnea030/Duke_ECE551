@@ -19,6 +19,10 @@ cyoa-step2 story1 < input0.txt
 cyoa-step2 story1 < input1.txt
 cyoa-step2 story1 < input2.txt
 cyoa-step2 story1 < input3.txt
+cyoa-step2 story1 < input4.txt
+cyoa-step2 story1 < input5.txt
+cyoa-step2 story1 < input6.txt
+
 cyoa-step2 story1 < input.txt
 cyoa-step2 story2 < input.txt
 cyoa-step2 story3 < input.txt
