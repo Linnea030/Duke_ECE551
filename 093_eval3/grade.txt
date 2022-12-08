@@ -1,6 +1,6 @@
-Grading at 12/08/2022:05:17:48.904304
-For commit ID f5b2bb5c8544a0472c6050475521db228d79ebad
-Grading at Thu Dec  8 12:16:34 AM EST 2022
+Grading at 12/08/2022:05:36:01.711311
+For commit ID 5b93482a1e6eb6a9e72fb0987b53a263419efda2
+Grading at Thu Dec  8 12:34:46 AM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -160,7 +160,7 @@ Step 1 EC intermediate deadline test 2
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean for this testcase
 You have passed this test case
-Intermediate deadline requirements for Step 1 passed at Thu Dec  8 12:16:53 AM EST 2022
+Intermediate deadline requirements for Step 1 passed at Thu Dec  8 12:35:05 AM EST 2022
 
 Step 2
 Checking that cyoa-step2 compiles
@@ -216,8 +216,18 @@ Valgrind was clean
 
 2.7: Current test is ./cyoa-step2 story1  <  input6.txt
 -----------------------------
-We considered this a failure case.
-But you did not (exit status was EXIT_SUCCESS).
+Great: we both considered this an error
+----here is what you printed on stderr---
+timeout: the monitored command dumped core
+-----------------------------------------
+Lets check if it valgrinds:
+Valgrind reported errors:
+==992409== Memcheck, a memory error detector
+==992409== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==992409== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==992409== Command: ./cyoa-step2 story1
+==992409== Parent PID: 992407
+==992409== 
 
 
 2.8: Current test is ./cyoa-step2 story1  <  input.txt
@@ -629,7 +639,7 @@ No request to check for intermediate deadline completion on step 3
 
 Step 4
 Checking that cyoa-step4 compiles
-g++ -o cyoa-step4 -pedantic -std=gnu++98 -Werror -Wall cyoa-step4.cpp readStory.hpp readStory.cpp page.hpp page.cpp choice.hpp choice.cpp pstory.hpp pstory.cpp
+make: 'cyoa-step4' is up to date.
 The code compiled (good)
 Executable cyoa-step4 exists (good)
 ------------------------------------
