@@ -1,11 +1,11 @@
-Grading at 12/08/2022:03:53:54.894833
-For commit ID 65fa288fc60f5ab96b268b0509429816856d958d
-Grading at Wed Dec  7 10:53:15 PM EST 2022
+Grading at 12/08/2022:03:54:30.924918
+For commit ID 8e427a6ab50d927683bdbf7035f3c2013ecf7ac7
+Grading at Wed Dec  7 10:53:55 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
 Checking that cyoa-step1 compiles
-g++ -o cyoa-step1 -pedantic -std=gnu++98 -Werror -Wall cyoa-step1.cpp readStory.hpp readStory.cpp page.hpp page.cpp choice.hpp choice.cpp pstory.hpp pstory.cpp
+make: 'cyoa-step1' is up to date.
 The code compiled (good)
 Executable cyoa-step1 exists (good)
 ------------------------------------
@@ -143,54 +143,6 @@ Valgrind was clean
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
-
-
-1.16: Current test is ./cyoa-step1 story10 < /dev/null
------------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
-
-
-1.17: Current test is ./cyoa-step1 story11 < /dev/null
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-Invalid line format!
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-
-
-1.18: Current test is ./cyoa-step1 story12 < /dev/null
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-Invalid line format!
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-
-
-1.19: Current test is ./cyoa-step1 ts1 < /dev/null
------------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
-
-
-1.20: Current test is ./cyoa-step1 ts2 < /dev/null
------------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
-
-
-1.21: Current test is ./cyoa-step1 ts3 < /dev/null
------------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
 ------------------------------------
 You have requested that we check for intermediate deadline completion on step 1
 ------------------------------------
@@ -208,7 +160,7 @@ Step 1 EC intermediate deadline test 2
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean for this testcase
 You have passed this test case
-Intermediate deadline requirements for Step 1 passed at Wed Dec  7 10:53:40 PM EST 2022
+Intermediate deadline requirements for Step 1 passed at Wed Dec  7 10:54:10 PM EST 2022
 
 Step 2
 Checking that cyoa-step2 compiles
@@ -371,6 +323,53 @@ Valgrind was clean
 
 
 3.9: Current test is ./cyoa-step3 story9 < /dev/null
+-----------------------------
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
+
+
+3.10: Current test is ./cyoa-step3 story10 < /dev/null
+-----------------------------
+We considered this a failure case.
+But you did not (exit status was EXIT_SUCCESS).
+
+
+3.11: Current test is ./cyoa-step3 story11 < /dev/null
+-----------------------------
+Great: we both considered this an error
+----here is what you printed on stderr---
+Invalid line format!
+-----------------------------------------
+Lets check if it valgrinds:
+Valgrind was clean
+
+
+3.12: Current test is ./cyoa-step3 story12 < /dev/null
+-----------------------------
+Great: we both considered this an error
+----here is what you printed on stderr---
+Invalid line format!
+-----------------------------------------
+Lets check if it valgrinds:
+Valgrind was clean
+
+
+3.13: Current test is ./cyoa-step3 ts1 < /dev/null
+-----------------------------
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
+
+
+3.14: Current test is ./cyoa-step3 ts2 < /dev/null
+-----------------------------
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
+
+
+3.15: Current test is ./cyoa-step3 ts3 < /dev/null
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
