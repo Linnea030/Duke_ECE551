@@ -126,6 +126,7 @@ bool Pstory::isChoicevar(std::string line) {
   }
   return true;
 }
+
 //check if string s is a number
 bool Pstory::isNumber(std::string s) {
   //if string is empty
@@ -224,6 +225,7 @@ bool Pstory::isSpacel(std::string line) {
   }
   return true;
 }
+
 //process Page without variable
 void Pstory::proPage(std::string line) {
   //if line is page line
@@ -256,6 +258,7 @@ void Pstory::proPage(std::string line) {
   Page P((size_t)pagenum, s2, s3);
   story.push_back(P);
 }
+
 //process Page with variable
 void Pstory::proPagevar(std::string line) {
   //get pagenumber
@@ -282,6 +285,7 @@ void Pstory::proPagevar(std::string line) {
   std::pair<long int, std::string> varPair = std::make_pair(varValue, s2);
   story[pagenum].var.push_back(varPair);
 }
+
 //process Choice without variable
 void Pstory::proChoice(std::string line) {
   //if line is choice line
@@ -310,6 +314,7 @@ void Pstory::proChoice(std::string line) {
   Choice C((size_t)cpagenum, (size_t)destpage, cs3, cnum);
   story[cpagenum].choice.push_back(C);
 }
+
 //process Choice with variable
 void Pstory::proChoicevar(std::string line) {
   //get pagenumber of choice
@@ -327,8 +332,6 @@ void Pstory::proChoicevar(std::string line) {
   //get variable name
   size_t cpos_equal = line.find("=", cpos_bra1 + 1);
   std::string cs2 = line.substr(cpos_bra1 + 1, cpos_equal - cpos_bra1 - 1);
-
-  //check if cs2 is contained in page???
 
   //get variable value
   size_t cpos_bra2 = line.find("]:", cpos_equal + 1);
@@ -406,6 +409,7 @@ void Pstory::proStory_2(std::ifstream & ifs) {
     }
   }
 }
+
 //check if there exist at least 1 win and 1 lose page
 void Pstory::check_wl(std::string s2) {
   if (s2 == "W") {  //winpage number +1
@@ -415,6 +419,7 @@ void Pstory::check_wl(std::string s2) {
     lose_num++;
   }
 }
+
 //check valid conditions for step2 3 4
 void Pstory::checkValid() {
   //3a. check destpage is valid or not
@@ -450,6 +455,7 @@ void Pstory::checkValid() {
     exit(EXIT_FAILURE);
   }
 }
+
 //begingame for step1 2 3,start the game for user
 void Pstory::beginGame(std::string path) {
   long currnum = 0;
@@ -513,7 +519,6 @@ void Pstory::beginGame_plus(std::string path) {
     //print page(num).txt and choice
     print_single1(path, currnum, storyVar);
     long num_choice = story[currnum].choice.size();  //get number of choice
-
     //read from cmd
     std::cin >> n;
     //if input is invalid, input again until valid
@@ -533,10 +538,8 @@ void Pstory::beginGame_plus(std::string path) {
       }
       temp = convert(n);
     }
-
     //get choice number
     long num = convert(n);
-
     //update currnum to destpage number
     long nextnum = story[currnum].choice[num - 1].destnum;
     currnum = nextnum;
@@ -544,6 +547,7 @@ void Pstory::beginGame_plus(std::string path) {
   //if type is win or lose
   print_single1(path, currnum, storyVar);
 }
+
 //check if this choice is valid for this page
 bool Pstory::isValidChoice(std::string n, long num_choice) {
   //if string is empty
@@ -575,7 +579,8 @@ bool Pstory::isValidChoice(std::string n, long num_choice) {
   delete[] c;
   return true;
 }
-//find all paths to win and print them
+
+//find all paths to win and print them, DFS is used here, cite AOP chapter 25
 void Pstory::findWay() {
   long curr_c = 0;                           //current choice number under this page
   std::map<long, int> visit;                 //visited node number
@@ -630,6 +635,7 @@ void Pstory::findWay() {
   //else print all the paths
   printWay(resPath);
 }
+
 //convert path node to a whole path string that can be printed
 std::string Pstory::toString(std::vector<std::pair<Page, long> > currPath) {
   std::string path;
@@ -641,12 +647,14 @@ std::string Pstory::toString(std::vector<std::pair<Page, long> > currPath) {
   s1 >> path;
   return path;
 }
+
 //print each string way
 void Pstory::printWay(std::vector<std::string> way) {
   for (unsigned long int i = 0; i < way.size(); ++i) {
     std::cout << way[i] << std::endl;
   }
 }
+
 //copy assignment operator
 Pstory & Pstory::operator=(const Pstory & rhs) {
   if (this != &rhs) {
