@@ -44,6 +44,8 @@ cyoa-step2 story12 < input.txt
 cyoa-step2 story13 < input.txt
 cyoa-step2 story14 < input.txt
 cyoa-step2 story15 < input.txt
+cyoa-step2 story16 < input.txt
+cyoa-step2 story < input.txt
 cyoa-step2 ts2 < input.txt
 cyoa-step2 ts3 < input.txt
 #input for st
