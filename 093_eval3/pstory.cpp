@@ -115,7 +115,6 @@ bool Pstory::isChoicevar(std::string line) {
     return false;
   }
   //find first ] after first =
-  //]:??? blank space
   size_t pos_braright = line.find("]", pos_equal + 1);
   if (pos_braright == std::string::npos) {
     return false;

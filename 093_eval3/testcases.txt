@@ -81,5 +81,6 @@ cyoa-step4 story1 < input5.txt
 cyoa-step4 tts1 < tts1in.txt
 cyoa-step4 tts4 < input.txt
 cyoa-step4 tts5 < input.txt
+cyoa-step4 tts6 < input.txt
 #cyoa-step4 story1 < input6.txt
 ec:step4
