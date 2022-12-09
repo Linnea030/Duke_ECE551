@@ -30,7 +30,6 @@ void ReadStory::openFile(char ** argv) {
     std::cerr << "Open file failed!\n";
     exit(EXIT_FAILURE);
   }
-  //return ifs;
 }
 
 //process file in step1
@@ -57,7 +56,7 @@ void ReadStory::processFile2(char ** argv) {
   Pstory ps;
   ps.proStory_1(ifs);
   //check if story is valid
-  ps.checkValid();
+  ps.checkValid(s);
   //start game
   ps.beginGame(s);
 }
@@ -73,7 +72,7 @@ void ReadStory::processFile3(char ** argv) {
   Pstory ps;
   ps.proStory_1(ifs);
   //check if story is valid
-  ps.checkValid();
+  ps.checkValid(s);
   //print all the ways to win
   ps.findWay();
 }
@@ -89,7 +88,7 @@ void ReadStory::processFile4(char ** argv) {
   Pstory ps;
   ps.proStory_2(ifs);
   //check if story is valid
-  ps.checkValid();
+  ps.checkValid(s);
   //start game
   ps.beginGame_plus(s);
 }

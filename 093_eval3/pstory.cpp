@@ -421,7 +421,7 @@ void Pstory::check_wl(std::string s2) {
 }
 
 //check valid conditions for step2 3 4
-void Pstory::checkValid() const {
+void Pstory::checkValid(std::string path) const {
   //3a. check destpage is valid or not
   std::map<int, int> hashmap;
   //traverse all choice to find destpage and save them in a map
@@ -453,6 +453,21 @@ void Pstory::checkValid() const {
   if (lose_num < 1) {
     std::cerr << "No page for lose\n";
     exit(EXIT_FAILURE);
+  }
+  //check if every files can be opened
+  for (long k = 0; k < p_num + 1; ++k) {
+    std::ifstream ff;
+    std::string path1;
+    path1 = path + story[k].fileName;
+    char * p = new char[path1.length() + 1];
+    std::strcpy(p, path1.c_str());
+    ff.open(p);
+    delete[] p;
+    //error check for failed open(no such file, invalid path)
+    if (!ff.is_open()) {
+      std::cerr << "Open file failed!\n";
+      exit(EXIT_FAILURE);
+    }
   }
 }
 

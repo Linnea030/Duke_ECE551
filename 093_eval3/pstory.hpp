@@ -90,9 +90,9 @@ class Pstory {
   //used it to check if there exist at least 1 win and 1 lose page
   void check_wl(std::string s2);
 
-  //input: nothing, return void
+  //input: string path of the files, return void
   //check valid conditions for step2 3 4
-  void checkValid() const;
+  void checkValid(std::string path) const;
 
   //input: string path of the files, return void
   //begingame for step1 2 3,start the game for user
