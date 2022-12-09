@@ -134,6 +134,7 @@ cyoa-step4 story13 < input.txt
 cyoa-step4 story14 < input.txt
 cyoa-step4 story15 < input.txt
 cyoa-step4 story16 < input.txt
+cyoa-step4 story17 < input.txt
 cyoa-step4 story < input.txt
 cyoa-step4 ts2 < input.txt
 cyoa-step4 ts3 < input.txt
