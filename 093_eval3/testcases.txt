@@ -143,14 +143,14 @@ cyoa-step4 story17 < infor17.txt
 cyoa-step4 story < input.txt
 cyoa-step4 ts2 < input.txt
 cyoa-step4 ts3 < input.txt
-cyoa-step4 st1 < input.txt
-cyoa-step4 st2 < input.txt
-cyoa-step4 st3 < input.txt
-cyoa-step4 st4 < input.txt
-cyoa-step4 st5 < input.txt
-cyoa-step4 st6 < input.txt
-cyoa-step4 st7 < input.txt
-cyoa-step4 st8 < input.txt
+#cyoa-step4 st1 < input.txt
+#cyoa-step4 st2 < input.txt
+#cyoa-step4 st3 < input.txt
+#cyoa-step4 st4 < input.txt
+#cyoa-step4 st5 < input.txt
+#cyoa-step4 st6 < input.txt
+#cyoa-step4 st7 < input.txt
+#cyoa-step4 st8 < input.txt
 cyoa-step4 tts1 < tts1in.txt
 cyoa-step4 tts1 < tts1in1.txt
 cyoa-step4 tts1 < tts1in2.txt
@@ -165,6 +165,6 @@ cyoa-step4 tts6 < input.txt
 cyoa-step4 tts7 < input.txt
 cyoa-step4 tts8 < input.txt
 cyoa-step4 tts9 < input.txt
-cyoa-step4 hhh < input.txt
+#cyoa-step4 hhh < input.txt
 cyoa-step4 story1 < input6.txt
 ec:step4
