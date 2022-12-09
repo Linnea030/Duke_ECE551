@@ -22,7 +22,7 @@
 5:7:Open the book
 
 7:10:Exult in your skillset and go home
-
+7:8:hhh
 8:11:Take your prize and go home
 
 0:3:Stab the dragon in the neck
