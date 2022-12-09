@@ -1,6 +1,6 @@
-Grading at 12/09/2022:01:55:40.138371
-For commit ID c79fc4dc862912d79ae43b7d9d17ed41f6e22873
-Grading at Thu Dec  8 08:52:52 PM EST 2022
+Grading at 12/09/2022:02:06:56.748186
+For commit ID 2d72f1810cc3b78fe986d2c20c5b8a1716430151
+Grading at Thu Dec  8 09:03:51 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -214,7 +214,7 @@ Step 1 EC intermediate deadline test 2
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean for this testcase
 You have passed this test case
-Intermediate deadline requirements for Step 1 passed at Thu Dec  8 08:53:20 PM EST 2022
+Intermediate deadline requirements for Step 1 passed at Thu Dec  8 09:04:18 PM EST 2022
 
 Step 2
 Checking that cyoa-step2 compiles
@@ -228,51 +228,51 @@ Now running YOUR tests for step 2
 
 2.1: Current test is ./cyoa-step2 story1  <  input0.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 2.2: Current test is ./cyoa-step2 story1  <  input1.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 2.3: Current test is ./cyoa-step2 story1  <  input2.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 2.4: Current test is ./cyoa-step2 story1  <  input3.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 2.5: Current test is ./cyoa-step2 story1  <  input4.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 2.6: Current test is ./cyoa-step2 story1  <  input5.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 2.7: Current test is ./cyoa-step2 story1  <  input.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 2.8: Current test is ./cyoa-step2 story2  <  input.txt
@@ -347,9 +347,9 @@ Valgrind was clean
 
 2.15: Current test is ./cyoa-step2 story9  <  input.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 2.16: Current test is ./cyoa-step2 story10  <  input.txt
@@ -426,7 +426,7 @@ Valgrind was clean
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
-Open file failed!
+Open file failed in check!
 -----------------------------------------
 Lets check if it valgrinds:
 Valgrind was clean
@@ -434,16 +434,16 @@ Valgrind was clean
 
 2.24: Current test is ./cyoa-step2 ts2  <  input.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 2.25: Current test is ./cyoa-step2 ts3  <  input.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 2.26: Current test is ./cyoa-step2 st1  <  input.txt
@@ -468,9 +468,9 @@ Valgrind was clean
 
 2.28: Current test is ./cyoa-step2 st3  <  input.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 2.29: Current test is ./cyoa-step2 st4  <  input.txt
@@ -515,9 +515,9 @@ Valgrind was clean
 
 2.33: Current test is ./cyoa-step2 st8  <  input.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 2.34: Current test is ./cyoa-step2 hhh  <  input.txt
@@ -535,144 +535,168 @@ You have requested that we check for intermediate deadline completion on step 2
 Step 2 EC intermediate deadline test 1
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story1 < /usr/local/ece551/cyoa/story1/inputs/input0.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 2
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story1 < /usr/local/ece551/cyoa/story1/inputs/input10.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 3
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story1 < /usr/local/ece551/cyoa/story1/inputs/input11.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 4
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story1 < /usr/local/ece551/cyoa/story1/inputs/input12.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 5
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story1 < /usr/local/ece551/cyoa/story1/inputs/input1.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 6
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story1 < /usr/local/ece551/cyoa/story1/inputs/input2.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 7
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story1 < /usr/local/ece551/cyoa/story1/inputs/input3.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 8
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story1 < /usr/local/ece551/cyoa/story1/inputs/input4.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 9
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story1 < /usr/local/ece551/cyoa/story1/inputs/input5.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 10
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story1 < /usr/local/ece551/cyoa/story1/inputs/input6.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 11
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story1 < /usr/local/ece551/cyoa/story1/inputs/input7.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 12
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story1 < /usr/local/ece551/cyoa/story1/inputs/input8.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 13
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story1 < /usr/local/ece551/cyoa/story1/inputs/input9.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 14
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story2 < /usr/local/ece551/cyoa/story2/inputs/input0.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 15
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story2 < /usr/local/ece551/cyoa/story2/inputs/input1.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 16
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story2 < /usr/local/ece551/cyoa/story2/inputs/input2.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 17
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story2 < /usr/local/ece551/cyoa/story2/inputs/input3.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 18
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story2 < /usr/local/ece551/cyoa/story2/inputs/input4.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 19
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story2 < /usr/local/ece551/cyoa/story2/inputs/input5.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 20
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story2 < /usr/local/ece551/cyoa/story2/inputs/input6.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 21
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story2 < /usr/local/ece551/cyoa/story2/inputs/input7.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 22
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story2 < /usr/local/ece551/cyoa/story2/inputs/input8.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 2 EC intermediate deadline test 23
 ===========================================================
 ./cyoa-step2 /usr/local/ece551/cyoa/story2 < /usr/local/ece551/cyoa/story2/inputs/input9.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+Intermediate deadline requirements for Step 2 passed at Thu Dec  8 09:05:13 PM EST 2022
 
 Step 3
 Checking that cyoa-step3 compiles
-g++ -o cyoa-step3 -pedantic -std=gnu++98 -Werror -Wall cyoa-step3.cpp readStory.hpp readStory.cpp page.hpp page.cpp choice.hpp choice.cpp pstory.hpp pstory.cpp
+make: 'cyoa-step3' is up to date.
 The code compiled (good)
 Executable cyoa-step3 exists (good)
 ------------------------------------
@@ -682,9 +706,9 @@ Now running YOUR tests for step 3
 
 3.1: Current test is ./cyoa-step3 story1 < /dev/null
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 3.2: Current test is ./cyoa-step3 story2 < /dev/null
@@ -759,9 +783,9 @@ Valgrind was clean
 
 3.9: Current test is ./cyoa-step3 story9 < /dev/null
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 3.10: Current test is ./cyoa-step3 story10 < /dev/null
@@ -828,7 +852,7 @@ Valgrind was clean
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
-Open file failed!
+Open file failed in check!
 -----------------------------------------
 Lets check if it valgrinds:
 Valgrind was clean
@@ -836,23 +860,23 @@ Valgrind was clean
 
 3.17: Current test is ./cyoa-step3 ts1 < /dev/null
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 3.18: Current test is ./cyoa-step3 ts2 < /dev/null
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 3.19: Current test is ./cyoa-step3 ts3 < /dev/null
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 3.20: Current test is ./cyoa-step3 ts4 < /dev/null
@@ -887,9 +911,9 @@ Valgrind was clean
 
 3.23: Current test is ./cyoa-step3 st3 < /dev/null
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 3.24: Current test is ./cyoa-step3 st4 < /dev/null
@@ -934,9 +958,9 @@ Valgrind was clean
 
 3.28: Current test is ./cyoa-step3 st8 < /dev/null
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 3.29: Current test is ./cyoa-step3 hhh < /dev/null
@@ -954,14 +978,17 @@ You have requested that we check for intermediate deadline completion on step 3
 Step 3 EC intermediate deadline test 1
 ===========================================================
 ./cyoa-step3 /usr/local/ece551/cyoa/story1
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 3 EC intermediate deadline test 2
 ===========================================================
 ./cyoa-step3 /usr/local/ece551/cyoa/story2
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+Intermediate deadline requirements for Step 3 passed at Thu Dec  8 09:05:44 PM EST 2022
 
 Step 4
 Checking that cyoa-step4 compiles
@@ -975,51 +1002,51 @@ Now running YOUR tests for step 4
 
 4.1: Current test is ./cyoa-step4 story1  <  input0.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 4.2: Current test is ./cyoa-step4 story1  <  input1.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 4.3: Current test is ./cyoa-step4 story1  <  input2.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 4.4: Current test is ./cyoa-step4 story1  <  input3.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 4.5: Current test is ./cyoa-step4 story1  <  input4.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 4.6: Current test is ./cyoa-step4 story1  <  input5.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 4.7: Current test is ./cyoa-step4 story1  <  input.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 4.8: Current test is ./cyoa-step4 story2  <  input.txt
@@ -1094,9 +1121,9 @@ Valgrind was clean
 
 4.15: Current test is ./cyoa-step4 story9  <  input.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 4.16: Current test is ./cyoa-step4 story10  <  input.txt
@@ -1173,7 +1200,7 @@ Valgrind was clean
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
-Open file failed!
+Open file failed in check!
 -----------------------------------------
 Lets check if it valgrinds:
 Valgrind was clean
@@ -1181,16 +1208,16 @@ Valgrind was clean
 
 4.24: Current test is ./cyoa-step4 ts2  <  input.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 4.25: Current test is ./cyoa-step4 ts3  <  input.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 4.26: Current test is ./cyoa-step4 st1  <  input.txt
@@ -1215,9 +1242,9 @@ Valgrind was clean
 
 4.28: Current test is ./cyoa-step4 st3  <  input.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 4.29: Current test is ./cyoa-step4 st4  <  input.txt
@@ -1262,58 +1289,58 @@ Valgrind was clean
 
 4.33: Current test is ./cyoa-step4 st8  <  input.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 4.34: Current test is ./cyoa-step4 tts1  <  tts1in.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 4.35: Current test is ./cyoa-step4 tts1  <  tts1in1.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 4.36: Current test is ./cyoa-step4 tts2  <  tts2in.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 4.37: Current test is ./cyoa-step4 tts2  <  tts2in1.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 4.38: Current test is ./cyoa-step4 tts3  <  tts3in.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 4.39: Current test is ./cyoa-step4 tts3  <  tts3in1.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 4.40: Current test is ./cyoa-step4 tts3  <  tts3in2.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 4.41: Current test is ./cyoa-step4 tts4  <  input.txt
@@ -1368,9 +1395,9 @@ Valgrind was clean
 
 4.46: Current test is ./cyoa-step4 tts9  <  input.txt
 -----------------------------
-You considered this a failure case:
-Open file failed!
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 
 4.47: Current test is ./cyoa-step4 hhh  <  input.txt
@@ -1388,161 +1415,188 @@ You have requested that we check for intermediate deadline completion on step 4
 Step 4 EC intermediate deadline test 1
 ===========================================================
 ./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input0.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 4 EC intermediate deadline test 2
 ===========================================================
 ./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input10.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 4 EC intermediate deadline test 3
 ===========================================================
 ./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input11.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 4 EC intermediate deadline test 4
 ===========================================================
 ./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input12.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 4 EC intermediate deadline test 5
 ===========================================================
 ./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input13.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 4 EC intermediate deadline test 6
 ===========================================================
 ./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input14.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 4 EC intermediate deadline test 7
 ===========================================================
 ./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input15.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 4 EC intermediate deadline test 8
 ===========================================================
 ./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input16.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 4 EC intermediate deadline test 9
 ===========================================================
 ./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input17.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 4 EC intermediate deadline test 10
 ===========================================================
 ./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input18.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 4 EC intermediate deadline test 11
 ===========================================================
 ./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input19.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 4 EC intermediate deadline test 12
 ===========================================================
 ./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input1.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 4 EC intermediate deadline test 13
 ===========================================================
 ./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input20.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 4 EC intermediate deadline test 14
 ===========================================================
 ./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input21.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 4 EC intermediate deadline test 15
 ===========================================================
 ./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input22.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 4 EC intermediate deadline test 16
 ===========================================================
 ./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input23.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 4 EC intermediate deadline test 17
 ===========================================================
 ./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input24.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 4 EC intermediate deadline test 18
 ===========================================================
 ./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input25.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 4 EC intermediate deadline test 19
 ===========================================================
 ./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input2.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 4 EC intermediate deadline test 20
 ===========================================================
 ./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input3.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 4 EC intermediate deadline test 21
 ===========================================================
 ./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input4.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 4 EC intermediate deadline test 22
 ===========================================================
 ./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input5.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 4 EC intermediate deadline test 23
 ===========================================================
 ./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input6.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 4 EC intermediate deadline test 24
 ===========================================================
 ./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input7.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 4 EC intermediate deadline test 25
 ===========================================================
 ./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input8.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
 
 Step 4 EC intermediate deadline test 26
 ===========================================================
 ./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input9.txt
-You indicated this was a failure, but it was not
-Open file failed!
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+Intermediate deadline requirements for Step 4 passed at Thu Dec  8 09:06:56 PM EST 2022
 
-You have NOT passed your test cases!
-You should go and figure out/understand where thing went wrong
-And fix the problem(s) before the deadline
+You have passed the test cases YOU provided
+If your tests are good, this is great. 
+If your tests are insufficient, you should do much more testing
 
 Overall Grade: NO GRADE YET
