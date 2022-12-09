@@ -28,7 +28,7 @@ cyoa-step2 story1 < input2.txt
 cyoa-step2 story1 < input3.txt
 cyoa-step2 story1 < input4.txt
 cyoa-step2 story1 < input5.txt
-#cyoa-step2 story1 < input6.txt
+cyoa-step2 story1 < input6.txt
 
 cyoa-step2 story1 < input.txt
 cyoa-step2 story2 < input.txt
@@ -142,5 +142,5 @@ cyoa-step4 tts7 < input.txt
 cyoa-step4 tts8 < input.txt
 cyoa-step4 tts9 < input.txt
 cyoa-step4 hhh < input.txt
-#cyoa-step4 story1 < input6.txt
+cyoa-step4 story1 < input6.txt
 ec:step4

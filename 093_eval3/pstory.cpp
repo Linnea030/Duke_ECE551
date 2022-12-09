@@ -483,12 +483,15 @@ void Pstory::beginGame(std::string path) {
     long num_choice = story[currnum].choice.size();  //get number of choice
     //read from cmd
     std::cin >> n;
+    isEndCin();  //if can not reach end
 
     //if input is invalid, input again until valid
     while (!isValidChoice(n, num_choice)) {
       std::cout << "That is not a valid choice, please try again\n";
       std::cin >> n;
+      isEndCin();  //if can not reach end
     }
+
     //get choice number
     long num = convert(n);
 
@@ -510,6 +513,15 @@ int Pstory::isInVector(std::string s,
     }
   }
   return -1;  //else return -1, means not in vector
+}
+
+//check if cin is end
+void Pstory::isEndCin() {
+  //if can not reach end
+  if (std::cin.eof()) {
+    std::cerr << "It acn not reach the end\n";
+    exit(EXIT_FAILURE);
+  }
 }
 
 //begingame for step4,start the game for user
@@ -537,20 +549,25 @@ void Pstory::beginGame_plus(std::string path) {
     long num_choice = story[currnum].choice.size();  //get number of choice
     //read from cmd
     std::cin >> n;
+    isEndCin();  //if can not reach end
+
     //if input is invalid, input again until valid
     while (!isValidChoice(n, num_choice)) {
       std::cout << "That is not a valid choice, please try again\n";
       std::cin >> n;
+      isEndCin();  //if can not reach end
     }
     long temp = convert(n);
     //check if <UNAVAILABLE>
     while (!story[currnum].choice[temp - 1].available) {
       std::cout << "That choice is not available at this time, please try again\n";
       std::cin >> n;
+      isEndCin();  //if can not reach end
       //if input is invalid, input again until valid
       while (!isValidChoice(n, num_choice)) {
         std::cout << "That is not a valid choice, please try again\n";
         std::cin >> n;
+        isEndCin();  //if can not reach end
       }
       temp = convert(n);
     }

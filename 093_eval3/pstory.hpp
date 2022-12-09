@@ -94,6 +94,10 @@ class Pstory {
   //check valid conditions for step2 3 4
   void checkValid(std::string path) const;
 
+  //input: nothing, return void
+  //check if cin is end
+  void isEndCin();
+
   //input: string path of the files, return void
   //begingame for step1 2 3,start the game for user
   void beginGame(std::string path);
