@@ -130,6 +130,7 @@ cyoa-step4 st7 < input.txt
 cyoa-step4 st8 < input.txt
 cyoa-step4 tts1 < tts1in.txt
 cyoa-step4 tts1 < tts1in1.txt
+cyoa-step4 tts1 < tts1in2.txt
 cyoa-step4 tts2 < tts2in.txt
 cyoa-step4 tts2 < tts2in1.txt
 cyoa-step4 tts3 < tts3in.txt
