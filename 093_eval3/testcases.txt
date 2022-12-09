@@ -14,7 +14,7 @@ cyoa-step1 story13
 cyoa-step1 story14
 cyoa-step1 story15
 cyoa-step1 story16
-cyoa-step1 story
+cyoa-step1 story17
 cyoa-step1 ts1
 cyoa-step1 ts2
 cyoa-step1 ts3
@@ -46,6 +46,7 @@ cyoa-step2 story13 < input.txt
 cyoa-step2 story14 < input.txt
 cyoa-step2 story15 < input.txt
 cyoa-step2 story16 < input.txt
+cyoa-step2 story17 < input.txt
 cyoa-step2 story < input.txt
 cyoa-step2 ts2 < input.txt
 cyoa-step2 ts3 < input.txt
@@ -77,6 +78,7 @@ cyoa-step3 story12
 cyoa-step3 story14
 cyoa-step3 story15
 cyoa-step3 story16
+cyoa-step3 story17
 cyoa-step3 story
 cyoa-step3 ts1
 cyoa-step3 ts2
