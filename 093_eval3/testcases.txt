@@ -29,8 +29,8 @@ cyoa-step1 st7
 cyoa-step1 st8
 cyoa-step1 hhh
 #cyoa-step1 /usr/local/ece551/cyoa/story3
-cyoa-step1 /usr/local/ece551/cyoa/story1
-cyoa-step1 /usr/local/ece551/cyoa/story2
+#cyoa-step1 /usr/local/ece551/cyoa/story1
+#cyoa-step1 /usr/local/ece551/cyoa/story2
 ec:step1
 
 cyoa-step2 story1 < input0.txt
@@ -41,6 +41,8 @@ cyoa-step2 story1 < input4.txt
 cyoa-step2 story1 < input5.txt
 cyoa-step2 story1 < input6.txt
 cyoa-step2 story1 < in1a.txt
+cyoa-step2 story1 < ina1.txt
+cyoa-step2 story1 < in22.txt
 cyoa-step2 story1 < /usr/local/ece551/cyoa/story1/inputs/input10.txt
 
 cyoa-step2 story1 < input.txt
@@ -164,4 +166,4 @@ cyoa-step4 tts8 < input.txt
 cyoa-step4 tts9 < input.txt
 cyoa-step4 hhh < input.txt
 cyoa-step4 story1 < input6.txt
-ec:step4
+#ec:step4
