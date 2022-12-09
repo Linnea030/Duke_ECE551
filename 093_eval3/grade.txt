@@ -1,6 +1,6 @@
-Grading at 12/09/2022:21:19:39.553178
-For commit ID d6bf8389a97667f49ae43b4f7b77af17bf06eb1c
-Grading at Fri Dec  9 04:16:37 PM EST 2022
+Grading at 12/09/2022:21:27:07.848101
+For commit ID 213fdc9c2a6e8995688269a35c1c306db3d545d8
+Grading at Fri Dec  9 04:24:07 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -294,7 +294,7 @@ Step 1 EC intermediate deadline test 2
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean for this testcase
 You have passed this test case
-Intermediate deadline requirements for Step 1 passed at Fri Dec  9 04:17:26 PM EST 2022
+Intermediate deadline requirements for Step 1 passed at Fri Dec  9 04:24:57 PM EST 2022
 
 Step 2
 Checking that cyoa-step2 compiles
@@ -827,7 +827,7 @@ Step 2 EC intermediate deadline test 23
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean for this testcase
 You have passed this test case
-Intermediate deadline requirements for Step 2 passed at Fri Dec  9 04:19:00 PM EST 2022
+Intermediate deadline requirements for Step 2 passed at Fri Dec  9 04:26:35 PM EST 2022
 
 Step 3
 Checking that cyoa-step3 compiles
@@ -988,76 +988,8 @@ No page for win
 -----------------------------------------
 Lets check if it valgrinds:
 Valgrind was clean
-
-
-3.16: Current test is ./cyoa-step3 story17 < /dev/null
------------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
-
-
-3.17: Current test is ./cyoa-step3 story < /dev/null
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-Open file failed in check!
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-
-
-3.18: Current test is ./cyoa-step3 ts1 < /dev/null
------------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
-
-
-3.19: Current test is ./cyoa-step3 ts2 < /dev/null
------------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
-
-
-3.20: Current test is ./cyoa-step3 ts3 < /dev/null
------------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
-
-
-3.21: Current test is ./cyoa-step3 ts4 < /dev/null
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-This page 9 is not referenced!
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-
-
-3.22: Current test is ./cyoa-step3 st1 < /dev/null
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-No such destpage file!
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-
-
-3.23: Current test is ./cyoa-step3 st2 < /dev/null
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-This page 5 is not referenced!
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-Start time 1670620598 seconds after epoch
-Current time 1670620779 seconds after epoch
+Start time 1670621047 seconds after epoch
+Current time 1670621227 seconds after epoch
 You have used more than 2 minutes of compute time. Exiting.
 
 Overall Grade: NO GRADE YET
