@@ -1,11 +1,18 @@
-cyoa-step1:cyoa-step1.cpp readStory.hpp readStory.cpp page.hpp page.cpp choice.hpp choice.cpp pstory.hpp pstory.cpp
-	g++ -o cyoa-step1 -pedantic -std=gnu++98 -Werror -Wall cyoa-step1.cpp readStory.hpp readStory.cpp page.hpp page.cpp choice.hpp choice.cpp pstory.hpp pstory.cpp
+CCFLAGS=--std=gnu++98 -pedantic -Wall -Werror -ggdb3
+PROGS=cyoa-step1 cyoa-step2 cyoa-step3 cyoa-step4
+OBJS=$(patsubst %,%.o,$(PROGS)) readStory.o pstory.o page.o choice.o
+all: $(PROGS)
+cyoa-step%: cyoa-step%.o readStory.o pstory.o page.o choice.o
+	g++ -o $@ $^
+%.o: %.cpp
+	g++ $(CFLAGS) -c $<
 
-cyoa-step2:cyoa-step2.cpp readStory.hpp readStory.cpp page.hpp page.cpp choice.hpp choice.cpp pstory.hpp pstory.cpp
-	g++ -o cyoa-step2 -pedantic -std=gnu++98 -Werror -Wall cyoa-step2.cpp readStory.hpp readStory.cpp page.hpp page.cpp choice.hpp choice.cpp pstory.hpp pstory.cpp
+.PHONY: clean
+clean:
+	rm -f *~ $(PROGS) $(OBJS)
 
-cyoa-step3:cyoa-step3.cpp readStory.hpp readStory.cpp page.hpp page.cpp choice.hpp choice.cpp pstory.hpp pstory.cpp
-	g++ -o cyoa-step3 -pedantic -std=gnu++98 -Werror -Wall cyoa-step3.cpp readStory.hpp readStory.cpp page.hpp page.cpp choice.hpp choice.cpp pstory.hpp pstory.cpp
-
-cyoa-step4:cyoa-step4.cpp readStory.hpp readStory.cpp page.hpp page.cpp choice.hpp choice.cpp pstory.hpp pstory.cpp
-	g++ -o cyoa-step4 -pedantic -std=gnu++98 -Werror -Wall cyoa-step4.cpp readStory.hpp readStory.cpp page.hpp page.cpp choice.hpp choice.cpp pstory.hpp pstory.cpp
+readStory.o: readStory.hpp
+pstory.o: pstory.hpp
+page.o: page.hpp
+choice.o: choice.hpp
+#cite makefile from eval2
