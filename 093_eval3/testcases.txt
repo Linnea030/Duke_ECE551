@@ -15,6 +15,7 @@ cyoa-step1 story14
 cyoa-step1 story15
 cyoa-step1 story16
 cyoa-step1 story17
+cyoa-step1 story
 cyoa-step1 ts1
 cyoa-step1 ts2
 cyoa-step1 ts3
