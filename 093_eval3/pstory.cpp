@@ -458,16 +458,17 @@ void Pstory::checkValid(std::string path) const {
   for (long k = 0; k < p_num + 1; ++k) {
     std::ifstream ff;
     std::string path1;
-    path1 = path + story[k].fileName;
+    path1 = path + "/" + story[k].fileName;
     char * p = new char[path1.length() + 1];
     std::strcpy(p, path1.c_str());
     ff.open(p);
     delete[] p;
     //error check for failed open(no such file, invalid path)
     if (!ff.is_open()) {
-      std::cerr << "Open file failed!\n";
+      std::cerr << "Open file failed in check!\n";
       exit(EXIT_FAILURE);
     }
+    ff.close();
   }
 }
 
