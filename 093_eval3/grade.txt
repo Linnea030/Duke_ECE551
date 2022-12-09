@@ -1,6 +1,6 @@
-Grading at 12/09/2022:16:29:05.599027
-For commit ID dd5cb32a1dabf58e6fe7829dcff1230e4f88bbc6
-Grading at Fri Dec  9 11:26:04 AM EST 2022
+Grading at 12/09/2022:16:35:28.026341
+For commit ID 04302734d6d7977bc88fb6697dca4583004ee1bf
+Grading at Fri Dec  9 11:32:03 AM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -287,7 +287,7 @@ Step 1 EC intermediate deadline test 2
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean for this testcase
 You have passed this test case
-Intermediate deadline requirements for Step 1 passed at Fri Dec  9 11:26:40 AM EST 2022
+Intermediate deadline requirements for Step 1 passed at Fri Dec  9 11:32:41 AM EST 2022
 
 Step 2
 Checking that cyoa-step2 compiles
@@ -813,7 +813,7 @@ Step 2 EC intermediate deadline test 23
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean for this testcase
 You have passed this test case
-Intermediate deadline requirements for Step 2 passed at Fri Dec  9 11:27:42 AM EST 2022
+Intermediate deadline requirements for Step 2 passed at Fri Dec  9 11:33:51 AM EST 2022
 
 Step 3
 Checking that cyoa-step3 compiles
@@ -1130,7 +1130,7 @@ Step 3 EC intermediate deadline test 2
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean for this testcase
 You have passed this test case
-Intermediate deadline requirements for Step 3 passed at Fri Dec  9 11:28:17 AM EST 2022
+Intermediate deadline requirements for Step 3 passed at Fri Dec  9 11:34:27 AM EST 2022
 
 Step 4
 Checking that cyoa-step4 compiles
@@ -1191,161 +1191,7 @@ Your output looks good. Lets check valgrind
 Valgrind was clean
 
 
-4.8: Current test is ./cyoa-step4 story2  <  input.txt
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-Invalid line format for pagenum!
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-
-
-4.9: Current test is ./cyoa-step4 story3  <  input.txt
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-Invalid line format for page type!
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-
-
-4.10: Current test is ./cyoa-step4 story4  <  input.txt
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-No such pagenum!
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-
-
-4.11: Current test is ./cyoa-step4 story5  <  input.txt
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-No such pagenum!
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-
-
-4.12: Current test is ./cyoa-step4 story6  <  input.txt
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-Invalid line format!
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-
-
-4.13: Current test is ./cyoa-step4 story7  <  input.txt
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-Invalid line format!
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-
-
-4.14: Current test is ./cyoa-step4 story8  <  input.txt
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-Win or Lose type can not have choice!
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-
-
-4.15: Current test is ./cyoa-step4 story9  <  input.txt
------------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
-
-
-4.16: Current test is ./cyoa-step4 story10  <  input.txt
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-This page 12 is not referenced!
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-
-
-4.17: Current test is ./cyoa-step4 story11  <  input.txt
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-Invalid line format!
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-
-
-4.18: Current test is ./cyoa-step4 story12  <  input.txt
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-Invalid line format!
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-
-
-4.19: Current test is ./cyoa-step4 story13  <  input.txt
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-This page 15 is not referenced!
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-
-
-4.20: Current test is ./cyoa-step4 story14  <  input.txt
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-Invalid line format for pagenum!
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-
-
-4.21: Current test is ./cyoa-step4 story15  <  input.txt
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-Open file failed!
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-
-
-4.22: Current test is ./cyoa-step4 story16  <  input.txt
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-No page for win
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-
-
-4.23: Current test is ./cyoa-step4 story17  <  input.txt
------------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
-
-
-4.24: Current test is ./cyoa-step4 story17  <  infor17.txt
+4.8: Current test is ./cyoa-step4 story17  <  infor17.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -1355,7 +1201,7 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-4.25: Current test is ./cyoa-step4 story  <  input.txt
+4.9: Current test is ./cyoa-step4 story  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -1365,21 +1211,21 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-4.26: Current test is ./cyoa-step4 ts2  <  input.txt
+4.10: Current test is ./cyoa-step4 ts2  <  input.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
 
-4.27: Current test is ./cyoa-step4 ts3  <  input.txt
+4.11: Current test is ./cyoa-step4 ts3  <  input.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
 
-4.28: Current test is ./cyoa-step4 st1  <  input.txt
+4.12: Current test is ./cyoa-step4 st1  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -1389,7 +1235,7 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-4.29: Current test is ./cyoa-step4 st2  <  input.txt
+4.13: Current test is ./cyoa-step4 st2  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -1399,14 +1245,14 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-4.30: Current test is ./cyoa-step4 st3  <  input.txt
+4.14: Current test is ./cyoa-step4 st3  <  input.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
 
-4.31: Current test is ./cyoa-step4 st4  <  input.txt
+4.15: Current test is ./cyoa-step4 st4  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -1416,7 +1262,7 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-4.32: Current test is ./cyoa-step4 st5  <  input.txt
+4.16: Current test is ./cyoa-step4 st5  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -1426,7 +1272,7 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-4.33: Current test is ./cyoa-step4 st6  <  input.txt
+4.17: Current test is ./cyoa-step4 st6  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -1436,7 +1282,7 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-4.34: Current test is ./cyoa-step4 st7  <  input.txt
+4.18: Current test is ./cyoa-step4 st7  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -1446,28 +1292,28 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-4.35: Current test is ./cyoa-step4 st8  <  input.txt
+4.19: Current test is ./cyoa-step4 st8  <  input.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
 
-4.36: Current test is ./cyoa-step4 tts1  <  tts1in.txt
+4.20: Current test is ./cyoa-step4 tts1  <  tts1in.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
 
-4.37: Current test is ./cyoa-step4 tts1  <  tts1in1.txt
+4.21: Current test is ./cyoa-step4 tts1  <  tts1in1.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
 
-4.38: Current test is ./cyoa-step4 tts1  <  tts1in2.txt
+4.22: Current test is ./cyoa-step4 tts1  <  tts1in2.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -1477,42 +1323,42 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-4.39: Current test is ./cyoa-step4 tts2  <  tts2in.txt
+4.23: Current test is ./cyoa-step4 tts2  <  tts2in.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
 
-4.40: Current test is ./cyoa-step4 tts2  <  tts2in1.txt
+4.24: Current test is ./cyoa-step4 tts2  <  tts2in1.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
 
-4.41: Current test is ./cyoa-step4 tts3  <  tts3in.txt
+4.25: Current test is ./cyoa-step4 tts3  <  tts3in.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
 
-4.42: Current test is ./cyoa-step4 tts3  <  tts3in1.txt
+4.26: Current test is ./cyoa-step4 tts3  <  tts3in1.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
 
-4.43: Current test is ./cyoa-step4 tts3  <  tts3in2.txt
+4.27: Current test is ./cyoa-step4 tts3  <  tts3in2.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
 
-4.44: Current test is ./cyoa-step4 tts4  <  input.txt
+4.28: Current test is ./cyoa-step4 tts4  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -1522,7 +1368,7 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-4.45: Current test is ./cyoa-step4 tts5  <  input.txt
+4.29: Current test is ./cyoa-step4 tts5  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -1532,7 +1378,7 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-4.46: Current test is ./cyoa-step4 tts6  <  input.txt
+4.30: Current test is ./cyoa-step4 tts6  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -1542,7 +1388,7 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-4.47: Current test is ./cyoa-step4 tts7  <  input.txt
+4.31: Current test is ./cyoa-step4 tts7  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -1552,7 +1398,7 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-4.48: Current test is ./cyoa-step4 tts8  <  input.txt
+4.32: Current test is ./cyoa-step4 tts8  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -1562,14 +1408,14 @@ Lets check if it valgrinds:
 Valgrind was clean
 
 
-4.49: Current test is ./cyoa-step4 tts9  <  input.txt
+4.33: Current test is ./cyoa-step4 tts9  <  input.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 
 
-4.50: Current test is ./cyoa-step4 hhh  <  input.txt
+4.34: Current test is ./cyoa-step4 hhh  <  input.txt
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
@@ -1577,8 +1423,205 @@ Open file failed!
 -----------------------------------------
 Lets check if it valgrinds:
 Valgrind was clean
-Start time 1670603165 seconds after epoch
-Current time 1670603345 seconds after epoch
-You have used more than 2 minutes of compute time. Exiting.
+
+
+4.35: Current test is ./cyoa-step4 story1  <  input6.txt
+-----------------------------
+Great: we both considered this an error
+----here is what you printed on stderr---
+It acn not reach the end
+-----------------------------------------
+Lets check if it valgrinds:
+Valgrind was clean
+------------------------------------
+You have requested that we check for intermediate deadline completion on step 4
+------------------------------------
+
+Step 4 EC intermediate deadline test 1
+===========================================================
+./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input0.txt
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+
+Step 4 EC intermediate deadline test 2
+===========================================================
+./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input10.txt
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+
+Step 4 EC intermediate deadline test 3
+===========================================================
+./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input11.txt
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+
+Step 4 EC intermediate deadline test 4
+===========================================================
+./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input12.txt
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+
+Step 4 EC intermediate deadline test 5
+===========================================================
+./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input13.txt
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+
+Step 4 EC intermediate deadline test 6
+===========================================================
+./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input14.txt
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+
+Step 4 EC intermediate deadline test 7
+===========================================================
+./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input15.txt
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+
+Step 4 EC intermediate deadline test 8
+===========================================================
+./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input16.txt
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+
+Step 4 EC intermediate deadline test 9
+===========================================================
+./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input17.txt
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+
+Step 4 EC intermediate deadline test 10
+===========================================================
+./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input18.txt
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+
+Step 4 EC intermediate deadline test 11
+===========================================================
+./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input19.txt
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+
+Step 4 EC intermediate deadline test 12
+===========================================================
+./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input1.txt
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+
+Step 4 EC intermediate deadline test 13
+===========================================================
+./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input20.txt
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+
+Step 4 EC intermediate deadline test 14
+===========================================================
+./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input21.txt
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+
+Step 4 EC intermediate deadline test 15
+===========================================================
+./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input22.txt
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+
+Step 4 EC intermediate deadline test 16
+===========================================================
+./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input23.txt
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+
+Step 4 EC intermediate deadline test 17
+===========================================================
+./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input24.txt
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+
+Step 4 EC intermediate deadline test 18
+===========================================================
+./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input25.txt
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+
+Step 4 EC intermediate deadline test 19
+===========================================================
+./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input2.txt
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+
+Step 4 EC intermediate deadline test 20
+===========================================================
+./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input3.txt
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+
+Step 4 EC intermediate deadline test 21
+===========================================================
+./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input4.txt
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+
+Step 4 EC intermediate deadline test 22
+===========================================================
+./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input5.txt
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+
+Step 4 EC intermediate deadline test 23
+===========================================================
+./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input6.txt
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+
+Step 4 EC intermediate deadline test 24
+===========================================================
+./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input7.txt
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+
+Step 4 EC intermediate deadline test 25
+===========================================================
+./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input8.txt
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+
+Step 4 EC intermediate deadline test 26
+===========================================================
+./cyoa-step4 /usr/local/ece551/cyoa/story3 < /usr/local/ece551/cyoa/story3/inputs/input9.txt
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean for this testcase
+You have passed this test case
+Intermediate deadline requirements for Step 4 passed at Fri Dec  9 11:35:27 AM EST 2022
+
+You have passed the test cases YOU provided
+If your tests are good, this is great. 
+If your tests are insufficient, you should do much more testing
 
 Overall Grade: NO GRADE YET
