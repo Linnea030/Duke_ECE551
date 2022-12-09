@@ -116,29 +116,29 @@ cyoa-step3 /usr/local/ece551/cyoa/story2
 ec:step3
 
 
-#cyoa-step4 story1 < input0.txt
-#cyoa-step4 story1 < input1.txt
-#cyoa-step4 story1 < input2.txt
-#cyoa-step4 story1 < input3.txt
-#cyoa-step4 story1 < input4.txt
-#cyoa-step4 story1 < input5.txt
-#cyoa-step4 story1 < input.txt
-#cyoa-step4 story2 < input.txt
-#cyoa-step4 story3 < input.txt
-#cyoa-step4 story4 < input.txt
-#cyoa-step4 story5 < input.txt
-#cyoa-step4 story6 < input.txt
-#cyoa-step4 story7 < input.txt
-#cyoa-step4 story8 < input.txt
-#cyoa-step4 story9 < input.txt
-#cyoa-step4 story10 < input.txt
-#cyoa-step4 story11 < input.txt
-#cyoa-step4 story12 < input.txt
-#cyoa-step4 story13 < input.txt
-#cyoa-step4 story14 < input.txt
-#cyoa-step4 story15 < input.txt
-#cyoa-step4 story16 < input.txt
-#cyoa-step4 story17 < input.txt
+cyoa-step4 story1 < input0.txt
+cyoa-step4 story1 < input1.txt
+cyoa-step4 story1 < input2.txt
+cyoa-step4 story1 < input3.txt
+cyoa-step4 story1 < input4.txt
+cyoa-step4 story1 < input5.txt
+cyoa-step4 story1 < input.txt
+cyoa-step4 story2 < input.txt
+cyoa-step4 story3 < input.txt
+cyoa-step4 story4 < input.txt
+cyoa-step4 story5 < input.txt
+cyoa-step4 story6 < input.txt
+cyoa-step4 story7 < input.txt
+cyoa-step4 story8 < input.txt
+cyoa-step4 story9 < input.txt
+cyoa-step4 story10 < input.txt
+cyoa-step4 story11 < input.txt
+cyoa-step4 story12 < input.txt
+cyoa-step4 story13 < input.txt
+cyoa-step4 story14 < input.txt
+cyoa-step4 story15 < input.txt
+cyoa-step4 story16 < input.txt
+cyoa-step4 story17 < input.txt
 cyoa-step4 story17 < infor17.txt
 cyoa-step4 story < input.txt
 cyoa-step4 ts2 < input.txt
@@ -167,4 +167,4 @@ cyoa-step4 tts8 < input.txt
 cyoa-step4 tts9 < input.txt
 cyoa-step4 hhh < input.txt
 cyoa-step4 story1 < input6.txt
-ec:step4
+#ec:step4
