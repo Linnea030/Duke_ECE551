@@ -1,5 +1,5 @@
 cyoa-step1 story1
-1;95;0ccyoa-step1 story2
+cyoa-step1 story2
 cyoa-step1 story3
 cyoa-step1 story4
 cyoa-step1 story5
@@ -19,7 +19,7 @@ cyoa-step1 ts1
 cyoa-step1 ts2
 cyoa-step1 ts3
 cyoa-step1 hhh
-cyoa-step1 /usr/local/ece551/cyoa/story3
+#cyoa-step1 /usr/local/ece551/cyoa/story3
 ec:step1
 
 cyoa-step2 story1 < input0.txt
@@ -59,7 +59,7 @@ cyoa-step2 st6 < input.txt
 cyoa-step2 st7 < input.txt
 cyoa-step2 st8 < input.txt
 cyoa-step2 hhh < input.txt
-cyoa-step2 /usr/local/ece551/cyoa/story3 < input.txt
+#cyoa-step2 /usr/local/ece551/cyoa/story3 < input.txt
 ec:step2
 
 cyoa-step3 story1
@@ -91,7 +91,7 @@ cyoa-step3 st6
 cyoa-step3 st7
 cyoa-step3 st8
 cyoa-step3 hhh
-cyoa-step3 /usr/local/ece551/cyoa/story3
+#cyoa-step3 /usr/local/ece551/cyoa/story3
 ec:step3
 
 
@@ -114,6 +114,10 @@ cyoa-step4 story10 < input.txt
 cyoa-step4 story11 < input.txt
 cyoa-step4 story12 < input.txt
 cyoa-step4 story13 < input.txt
+cyoa-step4 story14 < input.txt
+cyoa-step4 story15 < input.txt
+cyoa-step4 story16 < input.txt
+cyoa-step4 story < input.txt
 cyoa-step4 ts2 < input.txt
 cyoa-step4 ts3 < input.txt
 cyoa-step4 st1 < input.txt
