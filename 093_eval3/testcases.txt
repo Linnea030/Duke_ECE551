@@ -1,120 +1,6 @@
-cyoa-step1 story1
-cyoa-step1 story2
-cyoa-step1 story3
-cyoa-step1 story4
-cyoa-step1 story5
-cyoa-step1 story6
-cyoa-step1 story7
-cyoa-step1 story8
-cyoa-step1 story9
-cyoa-step1 story10
-cyoa-step1 story11
-cyoa-step1 story12
-cyoa-step1 story13
-cyoa-step1 story14
-cyoa-step1 story15
-cyoa-step1 story16
-cyoa-step1 story17
-cyoa-step1 story
-cyoa-step1 ts1
-cyoa-step1 ts2
-cyoa-step1 ts3
-cyoa-step1 ts4
-cyoa-step1 st1
-cyoa-step1 st2
-cyoa-step1 st3
-cyoa-step1 st4
-cyoa-step1 st5
-cyoa-step1 st6
-cyoa-step1 st7
-cyoa-step1 st8
-cyoa-step1 hhh
-#cyoa-step1 /usr/local/ece551/cyoa/story3
-#cyoa-step1 /usr/local/ece551/cyoa/story1
-#cyoa-step1 /usr/local/ece551/cyoa/story2
 ec:step1
-
-cyoa-step2 story1 < input0.txt
-cyoa-step2 story1 < input1.txt
-cyoa-step2 story1 < input2.txt
-cyoa-step2 story1 < input3.txt
-cyoa-step2 story1 < input4.txt
-cyoa-step2 story1 < input5.txt
-cyoa-step2 story1 < input6.txt
-#cyoa-step2 story1 < in1a.txt
-cyoa-step2 story1 < ina1.txt
-cyoa-step2 story1 < in22.txt
-cyoa-step2 story1 < /usr/local/ece551/cyoa/story1/inputs/input10.txt
-
-cyoa-step2 story1 < input.txt
-cyoa-step2 story2 < input.txt
-cyoa-step2 story3 < input.txt
-cyoa-step2 story4 < input.txt
-cyoa-step2 story5 < input.txt
-cyoa-step2 story6 < input.txt
-cyoa-step2 story7 < input.txt
-cyoa-step2 story8 < input.txt
-cyoa-step2 story9 < input.txt
-cyoa-step2 story10 < input.txt
-cyoa-step2 story11 < input.txt
-cyoa-step2 story12 < input.txt
-cyoa-step2 story13 < input.txt
-cyoa-step2 story14 < input.txt
-cyoa-step2 story15 < input.txt
-cyoa-step2 story16 < input.txt
-cyoa-step2 story17 < input.txt
-cyoa-step2 story17 < infor17.txt
-cyoa-step2 story < input.txt
-cyoa-step2 ts2 < input.txt
-cyoa-step2 ts3 < input.txt
-#input for st
-cyoa-step2 st1 < input.txt
-cyoa-step2 st2 < input.txt
-cyoa-step2 st3 < input.txt
-cyoa-step2 st4 < input.txt
-cyoa-step2 st5 < input.txt
-cyoa-step2 st6 < input.txt
-cyoa-step2 st7 < input.txt
-cyoa-step2 st8 < input.txt
-cyoa-step2 hhh < input.txt
-#cyoa-step2 /usr/local/ece551/cyoa/story3 < input.txt
 ec:step2
-
-cyoa-step3 story1
-cyoa-step3 story2
-cyoa-step3 story3
-cyoa-step3 story4
-cyoa-step3 story5
-cyoa-step3 story6
-cyoa-step3 story7
-cyoa-step3 story8
-cyoa-step3 story9
-cyoa-step3 story10
-cyoa-step3 story11
-cyoa-step3 story12
-cyoa-step3 story14
-cyoa-step3 story15
-cyoa-step3 story16
-cyoa-step3 story17
-cyoa-step3 story
-cyoa-step3 ts1
-cyoa-step3 ts2
-cyoa-step3 ts3
-cyoa-step3 ts4
-cyoa-step3 st1
-cyoa-step3 st2
-cyoa-step3 st3
-cyoa-step3 st4
-cyoa-step3 st5
-cyoa-step3 st6
-cyoa-step3 st7
-cyoa-step3 st8
-cyoa-step3 hhh
-#cyoa-step3 /usr/local/ece551/cyoa/story3
-cyoa-step3 /usr/local/ece551/cyoa/story1
-cyoa-step3 /usr/local/ece551/cyoa/story2
 ec:step3
-
 
 cyoa-step4 story1 < input0.txt
 cyoa-step4 story1 < input1.txt
@@ -143,14 +29,14 @@ cyoa-step4 story17 < infor17.txt
 cyoa-step4 story < input.txt
 cyoa-step4 ts2 < input.txt
 cyoa-step4 ts3 < input.txt
-#cyoa-step4 st1 < input.txt
-#cyoa-step4 st2 < input.txt
-#cyoa-step4 st3 < input.txt
-#cyoa-step4 st4 < input.txt
-#cyoa-step4 st5 < input.txt
-#cyoa-step4 st6 < input.txt
-#cyoa-step4 st7 < input.txt
-#cyoa-step4 st8 < input.txt
+cyoa-step4 st1 < input.txt
+cyoa-step4 st2 < input.txt
+cyoa-step4 st3 < input.txt
+cyoa-step4 st4 < input.txt
+cyoa-step4 st5 < input.txt
+cyoa-step4 st6 < input.txt
+cyoa-step4 st7 < input.txt
+cyoa-step4 st8 < input.txt
 cyoa-step4 tts1 < tts1in.txt
 cyoa-step4 tts1 < tts1in1.txt
 cyoa-step4 tts1 < tts1in2.txt
